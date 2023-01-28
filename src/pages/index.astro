@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Card from '../components/Card.astro';
+import techcrunch from '../assets/publication-logos/techcrunch.png';
+import cbs from '../assets/publication-logos/cbs.png';
+import forbes from '../assets/publication-logos/forbes.png';
+import buildots from '../assets/client-logos/Buildots.webp';
+import ox from '../assets/client-logos/OX.svg';
+import pinecone from '../assets/client-logos/Pinecone.png';
+import qm from '../assets/client-logos/QM.png';
+import runai from '../assets/client-logos/Runai.svg';
+import wilco from '../assets/client-logos/Wilco.png';
+import Testimonial from '../components/Testimonial.astro';
+
+const results = [
+	{
+		url: 'https://techcrunch.com/2023/01/18/quantum-machines-continues-to-grow-in-spite-of-economic-uncertainity/',
+		logo: techcrunch,
+		date: 'January 18, 2023',
+		title: 'Quantum Machines continues to grow in spite of economic uncertainity'
+	},
+	{
+		url: 'https://www.cbsnews.com/atlanta/video/the-breakdown-looking-at-the-future-of-building-construction/#x',
+		logo: cbs,
+		date: 'December 27, 2022',
+		title: 'The Breakdown: Looking at the future of building construction'
+	},
+	{
+		url: 'https://www.forbes.com/sites/adrianbridgwater/2022/12/06/israeli-software-engineering-start-up-creates-simulation-training-quests/',
+		logo: forbes,
+		date: 'December 6, 2022',
+		title: 'Israeli Software Engineering Start-Up Creates Simulation Training ‘Quests’'
+	},
+];
+
+const testimonials = [
+	{
+		text: 'They were sensitive to the brand we had built and our customers loved, yet unafraid to challenge and push us out of our comfort zones.',
+		logo: qm,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of QM'
+	},
+	{
+		text: 'We loved working with the team at Concrete. Their thoughtfulness stood out and so did the consistency of the experience regardless of who we interacted with.',
+		logo: buildots,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Buildots'
+	},
+	{
+		text: 'With their proven track record of helping brands challenge the status quo, Concrete were exactly who we needed to help us change the way people think about AI.',
+		logo: runai,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Run:ai'
+	},
+	{
+		text: 'We view Concrete as more than partners, they are an integral part of our team. We lean on their wisdom and creativity as they deliver high-level results after results.',
+		logo: wilco,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Wilco'
+	}
+];
+---
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="hero">
+			<Header />
+			<img class="hero-logo" src="concrete-media.svg" />
+			<h2>for serious tech companies</h2>
+		</div>
+		<section class="section" id="clients">
+			<h3>The most dynamic B2B tech companies turn to Concrete to promote them globally.</h3>
+			<div class="logos">
+				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots}/></a>
+				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm}/></a>
+				<a class="client" href="https://trywilco.com/" target="_blank"><img src={wilco}/></a>
+				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone}/></a>
+				<a class="client" href="https://ox.security/" target="_blank"><img src={ox}/></a>
+				<a class="client" href="https://run.ai/" target="_blank"><img src={runai}/></a>
+			</div>
+		</section>
+		<section class="section" id="results">
+			<ul>
+				{results.map(r => <Card articleUrl={r.url} date={r.date} headline={r.title} logo={r.logo}/>)}
+			</ul>
+			<div class="results-desc">
+				<h3>Media coverage that makes an impact</h3>
+				<p>We specialize in maximizing the coverage for your big announcements and in proactively creating continuous results between the big stories.</p>
+			</div>
+		</section>
+		<section class="testimonials" id="testimonials">
+			{testimonials.map(t => <Testimonial {...t} />)}
+		</section>
+		<section class="section" id="team">
+			<div>
+				<img src="team.png"/>
+				<h3>Join us</h3>
+				<p class="desc">Join Concrete Media and do PR at the highest level for some of the best and brightest tech companies.</p>
+				<a href="https://job.westraycommunications.com" target="_blank">See open positions</a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+
+	h2 {
+		font-weight: 600;
+		font-size: 48px;
+	}
+
+	h3 {
+		font-family: 'Outfit';
+		font-weight: 600;
+		font-size: 48px;
+		line-height: 115%;
+		letter-spacing: -0.01em;
+		color: #7022FB;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.hero {
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(hero-image.jpeg);
+		background-size: cover;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		color: white;
+		font-family: 'Outfit';
+	}
+
+	.hero-logo {
+		width: 85vw;
+	}
+
+	.client img {
+		max-width: 130px;
+		height: 37px;
+	}
+
+	#clients {
+		display: flex;
+		padding: 106px 112px;
+		align-items: center;
+	}
+
+	#clients h3 {
+		flex: 1 1 40%;
+		margin: 0;
+	}
+
+	#clients .logos {
+		flex: 1 1 60%;
+		display: flex;
+		flex-wrap: wrap;
+    	gap: 24px 32px;
+		max-width: fit-content;
+		justify-content: flex-end;
+	}
+
+	.client {
+		background: #FAF8F5;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 176px;
+		height: 72px;
+	}
+
+	section {
+		display: flex;
+		padding: 106px 112px;
+		align-items: center;
+		width: 100vw;
+	}
+
+	#results p {
+		font-family: 'Inter';
+		font-size: 24px;
+		line-height: 145%;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	#results :global(.result-card:nth-of-type(2)) {
+		margin-left: 74px;
+	}
+
+	#results :global(.result-card:nth-of-type(3)) {
+		margin-left: 148px;
+	}
+
+	#results ul {
+		margin-right: 64px;
+	}
+
+	.results-desc {
+		max-width: 37vw;
+    	margin-left: auto;
+	}
+
+	#testimonials {
+		gap: 32px;
+		width: 100vw;
+		overflow-x: hidden;
+	}
+
+	#team {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#team desc {
+		font-family: 'Inter';
+		font-size: 24px;
+		line-height: 145%;
+		text-align: center;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+</style>

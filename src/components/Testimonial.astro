@@ -1,0 +1,62 @@
+---
+export interface Props {
+	logo: string;
+	text: string;
+	name: string;
+	title: string;
+}
+
+const { logo, text, name, title } = Astro.props;
+---
+
+<div class="testimonial-card">
+	<p class="text">{text}</p>
+	<img src={logo}/>
+	<p class="name">{name}</p>
+	<p class="title">{title}</p>
+</div>
+<style>
+	.testimonial-card {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 24px;
+
+		width: 384px;
+		height: 480px;
+		background: #F8FAFC;
+		border-radius: 32px;
+		flex-shrink: 0;
+	}
+
+	p {
+		margin: 0;
+		font-family: 'Inter';
+		color: #171717;
+	}
+
+	.text {
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: -0.019em;
+		margin-bottom: auto;
+	}
+
+	.name {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: -0.017em;
+	}
+
+	.title {
+		font-size: 16px;
+		line-height: 22px;
+		letter-spacing: -0.013em;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	img {
+		height: 30px;
+	}
+</style>

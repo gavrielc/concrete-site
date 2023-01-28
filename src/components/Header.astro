@@ -1,0 +1,39 @@
+---
+export interface Props {}
+---
+<header>
+	<a href="/"><img class="logo" src="logo.svg" /></a>
+	<a href="/">Home</a>
+	<a href="#clients">Clients</a>
+	<a href="#results">Work</a>
+	<a href="#contact">Contact</a>
+</header>
+<style>
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100vw;
+		column-gap: 24px;
+		margin-bottom: auto;
+		padding: 30px 110px 30px 86px;
+	}
+
+	.logo {
+		height: 85px;
+	}
+
+	a:first-of-type {
+		margin-right: auto;
+	}
+
+	a {
+		font-family: 'Inter';
+		font-weight: 500;
+		color: white;
+		text-decoration: none;
+	}
+
+
+
+</style>
