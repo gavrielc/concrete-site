@@ -3,6 +3,8 @@ export interface Props {
 	title: string;
 }
 
+import social from '../assets/social-share.png';
+
 const { title } = Astro.props;
 ---
 
@@ -18,7 +20,7 @@ const { title } = Astro.props;
 		<meta name="description" content="The most dynamic B2B tech companies turn to Concrete to promote them globally. ">
 		<meta property="og:description" content="The most dynamic B2B tech companies turn to Concrete to promote them globally. ">
 		<meta property="og:title" content={title}>
-		<meta property="og:image" content="/social-share.png">
+		<meta property="og:image" content={social}>
 		<meta property="og:site_name" content="Concrete Media">
 		<title>{title}</title>
 	</head>
