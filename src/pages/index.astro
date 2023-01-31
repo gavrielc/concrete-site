@@ -66,8 +66,10 @@ const testimonials = [
 		<div class="hero">
 			<Header />
 			<img class="hero-logo" src="/concrete-media.svg" />
-			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
 		</div>
+		<section class="section tagline">
+			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
+		</section>
 		<section class="section" id="clients">
 			<h3>The most dynamic B2B tech companies turn to Concrete to promote them globally.</h3>
 			<div class="logos">
@@ -142,11 +144,19 @@ const testimonials = [
 
 	.hero-logo {
 		width: 85vw;
+		margin-bottom: 68px;
 	}
 
-	.hero h2 {
+	.tagline {
+		width: 100vw;
+		background: #7022FB;
+		padding: 90px;
+		justify-content: center;
+	}
+
+	.tagline h2 {
 		text-align: center;
-		margin: 1em 1em 1.5em;
+		margin: 0;
 		letter-spacing: -0.01em;
 	}
 
