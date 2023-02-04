@@ -3,7 +3,69 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
+import qm from '../assets/client-logos/QM.png';
+import buildots from '../assets/client-logos/Buildots.webp';
+import ox from '../assets/client-logos/OX.svg';
+import pinecone from '../assets/client-logos/Pinecone.png';
+import runai from '../assets/client-logos/Runai.svg';
+import wilco from '../assets/client-logos/Wilco.png';
 
+const clients = [
+    {logo: qm, site: 'https://www.quantum-machines.co/'},
+    // {logo: , site: 'https://cipia.com/'},
+    {logo: ox, site: 'https://www.ox.security/'},
+    // {logo: , site: 'https://spectralops.io/'},
+    // {logo: , site: 'https://www.imperiumjets.com/'},
+    // {logo: , site: 'https://www.armosec.io/'},
+    // {logo: , site: 'https://www.getport.io/'},
+    // {logo: , site: 'https://www.thoughtleaders.io/'},
+    // {logo: , site: 'https://www.puresec.io/'},
+    // {logo: , site: 'https://puls.com/'},
+    // {logo: , site: 'https://www.xtype.io/'},
+    // {logo: , site: 'https://www.dbmaestro.com/'},
+    // {logo: , site: 'https://www.aidoc.com/'},
+    {logo: buildots, site: 'https://buildots.com/'},
+    // {logo: , site: 'https://scopiolabs.com/'},
+    // {logo: , site: 'https://www.lumigo.io/'},
+    // {logo: , site: 'https://privya.ai/'},
+    // {logo: , site: 'https://www.arnica.io/'},
+    // {logo: , site: 'https://www.rookout.com/'},
+    // {logo: , site: 'https://brightsec.com/'},
+    // {logo: , site: 'https://www.sayatalabs.com/'},
+    // {logo: , site: 'https://www.voominsurance.com/'},
+    // {logo: , site: 'https://www.dia-analysis.com/'},
+    // {logo: , site: 'https://www.salto.io/'},
+    // {logo: , site: 'https://www.aporia.com/'},
+    // {logo: , site: 'https://www.imperva.com/'},
+    // {logo: , site: 'https://swimm.io/'},
+    {logo: wilco, site: 'https://www.trywilco.com/'},
+    // {logo: , site: 'https://www.explorium.ai/'},
+    // {logo: , site: 'https://www.jit.io/'},
+    // {logo: , site: 'https://www.tatio.io/'},
+    // {logo: , site: 'https://www.cybermdx.com/'},
+    // {logo: , site: 'https://www.animaapp.com/'},
+    // {logo: , site: 'https://en.safeguard.co.il/'},
+    // {logo: , site: 'https://www.ubeya.com/'},
+    // {logo: , site: 'https://www.stoke.world/'},
+    {logo: runai, site: 'https://www.run.ai/'},
+    {logo: pinecone, site: 'https://www.pinecone.io/'},
+    // {logo: , site: 'https://www.masterschool.com/'},
+    // {logo: , site: 'https://frontegg.com/'},
+    // {logo: , site: 'https://www.getnexar.com/'},
+    // {logo: , site: 'https://stor.ai/'},
+    // {logo: , site: 'https://www.datree.io/'},
+    // {logo: , site: 'https://www.dig.security/'},
+    // {logo: , site: 'https://craft.io/'},
+    // {logo: , site: 'https://lightrun.com/'},
+    // {logo: , site: 'https://oz-code.com/'},
+    // {logo: , site: 'https://www.medminder.com/'}
+    {logo: qm, site: 'https://www.quantum-machines.co/'},
+    {logo: ox, site: 'https://www.ox.security/'},
+    {logo: buildots, site: 'https://buildots.com/'},
+    {logo: wilco, site: 'https://www.trywilco.com/'},
+    {logo: runai, site: 'https://www.run.ai/'},
+    {logo: pinecone, site: 'https://www.pinecone.io/'},
+];
 ---
 
 <Layout title="Our clients | Public Relations for serious tech companies | concrete.media">
@@ -11,6 +73,9 @@ import Layout from "../layouts/Layout.astro";
     <section class="header">
         <h3>The most dynamic B2B tech companies turn to Concrete to promote them globally.</h3>
         <p class="desc-text">We specialize in maximizing the coverage for your big announcements and in proactively creating continuous results between the big stories.</p>
+    </section>
+    <section class="logos">
+        {clients.map(({logo, site}) => <a href={site} target="_blank"><img class="logo" src={logo}></a>)}
     </section>
     <Testimonials />
     <Footer />
@@ -25,6 +90,29 @@ import Layout from "../layouts/Layout.astro";
 
     .header h3 {
         margin: 0;
+    }
+
+    .logo {
+        max-height: 60px;
+        max-width: 175px;
+    }
+
+    .logos {
+        display: flex;
+        gap: 36px 32px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logos a {
+        width: 279px;
+        height: 85px;
+        background: #F8FAFC;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
 </style>
