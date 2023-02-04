@@ -12,6 +12,8 @@ import qm from '../assets/client-logos/QM.png';
 import runai from '../assets/client-logos/Runai.svg';
 import wilco from '../assets/client-logos/Wilco.png';
 import Testimonial from '../components/Testimonial.astro';
+import linkedin from '../assets/icons/linkedin.svg';
+import twitter from '../assets/icons/twitter.svg';
 
 const results = [
 	{
@@ -89,7 +91,10 @@ const testimonials = [
 			</div>
 		</section>
 		<section class="testimonials" id="testimonials">
-			{testimonials.map(t => <Testimonial {...t} />)}
+			<h3>What our clients say</h3>
+			<div>
+				{testimonials.map(t => <Testimonial {...t} />)}
+			</div>
 		</section>
 		<section class="section" id="team">
 			<div>
@@ -101,7 +106,12 @@ const testimonials = [
 		</section>
 		<footer>
 			<img class="footer-logo" src="/concrete-media.svg" />
-			<h2>You’ve built something amazing. We’ll tell the world.You’ve built something amazing. We’ll tell the world.</h2>
+			<h2>You’ve built something amazing. We’ll help tell the world.</h2>
+			<div class="footer-bottom">
+				<p>©2023 Concrete Media</p>
+				<a href="https://www.linkedin.com/company/westray-communications/" target="_blank"><img class='social-icon' src={linkedin}></a>
+				<a href="https://twitter.com/WestRayPR" target="_blank"><img class='social-icon' src={twitter}></a>
+			</div>
 		</footer>
 	</main>
 </Layout>
@@ -128,6 +138,13 @@ const testimonials = [
 	ul {
 		margin: 0;
 		padding: 0;
+	}
+
+	section {
+		display: flex;
+		padding: 106px 112px;
+		align-items: center;
+		width: 100vw;
 	}
 
 	.hero {
@@ -185,13 +202,6 @@ const testimonials = [
 		height: 72px;
 	}
 
-	section {
-		display: flex;
-		padding: 106px 112px;
-		align-items: center;
-		width: 100vw;
-	}
-
 	#results p {
 		font-family: 'Inter';
 		font-size: 24px;
@@ -217,9 +227,21 @@ const testimonials = [
 	}
 
 	#testimonials {
+		flex-direction: column;
+		padding-top: 0;
+	}
+
+	#testimonials > div {
 		gap: 32px;
 		width: 100vw;
 		overflow-x: hidden;
+		display: flex;
+		padding: 48px 112px;
+		align-items: center;
+	}
+
+	#testimonials h3 {
+		margin: 0;
 	}
 
 	#team {
@@ -270,6 +292,7 @@ const testimonials = [
 		background: #7022FB;
 		width: 100vw;
 		padding: 70px 112px;
+		color: white;
 	}
 
 	footer img {
@@ -278,6 +301,21 @@ const testimonials = [
 
 	footer h2 {
 		width: 47vw;
+	}
+
+	.footer-bottom {
+		display: flex;
+	}
+
+	.footer-bottom p {
+		margin: 0 auto 0 0;
+		font-family: 'Inter';
+	}
+
+	.social-icon {
+		height: 24px;
+		width: 24px;
+		margin-left: 16px;
 	}
 
 </style>
