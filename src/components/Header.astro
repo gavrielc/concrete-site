@@ -1,8 +1,14 @@
 ---
-export interface Props {}
+export interface Props {
+	inline?: boolean;
+	class?: string;
+}
+
+const {inline = false, class: className} = Astro.props;
+
 ---
-<header>
-	<a href="/"><img class="logo" src="logo.svg" /></a>
+<header class:list={[inline ? 'inline' : 'regular', className]}>
+	<a href="/">{inline ? <img class="inline-logo" src="logo.svg" /> : <img class="logo" src="concrete-media-logo.svg" />}</a>
 	<a href="/">Home</a>
 	<a href="#clients">Clients</a>
 	<a href="#results">Work</a>
@@ -16,11 +22,21 @@ export interface Props {}
 		width: 100vw;
 		column-gap: 24px;
 		margin-bottom: auto;
-		padding: 30px 110px 30px 86px;
+		padding: 32px 112px;
+	}
+
+	header.regular {
+		background: white;
+		position: sticky;
+		top: 0;
+	}
+
+	.inline-logo {
+		height: 65px;
 	}
 
 	.logo {
-		height: 85px;
+		height: 36px;
 	}
 
 	a:first-of-type {
@@ -30,8 +46,15 @@ export interface Props {}
 	a {
 		font-family: 'Inter';
 		font-weight: 500;
-		color: white;
 		text-decoration: none;
+	}
+
+	.regular a {
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	.inline a {
+		color: white;
 	}
 
 

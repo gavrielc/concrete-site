@@ -38,9 +38,10 @@ const results = [
 
 ---
 <Layout title="Public Relations for serious tech companies | concrete.media">
+	<Header class="home-sticky-header"/>
 	<main>
 		<div class="hero">
-			<Header />
+			<Header inline={true} class="home-inline-header"/>
 			<img class="hero-logo" src="/concrete-media.svg" />
 			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
 		</div>
@@ -80,7 +81,62 @@ const results = [
 	</main>
 </Layout>
 
+<script is:inline>
+	document.addEventListener('scroll', () => {
+		const inlineHeader = document.querySelector('.home-inline-header');
+		if (inlineHeader.getBoundingClientRect().bottom < 0) {
+			document.querySelector('.home-sticky-header').classList.add('visible');
+			window.visible = true;
+		} else if (window.visible) {
+			document.querySelector('.home-sticky-header').classList.remove('visible');
+			window.visible = false;
+			document.querySelector('.home-sticky-header').classList.add('invisible');
+		}
+	});
+
+	document.addEventListener('animationend', (e) => {
+		if (e.animationName === 'fade-out') {
+			document.querySelector('.home-sticky-header').classList.remove('invisible');
+		}
+	});
+</script>
+
 <style>
+
+	.home-sticky-header {
+		display: none;
+		top: 0;
+		position: fixed !important;
+		z-index: 10;
+	}
+
+	.home-sticky-header.visible {
+		display: flex;
+		animation: fade-in 0.3s;
+	}
+
+	.home-sticky-header.invisible {
+		display: flex;
+		animation: fade-out 0.3s;
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-out {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
 
 	.hero {
 		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-image.jpeg);
@@ -93,7 +149,7 @@ const results = [
 	}
 
 	.hero-logo {
-		width: 85vw;
+		width: calc(100vw - 224px);
 	}
 
 	.hero h2 {
