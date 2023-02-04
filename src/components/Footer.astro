@@ -1,0 +1,45 @@
+---
+import linkedin from '../assets/icons/linkedin.svg';
+import twitter from '../assets/icons/twitter.svg';
+---
+
+<footer>
+    <img class="footer-logo" src="/concrete-media.svg" />
+    <h2>You’ve built something amazing. We’ll help tell the world.</h2>
+    <div class="footer-bottom">
+        <p>©2023 Concrete Media</p>
+        <a href="https://www.linkedin.com/company/westray-communications/" target="_blank"><img class='social-icon' src={linkedin}></a>
+        <a href="https://twitter.com/WestRayPR" target="_blank"><img class='social-icon' src={twitter}></a>
+    </div>
+</footer>
+<style>
+    footer {
+		background: #7022FB;
+		width: 100vw;
+		padding: 70px 112px;
+		color: white;
+	}
+
+	footer img {
+		width: 40vw;
+	}
+
+	footer h2 {
+		width: 47vw;
+	}
+
+	.footer-bottom {
+		display: flex;
+	}
+
+	.footer-bottom p {
+		margin: 0 auto 0 0;
+		font-family: 'Inter';
+	}
+
+	.social-icon {
+		height: 24px;
+		width: 24px;
+		margin-left: 16px;
+	}
+</style>

@@ -1,0 +1,35 @@
+---
+export interface Props {
+    type?: 'hollow' | 'full';
+    href: string;
+    openInNewWindow?: boolean;
+}
+
+const {href, type = 'full', openInNewWindow = false} = Astro.props;
+---
+
+<a href={href} class={type} target={openInNewWindow ? '_blank' : null}><slot/></a>
+
+<style>
+    a {
+		border-radius: 50px;
+		text-decoration: none;
+		font-family: 'Inter';
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 24px;
+		letter-spacing: -0.014em;
+        padding: 8px 16px;
+        border: 1.5px solid #7022FB;
+	}
+
+    .full {
+		color: #F8FAFC;
+        background: #7022FB;
+    }
+
+    .hollow {
+        color: #7022FB;
+        background: white;
+    }
+</style>

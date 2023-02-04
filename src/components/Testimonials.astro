@@ -1,0 +1,64 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+import buildots from '../assets/client-logos/Buildots.webp';
+import qm from '../assets/client-logos/QM.png';
+import runai from '../assets/client-logos/Runai.svg';
+import wilco from '../assets/client-logos/Wilco.png';
+
+const testimonials = [
+	{
+		text: 'They were sensitive to the brand we had built and our customers loved, yet unafraid to challenge and push us out of our comfort zones.',
+		logo: qm,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of QM'
+	},
+	{
+		text: 'We loved working with the team at Concrete. Their thoughtfulness stood out and so did the consistency of the experience regardless of who we interacted with.',
+		logo: buildots,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Buildots'
+	},
+	{
+		text: 'With their proven track record of helping brands challenge the status quo, Concrete were exactly who we needed to help us change the way people think about AI.',
+		logo: runai,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Run:ai'
+	},
+	{
+		text: 'We view Concrete as more than partners, they are an integral part of our team. We lean on their wisdom and creativity as they deliver high-level results after results.',
+		logo: wilco,
+		name: 'Michelle Doe',
+		title: 'CEO and Founder of Wilco'
+	}
+];
+
+---
+
+<section class="testimonials" id="testimonials">
+    <h3>What our clients say</h3>
+    <div>
+        {testimonials.map(t => <TestimonialCard {...t} />)}
+    </div>
+</section>
+
+<style>
+	
+    #testimonials {
+		flex-direction: column;
+		padding-top: 0;
+	}
+
+	#testimonials > div {
+		gap: 32px;
+		width: 100vw;
+		overflow-x: hidden;
+		display: flex;
+		padding: 48px 112px;
+		align-items: center;
+	}
+
+	#testimonials h3 {
+		margin: 0;
+	}
+
+</style>
