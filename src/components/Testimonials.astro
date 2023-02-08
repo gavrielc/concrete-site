@@ -3,32 +3,40 @@ import TestimonialCard from "./TestimonialCard.astro";
 import buildots from '../assets/client-logos/Buildots.webp';
 import qm from '../assets/client-logos/QM.png';
 import runai from '../assets/client-logos/Runai.svg';
-import wilco from '../assets/client-logos/Wilco.png';
+// import wilco from '../assets/client-logos/Wilco.png';
+import aporia from '../assets/client-logos/Aporia.svg';
+import pinecone from '../assets/client-logos/Pinecone.svg';
 
 const testimonials = [
 	{
-		text: 'They were sensitive to the brand we had built and our customers loved, yet unafraid to challenge and push us out of our comfort zones.',
-		logo: qm,
-		name: 'Michelle Doe',
-		title: 'CEO and Founder of QM'
-	},
-	{
-		text: 'We loved working with the team at Concrete. Their thoughtfulness stood out and so did the consistency of the experience regardless of who we interacted with.',
+		text: 'Concrete is out there, finding media opportunities and delivering results that bring real value to us as a company. They take the initiative so we can focus our efforts elsewhere, knowing our PR is being managed at the highest level.',
 		logo: buildots,
-		name: 'Michelle Doe',
-		title: 'CEO and Founder of Buildots'
+		name: 'Aviv Leibovici',
+		title: 'Co-founder & CPO of Buildots'
 	},
 	{
-		text: 'With their proven track record of helping brands challenge the status quo, Concrete were exactly who we needed to help us change the way people think about AI.',
+		text: 'We\'ve been very pleased with the work of Concrete Media. They have helped effectively promote our brand and consistently deliver high-quality results. We appreciate their hard work and dedication and would definitely recommend their services.',
+		logo: aporia,
+		name: 'Liran Paul Hason',
+		title: 'CEO of Aporia'
+	},
+	{
+		text: 'We view Concrete Media as more than partners, they are an integral part of our team. We lean on their wisdom and creativity as they deliver high-level result after result.',
 		logo: runai,
-		name: 'Michelle Doe',
-		title: 'CEO and Founder of Run:ai'
+		name: 'Dr. Ronen Dar',
+		title: 'CTO and co-founder of Run:ai'
 	},
 	{
-		text: 'We view Concrete as more than partners, they are an integral part of our team. We lean on their wisdom and creativity as they deliver high-level results after results.',
-		logo: wilco,
-		name: 'Michelle Doe',
-		title: 'CEO and Founder of Wilco'
+		text: 'Doing PR for a quantum computing company requires deep technical knowledge that few public relations agencies have. Concrete Media has impressed me with their expertise and ability to communicate deep tech to a broad audience.',
+		logo: qm,
+		name: 'Yoel Knoll',
+		title: 'VP of Marketing at Quantum Machines'
+	},
+	{
+		text: 'Concrete is a tech PR agency that exceeds expectations and delivers real, measurable value. We were deeply impressed with the initial results around our launch. But perhaps even more impressive is the continuous stories Concrete keeps arranging month after month.',
+		logo: pinecone,
+		name: 'Lior Ehrenfeld',
+		title: 'VP of Finance and Ops at Pinecone'
 	}
 ];
 
@@ -53,7 +61,7 @@ const testimonials = [
 		width: 100vw;
 		overflow-x: hidden;
 		display: flex;
-		padding: 48px 112px;
+		padding: 36px 112px;
 		align-items: center;
 	}
 

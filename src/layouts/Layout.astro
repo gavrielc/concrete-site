@@ -39,7 +39,7 @@ const { title } = Astro.props;
 
 	h2 {
 		font-weight: 600;
-		font-size: 48px;
+		font-size: 64px;
 		color: white;
 		font-family: 'Outfit';
 		line-height: 115%;
@@ -61,7 +61,7 @@ const { title } = Astro.props;
 
 	section {
 		display: flex;
-		padding: 106px 112px;
+		padding: 84px 112px;
 		align-items: center;
 		width: 100vw;
 	}
@@ -71,5 +71,17 @@ const { title } = Astro.props;
 		font-size: 24px;
 		line-height: 145%;
 		color: rgba(0, 0, 0, 0.6);
+	}
+
+	@media screen and (max-width: 1400px) {
+		h2 {
+			font-size: 48px;
+		}
+	}
+
+	@media screen and (min-width: 1600px) {
+		section {
+			padding: 84px 356px;
+		}
 	}
 </style>

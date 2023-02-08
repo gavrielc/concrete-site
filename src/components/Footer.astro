@@ -1,15 +1,17 @@
 ---
 import linkedin from '../assets/icons/linkedin.svg';
 import twitter from '../assets/icons/twitter.svg';
+import facebook from '../assets/icons/facebook.svg';
 ---
 
 <footer>
     <img class="footer-logo" src="/concrete-media.svg" />
-    <h2>You’ve built something amazing. We’ll help tell the world.</h2>
+    <h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
     <div class="footer-bottom">
         <p>©2023 Concrete Media</p>
         <a href="https://www.linkedin.com/company/westray-communications/" target="_blank"><img class='social-icon' src={linkedin}></a>
         <a href="https://twitter.com/WestRayPR" target="_blank"><img class='social-icon' src={twitter}></a>
+        <a href="https://www.facebook.com/WestRaycom" target="_blank"><img class='social-icon' src={facebook}></a>
     </div>
 </footer>
 <style>
@@ -21,11 +23,12 @@ import twitter from '../assets/icons/twitter.svg';
 	}
 
 	footer img {
-		width: 40vw;
+		width: 627px;
 	}
 
 	footer h2 {
-		width: 47vw;
+		font-size: 48px;
+        margin: 32px 0 130px;
 	}
 
 	.footer-bottom {
@@ -41,5 +44,17 @@ import twitter from '../assets/icons/twitter.svg';
 		height: 24px;
 		width: 24px;
 		margin-left: 16px;
+	}
+
+    @media screen and (min-width: 1600px) {
+		footer {
+			padding: 70px 202px;
+		}
+	}
+
+    @media screen and (max-width: 1400px) {
+        footer h2 {
+            font-size: 40px;
+        }
 	}
 </style>

@@ -7,7 +7,7 @@ import cbs from '../assets/publication-logos/cbs.png';
 import forbes from '../assets/publication-logos/forbes.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import ox from '../assets/client-logos/OX.svg';
-import pinecone from '../assets/client-logos/Pinecone.png';
+import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.png';
 import runai from '../assets/client-logos/Runai.svg';
 import wilco from '../assets/client-logos/Wilco.png';
@@ -65,7 +65,7 @@ const results = [
 			</ul>
 			<div class="results-desc">
 				<h3>Media coverage that makes an impact</h3>
-				<p class="desc-text">We specialize in maximizing the coverage for your big announcements and in proactively creating continuous results between the big stories.</p>
+				<p class="desc-text">We specialize in maximizing the media coverage for your big announcements and in proactively creating continuous results between the major stories.</p>
 			</div>
 		</section>
 		<Testimonials />
@@ -73,7 +73,7 @@ const results = [
 			<div>
 				<img src="team.png"/>
 				<h3>Join us</h3>
-				<p class="desc-text">Join Concrete Media and do PR at the highest level for some of the best and brightest tech companies.</p>
+				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest B2B tech companies.</p>
 				<LinkButton href="https://job.westraycommunications.com" openInNewWindow={true}>See open positions</LinkButton>
 			</div>
 		</section>
@@ -150,18 +150,17 @@ const results = [
 
 	.hero-logo {
 		width: calc(100vw - 224px);
+		max-width: 1215px;
 	}
 
 	.hero h2 {
 		text-align: center;
-		margin: 1em 1em 1.5em;
+		margin: 32px  auto 74px;
 		letter-spacing: -0.01em;
 	}
 
 	#clients {
-		display: flex;
-		padding: 106px 112px;
-		align-items: center;
+		margin-top: 14px;
 	}
 
 	#clients h3 {
@@ -170,6 +169,8 @@ const results = [
 
 	.clients-content-wrapper {
 		flex: 1 1 40%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	#clients .logos {
@@ -215,6 +216,8 @@ const results = [
 
 	#team {
 		padding: 0 112px 96px;
+		max-width: 1215px;
+		margin: auto;
 	}
 
 	#team > div {
@@ -238,6 +241,10 @@ const results = [
 
 	#team h3 {
 		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 1400px) {
+		
 	}
 
 </style>
