@@ -243,8 +243,53 @@ const results = [
 		margin-bottom: 0;
 	}
 
-	@media screen and (max-width: 1400px) {
-		
+	@media screen and (max-width: 1050px) {
+		section {
+			flex-direction: column;
+		}
+
+		.hero {
+			padding: 32px 40px;
+		}
+
+		.hero-logo {
+			width: 100%;
+		}
+
+		.hero h2 {
+			margin: 24px 0 0;
+			font-size: 32px;
+		}
+
+		#clients .logos {
+			gap: 16px;
+		}
+
+		#results {
+			flex-direction: column-reverse;
+		}
+
+		#results :global(.result-card) {
+			margin-left: 0 !important;
+			width: 100%;
+		}
+
+		#results ul {
+			margin-right: 0;
+		}
+
+		.results-desc {
+			margin-left: 0;
+			max-width: 100%;
+		}
+
+		#team {
+			padding: 42px 16px;
+		}
+
+		#team .desc-text {
+			max-width: 100%;
+		}
 	}
 
 </style>
