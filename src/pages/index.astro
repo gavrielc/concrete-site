@@ -248,6 +248,10 @@ const results = [
 			flex-direction: column;
 		}
 
+		h2, h3, p {
+			text-align: center;
+		}
+
 		.hero {
 			padding: 32px 40px;
 		}
@@ -261,8 +265,20 @@ const results = [
 			font-size: 32px;
 		}
 
+		#clients {
+			position: relative;
+		}
+
 		#clients .logos {
 			gap: 16px;
+		}
+
+		.clients-content-wrapper :global(a) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
 		}
 
 		#results {
