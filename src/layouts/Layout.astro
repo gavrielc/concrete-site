@@ -4,7 +4,6 @@ export interface Props {
 }
 
 import social from '../assets/social-share.jpg';
-import {GoogleAnalytics} from 'astro-analytics';
 
 const { title } = Astro.props;
 ---
@@ -24,7 +23,15 @@ const { title } = Astro.props;
 		<meta property="og:image" content={social}>
 		<meta property="og:site_name" content="Concrete Media">
 		<title>{title}</title>
-		<GoogleAnalytics id='G-X678N0MN5C'/>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-X678N0MN5C"></script>
+		<script>
+			// @ts-nocheck
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-X678N0MN5C');
+		</script>
 	</head>
 	<body>
 		<slot />
