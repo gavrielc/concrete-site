@@ -3,7 +3,6 @@ import TestimonialCard from "./TestimonialCard.astro";
 import buildots from '../assets/client-logos/Buildots.webp';
 import qm from '../assets/client-logos/QM.png';
 import runai from '../assets/client-logos/Runai.svg';
-// import wilco from '../assets/client-logos/Wilco.png';
 import aporia from '../assets/client-logos/Aporia.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 
@@ -44,10 +43,33 @@ const testimonials = [
 
 <section class="testimonials" id="testimonials">
     <h3>What our clients say</h3>
-    <div>
+    <div class="cards-wrapper">
         {testimonials.map(t => <TestimonialCard {...t} />)}
     </div>
+    <nav>
+        {testimonials.map((_, i) => <div class:list={["dot", {active: i == 0}]} ><div class="inner-dot"/></div>)}
+    </nav>
 </section>
+
+<script>
+    const buttons = document.querySelectorAll<HTMLElement>('.dot');
+
+    buttons.forEach((button, i) => {
+        button.addEventListener('click', () => {
+            const container: HTMLElement = document.querySelector('.cards-wrapper');
+            const containerWidth = container.clientWidth;
+            container.scrollTo({behavior: 'smooth', left: (containerWidth + 32) * i});
+            buttons.forEach((b, j) => {
+                if (i == j) {
+                    b.classList.add('active');
+                } else {
+                    b.classList.remove('active');
+                }
+                
+            });
+        });
+    });
+</script>
 
 <style>
 	
@@ -58,31 +80,59 @@ const testimonials = [
 
 	#testimonials > div {
 		gap: 32px;
-		width: 100vw;
+		width: 1216px;
 		overflow-x: hidden;
 		display: flex;
-		padding: 36px 112px;
+		margin: 36px 112px;
 		align-items: center;
-	}
-
-    #testimonials > div::after {
-        height: 560px;
-        width: 180px;
-        background: linear-gradient(270deg, white 20%, rgba(255, 255, 255, 0) 100%);
-        content: " ";
-        position: absolute;
-        right: 0;
 	}
 
 	#testimonials h3 {
 		margin: 0;
 	}
 
-    @media screen and (max-width: 1050px) {
+    nav {
+        display: flex;
+    }
+
+    .dot {
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .inner-dot {
+        height: 12px;
+        width: 12px;
+        background: rgba(71, 85, 105, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .dot.active .inner-dot {
+        background: #7022FB;
+    }
+
+    @media screen and (min-width: 1271px) {
+        .dot:nth-of-type(n+3) {
+            display: none;
+        }
+	}
+
+    @media screen and (max-width: 1270px) {
         #testimonials > div {
-            gap: 10px;
-            width: 100%;
-            padding: 36px 0;
+            width: 800px;
+        }
+	}
+
+    @media screen and (max-width: 832px) {
+        #testimonials > div {
+            width: 384px;
+        }
+	}
+
+    @media screen and (min-width: 833px) {
+        .dot:nth-of-type(n+4) {
+            display: none;
         }
 	}
 </style>
