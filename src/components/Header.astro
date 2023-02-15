@@ -64,17 +64,13 @@ const {inline = false, class: className} = Astro.props;
 	}
 
 	@media screen and (max-width: 1050px) {
-		a:not(:first-of-type) {
+		a:not(:first-of-type, :last-of-type) {
 			display: none;
 		}
 
 		header {
 			padding: 0;
 			width: 100%;
-		}
-
-		header.regular {
-			display: none !important;
 		}
 	}
 

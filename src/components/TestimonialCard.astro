@@ -60,4 +60,14 @@ const { logo, text, name, title } = Astro.props;
 		height: 30px;
 		margin-bottom: 16px;
 	}
+
+	@media screen and (max-width: 400px) {
+		.testimonial-card {
+			width: calc(100vw - 16px);
+		}
+
+		.text {
+			font-size: 20px;
+		}
+	}
 </style>
