@@ -14,6 +14,7 @@ import wilco from '../assets/client-logos/Wilco.png';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
+import hero from '../assets/hero.jpg';
 
 const results = [
 	{
@@ -71,7 +72,7 @@ const results = [
 		<Testimonials />
 		<section class="section" id="team">
 			<div>
-				<img src="team.png"/>
+				<img src="/team.png"/>
 				<h3>Join us</h3>
 				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest B2B tech companies.</p>
 				<LinkButton href="https://job.westraycommunications.com" openInNewWindow={true}>See open positions</LinkButton>
@@ -139,7 +140,7 @@ const results = [
 	}
 
 	.hero {
-		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-image.jpeg);
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-22.jpg);
 		background-size: cover;
 		height: 100vh;
 		display: flex;
