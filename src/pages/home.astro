@@ -101,7 +101,10 @@ const results = [
 		}
 	});
 
-	window.imgNumber = 2;
+	const start = parseInt(window.location.hash.replace('#', ''));
+	window.imgNumber = start || 2;
+	const hero = document.querySelector('.hero');
+	hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
 	document.addEventListener('keydown', (e) => {
 		const hero = document.querySelector('.hero');
 		if (e.key === 'ArrowRight') {
