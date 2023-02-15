@@ -72,7 +72,7 @@ const results = [
 		<Testimonials />
 		<section class="section" id="team">
 			<div>
-				<img src="/team.png"/>
+				<img src="/hero-23.jpg"/>
 				<h3>Join us</h3>
 				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest B2B tech companies.</p>
 				<LinkButton href="https://job.westraycommunications.com" openInNewWindow={true}>See open positions</LinkButton>
@@ -101,20 +101,20 @@ const results = [
 		}
 	});
 
-	const start = parseInt(window.location.hash.replace('#', ''));
-	window.imgNumber = start || 2;
-	const hero = document.querySelector('.hero');
-	hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
-	document.addEventListener('keydown', (e) => {
-		const hero = document.querySelector('.hero');
-		if (e.key === 'ArrowRight') {
-			window.imgNumber = (window.imgNumber + 1) % 36;
-		} else if (e.key === 'ArrowLeft') {
-			window.imgNumber = (window.imgNumber - 1) % 36;
-		}
-		window.location.hash = window.imgNumber;
-		hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
-	});
+	// const start = parseInt(window.location.hash.replace('#', ''));
+	// window.imgNumber = start || 2;
+	// const hero = document.querySelector('.hero');
+	// hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
+	// document.addEventListener('keydown', (e) => {
+	// 	const hero = document.querySelector('.hero');
+	// 	if (e.key === 'ArrowRight') {
+	// 		window.imgNumber = (window.imgNumber + 1) % 36;
+	// 	} else if (e.key === 'ArrowLeft') {
+	// 		window.imgNumber = (window.imgNumber - 1) % 36;
+	// 	}
+	// 	window.location.hash = window.imgNumber;
+	// 	hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
+	// });
 </script>
 
 <style>
@@ -155,7 +155,7 @@ const results = [
 	}
 
 	.hero {
-		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-2.jpg);
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-32.jpg);
 		background-size: cover;
 		height: 100vh;
 		display: flex;
@@ -249,6 +249,8 @@ const results = [
 
 	#team img {
 		width: 100%;
+		border-radius: 32px 32px 0 0;
+		position: relative;
 	}
 
 	#team .desc-text {
@@ -287,6 +289,7 @@ const results = [
 
 		#clients .logos {
 			gap: 16px;
+			justify-content: center;
 		}
 
 		.clients-content-wrapper :global(a) {
