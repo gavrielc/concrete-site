@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import cbs from '../assets/publication-logos/cbs.png';
 import forbes from '../assets/publication-logos/forbes.png';
 import buildots from '../assets/client-logos/Buildots.webp';
+import mit from '../assets/publication-logos/mit.png';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.png';
@@ -14,26 +14,25 @@ import wilco from '../assets/client-logos/Wilco.png';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
-import hero from '../assets/hero.jpg';
 
 const results = [
 	{
-		url: 'https://techcrunch.com/2023/01/18/quantum-machines-continues-to-grow-in-spite-of-economic-uncertainity/',
-		logo: techcrunch,
-		date: 'January 18, 2023',
-		title: 'Quantum Machines continues to grow in spite of economic uncertainity'
-	},
-	{
-		url: 'https://www.cbsnews.com/atlanta/video/the-breakdown-looking-at-the-future-of-building-construction/#x',
-		logo: cbs,
-		date: 'December 27, 2022',
-		title: 'The Breakdown: Looking at the future of building construction'
-	},
-	{
-		url: 'https://www.forbes.com/sites/adrianbridgwater/2022/12/06/israeli-software-engineering-start-up-creates-simulation-training-quests/',
+		url: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
 		logo: forbes,
-		date: 'December 6, 2022',
-		title: 'Israeli Software Engineering Start-Up Creates Simulation Training ‘Quests’'
+		date: 'February 16, 2023',
+		title: 'What ChatGPT And Generative AI Mean For Your Business?'
+	},
+	{
+		url: 'https://www.technologyreview.com/2023/02/16/1068695/chatgpt-chatbot-battle-search-microsoft-bing-google/',
+		logo: mit,
+		date: 'February 16, 2023',
+		title: 'The ChatGPT-fueled battle for search is bigger than Microsoft or Google'
+	},
+	{
+		url: 'https://techcrunch.com/2023/02/01/gem-security-wants-to-secure-your-cloud-infrastructure-raises-11m/',
+		logo: techcrunch,
+		date: 'February 1, 2023',
+		title: 'Gem Security wants to secure your cloud infrastructure, raises $11M'
 	},
 ];
 
