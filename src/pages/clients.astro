@@ -87,7 +87,7 @@ const clients = [
 ---
 
 <Layout title="Our clients | Public Relations for serious tech companies | concrete.media">
-    <Header/>
+    <Header />
     <section class="header">
         <h3>The most dynamic B2B tech companies turn to Concrete to promote them globally.</h3>
         <p class="desc-text">We specialize in maximizing the coverage for your big announcements and in proactively creating continuous results between the big stories.</p>
@@ -132,5 +132,11 @@ const clients = [
         justify-content: center;
         flex-shrink: 0;
     }
+
+    @media screen and (max-width: 1050px) {
+        .header {
+            max-width: 90%;
+        }
+	}
 
 </style>
