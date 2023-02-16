@@ -1,29 +1,346 @@
 ---
-import Layout from "../layouts/Layout.astro";
----
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ResultCard from '../components/ResultCard.astro';
+import techcrunch from '../assets/publication-logos/techcrunch.png';
+import cbs from '../assets/publication-logos/cbs.png';
+import forbes from '../assets/publication-logos/forbes.png';
+import buildots from '../assets/client-logos/Buildots.webp';
+import ox from '../assets/client-logos/OX.svg';
+import pinecone from '../assets/client-logos/Pinecone.svg';
+import qm from '../assets/client-logos/QM.png';
+import runai from '../assets/client-logos/Runai.svg';
+import wilco from '../assets/client-logos/Wilco.png';
+import Footer from '../components/Footer.astro';
+import Testimonials from '../components/Testimonials.astro';
+import LinkButton from '../components/LinkButton.astro';
+import hero from '../assets/hero.jpg';
 
-<Layout title="Coming soon | concrete.media">
-    <div>
-        <img class="hero-logo" src="/concrete-media.svg" />
-        <h2>coming soon.</h2>
-    </div>
+const results = [
+	{
+		url: 'https://techcrunch.com/2023/01/18/quantum-machines-continues-to-grow-in-spite-of-economic-uncertainity/',
+		logo: techcrunch,
+		date: 'January 18, 2023',
+		title: 'Quantum Machines continues to grow in spite of economic uncertainity'
+	},
+	{
+		url: 'https://www.cbsnews.com/atlanta/video/the-breakdown-looking-at-the-future-of-building-construction/#x',
+		logo: cbs,
+		date: 'December 27, 2022',
+		title: 'The Breakdown: Looking at the future of building construction'
+	},
+	{
+		url: 'https://www.forbes.com/sites/adrianbridgwater/2022/12/06/israeli-software-engineering-start-up-creates-simulation-training-quests/',
+		logo: forbes,
+		date: 'December 6, 2022',
+		title: 'Israeli Software Engineering Start-Up Creates Simulation Training ‘Quests’'
+	},
+];
+
+---
+<Layout title="Public Relations for serious tech companies | concrete.media">
+	<Header class="home-sticky-header"/>
+	<main>
+		<div class="hero">
+			<Header inline={true} class="home-inline-header"/>
+			<img class="hero-logo" src="/concrete-media.svg" />
+			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
+		</div>
+		<section class="section" id="clients">
+			<div class='clients-content-wrapper'>
+				<h3>The most dynamic B2B tech companies turn to Concrete to promote them globally.</h3>
+				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
+			</div>
+			<div class="logos">
+				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots}/></a>
+				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm}/></a>
+				<a class="client" href="https://trywilco.com/" target="_blank"><img src={wilco}/></a>
+				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone}/></a>
+				<a class="client" href="https://ox.security/" target="_blank"><img src={ox}/></a>
+				<a class="client" href="https://run.ai/" target="_blank"><img src={runai}/></a>
+			</div>
+		</section>
+		<section class="section" id="results">
+			<ul>
+				{results.map(r => <ResultCard articleUrl={r.url} date={r.date} headline={r.title} logo={r.logo}/>)}
+			</ul>
+			<div class="results-desc">
+				<h3>Media coverage that makes an impact</h3>
+				<p class="desc-text">We specialize in maximizing the media coverage for your big announcements and in proactively creating continuous results between the major stories.</p>
+			</div>
+		</section>
+		<Testimonials />
+		<section class="section" id="team">
+			<div>
+				<img src="/hero-23.jpg"/>
+				<h3>Join us</h3>
+				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest B2B tech companies.</p>
+				<LinkButton href="https://job.westraycommunications.com" openInNewWindow={true}>See open positions</LinkButton>
+			</div>
+		</section>
+		<Footer />
+	</main>
 </Layout>
 
-<style>
-    div {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: #7022FB;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+<script is:inline>
+	document.addEventListener('scroll', () => {
+		const inlineHeader = document.querySelector('.home-inline-header');
+		if (inlineHeader.getBoundingClientRect().bottom < 0) {
+			document.querySelector('.home-sticky-header').classList.add('visible');
+			window.visible = true;
+		} else if (window.visible) {
+			document.querySelector('.home-sticky-header').classList.remove('visible');
+			window.visible = false;
+			document.querySelector('.home-sticky-header').classList.add('invisible');
+		}
+	});
 
-    img {
-        width: 90vw;
-    }
+	document.addEventListener('animationend', (e) => {
+		if (e.animationName === 'fade-out') {
+			document.querySelector('.home-sticky-header').classList.remove('invisible');
+		}
+	});
+
+	// const start = parseInt(window.location.hash.replace('#', ''));
+	// window.imgNumber = start || 2;
+	// const hero = document.querySelector('.hero');
+	// hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
+	// document.addEventListener('keydown', (e) => {
+	// 	const hero = document.querySelector('.hero');
+	// 	if (e.key === 'ArrowRight') {
+	// 		window.imgNumber = (window.imgNumber + 1) % 36;
+	// 	} else if (e.key === 'ArrowLeft') {
+	// 		window.imgNumber = (window.imgNumber - 1) % 36;
+	// 	}
+	// 	window.location.hash = window.imgNumber;
+	// 	hero.style.backgroundImage = `linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-${window.imgNumber}.jpg)`;
+	// });
+</script>
+
+<style>
+
+	.home-sticky-header {
+		display: none;
+		top: 0;
+		position: fixed !important;
+		z-index: 10;
+	}
+
+	.home-sticky-header.visible {
+		display: flex;
+		animation: fade-in 0.3s;
+	}
+
+	.home-sticky-header.invisible {
+		display: flex;
+		animation: fade-out 0.3s;
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-out {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+	.hero {
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-32.jpg);
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	.hero-logo {
+		width: calc(100vw - 224px);
+		max-width: 1215px;
+	}
+
+	.hero h2 {
+		text-align: center;
+		margin: 32px  auto 74px;
+		letter-spacing: -0.01em;
+	}
+
+	#clients {
+		margin-top: 14px;
+	}
+
+	#clients h3 {
+		margin: 0 0 32px;
+	}
+
+	.clients-content-wrapper {
+		flex: 1 1 40%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	#clients .logos {
+		flex: 1 1 60%;
+		display: flex;
+		flex-wrap: wrap;
+    	gap: 24px 32px;
+		max-width: fit-content;
+		justify-content: flex-end;
+	}
+
+	.client {
+		background: #FAF8F5;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 176px;
+		height: 72px;
+	}
+
+	.client img {
+		max-width: 130px;
+		height: 37px;
+	}
+
+	#results :global(.result-card:nth-of-type(2)) {
+		margin-left: 74px;
+	}
+
+	#results :global(.result-card:nth-of-type(3)) {
+		margin-left: 148px;
+	}
+
+	#results ul {
+		margin-right: 64px;
+	}
+
+	.results-desc {
+		max-width: 37vw;
+    	margin-left: auto;
+	}
+
+	#team {
+		padding: 0 112px 96px;
+		max-width: 1215px;
+		margin: auto;
+	}
+
+	#team > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		flex-grow: 1;
+		box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12), 0px 8px 16px rgba(0, 0, 0, 0.12);
+		border-radius: 32px;
+		padding-bottom: 48px;
+	}
+
+	#team img {
+		width: 100%;
+		border-radius: 32px 32px 0 0;
+		position: relative;
+	}
+
+	#team .desc-text {
+		max-width: 40vw;
+	}
+
+	#team h3 {
+		margin-bottom: 0;
+	}
+
+	@media screen and (max-width: 1050px) {
+		section {
+			flex-direction: column;
+		}
+
+		h2, h3, p {
+			text-align: center;
+		}
+
+		.hero {
+			padding: 32px 16px;
+		}
+
+		.hero-logo {
+			width: 100%;
+		}
+
+		.hero h2 {
+			margin: 24px 0 48px;
+		}
+
+		#clients {
+			position: relative;
+		}
+
+		#clients .logos {
+			gap: 16px;
+			justify-content: center;
+		}
+
+		.clients-content-wrapper :global(a) {
+			position: absolute;
+			bottom: -32px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+		}
+
+		#results {
+			flex-direction: column-reverse;
+		}
+
+		#results :global(.result-card) {
+			margin-left: 0 !important;
+			width: 100%;
+		}
+
+		#results ul {
+			margin-right: 0;
+		}
+
+		.results-desc {
+			margin-left: 0;
+			max-width: 100%;
+		}
+
+		#team {
+			padding: 42px 16px;
+		}
+
+		#team .desc-text {
+			max-width: 100%;
+		}
+
+		#team p {
+			margin: 24px 16px;
+		}
+	}
+
+	@media screen and (max-width: 400px) {
+		.client {
+			flex: 0 0 160px;
+		}
+	}
+
+	@media screen and (max-width: 367px) {
+		.client {
+			flex: 0 0 156px;
+		}
+	}
+
 </style>
