@@ -10,13 +10,13 @@ export interface Props {
 const { logo, headline, date, articleUrl, publication } = Astro.props;
 ---
 
-<div class="result-card">
+<li class="result-card">
 	<a href={articleUrl} target="_blank">
 		<img src={logo} alt={`${publication} logo`}/>
 		<h4>{headline}</h4>
 		<p>{date}</p>
 	</a>
-</div>
+</li>
 <style>
 	.result-card {
 		border: 1px solid rgba(255, 255, 255, 0.2);
@@ -26,6 +26,7 @@ const { logo, headline, date, articleUrl, publication } = Astro.props;
 		background: white;
 		width: 488px;
 		margin-bottom: 30px;
+		display: block;
 	}
 
 	a {
