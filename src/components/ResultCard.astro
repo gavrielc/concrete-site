@@ -4,14 +4,15 @@ export interface Props {
 	headline: string;
 	date: string;
 	articleUrl: string;
+	publication: string;
 }
 
-const { logo, headline, date, articleUrl } = Astro.props;
+const { logo, headline, date, articleUrl, publication } = Astro.props;
 ---
 
 <div class="result-card">
 	<a href={articleUrl} target="_blank">
-		<img src={logo}/>
+		<img src={logo} alt={`${publication} logo`}/>
 		<h4>{headline}</h4>
 		<p>{date}</p>
 	</a>

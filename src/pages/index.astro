@@ -19,18 +19,21 @@ const results = [
 	{
 		url: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
 		logo: forbes,
+		publication: 'Forbes',
 		date: 'February 16, 2023',
 		title: 'What ChatGPT And Generative AI Mean For Your Business?'
 	},
 	{
 		url: 'https://www.technologyreview.com/2023/02/16/1068695/chatgpt-chatbot-battle-search-microsoft-bing-google/',
 		logo: mit,
+		publication: 'MIT Technology Review',
 		date: 'February 16, 2023',
 		title: 'The ChatGPT-fueled battle for search is bigger than Microsoft or Google'
 	},
 	{
 		url: 'https://techcrunch.com/2023/02/01/gem-security-wants-to-secure-your-cloud-infrastructure-raises-11m/',
 		logo: techcrunch,
+		publication: 'TechCrunch',
 		date: 'February 1, 2023',
 		title: 'Gem Security wants to secure your cloud infrastructure, raises $11M'
 	},
@@ -42,7 +45,7 @@ const results = [
 	<main>
 		<div class="hero">
 			<Header inline={true} class="home-inline-header"/>
-			<img class="hero-logo" src="/concrete-media.svg" alt="The concrete media team in their Tel Aviv, Israel office doing PR for B2B tech companies." />
+			<img class="hero-logo" src="/concrete-media.svg" alt="Concrete Media logo" />
 			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
 		</div>
 		<section class="section" id="clients">
@@ -51,17 +54,17 @@ const results = [
 				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
 			</div>
 			<div class="logos">
-				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots}/></a>
-				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm}/></a>
-				<a class="client" href="https://trywilco.com/" target="_blank"><img src={wilco}/></a>
-				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone}/></a>
-				<a class="client" href="https://ox.security/" target="_blank"><img src={ox}/></a>
-				<a class="client" href="https://run.ai/" target="_blank"><img src={runai}/></a>
+				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots} alt="buildots logo"/></a>
+				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm} alt="qm logo"/></a>
+				<a class="client" href="https://trywilco.com/" target="_blank"><img src={wilco} alt="wilco logo"/></a>
+				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone} alt="pinecone logo"/></a>
+				<a class="client" href="https://ox.security/" target="_blank"><img src={ox} alt="ox security logo"/></a>
+				<a class="client" href="https://run.ai/" target="_blank"><img src={runai} alt="run:ai logo"/></a>
 			</div>
 		</section>
 		<section class="section" id="results">
 			<ul>
-				{results.map(r => <ResultCard articleUrl={r.url} date={r.date} headline={r.title} logo={r.logo}/>)}
+				{results.map(r => <ResultCard articleUrl={r.url} date={r.date} headline={r.title} logo={r.logo} publication={r.publication}/>)}
 			</ul>
 			<div class="results-desc">
 				<h3>Media coverage that makes an impact</h3>
