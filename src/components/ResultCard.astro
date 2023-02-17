@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components';
+
 export interface Props {
 	logo: string;
 	headline: string;
@@ -12,7 +14,7 @@ const { logo, headline, date, articleUrl, publication } = Astro.props;
 
 <li class="result-card">
 	<a href={articleUrl} target="_blank">
-		<img src={logo} alt={`${publication} logo`}/>
+		<Image src={logo} alt={`${publication} logo`}/>
 		<h4>{headline}</h4>
 		<p>{date}</p>
 	</a>
@@ -54,5 +56,6 @@ const { logo, headline, date, articleUrl, publication } = Astro.props;
 
 	img {
 		height: 30px;
+		width: 60px;
 	}
 </style>

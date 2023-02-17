@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components';
+
 export interface Props {
 	logo: string;
 	text: string;
@@ -11,7 +13,7 @@ const { logo, text, name, title } = Astro.props;
 
 <div class="testimonial-card">
 	<p class="text">{text}</p>
-	<img src={logo} alt={`Headshot of ${name}, ${title}`}/>
+	<Image src={logo} alt={`Headshot of ${name}, ${title}`}/>
 	<p class="name">{name}</p>
 	<p class="title">{title}</p>
 </div>
@@ -58,6 +60,7 @@ const { logo, text, name, title } = Astro.props;
 
 	img {
 		height: 30px;
+		width: 60px;
 		margin-bottom: 16px;
 	}
 

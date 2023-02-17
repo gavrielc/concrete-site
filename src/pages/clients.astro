@@ -33,6 +33,7 @@ import frontegg from '../assets/client-logos/Frontegg.svg';
 import nexar from '../assets/client-logos/Nexar.png';
 import storai from '../assets/client-logos/Storai.png';
 import datree from '../assets/client-logos/Datree.png';
+import { Image } from "@astrojs/image/components";
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/'},
@@ -93,7 +94,7 @@ const clients = [
         <p class="desc-text">Our clients represent the dynamic companies you know and respect in a range of industries. We are proud to be partners in their success.</p>
     </section>
     <section class="logos">
-        {clients.map(({logo, site, name}) => <a href={site} target="_blank"><img class="logo" src={logo} alt={`${name} logo`}></a>)}
+        {clients.map(({logo, site, name}) => <a href={site} target="_blank"><Image class="logo" src={logo} alt={`${name} logo`} /></a>)}
     </section>
     <Testimonials />
     <Footer />
