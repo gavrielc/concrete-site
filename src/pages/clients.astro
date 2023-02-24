@@ -3,87 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Layout from "../layouts/Layout.astro";
-import qm from '../assets/client-logos/QM.png';
-import buildots from '../assets/client-logos/Buildots.webp';
-import ox from '../assets/client-logos/Ox.png';
-import pinecone from '../assets/client-logos/Pinecone.svg';
-import runai from '../assets/client-logos/Runai.svg';
-import wilco from '../assets/client-logos/Wilco.png';
-import aporia from '../assets/client-logos/Aporia.svg';
-import cipia from '../assets/client-logos/Cipia.png';
-import spectral from '../assets/client-logos/Spectral.svg';
-import imperium from '../assets/client-logos/Imperium Jets.png';
-import armo from '../assets/client-logos/Armo.png';
-import port from '../assets/client-logos/Port.svg';
-import aidoc from '../assets/client-logos/Aidoc.png';
-import scopio from '../assets/client-logos/Scopio.png';
-import lumigo from '../assets/client-logos/Lumigo.svg';
-import privya from '../assets/client-logos/Privya.svg';
-import arnica from '../assets/client-logos/Arnica.webp';
-import rookout from '../assets/client-logos/Rookout.png';
-import sayata from '../assets/client-logos/Sayata.png';
-import imperva from '../assets/client-logos/Imperva.png';
-import swimm from '../assets/client-logos/Swimm.svg';
-import explorium from '../assets/client-logos/Explorium.svg';
-import jit from '../assets/client-logos/Jit.svg';
-import tatio from '../assets/client-logos/Tatio.png';
-import safeguard from '../assets/client-logos/Safeguard.png';
-import masterschool from '../assets/client-logos/Masterschool.webp';
-import frontegg from '../assets/client-logos/Frontegg.svg';
-import nexar from '../assets/client-logos/Nexar.png';
-import storai from '../assets/client-logos/Storai.png';
-import datree from '../assets/client-logos/Datree.png';
-
-const clients = [
-    {logo: jit, name: "jit", site: 'https://www.jit.io/'},
-    {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/'},
-    {logo: ox, name: "ox", site: 'https://www.ox.security/'},
-    {logo: runai, name: "runai", site: 'https://www.run.ai/'},
-    {logo: aidoc, name: "aidoc", site: 'https://www.aidoc.com/'},
-    {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/'},
-    {logo: aporia, name: "aporia", site: 'https://www.aporia.com/'},
-    {logo: buildots, name: "buildots", site: 'https://buildots.com/'},
-    {logo: cipia, name: "cipia", site: 'https://cipia.com/'},
-    {logo: armo, name: "armo", site: 'https://www.armosec.io/'},
-    {logo: wilco, name: "wilco", site: 'https://www.trywilco.com/'},
-    {logo: scopio, name: "scopio", site: 'https://scopiolabs.com/'},
-    {logo: lumigo, name: "lumigo", site: 'https://www.lumigo.io/'},
-    {logo: privya, name: "privya", site: 'https://privya.ai/'},
-    {logo: arnica, name: "arnica", site: 'https://www.arnica.io/'},
-    {logo: rookout, name: "rookout", site: 'https://www.rookout.com/'},
-    {logo: sayata, name: "sayata", site: 'https://www.sayatalabs.com/'},
-    {logo: imperva, name: "imperva", site: 'https://www.imperva.com/'},
-    {logo: swimm, name: "swimm", site: 'https://swimm.io/'},
-    {logo: explorium, name: "explorium", site: 'https://www.explorium.ai/'},
-    {logo: tatio, name: "tatio", site: 'https://www.tatio.io/'},
-    {logo: port, name: "port", site: 'https://www.getport.io/'},
-    {logo: safeguard, name: "safeguard", site: 'https://en.safeguard.co.il/'},
-    {logo: masterschool, name: "masterschool", site: 'https://www.masterschool.com/'},
-    {logo: frontegg, name: "frontegg", site: 'https://frontegg.com/'},
-    {logo: nexar, name: "nexar", site: 'https://www.getnexar.com/'},
-    {logo: storai, name: "storai", site: 'https://stor.ai/'},
-    {logo: datree, name: "datree", site: 'https://www.datree.io/'},
-    {logo: spectral, name: "spectral", site: 'https://spectralops.io/'},
-    {logo: imperium, name: "imperium", site: 'https://www.imperiumjets.com/'},
-    // {logo: , site: 'https://www.voominsurance.com/'},
-    // {logo: , site: 'https://www.dia-analysis.com/'},
-    // {logo: , site: 'https://www.salto.io/'},
-    // {logo: , site: 'https://www.cybermdx.com/'},
-    // {logo: , site: 'https://www.animaapp.com/'},
-    // {logo: , site: 'https://www.ubeya.com/'},
-    // {logo: , site: 'https://www.stoke.world/'},
-    // {logo: , site: 'https://www.thoughtleaders.io/'},
-    // {logo: , site: 'https://www.puresec.io/'},
-    // {logo: , site: 'https://puls.com/'},
-    // {logo: , site: 'https://www.xtype.io/'},
-    // {logo: , site: 'https://www.dbmaestro.com/'},
-    // {logo: , site: 'https://www.dig.security/'},
-    // {logo: , site: 'https://craft.io/'},
-    // {logo: , site: 'https://lightrun.com/'},
-    // {logo: , site: 'https://oz-code.com/'},
-    // {logo: , site: 'https://www.medminder.com/'}
-    // {logo: , site: 'https://brightsec.com/'},
-];
+import Clients from "../components/Clients";
 ---
 
 <Layout title="Our clients | Public Relations for serious tech companies | concrete.media">
@@ -93,7 +13,7 @@ const clients = [
         <p class="desc-text">Our clients represent the dynamic companies you know and respect in a range of industries. We are proud to be partners in their success.</p>
     </section>
     <section class="logos">
-        {clients.map(({logo, site, name}) => <a href={site} target="_blank"><img class="logo" src={logo} alt={`${name} logo`}></a>)}
+        <Clients client:idle/>
     </section>
     <Testimonials />
     <Footer />
@@ -110,19 +30,80 @@ const clients = [
         margin: 0;
     }
 
-    .logo {
+    .logos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logos :global(.tags) {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        align-self: flex-start;
+        margin: 0 calc(50% - 608px) 40px;
+    }
+
+    @media screen and (max-width: 1439px) {
+        .logos :global(.tags) {
+            margin: 0 calc(50% - 452px) 40px;
+        }
+	}
+
+    @media screen and (max-width: 1127px) {
+        .logos :global(.tags) {
+            margin: 0 calc(50% - 296px) 40px;
+        }
+	}
+
+    @media screen and (max-width: 1049px) {
+        .logos :global(.tags) {
+            margin: 0 calc(50% - 452px) 40px;
+        }
+	}
+
+    @media screen and (max-width: 935px) {
+        .logos :global(.tags) {
+            margin: 0 max(calc(50% - 296px), 0px) 40px;
+        }
+	}
+
+    @media screen and (max-width: 623px) {
+        .logos :global(.tags) {
+            justify-content: center;
+        }
+	}
+
+
+
+    .logos :global(.tag) {
+        padding: 16px 24px;
+        border-radius: 16px;
+        border: none;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 13px;
+        color: #7022FB;
+        background: #F8FAFC;
+        cursor: pointer;
+    }
+
+    .logos :global(.tag.active) {
+        background: rgba(112, 34, 251, 0.2);
+    }
+
+    .logos :global(.logo) {
         max-height: 92px;
         max-width: 184px;
     }
 
-    .logos {
+    .logos :global(.logos-wrapper) {
         display: flex;
         gap: 36px 32px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .logos a {
+    .logos :global(a) {
         width: 280px;
         height: 140px;
         background: #F8FAFC;
