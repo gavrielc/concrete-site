@@ -9,7 +9,7 @@ import wilco from '../assets/client-logos/Wilco.png';
 import aporia from '../assets/client-logos/Aporia.svg';
 import cipia from '../assets/client-logos/Cipia.png';
 import spectral from '../assets/client-logos/Spectral.svg';
-import imperium from '../assets/client-logos/Imperium Jets.png';
+import anyword from '../assets/client-logos/Anyword.svg';
 import armo from '../assets/client-logos/Armo.png';
 import port from '../assets/client-logos/Port.svg';
 import aidoc from '../assets/client-logos/Aidoc.png';
@@ -52,6 +52,7 @@ const clients = [
     {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML']},
     {logo: armo, name: "armo", site: 'https://www.armosec.io/', tags: ['dev', 'security']},
     {logo: wilco, name: "wilco", site: 'https://www.trywilco.com/', tags: ['dev']},
+    {logo: anyword, name: "anyword", site: 'https://anyword.com/', tags: ['AI & ML']},
     {logo: scopio, name: "scopio", site: 'https://scopiolabs.com/', tags: ['medtech']},
     {logo: lumigo, name: "lumigo", site: 'https://www.lumigo.io/', tags: ['dev', 'saas']},
     {logo: privya, name: "privya", site: 'https://privya.ai/', tags: ['security']},
@@ -61,25 +62,24 @@ const clients = [
     {logo: imperva, name: "imperva", site: 'https://www.imperva.com/', tags: ['security', 'saas']},
     {logo: swimm, name: "swimm", site: 'https://swimm.io/', tags: ['dev', 'saas']},
     {logo: explorium, name: "explorium", site: 'https://www.explorium.ai/', tags: ['AI & ML', 'saas']},
-    {logo: tatio, name: "tatio", site: 'https://www.tatio.io/', tags: ['saas']},
+    {logo: tatio, name: "tatio", site: 'https://www.tatio.io/', tags: ['saas', 'hr']},
     {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
-    {logo: safeguard, name: "safeguard", site: 'https://en.safeguard.co.il/', tags: []},
-    {logo: masterschool, name: "masterschool", site: 'https://www.masterschool.com/', tags: []},
+    {logo: safeguard, name: "safeguard", site: 'https://en.safeguard.co.il/', tags: ['AI & ML']},
+    {logo: masterschool, name: "masterschool", site: 'https://www.masterschool.com/', tags: ['dev']},
     {logo: frontegg, name: "frontegg", site: 'https://frontegg.com/', tags: ['dev', 'saas']},
     {logo: nexar, name: "nexar", site: 'https://www.getnexar.com/', tags: ['AI & ML']},
     {logo: storai, name: "storai", site: 'https://stor.ai/', tags: []},
     {logo: datree, name: "datree", site: 'https://www.datree.io/', tags: ['security', 'dev', 'saas']},
     {logo: spectral, name: "spectral", site: 'https://spectralops.io/', tags: ['dev', 'security', 'saas']},
-    {logo: dig, site: 'https://www.dig.security/', tags: ['security', 'saas']},
-    {logo: voom, site: 'https://www.voominsurance.com/', tags: ['insurtech']},
-    {logo: dia, site: 'https://www.dia-analysis.com/', tags: ['medtech']},
-    {logo: cybermdx, site: 'https://www.cybermdx.com/', tags: ['security', 'medtech']},
-    {logo: anima, site: 'https://www.animaapp.com/', tags: ['dev', 'saas']},
-    {logo: ubeya, site: 'https://www.ubeya.com/', tags: ['saas']},
-    {logo: stoke, site: 'https://www.stoke.world/', tags: ['saas']},
-    {logo: imperium, name: "imperium", site: 'https://www.imperiumjets.com/', tags: []},
-    {logo: lightrun, site: 'https://lightrun.com/', tags: ['dev', 'saas']},
-    {logo: bright, site: 'https://brightsec.com/', tags: ['dev', 'security', 'saas']},
+    {logo: dig, name: 'dig', site: 'https://www.dig.security/', tags: ['security', 'saas']},
+    {logo: voom, name: 'voom', site: 'https://www.voominsurance.com/', tags: ['insurtech']},
+    {logo: dia, name: 'dia', site: 'https://www.dia-analysis.com/', tags: ['medtech']},
+    {logo: cybermdx, name: 'cybermdx', site: 'https://www.cybermdx.com/', tags: ['security', 'medtech']},
+    {logo: anima, name: 'anima', site: 'https://www.animaapp.com/', tags: ['dev', 'saas']},
+    {logo: ubeya, name: 'ubeya', site: 'https://www.ubeya.com/', tags: ['saas', 'hr']},
+    {logo: stoke, name: 'stoke', site: 'https://www.stoke.world/', tags: ['saas', 'hr']},
+    {logo: lightrun, name: 'lightrun', site: 'https://lightrun.com/', tags: ['dev', 'saas']},
+    {logo: bright, name: 'bright', site: 'https://brightsec.com/', tags: ['dev', 'security', 'saas']},
 ];
 
 const tags = [
@@ -88,8 +88,7 @@ const tags = [
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'Medtech', value: 'medtech'},
     {name: 'B2B SaaS', value: 'saas'},
-    {name: 'Insurtech', value: 'insurtech'},
-    {name: 'Deep Tech', value: 'deep tech'}
+    {name: 'HR Tech', value: 'hr'}
 ];
 
 export default function Clients() {
