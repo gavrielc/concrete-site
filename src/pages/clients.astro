@@ -1,35 +1,21 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import Testimonials from "../components/Testimonials.astro";
-import Layout from "../layouts/Layout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 import Clients from "../components/Clients";
 ---
 
-<Layout title="Our clients | Public Relations for serious tech companies | concrete.media">
-    <Header />
-    <section class="header">
-        <h3>Client Experience</h3>
-        <p class="desc-text">Our clients represent the dynamic companies you know and respect in a range of industries. We are proud to be partners in their success.</p>
-    </section>
+<PageLayout
+    pageTitle="Our clients | Public Relations for serious tech companies | concrete.media"
+    title="Client Experience"
+    subTitle="Our clients represent the dynamic companies you know and respect in a range of industries. We are proud to be partners in their success."
+>
     <section class="logos">
         <Clients client:idle/>
     </section>
     <Testimonials />
-    <Footer />
-</Layout>
+</PageLayout>
 
 <style>
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 75%;
-    }
-
-    .header h3 {
-        margin: 0;
-    }
-
     .logos {
         display: flex;
         flex-direction: column;
@@ -43,19 +29,7 @@ import Clients from "../components/Clients";
         margin: 0 calc(50% - 608px) 40px;
     }
 
-    @media screen and (max-width: 1439px) {
-        .logos :global(.tags) {
-            margin: 0 calc(50% - 452px) 40px;
-        }
-	}
-
-    @media screen and (max-width: 1127px) {
-        .logos :global(.tags) {
-            margin: 0 calc(50% - 296px) 40px;
-        }
-	}
-
-    @media screen and (max-width: 1049px) {
+    @media screen and (max-width: 1311px) {
         .logos :global(.tags) {
             margin: 0 calc(50% - 452px) 40px;
         }
@@ -113,11 +87,4 @@ import Clients from "../components/Clients";
         justify-content: center;
         flex-shrink: 0;
     }
-
-    @media screen and (max-width: 1050px) {
-        .header {
-            max-width: 90%;
-        }
-	}
-
 </style>

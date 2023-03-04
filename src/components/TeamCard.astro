@@ -1,0 +1,110 @@
+---
+import linkedinLogo from '../assets/icons/linkedinFull.svg';
+import twitterLogo from '../assets/icons/twitterFull.svg';
+
+export interface Props {
+	name: string;
+	title: string;
+	bio: string;
+	image: string;
+	linkedin: string;
+	twitter?: string;
+}
+
+const { name, title, bio, image, linkedin, twitter} = Astro.props;
+---
+
+<div class="team-card">
+	<img class="headshot" src={image} alt={`Headshot of ${name}, ${title} at Concrete Media`}/>
+	<div class="details-wrapper">
+		<p class="name">{name}</p>
+		<p class="title">{title}</p>
+		<p class="bio">{bio}</p>
+		<div class="socials-wrapper">
+			<a href={linkedin} target="_blank"><img class='social-icon' src={linkedinLogo} alt="linkedin logo"></a>
+			{twitter && <a href={twitter} target="_blank"><img class='social-icon' src={twitterLogo} alt="twitter logo"></a>}
+		</div>
+	</div>
+</div>
+
+<style>
+	.team-card {
+		display: flex;
+		gap: 32px;
+		flex: 1 1 556px;
+		position: relative;
+	}
+
+	.headshot {
+		height: 516px;
+		width: 280px;
+		object-fit: cover;
+		border-radius: 16px;
+	}
+
+	.team-card::before {
+		content: '';
+		height: 516px;
+		width: 280px;
+		background: url(/gradient.png);
+		position: absolute;
+		border-radius: 16px;
+		background-size: cover;
+	}
+
+	.name {
+		font-family: 'Outfit';
+		font-weight: 600;
+		font-size: 24px;
+		color: #7022FB;
+		margin: 0 0 8px;
+	}
+
+	.title {
+		font-family: 'Inter';
+		font-weight: 600;
+		font-size: 16px;
+		color: rgba(0, 0, 0, 0.6);
+		margin: 0 0 22px;
+	}
+
+	.bio {
+		font-family: 'Inter';
+		font-size: 14px;
+		line-height: 145%;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	.details-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.socials-wrapper {
+		margin-top: auto;
+	}
+
+	@media screen and (max-width: 575px) {
+		.team-card {
+			flex-direction: column;
+		}
+
+		.bio {
+			order: 1;
+		}
+
+		.headshot {
+			aspect-ratio: 1 / 1;
+			width: 100%;
+			height: initial;
+			object-position: top;
+		}
+
+		.team-card::before {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			height: auto;
+			background-size: cover;
+		}
+	}
+</style>

@@ -1,0 +1,102 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import lazer from "../assets/team/Lazer.jpg";
+import jeremy from "../assets/team/Jeremy.jpg";
+import daria from "../assets/team/Daria.jpg";
+import zack from "../assets/team/Zack.jpg";
+import kevin from "../assets/team/Kevin.jpg";
+import rivka from "../assets/team/Rivka.jpg";
+import gavriel from "../assets/team/Gavriel.jpg";
+import netanya from "../assets/team/Netanya.jpg";
+import TeamCard from "../components/TeamCard.astro";
+
+const team = [
+    {
+        name: 'Lazer Cohen',
+        title: 'Founder and CEO',
+        bio: 'Lazer is the CEO of Concrete Media which he founded in 2014. Originally from Brooklyn, New York, his entry into PR is worthy of a feature story of its own. He co-founded a PR firm in New York in 2009 before moving with his wife to Israel and starting Concrete. He believes a good PR pro is a reporter’s best asset and his decade-long relationships with some of the top tech reporters attest to that belief. Lazer and his wife have four children — who are much more interested in their mom’s floral design business than whatever it is their dad does on the computer.',
+        image: lazer,
+        linkedin: 'https://www.linkedin.com/in/lazercohen/',
+        twitter: 'https://twitter.com/Lazer_Cohen'
+    },
+    {
+        name: 'Jeremy Seidman',
+        title: 'New Media Manager',
+        bio: 'Jeremy is a New Media Manager at Concrete Media. Originally from New Jersey, Jeremy made aliya in September 2022 with his dog Cassie. He has extensive experience in researching new markets/methodologies, data analysis, client service, and process improvement. Jeremy previously worked for Intercontinental Exchange (ICE) for seven years in their commodities operations group and puts his business and technical acumen to use for some of the most exciting companies operating in the Israeli start-up scene.',
+        image: jeremy,
+        linkedin: 'https://www.linkedin.com/in/jseidman30/'
+    },
+    {
+        name: 'Daria Khodorovsky',
+        title: 'Account Executive',
+        bio: 'Daria is an Account Executive for Concrete Media. A journalism graduate of Moscow State University, she lived in Rome for eight years before moving to Israel where she promptly fell in love with Tel Aviv and the Israeli tech environment. She leverages her decade of experience in marketing, corporate communications and content creation to create innovative opportunities for Concrete\'s portfolio of clients. A keen foodie, she recently married her interest in cuisine with her passion for writing by publishing a book on the restaurant culture of Rome.',
+        image: daria,
+        linkedin: 'https://www.linkedin.com/in/dariakhodorovskaya/',
+        twitter: 'https://twitter.com/DKhodorovsky'
+    },
+    {
+        name: 'Kevin Capon Goldszmidt',
+        title: 'Senior Account Manager',
+        bio: 'Kevin is a Senior PR Account Manager at Concrete Media. Originally from Mexico City, he emigrated to Israel in 2012 and earned his BA in Psychology at IDC Herzliya. A huge football and gaming fan, he is also passionate about learning about new technologies and the latest developments in areas like AI, Cybersecurity, and software development. “In PR you will always keep learning, and at Concrete you work surrounded by the brightest minds in Israel and probably the world, so there is no better place to learn”.',
+        image: kevin,
+        linkedin: 'https://www.linkedin.com/in/kcgoldszmidt/',
+        twitter: 'https://twitter.com/KCGoldszmidt'
+    },
+    {
+        name: 'Zack Rothbart',
+        title: 'Senior Strategist',
+        bio: 'Zack Rothbart is Senior Strategist at Concrete Media. He most recently served as international spokesman, senior communications adviser and English content manager at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Originally from the Philadelphia area, Zack has a BA in History and Middle Eastern Studies from Tulane University and an MA in Environmental Studies from Tel Aviv University, which he completed after serving in the IDF’s Liaison Corps.',
+        image: zack,
+        linkedin: 'https://www.linkedin.com/in/zack-rothbart-37913b62/',
+        twitter: 'https://twitter.com/ZackRothbart'
+    },
+    {
+        name: 'Netanya Stein',
+        title: 'Senior Account Executive',
+        bio: 'Netanya is a Senior Account Executive at Concrete Media. She made the move to Israel from New Jersey in the midst of the pandemic and worked at a global PR firm where she developed a keen interest in medtech and artificial intelligence. Netanya has a BA in English/PR and a passion for writing and forging relationships with clients and the media.',
+        image: netanya,
+        linkedin: 'https://www.linkedin.com/in/netanya-stein/'
+    },
+    {
+        name: 'Gavriel Cohen',
+        title: 'Tech Consultant and Account Manager',
+        bio: 'Gavriel is an Account Manager and technical consultant at Concrete Media. Originally from New York City, he did a year and half voluntary service in the IDF as a combat soldier in 2009, before emigrating to Israel in 2013. He studied at Tel Aviv University, where he earned a BSc with honors in Computer Science and Physics. He worked as a Software Developer and Team Leader at Wix for 6 years. With a keen interest in the intersection between Tech and Media, he closely follows trends in Machine Learning, CyberSecurity and Software Development.',
+        image: gavriel,
+        linkedin: 'https://www.linkedin.com/in/gavrielco/',
+        twitter: 'https://twitter.com/Gavriel_Cohen'
+    },
+    {
+        name: 'Rivka Richler',
+        title: 'New Media Manager',
+        bio: 'Rivka is a new media manager at Concrete Media. While working on her BA in marketing, Rivka practiced her new knowledge on a jewelry brand she created. She has been working in the marketing field since 2019 and her responsibilities have included strategic content writing and social media management. She’s energized by hearing about different businesses and how people are solving problems with new technology. After being in love with Israel from a distance for many years, Rivka took the leap in 2022 and moved to Jerusalem with her husband.',
+        image: rivka,
+        linkedin: 'https://www.linkedin.com/in/rivka-richler-6287a4bb/'
+    },
+];
+
+
+---
+
+<PageLayout
+    pageTitle="Our team | Public Relations for serious tech companies | concrete.media"
+    title="There are six PR professionals for every reporter, which means your PR firm has to be elite to get the earned media results you need to rise above the noise."
+    subTitle={`Concrete Media is fluent in technology and media. Our team includes coders and journalists: we get what you're doing and know how to communicate it to reporters.
+    <br>
+    We become an extension of your team, absorbing every development in your company and the industry so we can proactively advise you on the stories that will get you in the news.
+    <br>
+    Our media contacts are built on years of collaboration and mutual respect. The result is the maximum coverage for your big events and continued media exposure in between. 
+    `}
+>
+    <section class="team">
+        {team.map((e) => <TeamCard {...e}/>)}
+    </section>
+</PageLayout>
+
+<style>
+    .team {
+        flex-wrap: wrap;
+        gap: 44px 64px;
+    }
+
+
+</style>
