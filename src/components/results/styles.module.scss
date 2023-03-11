@@ -21,6 +21,10 @@
     .tag.active {
         background: rgba(112, 34, 251, 0.2);
     }
+
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+    }
 }
 
 .resultsWrapper {
