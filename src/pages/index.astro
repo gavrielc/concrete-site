@@ -17,25 +17,25 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
-		url: 'https://techcrunch.com/2023/02/28/gable-series-a/',
+		articleUrl: 'https://techcrunch.com/2023/02/28/gable-series-a/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
 		date: 'February 28, 2023',
-		title: 'Gable raises the roof (and $12M) for better remote working options'
+		headline: 'Gable raises the roof (and $12M) for better remote working options'
 	},
 	{
-		url: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
+		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
 		logo: forbes,
 		publication: 'Forbes',
 		date: 'February 16, 2023',
-		title: 'What ChatGPT And Generative AI Mean For Your Business?'
+		headline: 'What ChatGPT And Generative AI Mean For Your Business?'
 	},
 	{
-		url: 'https://www.technologyreview.com/2023/02/16/1068695/chatgpt-chatbot-battle-search-microsoft-bing-google/',
+		articleUrl: 'https://www.technologyreview.com/2023/02/16/1068695/chatgpt-chatbot-battle-search-microsoft-bing-google/',
 		logo: mit,
 		publication: 'MIT Technology Review',
 		date: 'February 16, 2023',
-		title: 'The ChatGPT-fueled battle for search is bigger than Microsoft or Google'
+		headline: 'The ChatGPT-fueled battle for search is bigger than Microsoft or Google'
 	},
 ];
 
@@ -64,7 +64,7 @@ const results = [
 		</section>
 		<section class="section" id="results">
 			<ul>
-				{results.map(r => <ResultCard articleUrl={r.url} date={r.date} headline={r.title} logo={r.logo} publication={r.publication}/>)}
+				{results.map(r => <ResultCard {...r}/>)}
 			</ul>
 			<div class="results-desc">
 				<h3>Media coverage that makes an impact</h3>

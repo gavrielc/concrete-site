@@ -1,0 +1,21 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Results from "../components/results";
+---
+
+<PageLayout
+    pageTitle="Media results | Public Relations for serious tech companies | Concrete Media"
+    title="Media Results"
+    subTitle="Our clients represent the dynamic companies you know and respect in a range of industries. We are proud to be partners in their success."
+>
+    <section class="results">
+        <Results client:idle/>
+    </section>
+</PageLayout>
+
+<style>
+    .results {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
