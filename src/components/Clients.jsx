@@ -39,6 +39,11 @@ import lightrun from '../assets/client-logos/Lightrun.png';
 import stoke from '../assets/client-logos/Stoke.svg';
 import ubeya from '../assets/client-logos/Ubeya.svg';
 import voom from '../assets/client-logos/Voom.png';
+import gable from '../assets/client-logos/Gable.svg';
+import qwak from '../assets/client-logos/Qwak.svg';
+import gem from '../assets/client-logos/Gem.png';
+import axiom from '../assets/client-logos/Axiom.svg';
+import akeyless from '../assets/client-logos/Akeyless.svg';
 
 const clients = [
     {logo: jit, name: "jit", site: 'https://www.jit.io/', tags: ['security', 'dev', 'saas']},
@@ -56,18 +61,23 @@ const clients = [
     {logo: scopio, name: "scopio", site: 'https://scopiolabs.com/', tags: ['medtech']},
     {logo: lumigo, name: "lumigo", site: 'https://www.lumigo.io/', tags: ['dev', 'saas']},
     {logo: privya, name: "privya", site: 'https://privya.ai/', tags: ['security']},
+    {logo: gable, name: "gable", site: 'https://www.gable.to/', tags: ['saas', 'hr']},
     {logo: arnica, name: "arnica", site: 'https://www.arnica.io/', tags: ['security', 'dev', 'saas']},
     {logo: rookout, name: "rookout", site: 'https://www.rookout.com/', tags: ['dev', 'saas']},
     {logo: sayata, name: "sayata", site: 'https://www.sayatalabs.com/', tags: ['insurtech']},
     {logo: imperva, name: "imperva", site: 'https://www.imperva.com/', tags: ['security', 'saas']},
+    {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev']},
     {logo: swimm, name: "swimm", site: 'https://swimm.io/', tags: ['dev', 'saas']},
     {logo: explorium, name: "explorium", site: 'https://www.explorium.ai/', tags: ['AI & ML', 'saas']},
     {logo: tatio, name: "tatio", site: 'https://www.tatio.io/', tags: ['saas', 'hr']},
     {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
+    {logo: gem, name: "gem", site: 'https://www.gem.security/', tags: ['dev', 'security', 'saas']},
     {logo: safeguard, name: "safeguard", site: 'https://en.safeguard.co.il/', tags: ['AI & ML']},
     {logo: masterschool, name: "masterschool", site: 'https://www.masterschool.com/', tags: ['dev']},
     {logo: frontegg, name: "frontegg", site: 'https://frontegg.com/', tags: ['dev', 'saas']},
     {logo: nexar, name: "nexar", site: 'https://www.getnexar.com/', tags: ['AI & ML']},
+    {logo: axiom, name: "axiom", site: 'https://axiom.security/', tags: ['security', 'saas']},
+    {logo: qwak, name: "qwak", site: 'https://www.qwak.com/', tags: ['AI & ML', 'saas']},
     {logo: storai, name: "storai", site: 'https://stor.ai/', tags: []},
     {logo: datree, name: "datree", site: 'https://www.datree.io/', tags: ['security', 'dev', 'saas']},
     {logo: spectral, name: "spectral", site: 'https://spectralops.io/', tags: ['dev', 'security', 'saas']},
