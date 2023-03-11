@@ -1,6 +1,6 @@
 import techcrunch from '../../assets/publication-logos/techcrunch.png';
 import forbes from '../../assets/publication-logos/forbes.webp';
-import mit from '../../assets/publication-logos/mit.webp';
+import mit from '../../assets/publication-logos/mit.png';
 import vb from '../../assets/publication-logos/vb.svg';
 import techtarget from '../../assets/publication-logos/techtarget.png';
 import ctech from '../../assets/publication-logos/ctech.png';
@@ -14,13 +14,33 @@ import sdxcentral from '../../assets/publication-logos/sdxcentral.svg';
 import securityboulevard from '../../assets/publication-logos/security-boulevard.png';
 import containerjournal from '../../assets/publication-logos/container-journal.png';
 import scmagazine from '../../assets/publication-logos/scmagazine.png';
-import computerweekly from '../../assets/publication-logos/computerweekly.jpeg';
+import computerweekly from '../../assets/publication-logos/computer-weekly.png';
 import fastcompany from '../../assets/publication-logos/fast-company.png';
 import cbs from '../../assets/publication-logos/cbs.png';
 import newscientist from '../../assets/publication-logos/new-scientist.png';
 import register from '../../assets/publication-logos/register.png';
+import bi from '../../assets/publication-logos/BI.png';
+import infoq from '../../assets/publication-logos/infoq.svg';
+import cso from '../../assets/publication-logos/cso.png';
+import securityweek from '../../assets/publication-logos/security-week.jpeg';
+import engineering from '../../assets/publication-logos/engineering.jpeg';
+import infoage from '../../assets/publication-logos/information-age.png';
+import blocksfiles from '../../assets/publication-logos/blocksfiles.png';
+import helpnetsec from '../../assets/publication-logos/helpnet.png';
+import builtin from '../../assets/publication-logos/built-in.png';
+import israel21c from '../../assets/publication-logos/israel21c.svg';
+import insidebigdata from '../../assets/publication-logos/insidebigdata.png';
+
 
 export default [
+	{
+		articleUrl: 'https://www.csoonline.com/article/3689811/open-letter-demands-owasp-overhaul-warns-of-mass-project-exodus.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'March 6, 2023',
+		headline: 'Open letter demands OWASP overhaul, warns of mass project exodus',
+        tags: ['dev', 'security', 'saas']
+	},
 	{
 		articleUrl: 'https://www.fastcompany.com/90848766/most-innovative-companies-medical-devices-2023',
 		logo: fastcompany,
@@ -46,6 +66,14 @@ export default [
         tags: ['highlights', 'AI & ML', 'saas']
 	},
 	{
+		articleUrl: 'https://www.helpnetsecurity.com/2023/03/01/developers-extension-security-team/',
+		logo: helpnetsec,
+		publication: 'Help Net Security',
+		date: 'March 1, 2023',
+		headline: 'Developers can make a great extension of your security team',
+        tags: ['security', 'dev']
+	},
+	{
 		articleUrl: 'https://techcrunch.com/2023/02/28/gable-series-a/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
@@ -54,12 +82,44 @@ export default [
         tags: ['highlights', 'hr', 'saas']
 	},
 	{
+		articleUrl: 'https://www.businessinsider.com/pitch-deck-gable-raise-seriesa-funding-flexible-hybrid-work-2023-2',
+		logo: bi,
+		publication: 'Business Insider',
+		date: 'February 28, 2023',
+		headline: 'The Pitch Deck Gable Used to Raise $12 Million in Series a Funding',
+        tags: ['highlights', 'hr', 'saas']
+	},
+	{
+		articleUrl: 'https://www.builtinsf.com/2023/02/28/gable-raises-16m-hiring',
+		logo: builtin,
+		publication: 'Built In',
+		date: 'February 28, 2023',
+		headline: 'Gable Secures $16M to Keep Distributed Employees Connected',
+        tags: ['hr', 'saas']
+	},
+	{
+		articleUrl: 'https://blocksandfiles.com/2023/02/28/pinecone-long-term-memory-for-ai/',
+		logo: blocksfiles,
+		publication: 'Blocks & Files',
+		date: 'February 28, 2023',
+		headline: 'Pinecone: Long-term memory for AI',
+        tags: ['AI & ML', 'dev']
+	},
+	{
 		articleUrl: 'https://www.darkreading.com/dr-tech/how-to-reduce-code-risk-using-pipelineless-security',
 		logo: darkreading,
 		publication: 'DarkReading',
 		date: 'February 27, 2023',
 		headline: 'How to Reduce Code Risk Using Pipelineless Security',
         tags: ['security', 'dev']
+	},
+	{
+		articleUrl: 'https://www.engineering.com/story/ai-takes-on-the-built-world',
+		logo: engineering,
+		publication: 'Engineering.com',
+		date: 'February 23, 2023',
+		headline: 'AI Takes on the Built World',
+        tags: ['AI & ML']
 	},
 	{
 		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
@@ -91,7 +151,31 @@ export default [
 		publication: 'Computer Weekly',
 		date: 'February 14, 2023',
 		headline: 'OSC&R framework to stop supply chain attacks in the wild',
-        tags: ['highlights', 'dev', 'security']
+        tags: ['highlights', 'dev', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2023/02/software-supply-chain-framework/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'February 14, 2023',
+		headline: 'Software Supply Chain Framework OSC&R Created to Help Mitigate Security Threats',
+        tags: ['dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.information-age.com/industry-first-software-supply-chain-security-framework-launched-123501581/',
+		logo: infoage,
+		publication: 'Information Age',
+		date: 'February 13, 2023',
+		headline: 'Industry-first software supply chain security framework launched',
+        tags: ['dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.israel21c.org/flight-simulator-puts-fun-in-upskilling-for-developers/',
+		logo: israel21c,
+		publication: 'ISRAEL21c',
+		date: 'January 29, 2023',
+		headline: '‘Flight simulator’ puts fun in upskilling for developers',
+        tags: ['dev']
 	},
 	{
 		articleUrl: 'https://www.calcalistech.com/ctechnews/article/98yjyqqb1',
@@ -99,7 +183,7 @@ export default [
 		publication: 'CTech',
 		date: 'February 12, 2023',
 		headline: 'Extreme Makover: “Generative AI is the most exciting step in AI”',
-        tags: ['AI & ML']
+        tags: ['AI & ML', 'saas']
 	},
 	{
 		articleUrl: 'https://venturebeat.com/security/armo-shows-how-chatgpt-can-help-protect-kubernetes/',
@@ -107,7 +191,7 @@ export default [
 		publication: 'VentureBeat',
 		date: 'February 7, 2023',
 		headline: 'ARMO shows how ChatGPT can help protect Kubernetes ',
-        tags: ['highlights', 'security']
+        tags: ['highlights', 'security', 'dev']
 	},
 	{
 		articleUrl: 'https://www.sdxcentral.com/articles/news/armo-integrates-chatgpt-for-cloud-native-security/2023/02/',
@@ -115,7 +199,7 @@ export default [
 		publication: 'SDXCentral',
 		date: 'February 7, 2023',
 		headline: 'Armo Integrates ChatGPT for Cloud-Native Security',
-        tags: ['security']
+        tags: ['security', 'dev']
 	},
 	{
 		articleUrl: 'https://www.darkreading.com/application-security/armo-integrates-chatgpt-to-help-users-secure-kubernetes',
@@ -131,7 +215,7 @@ export default [
 		publication: 'TheNewStack',
 		date: 'February 6, 2023',
 		headline: 'When Losing $10,000 to Cryptojacking Is a Good Investment',
-        tags: ['dev']
+        tags: ['dev', 'security']
 	},
 	{
 		articleUrl: 'https://www.theregister.com/2023/02/05/supply_chain_security_efforts/',
@@ -139,7 +223,7 @@ export default [
 		publication: 'The Register',
 		date: 'February 5, 2023',
 		headline: 'Have we learned anything from SolarWinds supply chain attacks?',
-        tags: ['highlights', 'security', 'dev']
+        tags: ['highlights', 'security', 'dev', 'saas']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/02/01/gem-security-wants-to-secure-your-cloud-infrastructure-raises-11m/',
@@ -147,7 +231,15 @@ export default [
 		publication: 'TechCrunch',
 		date: 'February 1, 2023',
 		headline: 'Gem Security wants to secure your cloud infrastructure, raises $11M',
-        tags: ['highlights', 'dev', 'security']
+        tags: ['highlights', 'dev', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.csoonline.com/article/3686575/new-mitre-attandck-like-framework-outlines-software-supply-chain-attack-ttps.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'February 1, 2023',
+		headline: 'New “MITRE ATT&CK-like” framework outlines software supply chain attack TTPs',
+        tags: ['dev', 'security']
 	},
 	{
 		articleUrl: 'https://venturebeat.com/security/gem-security-shows-detection-and-response-key-to-cloud-security-raises-11m/',
@@ -155,7 +247,7 @@ export default [
 		publication: 'VentureBeat',
 		date: 'February 1, 2023',
 		headline: 'Gem Security shows detection and response key to cloud security, raises $11M',
-        tags: ['highlights', 'dev', 'security']
+        tags: ['highlights', 'dev', 'security', 'saas']
 	},
 	{
 		articleUrl: 'https://siliconangle.com/2023/02/01/israeli-cloud-security-startup-gem-security-launches-11m-funding/',
@@ -163,7 +255,23 @@ export default [
 		publication: 'SiliconAngle',
 		date: 'February 1, 2023',
 		headline: 'Israeli cloud security startup Gem Security launches with $11M in funding',
+        tags: ['dev', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/gem-security-gets-11-million-seed-investment-for-cloud-incident-response-platform/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'February 1, 2023',
+		headline: 'Gem Security Gets $11 Million Seed Investment for Cloud Incident Response Platform',
         tags: ['dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.israel21c.org/israeli-ai-construction-technology-helps-build-uk-hospital/',
+		logo: israel21c,
+		publication: 'ISRAEL21c',
+		date: 'January 29, 2023',
+		headline: 'Israeli AI construction technology helps build UK hospital',
+        tags: ['AI & ML']
 	},
 	{
 		articleUrl: 'https://securityboulevard.com/2023/01/kubernetes-security-and-misconfigurations-with-jimmy-mesta/',
@@ -179,7 +287,7 @@ export default [
 		publication: 'Container Journal',
 		date: 'January 26, 2023',
 		headline: 'Why You Shouldn’t Use a Jump Server to Protect Kubernetes’ API',
-        tags: ['security']
+        tags: ['security', 'dev']
 	},
 	{
 		articleUrl: 'https://www.labiotech.eu/interview/scopio-future-telehematology/',
@@ -195,7 +303,7 @@ export default [
 		publication: 'TheNewStack',
 		date: 'January 25, 2023',
 		headline: 'How Jit Builds a Platform Engineering Mindset in the Cloud',
-        tags: ['dev', 'security']
+        tags: ['dev', 'security', 'saas']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/01/18/quantum-machines-continues-to-grow-in-spite-of-economic-uncertainity/',
@@ -212,6 +320,22 @@ export default [
 		date: 'January 17, 2023',
 		headline: 'Kubescape accepted into Cloud Native Computing Foundation',
         tags: ['security']
+	},
+	{
+		articleUrl: 'https://www.israel21c.org/how-to-recruit-underrepresented-candidates-to-the-workforce/',
+		logo: israel21c,
+		publication: 'ISRAEL21c',
+		date: 'January 17, 2023',
+		headline: 'How To Recruit Underrepresented Candidates To The Workforce',
+        tags: ['hr', 'saas']
+	},
+	{
+		articleUrl: 'https://insidebigdata.com/2023/01/17/the-insidebigdata-impact-50-list-for-q1-2023/',
+		logo: insidebigdata,
+		publication: 'Inside Big Data',
+		date: 'January 17, 2023',
+		headline: 'The insideBIGDATA IMPACT 50 List for Q1 2023',
+        tags: ['AI & ML']
 	},
 	{
 		articleUrl: 'https://www.computerweekly.com/blog/Open-Source-Insider/Armo-goes-CNCF-sandbox-wider-platform-offering-emerges',
@@ -251,7 +375,7 @@ export default [
 		publication: 'TechTarget',
 		date: 'January 9, 2023',
 		headline: '10 top AI and machine learning trends for 2023',
-        tags: ['highlights', 'AI & ML']
+        tags: ['AI & ML']
 	},
 	{
 		articleUrl: 'https://www.newscientist.com/article/2353610-ai-could-predict-hurricanes-or-rogue-waves-from-minimal-data/',
@@ -260,6 +384,14 @@ export default [
 		date: 'January 6, 2023',
 		headline: 'AI could predict hurricanes or rogue waves from minimal data',
         tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2023/01/kubernetes-security-armo/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'January 8, 2023',
+		headline: 'Report Finds Heavy Use of Open-Source Solutions for Kubernetes Security',
+        tags: ['dev', 'security']
 	},
 	{
 		articleUrl: 'https://www.cbsnews.com/atlanta/video/the-breakdown-looking-at-the-future-of-building-construction/#x',
