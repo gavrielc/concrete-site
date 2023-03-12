@@ -147,7 +147,7 @@ export default [
 		publication: 'VentureBeat',
 		date: 'February 15, 2023',
 		headline: 'What are the dos and don’ts for success with low-code/no-code platforms?',
-        tags: ['highlights', 'AI & ML', 'dev']
+        tags: ['AI & ML', 'dev']
 	},
 	{
 		articleUrl: 'https://www.computerweekly.com/news/365531024/OSCR-framework-to-stop-supply-chain-attacks-in-the-wild',
@@ -155,7 +155,7 @@ export default [
 		publication: 'Computer Weekly',
 		date: 'February 14, 2023',
 		headline: 'OSC&R framework to stop supply chain attacks in the wild',
-        tags: ['highlights', 'dev', 'security', 'saas']
+        tags: ['dev', 'security', 'saas']
 	},
 	{
 		articleUrl: 'https://www.infoq.com/news/2023/02/software-supply-chain-framework/',
@@ -230,6 +230,14 @@ export default [
         tags: ['highlights', 'security', 'dev', 'saas']
 	},
 	{
+		articleUrl: 'https://venturebeat.com/security/gem-security-shows-detection-and-response-key-to-cloud-security-raises-11m/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'February 1, 2023',
+		headline: 'Gem Security shows detection and response key to cloud security, raises $11M',
+        tags: ['highlights', 'dev', 'security', 'saas']
+	},
+	{
 		articleUrl: 'https://techcrunch.com/2023/02/01/gem-security-wants-to-secure-your-cloud-infrastructure-raises-11m/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
@@ -244,14 +252,6 @@ export default [
 		date: 'February 1, 2023',
 		headline: 'New “MITRE ATT&CK-like” framework outlines software supply chain attack TTPs',
         tags: ['dev', 'security']
-	},
-	{
-		articleUrl: 'https://venturebeat.com/security/gem-security-shows-detection-and-response-key-to-cloud-security-raises-11m/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'February 1, 2023',
-		headline: 'Gem Security shows detection and response key to cloud security, raises $11M',
-        tags: ['highlights', 'dev', 'security', 'saas']
 	},
 	{
 		articleUrl: 'https://siliconangle.com/2023/02/01/israeli-cloud-security-startup-gem-security-launches-11m-funding/',
@@ -355,7 +355,7 @@ export default [
 		publication: 'Computer Weekly',
 		date: 'January 16, 2023',
 		headline: 'Armo goes CNCF sandbox, wider platform offering emerges',
-        tags: ['highlights', 'dev', 'security']
+        tags: ['dev', 'security']
 	},
 	{
 		articleUrl: 'https://healthcare-digital.com/technology-and-ai/itai-hayut-ceo-of-scopio-labs-on-ai-blood-cancer',
