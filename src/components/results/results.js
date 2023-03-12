@@ -30,6 +30,10 @@ import helpnetsec from '../../assets/publication-logos/helpnet.png';
 import builtin from '../../assets/publication-logos/built-in.png';
 import israel21c from '../../assets/publication-logos/israel21c.svg';
 import insidebigdata from '../../assets/publication-logos/insidebigdata.png';
+import ft from '../../assets/publication-logos/ft.jpeg';
+import wired from '../../assets/publication-logos/wired.svg';
+import bloomberg from '../../assets/publication-logos/bloomberg.png';
+import wsj from '../../assets/publication-logos/wsj.png';
 
 
 export default [
@@ -274,6 +278,14 @@ export default [
         tags: ['AI & ML']
 	},
 	{
+		articleUrl: 'https://www.ft.com/content/c9a3fe9c-8fda-4be5-b440-957a2dd5cd5f',
+		logo: ft,
+		publication: 'Financial Times',
+		date: 'January 27, 2022',
+		headline: 'Israeli tech sector warns of economic hit from Netanyahu’s hardline policies',
+        tags: ['highlights']
+	},
+	{
 		articleUrl: 'https://securityboulevard.com/2023/01/kubernetes-security-and-misconfigurations-with-jimmy-mesta/',
 		logo: securityboulevard,
 		publication: 'Security Boulevard',
@@ -449,5 +461,29 @@ export default [
 		headline: 'Not under the microscope: Scopio Labs transforms blood testing',
         tags: ['medtech']
 	},
-	
+	{
+		articleUrl: 'https://www.wired.com/story/hottest-startups-in-tel-aviv-2022/',
+		logo: wired,
+		publication: 'Wired',
+		date: 'October 8, 2022',
+		headline: 'The Hottest Startups in Tel Aviv',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.bloomberg.com/opinion/articles/2022-08-01/facebook-youtube-s-problems-can-t-be-hidden-in-ai-s-black-box',
+		logo: bloomberg,
+		publication: 'Bloomberg',
+		date: 'August 1, 2022',
+		headline: 'Social Media Can No Longer Hide Its Problems in a Black Box',
+        tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.wsj.com/articles/aidoc-an-ai-healthcare-startup-nabs-110-million-expansion-round-11655373604',
+		logo: wsj,
+		publication: 'WSJ',
+		date: 'June 16, 2022',
+		headline: 'Aidoc, an AI Healthcare Startup, Nabs $110 Million Expansion Round',
+        tags: ['highlights', 'medtech']
+	},
+
 ];
