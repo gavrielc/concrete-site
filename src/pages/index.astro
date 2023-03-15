@@ -305,6 +305,8 @@ const results = [
 
 		#results {
 			flex-direction: column-reverse;
+			position: relative;
+			margin-bottom: 50px;
 		}
 
 		#results :global(.result-card) {
@@ -319,6 +321,14 @@ const results = [
 		.results-desc {
 			margin-left: 0;
 			max-width: 100%;
+		}
+
+		.results-desc :global(a) {
+			position: absolute;
+			bottom: -12px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
 		}
 
 		#team {
