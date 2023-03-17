@@ -34,9 +34,44 @@ import ft from '../../assets/publication-logos/ft.jpeg';
 import wired from '../../assets/publication-logos/wired.svg';
 import bloomberg from '../../assets/publication-logos/bloomberg.png';
 import wsj from '../../assets/publication-logos/wsj.png';
+import autoworld from '../../assets/publication-logos/auto-world.svg';
+import infoworld from '../../assets/publication-logos/info-world.png';
+import adex from '../../assets/publication-logos/adex.png';
 
 
 export default [
+	{
+		articleUrl: 'https://www.adexchanger.com/privacy/this-privacy-tech-startup-wants-to-crack-the-code-on-code/',
+		logo: adex,
+		publication: 'Ad Exchanger',
+		date: 'March 15, 2023',
+		headline: 'This Privacy Tech Startup Wants To Crack The Code On … Code',
+        tags: ['dev', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.infoworld.com/article/3689701/how-to-explain-the-machine-learning-life-cycle-to-business-execs.html',
+		logo: infoworld,
+		publication: 'InfoWorld',
+		date: 'March 13, 2023',
+		headline: 'How to explain the machine learning life cycle to business execs',
+        tags: ['dev', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.automotiveworld.com/articles/dash-cam-data-to-feed-digital-twin-of-roadways/',
+		logo: autoworld,
+		publication: 'Automotive World',
+		date: 'March 9, 2023',
+		headline: 'Dash cam data to feed digital twin of roadways',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/how-nlp-is-turbocharging-business-intelligence/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 8, 2023',
+		headline: 'How NLP is turbocharging business intelligence',
+        tags: ['highlights', 'dev', 'AI & ML', 'saas']
+	},
 	{
 		articleUrl: 'https://www.csoonline.com/article/3689811/open-letter-demands-owasp-overhaul-warns-of-mass-project-exodus.html',
 		logo: cso,
