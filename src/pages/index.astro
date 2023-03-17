@@ -5,6 +5,7 @@ import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
 import forbes from '../assets/publication-logos/forbes.webp';
 import buildots from '../assets/client-logos/Buildots.webp';
+import fastcompany from '../assets/publication-logos/fast-company.png';
 import mit from '../assets/publication-logos/mit.webp';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
@@ -16,12 +17,19 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
+{
+		articleUrl: 'https://www.fastcompany.com/90848766/most-innovative-companies-medical-devices-2023',
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'March 2, 2023',
+		headline: 'The 10 most innovative medical device companies of 2023',
+	},
 	{
-		articleUrl: 'https://techcrunch.com/2023/02/28/gable-series-a/',
+		articleUrl: 'https://techcrunch.com/2023/03/01/qwak-raises-12m-for-its-mlops-platform/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
-		date: 'February 28, 2023',
-		headline: 'Gable raises the roof (and $12M) for better remote working options'
+		date: 'March 1, 2023',
+		headline: 'Qwak raises $12M for its MLOps platform'
 	},
 	{
 		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
@@ -63,7 +71,7 @@ const results = [
 			</div>
 		</section>
 		<section class="section" id="results">
-			<ul>
+			<ul class:list={[{four: results.length == 4}]}>
 				{results.map(r => <ResultCard {...r}/>)}
 			</ul>
 			<div class="results-desc">
@@ -120,7 +128,7 @@ const results = [
 	// });
 </script>
 
-<style>
+<style lang='scss'>
 
 	.home-sticky-header {
 		display: none;
@@ -217,22 +225,59 @@ const results = [
 		height: 37px;
 	}
 
-	#results :global(.result-card:nth-of-type(2)) {
-		margin-left: 74px;
+	#results {
+		:global(.result-card:nth-of-type(2)) {
+			margin-left: 74px;
+		}
+
+		:global(.result-card:nth-of-type(3)) {
+			margin-left: 148px;
+		}
+
+		ul {
+			margin-right: 64px;
+		}
+
+		.results-desc {
+			max-width: 37vw;
+			margin-left: auto;
+
+			.desc-text {
+				margin-bottom: 48px;
+			}
+		}
+
+
+
+		.four {
+
+			@media screen and (min-width: 1051px) {
+				:global(h4) {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+
+			:global(.result-card:nth-of-type(2)) {
+				margin-left: 49px;
+			}
+
+			:global(.result-card:nth-of-type(3)) {
+				margin-left: 98px;
+			}
+
+			:global(.result-card:nth-of-type(4)) {
+				margin-left: 147px;
+			}
+
+			:global(.result-card) {
+				margin-bottom: 20px;
+			}
+		} 
 	}
 
-	#results :global(.result-card:nth-of-type(3)) {
-		margin-left: 148px;
-	}
 
-	#results ul {
-		margin-right: 64px;
-	}
-
-	.results-desc {
-		max-width: 37vw;
-    	margin-left: auto;
-	}
 
 	#team {
 		padding: 0 112px 96px;
@@ -307,28 +352,33 @@ const results = [
 			flex-direction: column-reverse;
 			position: relative;
 			margin-bottom: 50px;
-		}
 
-		#results :global(.result-card) {
-			margin-left: 0 !important;
-			width: 100%;
-		}
+			:global(.result-card) {
+				margin-left: 0 !important;
+				width: 100%;
+			}
 
-		#results ul {
-			margin-right: 0;
-		}
+			ul {
+				margin-right: 0;
+			}
 
-		.results-desc {
-			margin-left: 0;
-			max-width: 100%;
-		}
+			.results-desc {
+				margin-left: 0;
+				max-width: 100%;
+			}
 
-		.results-desc :global(a) {
-			position: absolute;
-			bottom: -12px;
-			right: 0;
-			left: 0;
-			margin: 0 auto;
+			.results-desc .desc-text {
+				margin-bottom: revert;
+			}
+
+			.results-desc :global(a) {
+				position: absolute;
+				bottom: -12px;
+				right: 0;
+				left: 0;
+				margin: 0 auto;
+			}
+
 		}
 
 		#team {
