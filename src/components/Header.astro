@@ -1,36 +1,73 @@
 ---
+import linkedin from '../assets/icons/linkedin.svg';
+import twitter from '../assets/icons/twitter.svg';
+import facebook from '../assets/icons/facebook.svg';
+
 export interface Props {
 	inline?: boolean;
 	class?: string;
 }
 
 const {inline = false, class: className} = Astro.props;
+const type = inline ? 'inline' : 'regular';
 
 ---
-<header class:list={[inline ? 'inline' : 'regular', className]}>
-	<a href="/">{inline ? <img class="inline-logo" src="/logo.svg" alt="Concrete PR Agency logo"/> : <img class="logo" src="/concrete-media-logo.svg" alt="Concrete PR Agency logo" />}</a>
+<header class:list={[type, className]}>
+	<a href="/"><img class="inline-logo" src="/logo.svg" alt="Concrete PR Agency logo"/><img class="logo" src="/concrete-media-logo.svg" alt="Concrete PR Agency logo" /></a>
 	<a href="/">Home</a>
 	<a href="/clients">Clients</a>
 	<a href="/team">Team</a>
 	<a href="/results">Coverage</a>
 	<a href="mailto:info@concrete.media?subject=[PR Inquiry]" target="_blank">Contact</a>
+	<div class='hamburger'>
+		<div/>
+		<div/>
+		<div/>
+	</div>
+	<div class="social-wrapper">
+        <a href="https://www.linkedin.com/company/concrete-media/" target="_blank"><img class='social-icon' src={linkedin} alt="linkedin logo"></a>
+        <a href="https://twitter.com/WestRayPR" target="_blank"><img class='social-icon' src={twitter} alt="twitter logo"></a>
+        <a href="https://www.facebook.com/Concrete.mediaPR" target="_blank"><img class='social-icon' src={facebook} alt="facebook logo"></a>
+    </div>
+	<button class="close-menu"><img src="/x.svg" alt="close mobile menu"/></button>
 </header>
-<style>
+<script is:inline>
+	document.querySelectorAll(`.hamburger`).forEach(h => h.addEventListener('click', () => {
+		document.querySelector(`header.regular`).classList.add('mobile-open');
+	}));
+
+	document.querySelectorAll(`.close-menu`).forEach(h => h.addEventListener('click', () => {
+		document.querySelector(`header.regular`).classList.remove('mobile-open');
+	}));
+</script>
+<style lang="scss">
 	header {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		width: 100vw;
-		column-gap: 24px;
+		gap: 16px 24px;
 		margin-bottom: auto;
 		padding: 32px 112px;
-	}
 
-	header.regular {
-		background: white;
-		position: sticky;
-		top: 0;
-		z-index: 2;
+		.logo {
+			display: none;
+		}
+
+		&.regular {
+			background: white;
+			position: sticky;
+			top: 0;
+			z-index: 2;
+
+			.logo {
+				display: inline;
+			}
+
+			.inline-logo {
+				display: none;
+			}
+		}
 	}
 
 	.inline-logo {
@@ -59,6 +96,18 @@ const {inline = false, class: className} = Astro.props;
 		color: white;
 	}
 
+	.hamburger {
+		display: none;
+	}
+
+	.social-wrapper {
+		display: none;
+	}
+
+	.close-menu {
+		display: none;
+	}
+
 	@media screen and (min-width: 1800px) {
 		header {
 			padding: 32px 202px;
@@ -66,32 +115,97 @@ const {inline = false, class: className} = Astro.props;
 	}
 
 	@media screen and (max-width: 1050px) {
-		.inline a:not(:first-of-type, :last-of-type) {
-			display: none;
-		}
+		header {
 
-		.inline a:last-of-type {
-			border-radius: 50px;
-			padding: 8px 16px;
-			border: 1.5px solid white;
-			width: fit-content;
-		}
+			a:not(:first-of-type) {
+				display: none;
+			}
 
-		header.inline {
-			padding: 0 0 0 24px;
-			width: 100%;
-		}
+			.hamburger {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
 
-		header.regular {
-			padding: 36px 16px 30px;
-        }
+				div {
+					height: 2px;
+					width: 48px;
+					background-color: #7022FB;
+				}
+			}
 
-        header.regular a:not(:first-of-type) {
-            display: none;
-        }
+			&.inline {
+				padding: 0 0 0 24px;
+				width: 100%;
 
-		header.regular img {
-			max-width: 70vw;
+				.hamburger {
+					gap: 16px;
+					
+					div {
+						background-color: white;
+					}
+				}
+			}
+
+			&.regular {
+				padding: 36px 16px 30px;
+
+				img {
+					max-width: 70vw;
+				}
+			}
+
+			&.mobile-open {
+				display: flex;
+				background-color: #7022FB;
+				height: 100vh;
+				animation: none !important;
+				flex-direction: column;
+				align-items: flex-start;
+				padding: 46px 40px;
+
+				.logo {
+					display: none;
+				}
+
+				.inline-logo {
+					display: inline;
+				}
+
+				a {
+					display: inline;
+					color: white;
+					font-family: 'Outfit';
+					font-size: 40px;
+					font-weight: 600;
+
+					&:first-of-type {
+						margin-bottom: auto;
+					}
+				}
+
+				.hamburger {
+					display: none;
+				}
+
+				.social-wrapper {
+					display: flex;
+					gap: 16px;
+
+					.social-icon {
+						height: 24px;
+						width: 24px;
+					}
+				}
+
+				.close-menu {
+					display: inline;
+					background: none;
+					border: none;
+					position: absolute;
+					top: 60px;
+					right: 40px;
+				}
+			}
 		}
 	}
 
