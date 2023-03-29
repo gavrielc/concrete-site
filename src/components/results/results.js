@@ -81,7 +81,7 @@ export default [
 		logo: datanami,
 		publication: 'Datanami',
 		date: 'March 27, 2023',
-		headline: 'In-cabin driver monitoring is the future of both car safety and convenience',
+		headline: 'Vector Databases Emerge to Fill Critical Role in AI',
         tags: ['AI & ML', 'dev', 'saas']
 	},
 	{
