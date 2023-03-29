@@ -37,9 +37,117 @@ import wsj from '../../assets/publication-logos/wsj.png';
 import autoworld from '../../assets/publication-logos/auto-world.svg';
 import infoworld from '../../assets/publication-logos/info-world.png';
 import adex from '../../assets/publication-logos/adex.png';
+import jpost from '../../assets/publication-logos/jpost.svg';
+import datanami from '../../assets/publication-logos/datanami.png';
+import betanews from '../../assets/publication-logos/betanews.png';
+import axios from '../../assets/publication-logos/axios.png';
 
 
 export default [
+	{
+		articleUrl: 'https://techcrunch.com/2023/03/29/leapxpert-raises-22m-to-monitor-employee-chats-for-compliance/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'March 29, 2023',
+		headline: 'LeapXpert raises $22M to monitor employee chats for compliance',
+        tags: ['highlights', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.axios.com/pro/fintech-deals/2023/03/29/leapxpert-nets-22m-to-track-employee-chats-for-compliance',
+		logo: axios,
+		publication: 'Axios',
+		date: 'March 29, 2023',
+		headline: 'LeapXpert nets $22M to track employee chats for compliance',
+        tags: ['highlights', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/leapxpert-banks-22m-funding-to-secure-corporate-messaging-with-consumer-apps/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'March 29, 2023',
+		headline: 'LeapXpert Banks $22M Funding to Secure Corporate Messaging With Consumer Apps',
+        tags: ['security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.builtinnyc.com/2023/03/29/leapxpert-raises-22m-compliant-mobile-messaging',
+		logo: builtin,
+		publication: 'Built In',
+		date: 'March 29, 2023',
+		headline: 'LeapXpert Lands $22M to Make Messaging Apps Compliant for Finance Pros',
+        tags: ['security', 'saas']
+	},
+	{
+		articleUrl: 'https://www.datanami.com/2023/03/27/vector-databases-emerge-to-fill-critical-role-in-ai/',
+		logo: datanami,
+		publication: 'Datanami',
+		date: 'March 27, 2023',
+		headline: 'In-cabin driver monitoring is the future of both car safety and convenience',
+        tags: ['AI & ML', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/5-ways-openais-chatgpt-plugins-could-change-the-ai-game-the-ai-beat/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 27, 2023',
+		headline: '5 ways OpenAI’s ChatGPT plugins could change the AI game | The AI Beat',
+        tags: ['highlights', 'dev', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/03/27/integrating-security-into-the-development-process-qa/',
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'March 27, 2023',
+		headline: 'Integrating security into the development process',
+        tags: ['dev', 'security', 'saas']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/testgpt-a-generative-ai-tool-for-ensuring-code-integrity-is-released-for-beta/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 22, 2023',
+		headline: 'TestGPT, a generative AI tool for ensuring code integrity, is released for beta',
+        tags: ['highlights', 'dev', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/03/22/codiumai-is-using-generative-ai-to-help-developers-build-code-logic-tests-automatically/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'March 22, 2023',
+		headline: 'CodiumAI is using generative AI to help developers build code logic tests automatically',
+        tags: ['highlights', 'dev', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/programming-development/nvidia-quantum-machines-promote-quantum-classical-computing/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 22, 2023',
+		headline: 'Nvidia and Quantum Machines promote quantum-classical computing at GTC',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/03/21/nvidia-teams-up-with-quantum-machines-to-combine-classical-and-quantum-machines/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'March 21, 2023',
+		headline: 'Nvidia teams up with Quantum Machines to combine classical and quantum machines',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.sdxcentral.com/articles/analysis/ai-has-a-long-term-memory-problem-how-to-make-neural-networks-less-forgetful/2023/03/',
+		logo: sdxcentral,
+		publication: 'SDX Central',
+		date: 'March 20, 2023',
+		headline: 'AI Has a Long-Term Memory Problem (How to Make Neural Networks Less Forgetful)',
+        tags: ['AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/business-and-innovation/article-734774',
+		logo: jpost,
+		publication: 'Jerusalem Post',
+		date: 'March 19, 2023',
+		headline: 'In-cabin driver monitoring is the future of both car safety and convenience',
+        tags: ['AI & ML']
+	},
 	{
 		articleUrl: 'https://www.adexchanger.com/privacy/this-privacy-tech-startup-wants-to-crack-the-code-on-code/',
 		logo: adex,

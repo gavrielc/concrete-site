@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import forbes from '../assets/publication-logos/forbes.webp';
+import axios from '../assets/publication-logos/axios.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import fastcompany from '../assets/publication-logos/fast-company.png';
-import mit from '../assets/publication-logos/mit.webp';
+import vb from '../assets/publication-logos/vb.svg';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -17,34 +17,36 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
-{
+	{
+		articleUrl: 'https://www.axios.com/pro/fintech-deals/2023/03/29/leapxpert-nets-22m-to-track-employee-chats-for-compliance',
+		logo: axios,
+		publication: 'Axios',
+		date: 'March 29, 2023',
+		headline: 'LeapXpert nets $22M to track employee chats for compliance'
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/testgpt-a-generative-ai-tool-for-ensuring-code-integrity-is-released-for-beta/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 22, 2023',
+		headline: 'TestGPT, a generative AI tool for ensuring code integrity, is released for beta',
+        tags: ['highlights', 'dev', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/03/21/nvidia-teams-up-with-quantum-machines-to-combine-classical-and-quantum-machines/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'March 21, 2023',
+		headline: 'Nvidia teams up with Quantum Machines to combine classical and quantum machines',
+        tags: ['highlights']
+	},
+	{
 		articleUrl: 'https://www.fastcompany.com/90848766/most-innovative-companies-medical-devices-2023',
 		logo: fastcompany,
 		publication: 'Fast Company',
 		date: 'March 2, 2023',
 		headline: 'The 10 most innovative medical device companies of 2023',
-	},
-	{
-		articleUrl: 'https://techcrunch.com/2023/03/01/qwak-raises-12m-for-its-mlops-platform/',
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'March 1, 2023',
-		headline: 'Qwak raises $12M for its MLOps platform'
-	},
-	{
-		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/02/16/what-chatgpt-and-generative-ai-mean-for-your-business/',
-		logo: forbes,
-		publication: 'Forbes',
-		date: 'February 16, 2023',
-		headline: 'What ChatGPT And Generative AI Mean For Your Business?'
-	},
-	{
-		articleUrl: 'https://www.technologyreview.com/2023/02/16/1068695/chatgpt-chatbot-battle-search-microsoft-bing-google/',
-		logo: mit,
-		publication: 'MIT Technology Review',
-		date: 'February 16, 2023',
-		headline: 'The ChatGPT-fueled battle for search is bigger than Microsoft or Google'
-	},
+	}
 ];
 
 ---
