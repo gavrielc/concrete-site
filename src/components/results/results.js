@@ -41,16 +41,121 @@ import jpost from '../../assets/publication-logos/jpost.svg';
 import datanami from '../../assets/publication-logos/datanami.png';
 import betanews from '../../assets/publication-logos/betanews.png';
 import axios from '../../assets/publication-logos/axios.png';
+import uniteai from '../../assets/publication-logos/uniteai.png';
+import wapo from '../../assets/publication-logos/WaPo.png';
+import fox from '../../assets/publication-logos/fox.png';
+import finextra from '../../assets/publication-logos/finextra.png';
+import finovate from '../../assets/publication-logos/finovate.png';
+import finmag from '../../assets/publication-logos/fintech-magazine.png';
+import fintechtimes from '../../assets/publication-logos/fintechtimes.png';
+import pymnts from '../../assets/publication-logos/PYMNTS.png';
+import skift from '../../assets/publication-logos/skift.png';
 
 
 export default [
+	{
+		articleUrl: 'https://www.foxbusiness.com/technology/chatgpt-increase-threat-vector-cyberattacks-misinformation-experts-warn-deepfake-generator',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'April 1, 2023',
+		headline: 'ChatGPT could increase \'threat vector\' for cyberattacks and misinformation, experts warn: \'Deepfake generator\'',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.businessinsider.com/leapxpert-pitch-deck-startup-monitor-messenger-apps-whatsapp-signal-wechat-2023-3',
+		logo: bi,
+		publication: 'Business Insider',
+		date: 'March 31, 2023',
+		headline: 'Here\'s the 15-page pitch deck a startup helping Wall Street monitor employees\' use of messengers like WhatsApp and Signal used to raise $22 million',
+        tags: ['highlights', 'saas', 'fintech']
+	},
+	{
+		articleUrl: 'https://skift.com/2023/03/31/cabify-raises-66-million-for-spanish-rideshare-platform/',
+		logo: skift,
+		publication: 'Skift',
+		date: 'March 31, 2023',
+		headline: 'Cabify Raises $66 Million for Spanish Rideshare Platform',
+        tags: ['saas', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.washingtonpost.com/business/2023/03/30/elon-musk-wants-to-pause-ai-progress-with-chatgpt-it-s-too-late-for-that/86a1487c-ceeb-11ed-8907-156f0390d081_story.html',
+		logo: wapo,
+		publication: 'The Washinton Post',
+		date: 'March 30, 2023',
+		headline: 'Elon Musk Wants to Pause AI? It’s Too Late for That',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.foxbusiness.com/technology/ai-vs-job-market-experts-tech-roles-immune-automation-could-face-disruption',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'March 30, 2023',
+		headline: 'AI vs the job market: Experts say tech roles thought \'immune\' to automation could face disruption',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.computerweekly.com/news/365534022/OSCR-supply-chain-security-framework-goes-live-on-Github',
+		logo: computerweekly,
+		publication: 'Computer Weekly',
+		date: 'March 30, 2023',
+		headline: 'OSC&R supply chain security framework goes live on Github',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.sdxcentral.com/articles/news/you-can-now-track-supply-chain-attacks-on-github/2023/03/',
+		logo: sdxcentral,
+		publication: 'SDX Central',
+		date: 'March 30, 2023',
+		headline: 'You Can Now Track Supply Chain Attacks on GitHub',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://fintechmagazine.com/articles/whatsapp-compliance-platform-leapxpert-raises-another-22mn',
+		logo: finmag,
+		publication: 'Fintech Magazine',
+		date: 'March 30, 2023',
+		headline: 'Whatsapp compliance platform LeapXpert raises another $22mn',
+        tags: ['fintech', 'saas']
+	},
+	{
+		articleUrl: 'https://www.finextra.com/newsarticle/42061/leapxpert-raises-22m-for-finserv-messaging-platform',
+		logo: finextra,
+		publication: 'Finextra',
+		date: 'March 30, 2023',
+		headline: 'LeapXpert raises $22m for finserv messaging platform',
+        tags: ['fintech', 'saas']
+	},
+	{
+		articleUrl: 'https://thefintechtimes.com/this-week-in-fintech-tft-bi-weekly-news-roundup-30-03-2/',
+		logo: fintechtimes,
+		publication: 'Fintech Times',
+		date: 'March 30, 2023',
+		headline: 'This Week in Fintech: TFT Bi-Weekly News Roundup 30/03',
+        tags: ['fintech', 'saas']
+	},
+	{
+		articleUrl: 'https://finovate.com/business-communications-innovator-leapxpert-locks-in-22-million-in-series-a-funding/',
+		logo: finovate,
+		publication: 'Finovate',
+		date: 'March 30, 2023',
+		headline: 'Business Communications Innovator LeapXpert Locks in $22 Million in Series A+ Funding',
+        tags: ['fintech', 'saas']
+	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/03/29/leapxpert-raises-22m-to-monitor-employee-chats-for-compliance/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
 		date: 'March 29, 2023',
 		headline: 'LeapXpert raises $22M to monitor employee chats for compliance',
-        tags: ['highlights', 'security', 'saas']
+        tags: ['highlights', 'security', 'saas', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/tsahy-shapsa-co-founder-co-ceo-at-jit-cybersecurity-interviews/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'March 29, 2023',
+		headline: 'Tsahy Shapsa, Co-Founder & Co-CEO at Jit – Cybersecurity Interviews',
+        tags: ['security', 'saas']
 	},
 	{
 		articleUrl: 'https://www.axios.com/pro/fintech-deals/2023/03/29/leapxpert-nets-22m-to-track-employee-chats-for-compliance',
@@ -58,7 +163,7 @@ export default [
 		publication: 'Axios',
 		date: 'March 29, 2023',
 		headline: 'LeapXpert nets $22M to track employee chats for compliance',
-        tags: ['highlights', 'security', 'saas']
+        tags: ['highlights', 'security', 'saas', 'fintech']
 	},
 	{
 		articleUrl: 'https://www.securityweek.com/leapxpert-banks-22m-funding-to-secure-corporate-messaging-with-consumer-apps/',
@@ -66,7 +171,7 @@ export default [
 		publication: 'Security Week',
 		date: 'March 29, 2023',
 		headline: 'LeapXpert Banks $22M Funding to Secure Corporate Messaging With Consumer Apps',
-        tags: ['security', 'saas']
+        tags: ['security', 'saas', 'fintech']
 	},
 	{
 		articleUrl: 'https://www.builtinnyc.com/2023/03/29/leapxpert-raises-22m-compliant-mobile-messaging',
@@ -74,7 +179,15 @@ export default [
 		publication: 'Built In',
 		date: 'March 29, 2023',
 		headline: 'LeapXpert Lands $22M to Make Messaging Apps Compliant for Finance Pros',
-        tags: ['security', 'saas']
+        tags: ['security', 'saas', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.pymnts.com/news/b2b-payments/2023/reeco-raises-10million-to-grow-hospitality-procurement-marketplace/',
+		logo: pymnts,
+		publication: 'PYMNTS.com',
+		date: 'March 28, 2023',
+		headline: 'Reeco Raises $10 Million to Grow Hospitality Procurement Marketplace',
+        tags: ['saas', 'fintech']
 	},
 	{
 		articleUrl: 'https://www.datanami.com/2023/03/27/vector-databases-emerge-to-fill-critical-role-in-ai/',
@@ -123,6 +236,14 @@ export default [
 		date: 'March 22, 2023',
 		headline: 'Nvidia and Quantum Machines promote quantum-classical computing at GTC',
         tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/podcast/inside-israeli-innovation/article-735082/',
+		logo: jpost,
+		publication: 'Jerusalem Post',
+		date: 'March 22, 2023',
+		headline: 'Inside Israeli Innovation, Ep. 4: Will Israeli banks crash too?',
+        tags: ['hr', 'saas']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/03/21/nvidia-teams-up-with-quantum-machines-to-combine-classical-and-quantum-machines/',

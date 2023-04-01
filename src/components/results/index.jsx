@@ -12,7 +12,8 @@ const tags = [
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'Medtech', value: 'medtech'},
     {name: 'B2B SaaS', value: 'saas'},
-    {name: 'HR Tech', value: 'hr'}
+    {name: 'HR Tech', value: 'hr'},
+    {name: 'Fintech', value: 'fintech'}
 ];
 
 export default function Results() {

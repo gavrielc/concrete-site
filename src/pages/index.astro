@@ -5,8 +5,8 @@ import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
 import axios from '../assets/publication-logos/axios.png';
 import buildots from '../assets/client-logos/Buildots.webp';
-import fastcompany from '../assets/publication-logos/fast-company.png';
-import vb from '../assets/publication-logos/vb.svg';
+import fox from '../assets/publication-logos/fox.png';
+import wapo from '../assets/publication-logos/WaPo.png';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -18,19 +18,25 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
+		articleUrl: 'https://www.foxbusiness.com/technology/ai-vs-job-market-experts-tech-roles-immune-automation-could-face-disruption',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'March 30, 2023',
+		headline: 'AI vs the job market: Experts say tech roles thought \'immune\' to automation could face disruption',
+	},
+	{
+		articleUrl: 'https://www.washingtonpost.com/business/2023/03/30/elon-musk-wants-to-pause-ai-progress-with-chatgpt-it-s-too-late-for-that/86a1487c-ceeb-11ed-8907-156f0390d081_story.html',
+		logo: wapo,
+		publication: 'The Washinton Post',
+		date: 'March 30, 2023',
+		headline: 'Elon Musk Wants to Pause AI? It’s Too Late for That',
+	},
+	{
 		articleUrl: 'https://www.axios.com/pro/fintech-deals/2023/03/29/leapxpert-nets-22m-to-track-employee-chats-for-compliance',
 		logo: axios,
 		publication: 'Axios',
 		date: 'March 29, 2023',
 		headline: 'LeapXpert nets $22M to track employee chats for compliance'
-	},
-	{
-		articleUrl: 'https://venturebeat.com/ai/testgpt-a-generative-ai-tool-for-ensuring-code-integrity-is-released-for-beta/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'March 22, 2023',
-		headline: 'TestGPT, a generative AI tool for ensuring code integrity, is released for beta',
-        tags: ['highlights', 'dev', 'AI & ML', 'saas']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/03/21/nvidia-teams-up-with-quantum-machines-to-combine-classical-and-quantum-machines/',
@@ -39,13 +45,6 @@ const results = [
 		date: 'March 21, 2023',
 		headline: 'Nvidia teams up with Quantum Machines to combine classical and quantum machines',
         tags: ['highlights']
-	},
-	{
-		articleUrl: 'https://www.fastcompany.com/90848766/most-innovative-companies-medical-devices-2023',
-		logo: fastcompany,
-		publication: 'Fast Company',
-		date: 'March 2, 2023',
-		headline: 'The 10 most innovative medical device companies of 2023',
 	}
 ];
 
