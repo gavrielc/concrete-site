@@ -54,12 +54,28 @@ import skift from '../../assets/publication-logos/skift.png';
 
 export default [
 	{
+		articleUrl: 'https://www.washingtonpost.com/business/2023/04/03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search/56fc1756-d1d8-11ed-ac8b-cd7da05168e9_story.html',
+		logo: wapo,
+		publication: 'Washinton Post',
+		date: 'April 3, 2023',
+		headline: 'ChatGPT’s ‘IPhone Moment’ Poses a New Threat to Google',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
 		articleUrl: 'https://www.foxbusiness.com/technology/chatgpt-increase-threat-vector-cyberattacks-misinformation-experts-warn-deepfake-generator',
 		logo: fox,
 		publication: 'Fox Business',
 		date: 'April 1, 2023',
 		headline: 'ChatGPT could increase \'threat vector\' for cyberattacks and misinformation, experts warn: \'Deepfake generator\'',
         tags: ['highlights', 'AI & ML', 'saas', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/10-best-ai-marketing-tools/',
+		logo: uniteai,
+		publication: 'Uniteai.ai',
+		date: 'April 1, 2023',
+		headline: '10 “Best” AI Marketing Tools',
+        tags: ['AI & ML', 'saas']
 	},
 	{
 		articleUrl: 'https://www.businessinsider.com/leapxpert-pitch-deck-startup-monitor-messenger-apps-whatsapp-signal-wechat-2023-3',
@@ -70,6 +86,14 @@ export default [
         tags: ['highlights', 'saas', 'fintech']
 	},
 	{
+		articleUrl: 'https://sdtimes.com/software-development/sd-times-open-source-project-of-the-week-oscr-software-supply-chain-attack-matrix/',
+		logo: sdtimes,
+		publication: 'SD Times',
+		date: 'March 31, 2023',
+		headline: 'SD Times Open-Source Project of the Week: OSC&R Software Supply Chain Attack Matrix',
+        tags: ['saas', 'dev', 'security']
+	},
+	{
 		articleUrl: 'https://skift.com/2023/03/31/cabify-raises-66-million-for-spanish-rideshare-platform/',
 		logo: skift,
 		publication: 'Skift',
@@ -78,9 +102,9 @@ export default [
         tags: ['saas', 'fintech']
 	},
 	{
-		articleUrl: 'https://www.washingtonpost.com/business/2023/03/30/elon-musk-wants-to-pause-ai-progress-with-chatgpt-it-s-too-late-for-that/86a1487c-ceeb-11ed-8907-156f0390d081_story.html',
-		logo: wapo,
-		publication: 'The Washinton Post',
+		articleUrl: 'https://www.bloomberg.com/opinion/articles/2023-03-30/elon-musk-wants-to-pause-ai-progress-with-chatgpt-it-s-too-late-for-that#xj4y7vzkg',
+		logo: bloomberg,
+		publication: 'Bloomberg',
 		date: 'March 30, 2023',
 		headline: 'Elon Musk Wants to Pause AI? It’s Too Late for That',
         tags: ['highlights', 'AI & ML', 'saas', 'dev']

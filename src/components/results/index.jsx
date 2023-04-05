@@ -7,13 +7,13 @@ const cn = classNames.bind(styles);
 
 const tags = [
     {name: 'Highlights', value: 'highlights'},
-    {name: 'Developer Tools', value: 'dev'},
+    {name: 'B2B SaaS', value: 'saas'},
+    {name: 'Developer', value: 'dev'},
     {name: 'CyberSecurity', value: 'security'},
     {name: 'AI & ML', value: 'AI & ML'},
+    {name: 'Fintech', value: 'fintech'},
     {name: 'Medtech', value: 'medtech'},
-    {name: 'B2B SaaS', value: 'saas'},
     {name: 'HR Tech', value: 'hr'},
-    {name: 'Fintech', value: 'fintech'}
 ];
 
 export default function Results() {
