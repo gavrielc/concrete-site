@@ -54,6 +54,22 @@ import skift from '../../assets/publication-logos/skift.png';
 
 export default [
 	{
+		articleUrl: 'https://venturebeat.com/ai/openai-chief-says-age-of-giant-ai-models-is-ending-a-gpu-crisis-could-be-one-reason-why/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'April 17, 2023',
+		headline: 'OpenAI chief says age of giant AI models is ending; a GPU crisis could be one reason why',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/04/07/guarding-against-supply-chain-attacks-qa/',
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'April 7, 2023',
+		headline: 'Guarding against supply chain attacks',
+        tags: ['dev', 'security', 'saas']
+	},
+	{
 		articleUrl: 'https://www.washingtonpost.com/business/2023/04/03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search/56fc1756-d1d8-11ed-ac8b-cd7da05168e9_story.html',
 		logo: wapo,
 		publication: 'Washinton Post',
