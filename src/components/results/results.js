@@ -50,9 +50,102 @@ import finmag from '../../assets/publication-logos/fintech-magazine.png';
 import fintechtimes from '../../assets/publication-logos/fintechtimes.png';
 import pymnts from '../../assets/publication-logos/PYMNTS.png';
 import skift from '../../assets/publication-logos/skift.png';
+import crunchbase from '../../assets/publication-logos/crunchbase.png';
+import globes from '../../assets/publication-logos/globes.png';
+import sfbt from '../../assets/publication-logos/sfbt.webp';
+import cbinsights from '../../assets/publication-logos/cbinsights.png';
+import co from '../../assets/publication-logos/co.png';
 
 
 export default [
+	{
+		articleUrl: 'https://techcrunch.com/2023/04/27/pinecone-drops-100m-investment-on-750m-valuation-as-vector-database-demand-grows/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'April 27, 2023',
+		headline: 'Pinecone drops $100M investment on $750M valuation, as vector database demand grows',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/ai-startup-pinecone-raises-100-million-as-vector-database-market-for-llms-heats-up/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'April 27, 2023',
+		headline: 'AI startup Pinecone raises $100 million as vector database market for LLMs heats up',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://news.crunchbase.com/ai-robotics/startup-venture-funding-database-pinecone/',
+		logo: crunchbase,
+		publication: 'CrunchBase',
+		date: 'April 27, 2023',
+		headline: 'Pinecone Hits $750M Valuation As AI Heats Up Vector Database Market',
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://blocksandfiles.com/2023/04/28/chatgpt-pinecone-100-million-funding/',
+		logo: blocksfiles,
+		publication: 'Blocks & Files',
+		date: 'April 27, 2023',
+		headline: 'ChatGPT hype snags database startup $100M',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/04/27/pinecone-raises-100m-generative-ai-drives-demand-vector-database-technology/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'April 27, 2023',
+		headline: 'Pinecone raises $100M as generative AI drives demand for vector database technology',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/sjveg7ux2',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'April 27, 2023',
+		headline: 'Pinecone hits $750 million valuation in $100 million round to build long-term memory for AI',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://en.globes.co.il/en/article-ai-co-pinecone-raises-100m-at-750m-valuation-1001445029',
+		logo: globes,
+		publication: 'Globes',
+		date: 'April 27, 2023',
+		headline: 'AI co Pinecone raises $100m at $750m valuation',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.bizjournals.com/sanfrancisco/inno/stories/news/2023/04/27/ai-startup-with-bay-area-roots-scores-big-funding.html',
+		logo: sfbt,
+		publication: 'San Francisco Business Times',
+		date: 'April 27, 2023',
+		headline: 'PInecone, an AI-related startup with Bay Area roots, has scored $100M in funding',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.cbinsights.com/research/generative-ai-infrastructure-vector-database/',
+		logo: cbinsights,
+		publication: 'CB Insights',
+		date: 'April 27, 2023',
+		headline: 'Vector database startups raise over $350M to build generative AI infrastructure',
+        tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://commercialobserver.com/2023/04/proptech-flex-coworking/',
+		logo: co,
+		publication: 'Commercial Observer',
+		date: 'April 25, 2023',
+		headline: 'Proptech Spies Opportunity in Flex Space’s Hybrid-Driven Growth',
+        tags: ['hr', 'saas']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/business-and-innovation/article-739565',
+		logo: jpost,
+		publication: 'JPost',
+		date: 'April 18, 2023',
+		headline: 'Safeguard raises $8 million for AI workplace accident prevention platform',
+        tags: ['AI & ML']
+	},
 	{
 		articleUrl: 'https://venturebeat.com/ai/openai-chief-says-age-of-giant-ai-models-is-ending-a-gpu-crisis-could-be-one-reason-why/',
 		logo: vb,
