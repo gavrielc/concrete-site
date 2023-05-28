@@ -55,9 +55,108 @@ import globes from '../../assets/publication-logos/globes.png';
 import sfbt from '../../assets/publication-logos/sfbt.webp';
 import cbinsights from '../../assets/publication-logos/cbinsights.png';
 import co from '../../assets/publication-logos/co.png';
+import techeu from '../../assets/publication-logos/techeu.png';
+import infosec from '../../assets/publication-logos/infosec.png';
+import thewrap from '../../assets/publication-logos/thewrap.svg';
 
 
 export default [
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/bl93aqoik',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'May 25, 2023',
+		headline: 'The big Krakowski: Israeli startup Deepdub takes on Hollywood',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/05/24/wiremock-lands-6-5m-to-help-developers-build-and-test-on-mock-apis/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'May 24, 2023',
+		headline: 'WireMock lands $6.5M to help developers build and test on mock APIs',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/05/24/api-simulation-platform-wiremock-raises-6-5m-seed-funding/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'May 24, 2023',
+		headline: 'API simulation platform WireMock raises $6.5M in seed funding',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://tech.eu/2023/05/24/wiremock-raises-65-million-in-seed-funding-for-groundbreaking-api-developer-productivity-platform-wiremock-cloud/',
+		logo: techeu,
+		publication: 'Tech.eu',
+		date: 'May 24, 2023',
+		headline: 'WireMock raises $6.5 million in seed funding for its API developer productivity platform',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/05/22/firmbase-raises-12m-to-modernize-financial-planning-for-startups/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'May 22, 2023',
+		headline: 'Firmbase raises $12M to modernize financial planning for startups',
+        tags: ['highlights', 'saas', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.infosecurity-magazine.com/news/chatgpt-software-supply-chain/',
+		logo: infosec,
+		publication: 'Infosecurity Magazine',
+		date: 'May 18, 2023',
+		headline: 'ChatGPT Leveraged to Enhance Software Supply Chain Security',
+        tags: ['saas', 'AI & ML', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/vector-databases-are-having-a-moment-a-chat-with-pinecone/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'May 17, 2023',
+		headline: 'Vector Databases Are Having a Moment — A Chat with Pinecone',
+        tags: ['saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.csoonline.com/article/3696436/arnicas-real-time-code-risk-scanning-tools-aim-to-secure-supply-chain.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'May 16, 2023',
+		headline: 'Arnica\'s real-time, code-risk scanning tools aim to secure supply chain',
+        tags: ['saas', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'May 14, 2023',
+		headline: 'What enterprises need to know about adopting generative AI',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.thewrap.com/ai-dubbing-company-deepdub-mpa-tpn-certification/',
+		logo: thewrap,
+		publication: 'TheWrap',
+		date: 'May 11, 2023',
+		headline: 'AI Dubbing Company Deepdub Secures MPA’s Trusted Partner Network Certification',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-742738',
+		logo: jpost,
+		publication: 'Jerusalem Post',
+		date: 'May 11, 2023',
+		headline: 'Deepdub on track to provide AI-generated dubbing for the film and TV industry',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2023/05/chatgpt-retrieval-plugin/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'May 9, 2023',
+		headline: 'OpenAI\'s Open-Source ChatGPT Plugin - Q&A with Roy Miara',
+        tags: ['AI & ML', 'dev', 'saas']
+	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/04/27/pinecone-drops-100m-investment-on-750m-valuation-as-vector-database-demand-grows/',
 		logo: techcrunch,
