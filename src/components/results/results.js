@@ -62,6 +62,30 @@ import thewrap from '../../assets/publication-logos/thewrap.svg';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/4T4R5FsISgFtwaYkHczKEP',
+        tags: ['podcast']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/4efa6CThJcaPxafenJA9FH',
+        tags: ['podcast']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
+        tags: ['podcast']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/08KOY6dAXJVTytAs2knY3u',
+        tags: ['podcast']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/28kzdDh0fp3zZwRwFkMrWh',
+        tags: ['podcast']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/2ZcqxyVLpXYZ9pqhNkPip3',
+        tags: ['podcast']
+	},
+	{
 		articleUrl: 'https://www.calcalistech.com/ctechnews/article/bl93aqoik',
 		logo: ctech,
 		publication: 'CTech',
