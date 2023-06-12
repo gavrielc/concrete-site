@@ -58,9 +58,26 @@ import co from '../../assets/publication-logos/co.png';
 import techeu from '../../assets/publication-logos/techeu.png';
 import infosec from '../../assets/publication-logos/infosec.png';
 import thewrap from '../../assets/publication-logos/thewrap.svg';
+import nypost from '../../assets/publication-logos/nypost.png';
 
 
 export default [
+	{
+		articleUrl: 'https://nypost.com/2023/06/07/openais-sam-altman-complained-chip-shortage-is-delaying-chatgpt-plans/',
+		logo: nypost,
+		publication: 'NY Post',
+		date: 'June 7, 2023',
+		headline: 'OpenAI’s Sam Altman complained chip shortage ‘delaying’ ChatGPT plans: deleted post',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/06/01/ariga-is-helping-developers-define-database-schema-as-code/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'June 1, 2023',
+		headline: 'Ariga is helping developers define database schema as code',
+        tags: ['highlights', 'saas', 'dev']
+	},
 	{
 		articleUrl: 'https://www.calcalistech.com/ctechnews/article/bl93aqoik',
 		logo: ctech,

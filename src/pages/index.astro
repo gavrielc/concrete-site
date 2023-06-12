@@ -5,7 +5,7 @@ import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
 import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
-import fox from '../assets/publication-logos/fox.png';
+import nypost from '../assets/publication-logos/nypost.png';
 import wapo from '../assets/publication-logos/WaPo.png';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
@@ -17,12 +17,21 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
-{
-		articleUrl: 'https://techcrunch.com/2023/05/24/wiremock-lands-6-5m-to-help-developers-build-and-test-on-mock-apis/',
+	{
+		articleUrl: 'https://nypost.com/2023/06/07/openais-sam-altman-complained-chip-shortage-is-delaying-chatgpt-plans/',
+		logo: nypost,
+		publication: 'NY Post',
+		date: 'June 7, 2023',
+		headline: 'OpenAI’s Sam Altman complained chip shortage ‘delaying’ ChatGPT plans: deleted post',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/06/01/ariga-is-helping-developers-define-database-schema-as-code/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
-		date: 'May 24, 2023',
-		headline: 'WireMock lands $6.5M to help developers build and test on mock APIs'
+		date: 'June 1, 2023',
+		headline: 'Ariga is helping developers define database schema as code',
+        tags: ['highlights', 'saas', 'dev']
 	},
 	{
 		articleUrl: 'https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/',
@@ -37,13 +46,6 @@ const results = [
 		publication: 'Washinton Post',
 		date: 'April 3, 2023',
 		headline: 'ChatGPT’s ‘IPhone Moment’ Poses a New Threat to Google'
-	},
-	{
-		articleUrl: 'https://www.foxbusiness.com/technology/ai-vs-job-market-experts-tech-roles-immune-automation-could-face-disruption',
-		logo: fox,
-		publication: 'Fox Business',
-		date: 'March 30, 2023',
-		headline: 'AI vs the job market: Experts say tech roles thought \'immune\' to automation could face disruption',
 	}
 ];
 
