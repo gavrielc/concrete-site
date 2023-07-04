@@ -63,6 +63,70 @@ import nypost from '../../assets/publication-logos/nypost.png';
 
 export default [
 	{
+		articleUrl: 'https://www.foxbusiness.com/media/ai-comes-construction-tech-360-degree-cameras-deployed-first-time-new-york-project',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'June 20, 2023',
+		headline: 'AI comes for construction: New tech with 360-degree cameras deployed for first time in New York project',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/nir-valtman-ceo-founder-at-arnica-interview-series/',
+		logo: uniteai,
+		publication: 'Uniteai.ai',
+		date: 'June 20, 2023',
+		headline: 'Nir Valtman, CEO & Founder at Arnica – Interview Series',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-746928',
+		logo: jpost,
+		publication: 'Jerusalem Post',
+		date: 'June 20, 2023',
+		headline: 'Noogata unveils AI assistant to increase sales on Amazon',
+        tags: ['AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/akeyless-launches-saas-based-external-secrets-manager/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'June 19, 2023',
+		headline: 'Akeyless Launches SaaS-based External Secrets Manager',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/06/15/deepchecks-snags-14m-seed-to-continuously-validate-ml-models/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks snags $14M seed to continuously validate ML models',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/deepchecks-raises-funding-and-launches-open-source-validation-platform-for-ml-models/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks raises funding and launches open source validation platform for ML models',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/06/15/deepchecks-raises-14m-continuously-validate-machine-learning-models/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks raises $14M to validate machine learning models continuously',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/will-llm-and-generative-ai-solve-a-20-year-old-problem-in-application-security/',
+		logo: uniteai,
+		publication: 'Uniteai.ai',
+		date: 'June 14, 2023',
+		headline: 'Will LLM and Generative AI Solve a 20-Year-Old Problem in Application Security?',
+        tags: ['security', 'dev', 'saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://nypost.com/2023/06/07/openais-sam-altman-complained-chip-shortage-is-delaying-chatgpt-plans/',
 		logo: nypost,
 		publication: 'NY Post',

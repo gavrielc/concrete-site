@@ -6,7 +6,7 @@ import techcrunch from '../assets/publication-logos/techcrunch.png';
 import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
 import nypost from '../assets/publication-logos/nypost.png';
-import wapo from '../assets/publication-logos/WaPo.png';
+import fox from '../assets/publication-logos/fox.png';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -17,6 +17,22 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
+	{
+		articleUrl: 'https://www.foxbusiness.com/media/ai-comes-construction-tech-360-degree-cameras-deployed-first-time-new-york-project',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'June 20, 2023',
+		headline: 'AI comes for construction: New tech with 360-degree cameras deployed for first time in New York project',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/deepchecks-raises-funding-and-launches-open-source-validation-platform-for-ml-models/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks raises funding and launches open source validation platform for ML models',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
 	{
 		articleUrl: 'https://nypost.com/2023/06/07/openais-sam-altman-complained-chip-shortage-is-delaying-chatgpt-plans/',
 		logo: nypost,
@@ -33,20 +49,6 @@ const results = [
 		headline: 'Ariga is helping developers define database schema as code',
         tags: ['highlights', 'saas', 'dev']
 	},
-	{
-		articleUrl: 'https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'May 14, 2023',
-		headline: 'What enterprises need to know about adopting generative AI',
-	},
-	{
-		articleUrl: 'https://www.washingtonpost.com/business/2023/04/03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search/56fc1756-d1d8-11ed-ac8b-cd7da05168e9_story.html',
-		logo: wapo,
-		publication: 'Washinton Post',
-		date: 'April 3, 2023',
-		headline: 'ChatGPT’s ‘IPhone Moment’ Poses a New Threat to Google'
-	}
 ];
 
 ---
