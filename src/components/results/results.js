@@ -63,6 +63,30 @@ import nypost from '../../assets/publication-logos/nypost.png';
 
 export default [
 	{
+		articleUrl: 'https://venturebeat.com/games/deepdub-go-brings-ai-localization-to-indie-games-and-content-creators/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 6, 2023',
+		headline: 'Deepdub Go brings AI localization to indie games and content creators',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.businessinsider.com/ai-startups-netflix-marvel-lucasfilm-holllywood-deepfake-dubbing-vc-funding-2023-3',
+		logo: bi,
+		publication: 'Business Insider',
+		date: 'July 6, 2023',
+		headline: '11 startups developing AI to disrupt Hollywood and scoring hundreds of millions in VC and private equity funding',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/07/06/deepdub-go-uses-generative-ai-platform-professionally-dub-video-content/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'July 6, 2023',
+		headline: 'Deepdub GO uses generative AI platform to dub any video content professionally',
+        tags: ['saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://www.foxbusiness.com/media/ai-comes-construction-tech-360-degree-cameras-deployed-first-time-new-york-project',
 		logo: fox,
 		publication: 'Fox Business',
