@@ -47,16 +47,22 @@ import akeyless from '../assets/client-logos/Akeyless.svg';
 import deepdub from '../assets/client-logos/Deepdub.svg';
 import uveye from '../assets/client-logos/UVeye.svg';
 import noogata from '../assets/client-logos/Noogata.svg';
+import tlv from '../assets/client-logos/TLV.svg';
+import deepchecks from '../assets/client-logos/deepchecks.svg';
+import codium from '../assets/client-logos/codium.svg';
+import leapxpert from '../assets/client-logos/LeapXpert.png';
+import wiremock from '../assets/client-logos/wiremock.png';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech']},
-    {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas']},
+    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML']},
     {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas']},
     {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas']},
-    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML']},
+    {logo: tlv, name: "TLV Partners", site: 'https://www.tlv.partners/', tags: ['AI & ML', 'deep tech', 'security', 'saas', 'dev']},
+    {logo: deepdub, name: "deepdub", site: 'https://deepdub.ai/', tags: ['AI & ML', 'saas']},
     {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML']},
     {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev']},
-    {logo: deepdub, name: "deepdub", site: 'https://deepdub.ai/', tags: ['AI & ML', 'saas']},
+    {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas']},
     {logo: uveye, name: "UVEYE", site: 'https://www.uveye.com/', tags: ['AI & ML']},
     {logo: anyword, name: "anyword", site: 'https://anyword.com/', tags: ['AI & ML']},
     {logo: arnica, name: "arnica", site: 'https://www.arnica.io/', tags: ['security', 'dev', 'saas']},
@@ -66,10 +72,14 @@ const clients = [
     {logo: safeguard, name: "safeguard", site: 'https://en.safeguard.co.il/', tags: ['AI & ML']},
     {logo: privya, name: "privya", site: 'https://privya.ai/', tags: ['security']},
     {logo: gable, name: "gable", site: 'https://www.gable.to/', tags: ['saas', 'hr']},
-    {logo: gem, name: "gem", site: 'https://www.gem.security/', tags: ['dev', 'security', 'saas']},
-    {logo: axiom, name: "axiom", site: 'https://axiom.security/', tags: ['security', 'saas']},
+    {logo: leapxpert, name: "LeapXpert", site: 'https://www.leapxpert.com//', tags: ['dev', 'security', 'saas']},
     {logo: qwak, name: "qwak", site: 'https://www.qwak.com/', tags: ['AI & ML', 'saas']},
     {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
+    {logo: deepchecks, name: "Deepchecks", site: 'https://deepchecks.com/', tags: ['saas', 'AI & ML', 'dev']},
+    {logo: gem, name: "gem", site: 'https://www.gem.security/', tags: ['dev', 'security', 'saas']},
+    {logo: axiom, name: "axiom", site: 'https://axiom.security/', tags: ['security', 'saas']},
+    {logo: codium, name: "Codium", site: 'https://www.codium.ai/', tags: ['AI & ML', 'saas', 'dev']},
+    {logo: wiremock, name: "wiremock", site: 'https://wiremock.org/', tags: ['dev', 'saas']},
     {logo: dig, name: 'dig', site: 'https://www.dig.security/', tags: ['security', 'saas']},
     {logo: sayata, name: "sayata", site: 'https://www.sayatalabs.com/', tags: ['insurtech']},
     {logo: armo, name: "armo", site: 'https://www.armosec.io/', tags: ['dev', 'security']},

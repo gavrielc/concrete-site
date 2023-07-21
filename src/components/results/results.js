@@ -59,9 +59,67 @@ import techeu from '../../assets/publication-logos/techeu.png';
 import infosec from '../../assets/publication-logos/infosec.png';
 import thewrap from '../../assets/publication-logos/thewrap.svg';
 import nypost from '../../assets/publication-logos/nypost.png';
+import nyt from '../../assets/publication-logos/nyt.png';
+import reuters from '../../assets/publication-logos/reuters.svg';
 
 
 export default [
+	{
+		articleUrl: 'https://www.nytimes.com/2023/07/20/technology/an-ai-supercomputer-whirs-to-life-powered-by-giant-computer-chips.html',
+		logo: nyt,
+		publication: 'New York Times',
+		date: 'July 20, 2023',
+		headline: 'An A.I. Supercomputer Whirs to Life, Powered by Giant Computer Chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/07/18/making-chatgpt-a-highly-targeted-marketing-tool-anyword-predicts-its-performance/',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'July 18, 2023',
+		headline: 'Making ChatGPT A Highly-Targeted Marketing Tool, Anyword Predicts Its Performance',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/marketing-software-anyword-adds-integrations-to-chatgpt-notion-ai-and-canva-ai/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 18, 2023',
+		headline: 'Marketing software Anyword adds integrations to ChatGPT, Notion AI, and Canva AI',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/tlv-250-mln-fund-looks-further-afield-israeli-tech-startups-2023-07-17/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'July 17, 2023',
+		headline: 'TLV $250 mln fund looks further afield for Israeli tech startups',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/07/17/tlv-partners-raises-new-250m-fund/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'July 17, 2023',
+		headline: 'TLV Partners raises new $250M fund',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/pinecone-leads-explosion-in-vector-databases-for-generative-ai/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 14, 2023',
+		headline: 'Pinecone leads ‘explosion’ in vector databases for generative AI',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.theregister.com/2023/07/11/vector_databases/',
+		logo: register,
+		publication: 'The Register',
+		date: 'July 11, 2023',
+		headline: 'Putting LLMs into production is a monumental task – vector databases could light the way',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
 	{
 		articleUrl: 'https://venturebeat.com/games/deepdub-go-brings-ai-localization-to-indie-games-and-content-creators/',
 		logo: vb,
@@ -85,6 +143,14 @@ export default [
 		date: 'July 6, 2023',
 		headline: 'Deepdub GO uses generative AI platform to dub any video content professionally',
         tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/07/05/announcing-the-saas-stage-agenda-at-techcrunch-disrupt/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'July 5, 2023',
+		headline: 'Announcing the SaaS Stage agenda at TechCrunch Disrupt 2023',
+        tags: ['highlights']
 	},
 	{
 		articleUrl: 'https://www.foxbusiness.com/media/ai-comes-construction-tech-360-degree-cameras-deployed-first-time-new-york-project',
