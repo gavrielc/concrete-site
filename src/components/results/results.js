@@ -61,9 +61,27 @@ import thewrap from '../../assets/publication-logos/thewrap.svg';
 import nypost from '../../assets/publication-logos/nypost.png';
 import nyt from '../../assets/publication-logos/nyt.png';
 import reuters from '../../assets/publication-logos/reuters.svg';
+import cnbc from '../../assets/publication-logos/cnbc.png';
+import thestreet from '../../assets/publication-logos/thestreet.png';
 
 
 export default [
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/07/25/israels-government-is-acting-against-its-people-and-economy-vc-firm.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'July 25, 2023',
+		headline: 'TLV Partners: "The Israeli government is acting against its people and economy"',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.thestreet.com/technology/this-tech-startup-is-powering-part-of-the-core-of-ai-models',
+		logo: thestreet,
+		publication: 'The Street',
+		date: 'July 21, 2023',
+		headline: 'This Tech Startup Is Powering \'the Core Infrastructure\' of AI Models',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
 	{
 		articleUrl: 'https://www.nytimes.com/2023/07/20/technology/an-ai-supercomputer-whirs-to-life-powered-by-giant-computer-chips.html',
 		logo: nyt,

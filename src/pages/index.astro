@@ -6,7 +6,7 @@ import techcrunch from '../assets/publication-logos/techcrunch.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import forbes from '../assets/publication-logos/forbes.png';
 import nyt from '../assets/publication-logos/nyt.png';
-import reuters from '../assets/publication-logos/reuters.svg';
+import cnbc from '../assets/publication-logos/cnbc.png';
 import ox from '../assets/client-logos/OX.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -17,6 +17,14 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/07/25/israels-government-is-acting-against-its-people-and-economy-vc-firm.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'July 25, 2023',
+		headline: 'TLV Partners: "The Israeli government is acting against its people and economy"',
+        tags: ['highlights']
+	},
 	{
 		articleUrl: 'https://www.nytimes.com/2023/07/20/technology/an-ai-supercomputer-whirs-to-life-powered-by-giant-computer-chips.html',
 		logo: nyt,
@@ -32,14 +40,6 @@ const results = [
 		date: 'July 18, 2023',
 		headline: 'Making ChatGPT A Highly-Targeted Marketing Tool, Anyword Predicts Its Performance',
         tags: ['highlights', 'saas', 'AI & ML']
-	},
-	{
-		articleUrl: 'https://www.reuters.com/technology/tlv-250-mln-fund-looks-further-afield-israeli-tech-startups-2023-07-17/',
-		logo: reuters,
-		publication: 'Reuters',
-		date: 'July 17, 2023',
-		headline: 'TLV $250 mln fund looks further afield for Israeli tech startups',
-        tags: ['highlights']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/06/15/deepchecks-snags-14m-seed-to-continuously-validate-ml-models/',
