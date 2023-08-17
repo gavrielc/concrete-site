@@ -63,9 +63,117 @@ import nyt from '../../assets/publication-logos/nyt.png';
 import reuters from '../../assets/publication-logos/reuters.svg';
 import cnbc from '../../assets/publication-logos/cnbc.png';
 import thestreet from '../../assets/publication-logos/thestreet.png';
+import foxnews from '../../assets/publication-logos/FoxNews.png';
+import mmr from '../../assets/publication-logos/mmr.png';
+import secmag from '../../assets/publication-logos/secmag.svg';
+import theinformation from '../../assets/publication-logos/The_Information.png';
 
 
 export default [
+	{
+		articleUrl: 'https://siliconangle.com/2023/08/15/developer-security-operations-startup-ox-security-adds-ibm-investor-list/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'August 15, 2023',
+		headline: 'Developer security operations startup OX Security adds IBM to its investor list',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.nytimes.com/2023/08/15/business/artificial-intelligence-construction-real-estate.html',
+		logo: nyt,
+		publication: 'The New York Times',
+		date: 'August 15, 2023',
+		headline: 'A.I. Can’t Build a High-Rise, but It Can Speed Up the Job',
+        tags: ['AI & ML', 'highlights']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/08/15/configu-raises-a-3m-pre-seed-round-for-its-configuration-as-code-platform/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'August 15, 2023',
+		headline: 'Configu raises a $3M pre-seed round for its configuration-as-code platform',
+        tags: ['dev', 'highlights', 'saas']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/ry6x00lw32',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'August 14, 2023',
+		headline: 'Configu raises $3 million pre-Seed funding for its open-source configuration orchestration platform',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/08/14/application-configuration-startup-configu-raises-3m-pre-seed-funding/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'August 14, 2023',
+		headline: 'Application configuration startup Configu raises $3M in pre-seed funding',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.theinformation.com/articles/pinecone-and-cohere-ceos-warn-about-leaving-the-gpu-faucet-running-in-the-age-of-ai',
+		logo: theinformation,
+		publication: 'The Information',
+		date: 'August 14, 2023',
+		headline: 'Pinecone and Cohere CEOs Warn About Leaving the GPU ‘Faucet’ Running in the Age of AI',
+        tags: ['saas', 'dev', 'AI & ML', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.scmagazine.com/brief/experts-warn-of-growing-dependency-confusion-attacks',
+		logo: scmagazine,
+		publication: 'SC Magazine',
+		date: 'August 14, 2023',
+		headline: 'Experts warn of growing dependency confusion attacks',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/all-about-oscr-a-software-supply-chain-security-framework/',
+		logo: tns,
+		publication: 'The New Stack',
+		date: 'August 14, 2023',
+		headline: 'All about OSC&R, a Software Supply Chain Security Framework',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://mobilemarketingreads.com/barbie-has-been-the-search-term-with-the-highest-search-count-on-amazon/',
+		logo: mmr,
+		publication: 'Mobile Marketing Reads',
+		date: 'August 9, 2023',
+		headline: '“Barbie” has been the search term with the highest search count on Amazon',
+        tags: ['AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securitymagazine.com/articles/99741-large-user-applications-vulnerable-to-dependency-confusion-attacks',
+		logo: secmag,
+		publication: 'Security Magazine',
+		date: 'August 9, 2023',
+		headline: 'Large-user applications vulnerable to dependency confusion attacks',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.insiderintelligence.com/content/amazon-shopify-mattel-boost-barbie-movie',
+		logo: bi,
+		publication: 'Insider Intelligence',
+		date: 'August 7, 2023',
+		headline: 'Amazon, Shopify, Mattel get a boost from the ‘Barbie’ movie',
+        tags: ['AI & ML', 'saas', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/ami-hever-co-founder-ceo-of-uveye-interview-series/',
+		logo: uniteai,
+		publication: 'UniteAI',
+		date: 'August 7, 2023',
+		headline: 'Amir Hever, Co-Founder & CEO of UVeye – Interview Series',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://www.foxnews.com/media/ai-pioneers-promise-safer-roads-construction-sites-help-new-technology',
+		logo: foxnews,
+		publication: 'Fox News',
+		date: 'July 27, 2023',
+		headline: 'AI pioneers expect safer roads, construction sites with the help of new technology',
+        tags: ['highlights', 'AI & ML']
+	},
 	{
 		articleUrl: 'https://www.cnbc.com/video/2023/07/25/israels-government-is-acting-against-its-people-and-economy-vc-firm.html',
 		logo: cnbc,
