@@ -71,6 +71,14 @@ import theinformation from '../../assets/publication-logos/The_Information.png';
 
 export default [
 	{
+		articleUrl: 'https://techcrunch.com/2023/08/29/quantum-machines-next-gen-quantum-control-solution-that-can-scale-beyond-1000-qubits/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'August 29, 2023',
+		headline: 'Quantum Machines’ next-gen quantum control solution that can scale beyond 1,000 qubits',
+        tags: ['highlights']
+	},
+	{
 		articleUrl: 'https://siliconangle.com/2023/08/15/developer-security-operations-startup-ox-security-adds-ibm-investor-list/',
 		logo: siliconangle,
 		publication: 'SiliconAngle',
