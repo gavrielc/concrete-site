@@ -1,0 +1,208 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import lazer from '../assets/team/Lazer.jpg';
+import bullet from '../assets/icons/bullet.svg';
+---
+
+<PageLayout pageTitle="Contact | Public Relations for serious tech companies | Concrete Media">
+    <section class='meeting'>
+        <div class='meeting-desc'>
+            <h3>Let's connect to discuss your PR needs</h3>
+            <p class="desc-text">Just grab any available slot on the calendar and I'll be happy to talk</p>
+            <div class='host'>
+                <img src={lazer} alt='Picture of Lazer Cohen, CEO and Founder of Concrete Media'/>
+                <div>
+                    <p class="name">Lazer Cohen</p>
+                    <p class="title">Concrete Media founder and CEO</p>
+                </div>
+            </div>
+        </div>
+        <div class="calendly-wrapper">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/lazer-rfs/let-s-talk-pr?text_color=171717&primary_color=7022fb&background_color=1a1a1a&hide_event_type_details=1"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+</iframe>
+        </div>
+    </section>
+    <section class="offices">
+        <div class="office-location">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.6027805356175!2d34.79725897643397!3d32.07999077396269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4bbc285cb811%3A0x8a630c87a0d074b0!2sAriel%20Sharon%20St%204%2C%20Giv&#39;atayim!5e0!3m2!1sen!2sil!4v1686832149724!5m2!1sen!2sil" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="location-desc">
+                <img src={bullet} alt="" />
+                <p class="name">Tel Aviv office</p>
+                <p class="address">Ariel Sharon St 4, Giv'atayim</p>
+            </div>
+        </div>
+        <div class="office-location">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.650322338379!2d35.213777300000004!3d31.7527443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502d7e1c8c8b099%3A0xfd0c5f7c7184d7be!2sGeneral%20Pierre%20Koenig%20St%2028%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1686834097673!5m2!1sen!2sil" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="location-desc">
+                <img src={bullet} alt="" />
+                <p class="name">Jerusalem office</p>
+                <p class="address">General Pierre Koenig St 28, Jerusalem</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-email">
+        <div>
+            <h3>Get in touch</h3>
+            <a class="email" href="mailto:lazer@concrete.media">lazer@concrete.media</a>
+        </div>
+    </section>
+</PageLayout>
+
+<style lang="scss">
+    @mixin normal-text {
+        font-family: 'Inter';
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .meeting {
+        gap: 80px;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding-top: 110px;
+
+        .calendly-inline-widget {
+            border-radius: 16px;
+            height: 602px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
+        }
+
+        .calendly-wrapper {
+            flex: 1 0 358px;
+
+            border-radius: 16px;
+            max-height: 602px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
+        }
+
+        .meeting-desc {
+            flex: 1 0 358px;
+
+            h3 {
+                margin: 0;
+            }
+
+            .desc-text {
+                margin-bottom: 80px;
+            }
+
+            .host {
+                display: flex;
+                align-items: flex-end;
+                gap: 26px;
+
+                img {
+                    object-fit: cover;
+                    object-position: top;
+                    height: 138px;
+                    width: 138px;
+                    border-radius: 50%;
+                }
+
+
+
+                .title {
+                    @include normal-text;
+                    font-weight: 600;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    .offices {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .office-location {
+        flex: 1 0 358px;
+
+        .map {
+            border-radius: 16px;
+        }
+
+        .location-desc {
+            position: relative;
+            margin-top: 16px;
+        }
+
+        .address {
+            @include normal-text;
+        }
+
+        .name, .address {
+            margin: 0 0 8px 20px;
+        }
+
+        img {
+            position: absolute;
+            top: 10px;
+        }
+    }
+
+    .name {
+        font-family: 'Outfit';
+        font-weight: 600;
+        font-size: 24px;
+        color: #7022FB;
+        margin: 0;
+    }
+
+    .contact-email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 62px;
+        padding-bottom: 62px;
+
+        h3 {
+            margin: 0 0 16px;
+        }
+
+        .email {
+            @include normal-text;
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 827px) {
+        .meeting {
+            padding-top: 6px;
+            gap: 24px;
+
+            .meeting-desc {
+                text-align: center;
+
+                .desc-text {
+                    margin-bottom: 16px;
+                }
+
+                .host {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 16px;
+
+                    img {
+                        height: 58px;
+                        width: 58px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 367px) {
+        .office-location {
+            flex: 1 0 200px;
+        }
+    }
+</style>
