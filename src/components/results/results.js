@@ -71,6 +71,14 @@ import theinformation from '../../assets/publication-logos/The_Information.png';
 
 export default [
 	{
+		articleUrl: 'https://www.csoonline.com/article/650786/bitbucket-integrates-arnicas-application-security-tools.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'August 31, 2023',
+		headline: 'Bitbucket integrates Arnica’s application security tools',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
 		articleUrl: 'https://techcrunch.com/2023/08/29/quantum-machines-next-gen-quantum-control-solution-that-can-scale-beyond-1000-qubits/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
