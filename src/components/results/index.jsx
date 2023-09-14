@@ -26,7 +26,7 @@ export default function Results() {
             </div>
             <div className={styles.resultsWrapper}>
                 {results.filter(({tags}) => !value || tags.includes(value)).map(({articleUrl, logo, headline, publication, date}) => (
-                <li className={styles["result-card"]}>
+                <li className={styles["result-card"]} key={articleUrl}>
                     <a href={articleUrl} target="_blank">
                         <img src={logo} alt={`${publication} logo`}/>
                         <h4>{headline}</h4>
