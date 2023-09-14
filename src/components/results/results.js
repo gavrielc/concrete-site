@@ -67,9 +67,122 @@ import foxnews from '../../assets/publication-logos/FoxNews.png';
 import mmr from '../../assets/publication-logos/mmr.png';
 import secmag from '../../assets/publication-logos/secmag.svg';
 import theinformation from '../../assets/publication-logos/The_Information.png';
+import techradar from '../../assets/publication-logos/techradar.svg';
 
 
 export default [
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/13/port-is-aging-well-as-developer-portal-concept-takes-shape/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 13, 2023',
+		headline: 'Port is aging well as developer portal concept takes shape',
+        tags: ['highlights', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/13/port-raises-18m-simplify-devops-processes-developer-teams/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'September 13, 2023',
+		headline: 'Port raises $18M to simplify DevOps processes for developer teams',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/vector-embeddings-antidote-to-psychotic-llms-and-a-cure-for-alert-fatigue/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 12, 2023',
+		headline: 'Vector Embeddings – Antidote to Psychotic LLMs and a Cure for Alert Fatigue?',
+        tags: ['AI & ML', 'security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/11/scala-biodesign-makes-it-easy-to-re-engineer-proteins-one-molecule-at-a-time-or-50/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 11, 2023',
+		headline: 'Scala Biodesign makes it easy to re-engineer proteins one molecule at a time – or 50',
+        tags: ['highlights', 'AI & ML', 'medtech']
+	},
+	{
+		articleUrl: 'https://www.wsj.com/articles/companies-look-to-squeeze-more-power-out-of-ai-chips-fe33e2f2',
+		logo: wsj,
+		publication: 'Wall Street Journal',
+		date: 'September 8, 2023',
+		headline: 'Companies Look to Squeeze More Power Out of AI Chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.techradar.com/pro/anyword-review-is-this-the-ai-writing-solution-for-you',
+		logo: techradar,
+		publication: 'Techradar',
+		date: 'September 7, 2023',
+		headline: 'Anyword review: Is this the AI writing solution for you?',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/09/07/cisos-see-budgets-increase-despite-economic-slowdown/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'September 7, 2023',
+		headline: 'CISOs see budgets increase despite economic slowdown',
+        tags: ['security']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/the-team8-foundry-method-for-selecting-investable-startups/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 7, 2023',
+		headline: 'The Team8 Foundry Method for Selecting Investable Startups',
+        tags: ['security']
+	},
+	{
+		articleUrl: 'https://www.csoonline.com/article/651241/iam-cloud-security-to-drive-new-cybersecurity-spending.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'September 7, 2023',
+		headline: 'IAM, cloud security to drive new cybersecurity spending',
+        tags: ['security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/06/api-security-startup-pynt-raises-6m/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 6, 2023',
+		headline: 'API security startup Pynt raises $6M',
+        tags: ['highlights', 'security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/06/pynt-raises-6m-announces-general-availability-api-security-autopilot/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 6, 2023',
+		headline: 'Pynt raises $6M as it announces general availability of its API security autopilot',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://sdtimes.com/pynt-unveils-industry-first-platform-to-automate-api-security-backed-by-6m-in-seed-funding-and-global-user-traction/',
+		logo: sdtimes,
+		publication: 'SD Times',
+		date: 'September 5, 2023',
+		headline: 'Pynt unveils industry-first platform to automate API security, backed by $6M in Seed funding and global user traction',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/05/harmonya-20m-product-data-cpg/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 5, 2023',
+		headline: 'Harmonya bags $20M to decipher product data for CPG brands',
+        tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/05/harmonya-raises-20m/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'September 5, 2023',
+		headline: 'Generative AI startup Harmonya raises $20M to squeeze more insights from product data',
+        tags: ['AI & ML', 'saas']
+	},
 	{
 		articleUrl: 'https://www.csoonline.com/article/650786/bitbucket-integrates-arnicas-application-security-tools.html',
 		logo: cso,
