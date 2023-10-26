@@ -72,6 +72,126 @@ import techradar from '../../assets/publication-logos/techradar.svg';
 
 export default [
 	{
+		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
+		logo: wired,
+		publication: 'Wired',
+		date: 'October 25, 2023',
+		headline: 'Amazon’s AI-Powered Van Inspections Give It a Powerful New Data Feed',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/10/25/how-ai-can-help-secure-the-software-supply-chain-qa/',
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'October 25, 2023',
+		headline: 'How AI can help secure the software supply chain',
+        tags: ['security', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/amazon-partners-with-israeli-startup-uveye-on-ai-inspections-of-delivery-vans/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 19, 2023',
+		headline: 'Amazon partners with Israeli startup UVeye on AI inspections of delivery vans',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/edgarsten/2023/10/18/amazon-chooses-uveye-drive-through-tech-to-prevent-van-breakdowns/?sh=30e29f8d4cf0',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'October 18, 2023',
+		headline: 'Amazon Chooses UVeye Drive-Through Tech To Prevent Van Breakdowns',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/10/18/statement-a-cash-flow-management-platform-for-enterprises-raises-12m/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 18, 2023',
+		headline: 'Statement, a cash flow management platform for enterprises, raises $12M',
+        tags: ['highlights', 'fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/10/18/statement-real-time-cash-flow-intelligence-platform-raises-12m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'October 18, 2023',
+		headline: 'Statement, a real-time cash flow intelligence platform, raises $12M',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/rytw1ua11a',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'October 18, 2023',
+		headline: 'Fintech startup Statement raises $12 million for multi-banking, global liquidity management platform',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://finovate.com/statement-raises-12-million-for-ai-powered-treasury-tools/',
+		logo: finovate,
+		publication: 'Finovate',
+		date: 'October 18, 2023',
+		headline: 'Statement Raises $12 Million for AI-Powered Treasury Tools',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/10/13/israels-startup-ecosystem-down-but-not-out/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 13, 2023',
+		headline: 'Israel’s startup ecosystem: Down but not out',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/israels-ai-startups-carry-on-as-employees-mobilize-for-war-run-to-shelters/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 10, 2023',
+		headline: 'Israel’s AI startups carry on as employees mobilize for war, run to shelters',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/27/gem-security-raises-23m-for-its-cloud-security-platform/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 27, 2023',
+		headline: 'Gem Security raises $23M for its cloud security platform',
+        tags: ['highlights', 'saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/27/cloud-native-threat-detection-response-startup-gem-security-raises-23m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 27, 2023',
+		headline: 'Cloud-native threat detection and response startup Gem Security raises $23M',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/gem-security-lands-23m-series-a-funding/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 27, 2023',
+		headline: 'Gem Security Lands $23 Million Series A Funding',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/25/ai-writers-strike-film-industry/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 25, 2023',
+		headline: '‘Nobody has lost their job because of what we do,’ says CEO of film industry AI tool',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://insidebigdata.com/2023/09/19/generative-ai-report-9-19-2023/',
+		logo: insidebigdata,
+		publication: 'InsideBigData',
+		date: 'September 19, 2023',
+		headline: 'Pinecone working with AWS to solve Generative AI hallucination challenges',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://techcrunch.com/2023/09/13/port-is-aging-well-as-developer-portal-concept-takes-shape/',
 		logo: techcrunch,
 		publication: 'TechCrunch',

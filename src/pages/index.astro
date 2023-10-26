@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
+import wired from '../assets/publication-logos/wired.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
 import forbes from '../assets/publication-logos/forbes.png';
-import nyt from '../assets/publication-logos/nyt.png';
-import cnbc from '../assets/publication-logos/cnbc.png';
+import vb from '../assets/publication-logos/vb.svg';
 import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -18,36 +18,36 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
-		articleUrl: 'https://techcrunch.com/2023/09/13/port-is-aging-well-as-developer-portal-concept-takes-shape/',
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'September 13, 2023',
-		headline: 'Port is aging well as developer portal concept takes shape',
-        tags: ['highlights', 'dev', 'saas']
+		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
+		logo: wired,
+		publication: 'Wired',
+		date: 'October 25, 2023',
+		headline: 'Amazon’s AI-Powered Van Inspections Give It a Powerful New Data Feed',
+        tags: ['highlights', 'AI & ML']
 	},
 	{
-		articleUrl: 'https://www.nytimes.com/2023/08/15/business/artificial-intelligence-construction-real-estate.html',
-		logo: nyt,
-		publication: 'The New York Times',
-		date: 'August 15, 2023',
-		headline: 'A.I. Can’t Build a High-Rise, but It Can Speed Up the Job',
-        tags: ['AI & ML', 'highlights']
-	},
-	{
-		articleUrl: 'https://www.cnbc.com/video/2023/07/25/israels-government-is-acting-against-its-people-and-economy-vc-firm.html',
-		logo: cnbc,
-		publication: 'CNBC',
-		date: 'July 25, 2023',
-		headline: 'TLV Partners: "The Israeli government is acting against its people and economy"',
-        tags: ['highlights']
-	},
-	{
-		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/07/18/making-chatgpt-a-highly-targeted-marketing-tool-anyword-predicts-its-performance/',
+		articleUrl: 'https://www.forbes.com/sites/edgarsten/2023/10/18/amazon-chooses-uveye-drive-through-tech-to-prevent-van-breakdowns/?sh=30e29f8d4cf0',
 		logo: forbes,
 		publication: 'Forbes',
-		date: 'July 18, 2023',
-		headline: 'Making ChatGPT A Highly-Targeted Marketing Tool, Anyword Predicts Its Performance',
-        tags: ['highlights', 'saas', 'AI & ML']
+		date: 'October 18, 2023',
+		headline: 'Amazon Chooses UVeye Drive-Through Tech To Prevent Van Breakdowns',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/10/18/statement-a-cash-flow-management-platform-for-enterprises-raises-12m/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 18, 2023',
+		headline: 'Statement, a cash flow management platform for enterprises, raises $12M',
+        tags: ['highlights', 'fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/israels-ai-startups-carry-on-as-employees-mobilize-for-war-run-to-shelters/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 10, 2023',
+		headline: 'Israel’s AI startups carry on as employees mobilize for war, run to shelters',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
 	},
 ];
 
