@@ -72,6 +72,46 @@ import techradar from '../../assets/publication-logos/techradar.svg';
 
 export default [
 	{
+		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'November 28, 2023',
+		headline: 'The 4 next big things in buildings and real estate technology for 2023',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/amir-haramaty-ceo-co-founder-of-aiola-interview-series/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'November 27, 2023',
+		headline: 'Amir Haramaty, CEO & Co-Founder of aiOla – Interview Series',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/11/20/why-secrets-management-is-key-to-securing-your-systems-qa/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'November 20, 2023',
+		headline: 'Why secrets management is key to securing your systems [Q&A]',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/11/14/96-percent-of-organizations-vulnerable-due-to-mismanaged-secrets/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'November 14, 2023',
+		headline: '96 percent of organizations vulnerable due to mismanaged secrets',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/11/09/lunar-dev-wants-to-help-developers-take-control-of-their-external-api-costs/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 9, 2023',
+		headline: 'Lunar.dev wants to help developers take control of third-party API costs',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
 		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
 		logo: wired,
 		publication: 'Wired',

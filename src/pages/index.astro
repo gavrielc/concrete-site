@@ -6,7 +6,7 @@ import techcrunch from '../assets/publication-logos/techcrunch.png';
 import wired from '../assets/publication-logos/wired.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
 import forbes from '../assets/publication-logos/forbes.png';
-import vb from '../assets/publication-logos/vb.svg';
+import fastcompany from '../assets/publication-logos/fast-company.png';
 import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -17,6 +17,21 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
+	{
+		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'November 28, 2023',
+		headline: 'The 4 next big things in buildings and real estate technology for 2023'
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/11/09/lunar-dev-wants-to-help-developers-take-control-of-their-external-api-costs/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 9, 2023',
+		headline: 'Lunar.dev wants to help developers take control of third-party API costs',
+        tags: ['highlights', 'saas', 'dev']
+	},
 	{
 		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
 		logo: wired,
@@ -32,22 +47,6 @@ const results = [
 		date: 'October 18, 2023',
 		headline: 'Amazon Chooses UVeye Drive-Through Tech To Prevent Van Breakdowns',
         tags: ['highlights', 'AI & ML']
-	},
-	{
-		articleUrl: 'https://techcrunch.com/2023/10/18/statement-a-cash-flow-management-platform-for-enterprises-raises-12m/',
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'October 18, 2023',
-		headline: 'Statement, a cash flow management platform for enterprises, raises $12M',
-        tags: ['highlights', 'fintech', 'saas', 'AI & ML']
-	},
-	{
-		articleUrl: 'https://venturebeat.com/ai/israels-ai-startups-carry-on-as-employees-mobilize-for-war-run-to-shelters/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'October 10, 2023',
-		headline: 'Israel’s AI startups carry on as employees mobilize for war, run to shelters',
-        tags: ['highlights', 'saas', 'AI & ML', 'dev']
 	},
 ];
 
