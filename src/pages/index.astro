@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import wired from '../assets/publication-logos/wired.svg';
+import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
-import forbes from '../assets/publication-logos/forbes.png';
+import cnbc from '../assets/publication-logos/cnbc.png';
 import fastcompany from '../assets/publication-logos/fast-company.png';
 import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
@@ -18,36 +18,34 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
+		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 19, 2023',
+		headline: 'ScaleOps looks to cut cloud bills by automating Kubernetes configurations',
+	},
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/12/15/how-is-the-israel-hamas-war-impacting-the-tech-scene.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'December 15, 2023',
+		headline: 'How is the Israel-Hamas war impacting the tech scene?',
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/citrusx-emerges-from-stealth-to-make-ai-explainable-streamline-compliance-for-enterprises/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 11, 2023',
+		headline: 'Citrusx emerges from stealth to make AI explainable, streamline compliance for enterprises',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
 		logo: fastcompany,
 		publication: 'Fast Company',
 		date: 'November 28, 2023',
 		headline: 'The 4 next big things in buildings and real estate technology for 2023'
-	},
-	{
-		articleUrl: 'https://techcrunch.com/2023/11/09/lunar-dev-wants-to-help-developers-take-control-of-their-external-api-costs/',
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'November 9, 2023',
-		headline: 'Lunar.dev wants to help developers take control of third-party API costs',
-        tags: ['highlights', 'saas', 'dev']
-	},
-	{
-		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
-		logo: wired,
-		publication: 'Wired',
-		date: 'October 25, 2023',
-		headline: 'Amazon’s AI-Powered Van Inspections Give It a Powerful New Data Feed',
-        tags: ['highlights', 'AI & ML']
-	},
-	{
-		articleUrl: 'https://www.forbes.com/sites/edgarsten/2023/10/18/amazon-chooses-uveye-drive-through-tech-to-prevent-van-breakdowns/?sh=30e29f8d4cf0',
-		logo: forbes,
-		publication: 'Forbes',
-		date: 'October 18, 2023',
-		headline: 'Amazon Chooses UVeye Drive-Through Tech To Prevent Van Breakdowns',
-        tags: ['highlights', 'AI & ML']
-	},
+	}
 ];
 
 ---

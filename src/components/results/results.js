@@ -72,6 +72,46 @@ import techradar from '../../assets/publication-logos/techradar.svg';
 
 export default [
 	{
+		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 19, 2023',
+		headline: 'ScaleOps looks to cut cloud bills by automating Kubernetes configurations',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/12/15/how-is-the-israel-hamas-war-impacting-the-tech-scene.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'December 15, 2023',
+		headline: 'How is the Israel-Hamas war impacting the tech scene?',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/citrusx-emerges-from-stealth-to-make-ai-explainable-streamline-compliance-for-enterprises/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 11, 2023',
+		headline: 'Citrusx emerges from stealth to make AI explainable, streamline compliance for enterprises',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/12/11/with-regulation-looming-citrusx-helps-ensure-ai-models-are-in-compliance/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 11, 2023',
+		headline: 'With regulation looming, Citrusx helps ensure AI models are in compliance',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/security/how-arnicas-ceo-foresees-generative-ais-impact-on-devops-security/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 5, 2023',
+		headline: 'How Arnica’s CEO foresees generative AI’s impact on DevOps security',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev', 'security']
+	},
+	{
 		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
 		logo: fastcompany,
 		publication: 'Fast Company',
