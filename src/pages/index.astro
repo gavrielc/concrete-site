@@ -6,7 +6,7 @@ import techcrunch from '../assets/publication-logos/techcrunch.png';
 import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
 import cnbc from '../assets/publication-logos/cnbc.png';
-import fastcompany from '../assets/publication-logos/fast-company.png';
+import forbes from '../assets/publication-logos/forbes.webp';
 import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
@@ -17,6 +17,20 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
+	{
+		articleUrl: 'https://venturebeat.com/ai/ask-ai-gets-11m-to-advance-customer-support-and-more-with-ask-chrome-extension/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 10, 2024',
+		headline: 'Ask-AI gets $11M to advance customer support and more with ‘ASK’ Chrome extension',
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/01/09/scaleops-composes-new-score-for-cloud-native-orchestration/?sh=20e14daf742f',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 9, 2024',
+		headline: 'ScaleOps Composes New Score For Cloud-Native Orchestration',
+	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
 		logo: techcrunch,
@@ -30,21 +44,6 @@ const results = [
 		publication: 'CNBC',
 		date: 'December 15, 2023',
 		headline: 'How is the Israel-Hamas war impacting the tech scene?',
-	},
-	{
-		articleUrl: 'https://venturebeat.com/ai/citrusx-emerges-from-stealth-to-make-ai-explainable-streamline-compliance-for-enterprises/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'December 11, 2023',
-		headline: 'Citrusx emerges from stealth to make AI explainable, streamline compliance for enterprises',
-        tags: ['highlights', 'saas', 'AI & ML']
-	},
-	{
-		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
-		logo: fastcompany,
-		publication: 'Fast Company',
-		date: 'November 28, 2023',
-		headline: 'The 4 next big things in buildings and real estate technology for 2023'
 	}
 ];
 

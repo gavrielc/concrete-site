@@ -72,6 +72,46 @@ import techradar from '../../assets/publication-logos/techradar.svg';
 
 export default [
 	{
+		articleUrl: 'https://venturebeat.com/ai/ask-ai-gets-11m-to-advance-customer-support-and-more-with-ask-chrome-extension/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 10, 2024',
+		headline: 'Ask-AI gets $11M to advance customer support and more with ‘ASK’ Chrome extension',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/10/generative-ai-startup-ask-ai-breaks-data-silos-customer-service-teams-raises-11m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 10, 2024',
+		headline: 'Generative AI startup Ask-AI, which breaks down data silos for customer service teams, raises $11M',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/ai-dominate-this-years-ces-even-without-openais-altman-hand-2024-01-04/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'January 9, 2024',
+		headline: 'AI to dominate this year\'s CES, even without OpenAI\'s Altman on hand',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/01/09/scaleops-composes-new-score-for-cloud-native-orchestration/?sh=20e14daf742f',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 9, 2024',
+		headline: 'ScaleOps Composes New Score For Cloud-Native Orchestration',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.pymnts.com/news/artificial-intelligence/2024/deepdub-ceo-on-the-power-of-ai-voice-clones-to-reshape-streaming-content',
+		logo: pymnts,
+		publication: 'PYMNTS.com',
+		date: 'January 4, 2024',
+		headline: 'Deepdub CEO on the Power of AI Voice Clones to Reshape Streaming Content',
+        tags: ['highlights', 'saas', 'AI & ML', 'fintech']
+	},
+	{
 		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
