@@ -7,10 +7,10 @@ const cn = classNames.bind(styles);
 
 const tags = [
     {name: 'Highlights', value: 'highlights'},
+    {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
     {name: 'Developer', value: 'dev'},
     {name: 'CyberSecurity', value: 'security'},
-    {name: 'AI & ML', value: 'AI & ML'},
     {name: 'Fintech', value: 'fintech'},
     {name: 'Medtech', value: 'medtech'},
     {name: 'HR Tech', value: 'hr'},

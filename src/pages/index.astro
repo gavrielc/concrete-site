@@ -5,7 +5,6 @@ import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
 import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
-import cnbc from '../assets/publication-logos/cnbc.png';
 import forbes from '../assets/publication-logos/forbes.webp';
 import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
@@ -18,32 +17,32 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
+		articleUrl: 'https://techcrunch.com/2024/01/24/prompt-security-wants-to-make-genai-safe-for-the-enterprise/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security wants to make GenAI safe for the enterprise'
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/janakirammsv/2024/01/16/pinecone-brings-serverless-to-vector-databases/',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 16, 2024',
+		headline: 'Pinecone Brings Serverless To Vector Databases'
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/16/infield-wants-to-make-open-source-dependency-management-trivial/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 16, 2024',
+		headline: 'Infield wants to make open source dependency management trivial',
+	},
+	{
 		articleUrl: 'https://venturebeat.com/ai/ask-ai-gets-11m-to-advance-customer-support-and-more-with-ask-chrome-extension/',
 		logo: vb,
 		publication: 'VentureBeat',
 		date: 'January 10, 2024',
 		headline: 'Ask-AI gets $11M to advance customer support and more with ‘ASK’ Chrome extension',
-	},
-	{
-		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/01/09/scaleops-composes-new-score-for-cloud-native-orchestration/?sh=20e14daf742f',
-		logo: forbes,
-		publication: 'Forbes',
-		date: 'January 9, 2024',
-		headline: 'ScaleOps Composes New Score For Cloud-Native Orchestration',
-	},
-	{
-		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'December 19, 2023',
-		headline: 'ScaleOps looks to cut cloud bills by automating Kubernetes configurations',
-	},
-	{
-		articleUrl: 'https://www.cnbc.com/video/2023/12/15/how-is-the-israel-hamas-war-impacting-the-tech-scene.html',
-		logo: cnbc,
-		publication: 'CNBC',
-		date: 'December 15, 2023',
-		headline: 'How is the Israel-Hamas war impacting the tech scene?',
 	}
 ];
 

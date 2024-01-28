@@ -72,6 +72,102 @@ import techradar from '../../assets/publication-logos/techradar.svg';
 
 export default [
 	{
+		articleUrl: 'https://techcrunch.com/2024/01/24/prompt-security-wants-to-make-genai-safe-for-the-enterprise/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security wants to make GenAI safe for the enterprise',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/24/prompt-security-raises-5m-exits-stealth-ensure-llms-dont-give-corporate-secrets/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security raises $5M to ensure LLMs don’t give up corporate secrets',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/israeli-startup-gets-5m-seed-capital-to-tackle-ai-security/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'January 24, 2024',
+		headline: 'Israeli Startup Gets $5M Seed Capital to Tackle AI Security',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://www.darkreading.com/cyber-risk/prompt-security-launches-ai-protection-enterprise',
+		logo: darkreading,
+		publication: 'DarkReading',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security Launches With AI Protection for the Enterprise',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/ai-assisted-dependency-updates-without-breaking-things/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'January 22, 2024',
+		headline: 'AI-Assisted Dependency Updates without Breaking Things',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/dev-news-python-ai-tool-a-copilot-alternative-and-rsc-news/#:~:text=Vector%20Database%20Pinecone%20Goes%20Serverless',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'January 20, 2024',
+		headline: 'Vector Database Pinecone Goes Serverless',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.techtarget.com/searchdatamanagement/news/366566676/Pinecone-unveils-serverless-vector-database-targets-costs',
+		logo: techtarget,
+		publication: 'TechTarget',
+		date: 'January 17, 2024',
+		headline: 'Pinecone unveils serverless vector database, targets costs',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/16/infield-wants-to-make-open-source-dependency-management-trivial/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 16, 2024',
+		headline: 'Infield wants to make open source dependency management trivial',
+        tags: ['highlights', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/janakirammsv/2024/01/16/pinecone-brings-serverless-to-vector-databases/',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 16, 2024',
+		headline: 'Pinecone Brings Serverless To Vector Databases',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/16/pinecones-vector-database-gets-a-new-serverless-architecture/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 16, 2024',
+		headline: 'Pinecone’s vector database gets a new serverless architecture',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/pinecone-new-vector-database-architecture-a-breakthrough-to-curb-ai-hallucinations/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 16, 2024',
+		headline: 'Pinecone: New vector database architecture a ‘breakthrough’ to curb AI hallucinations',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/16/pinecones-vector-database-goes-serverless/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 16, 2024',
+		headline: 'Pinecone’s vector database goes serverless',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://venturebeat.com/ai/ask-ai-gets-11m-to-advance-customer-support-and-more-with-ask-chrome-extension/',
 		logo: vb,
 		publication: 'VentureBeat',
@@ -109,7 +205,7 @@ export default [
 		publication: 'PYMNTS.com',
 		date: 'January 4, 2024',
 		headline: 'Deepdub CEO on the Power of AI Voice Clones to Reshape Streaming Content',
-        tags: ['highlights', 'saas', 'AI & ML', 'fintech']
+        tags: ['saas', 'AI & ML', 'fintech']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
@@ -141,6 +237,14 @@ export default [
 		publication: 'TechCrunch',
 		date: 'December 11, 2023',
 		headline: 'With regulation looming, Citrusx helps ensure AI models are in compliance',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/deepdub-startup-with-ties-to-hbo-max-and-fox-launches-royalty-program-for-ai-voice-clones/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 7, 2023',
+		headline: 'Deepdub, startup with ties to HBO Max and Fox, launches royalty program for AI voice clones',
         tags: ['highlights', 'saas', 'AI & ML']
 	},
 	{
