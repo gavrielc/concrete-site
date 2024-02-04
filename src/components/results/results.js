@@ -68,9 +68,42 @@ import mmr from '../../assets/publication-logos/mmr.png';
 import secmag from '../../assets/publication-logos/secmag.svg';
 import theinformation from '../../assets/publication-logos/The_Information.png';
 import techradar from '../../assets/publication-logos/techradar.svg';
+import fortune from '../../assets/publication-logos/fortune.png';
 
 
 export default [
+	{
+		articleUrl: 'https://www.infoq.com/news/2024/02/pinecone-serverless-database/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'February 3, 2024',
+		headline: 'Pinecone Introduces Its Serverless Vector Database',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.darkreading.com/cybersecurity-operations/israeli-cybersecurity-companies-enduring-conflict',
+		logo: darkreading,
+		publication: 'Dark Reading',
+		date: 'January 30, 2024',
+		headline: 'How Israeli Cybersecurity Companies Endure Through the Conflict',
+        tags: ['saas', 'security']
+	},
+	{
+		articleUrl: 'https://archive.is/PRdtH#selection-1177.0-1180.0',
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'January 30, 2024',
+		headline: 'Prompt School: Go with the flow - Eye on AI',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/new-open-source-ai-coding-tool-surpasses-its-inspiration-google-deepminds-alphacode/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 26, 2024',
+		headline: 'New open source AI coding tool surpasses its inspiration: Google DeepMind’s AlphaCode',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
 	{
 		articleUrl: 'https://techcrunch.com/2024/01/24/prompt-security-wants-to-make-genai-safe-for-the-enterprise/',
 		logo: techcrunch,
@@ -126,6 +159,14 @@ export default [
 		date: 'January 17, 2024',
 		headline: 'Pinecone unveils serverless vector database, targets costs',
         tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://archive.is/CgQih#selection-1015.0-1015.82',
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'January 16, 2024',
+		headline: 'Pinecone debuts “serverless” solution that it says can dramatically lower AI cost.',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2024/01/16/infield-wants-to-make-open-source-dependency-management-trivial/',
