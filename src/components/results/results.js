@@ -69,15 +69,40 @@ import secmag from '../../assets/publication-logos/secmag.svg';
 import theinformation from '../../assets/publication-logos/The_Information.png';
 import techradar from '../../assets/publication-logos/techradar.svg';
 import fortune from '../../assets/publication-logos/fortune.png';
+import aibusiness from '../../assets/publication-logos/ai-business.svg';
 
 
 export default [
+	{
+		articleUrl: 'https://venturebeat.com/ai/sam-altman-and-the-7t-geopolitics-of-ai-chips-the-ai-beat/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'February 12, 2024',
+		headline: 'Sam Altman and the $7T geopolitics of AI chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2024/02/scaleops-container-slash-costs/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'February 5, 2024',
+		headline: 'ScaleOps Automates Rightsizing to Reduce Kubernetes Costs',
+        tags: ['saas', 'dev']
+	},
 	{
 		articleUrl: 'https://www.infoq.com/news/2024/02/pinecone-serverless-database/',
 		logo: infoq,
 		publication: 'InfoQ',
 		date: 'February 3, 2024',
 		headline: 'Pinecone Introduces Its Serverless Vector Database',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://aibusiness.com/data/using-vector-databases-for-generative-ai',
+		logo: aibusiness,
+		publication: 'AI Business',
+		date: 'February 1, 2024',
+		headline: 'Gen AI is Raising the Popularity of Vector Databases',
         tags: ['saas', 'dev', 'AI & ML']
 	},
 	{
