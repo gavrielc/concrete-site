@@ -70,9 +70,67 @@ import theinformation from '../../assets/publication-logos/The_Information.png';
 import techradar from '../../assets/publication-logos/techradar.svg';
 import fortune from '../../assets/publication-logos/fortune.png';
 import aibusiness from '../../assets/publication-logos/ai-business.svg';
+import designnews from '../../assets/publication-logos/designnews.svg';
+import startuphub from '../../assets/publication-logos/startuphub.png';
 
 
 export default [
+	{
+		articleUrl: 'https://venturebeat.com/games/deepdub-adds-ai-dubbing-tech-that-can-change-a-speakers-accent/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'February 29, 2024',
+		headline: 'Deepdub adds AI dubbing tech that can change a speaker’s accent',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/02/29/how-to-use-a-vector-database/?sh=247b3096793d',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'February 29, 2024',
+		headline: 'How To Use A Vector Database',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.helpnetsecurity.com/2024/02/28/itamar-friedman-codium-ai-ai-devops-software-development/',
+		logo: helpnetsec,
+		publication: 'HelpNetSecurity',
+		date: 'February 28, 2024',
+		headline: 'AI-driven DevOps: Revolutionizing software engineering practices',
+        tags: ['saas', 'AI & ML', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/akeyless-wants-you-to-throw-away-the-encryption-key/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'February 26, 2024',
+		headline: 'Akeyless Wants You to Throw Away the Encryption Key',
+        tags: ['saas', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.designnews.com/design-engineering/create-your-own-guitar-with-3d-vr-design-technology',
+		logo: designnews,
+		publication: 'DesignNews',
+		date: 'February 26, 2024',
+		headline: 'Create Your Own Guitar with 3D/AR Design Technology',
+        tags: ['saas']
+	},
+	{
+		articleUrl: 'https://www.startuphub.ai/from-big-data-to-voice-activation-the-founding-journey-behind-aiolas-speech-ai-revolution/',
+		logo: startuphub,
+		publication: 'StartupHub.ai',
+		date: 'February 22, 2024',
+		headline: 'From Big Data to Voice Activation: The Founding Journey Behind aiOla\'s Speech AI Revolution',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.theregister.com/2024/02/19/codium_ai_interview/',
+		logo: register,
+		publication: 'The Register',
+		date: 'February 19, 2024',
+		headline: 'Going with the flow makes AI better at solving coding problems',
+        tags: ['saas', 'AI & ML', 'dev']
+	},
 	{
 		articleUrl: 'https://venturebeat.com/ai/sam-altman-and-the-7t-geopolitics-of-ai-chips-the-ai-beat/',
 		logo: vb,
