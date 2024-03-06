@@ -76,6 +76,30 @@ import startuphub from '../../assets/publication-logos/startuphub.png';
 
 export default [
 	{
+		articleUrl: 'https://www.bloomberg.com/news/articles/2024-03-05/microsoft-walmart-back-israel-vc-s-500-million-in-fund-raising',
+		logo: bloomberg,
+		publication: 'Bloomberg',
+		date: 'March 5, 2024',
+		headline: 'Microsoft, Walmart Back Israel VC’s $500 Million in Fund Raising',
+        tags: ['highlights', 'saas', 'AI & ML', 'security', 'medtech', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/israeli-venture-group-team8-raises-500-million-new-tech-funds-2024-03-05/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'March 5, 2024',
+		headline: 'Israeli venture group Team8 raises $500 million for new tech funds',
+        tags: ['highlights', 'saas', 'AI & ML', 'security', 'medtech', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/investment-firm-team8-raises-additional-500-million/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'March 5, 2024',
+		headline: 'Investment Firm Team8 Raises Additional $500 Million',
+        tags: ['saas', 'security']
+	},
+	{
 		articleUrl: 'https://venturebeat.com/games/deepdub-adds-ai-dubbing-tech-that-can-change-a-speakers-accent/',
 		logo: vb,
 		publication: 'VentureBeat',
