@@ -76,6 +76,14 @@ import startuphub from '../../assets/publication-logos/startuphub.png';
 
 export default [
 	{
+		articleUrl: 'https://venturebeat.com/ai/invgates-ai-hub-automatically-generates-knowledge-articles-from-it-incidents/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 6, 2024',
+		headline: 'InvGate’s AI Hub automatically generates knowledge articles from IT incidents',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://www.bloomberg.com/news/articles/2024-03-05/microsoft-walmart-back-israel-vc-s-500-million-in-fund-raising',
 		logo: bloomberg,
 		publication: 'Bloomberg',
