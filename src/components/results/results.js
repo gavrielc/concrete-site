@@ -72,9 +72,28 @@ import fortune from '../../assets/publication-logos/fortune.png';
 import aibusiness from '../../assets/publication-logos/ai-business.svg';
 import designnews from '../../assets/publication-logos/designnews.svg';
 import startuphub from '../../assets/publication-logos/startuphub.png';
+import inc from '../../assets/publication-logos/inc.png';
+import supplychainbrain from '../../assets/publication-logos/supplychainbrain.png';
+import timesofisrael from '../../assets/publication-logos/toi.svg';
 
 
 export default [
+	{
+		articleUrl: 'https://www.inc.com/peter-cohan/this-venture-firm-sees-opportunity-in-generative-ai-heres-how-to-win-its-capital.html',
+		logo: inc,
+		publication: 'Inc.',
+		date: 'March 9, 2024',
+		headline: 'This Venture Firm Sees Opportunity in Generative AI: Here\'s How to Win Its Capital',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.supplychainbrain.com/blogs/1-think-tank/post/39091-embracing-ai-how-to-balance-short-term-gains-with-long-term-promise',
+		logo: supplychainbrain,
+		publication: 'Supply Chain Brain',
+		date: 'March 8, 2024',
+		headline: 'Embracing AI: How To Balance Short-Term Gains With Long-Term Promise',
+        tags: ['saas', 'AI & ML']
+	},
 	{
 		articleUrl: 'https://venturebeat.com/ai/invgates-ai-hub-automatically-generates-knowledge-articles-from-it-incidents/',
 		logo: vb,
@@ -82,6 +101,14 @@ export default [
 		date: 'March 6, 2024',
 		headline: 'InvGate’s AI Hub automatically generates knowledge articles from IT incidents',
         tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://blogs.timesofisrael.com/rising-above-israeli-tech-startups-show-resilience-amid-conflict/',
+		logo: timesofisrael,
+		publication: 'Times Of Israel',
+		date: 'March 6, 2024',
+		headline: 'Rising above: Israeli tech startups show resilience amid conflict',
+        tags: ['saas', 'AI & ML']
 	},
 	{
 		articleUrl: 'https://www.bloomberg.com/news/articles/2024-03-05/microsoft-walmart-back-israel-vc-s-500-million-in-fund-raising',
