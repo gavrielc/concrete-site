@@ -3,52 +3,52 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import vb from '../assets/publication-logos/vb.svg';
+import bloomberg from '../assets/publication-logos/bloomberg.png';
+import inc from '../assets/publication-logos/inc.png';
 import buildots from '../assets/client-logos/Buildots.webp';
-import fox from '../assets/publication-logos/fox.png';
-import wapo from '../assets/publication-logos/WaPo.png';
-import ox from '../assets/client-logos/OX.svg';
+import forbes from '../assets/publication-logos/forbes.webp';
+import akeyless from '../assets/client-logos/Akeyless.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
 import qm from '../assets/client-logos/QM.webp';
 import runai from '../assets/client-logos/Runai.svg';
-import anyword from '../assets/client-logos/Anyword.svg';
+import deepdub from '../assets/client-logos/Deepdub.svg';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const results = [
-{
-		articleUrl: 'https://techcrunch.com/2023/05/24/wiremock-lands-6-5m-to-help-developers-build-and-test-on-mock-apis/',
+	{
+		articleUrl: 'https://www.inc.com/peter-cohan/this-venture-firm-sees-opportunity-in-generative-ai-heres-how-to-win-its-capital.html',
+		logo: inc,
+		publication: 'Inc.',
+		date: 'March 9, 2024',
+		headline: 'This Venture Firm Sees Opportunity in Generative AI: Here\'s How to Win Its Capital',
+	},
+	{
+		articleUrl: 'https://www.bloomberg.com/news/articles/2024-03-05/microsoft-walmart-back-israel-vc-s-500-million-in-fund-raising',
+		logo: bloomberg,
+		publication: 'Bloomberg',
+		date: 'March 5, 2024',
+		headline: 'Microsoft, Walmart Back Israel VC’s $500 Million in Fund Raising',
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/02/29/how-to-use-a-vector-database/?sh=247b3096793d',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'February 29, 2024',
+		headline: 'How To Use A Vector Database',
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/24/prompt-security-wants-to-make-genai-safe-for-the-enterprise/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
-		date: 'May 24, 2023',
-		headline: 'WireMock lands $6.5M to help developers build and test on mock APIs'
-	},
-	{
-		articleUrl: 'https://venturebeat.com/ai/what-enterprises-need-to-know-about-adopting-generative-ai/',
-		logo: vb,
-		publication: 'VentureBeat',
-		date: 'May 14, 2023',
-		headline: 'What enterprises need to know about adopting generative AI',
-	},
-	{
-		articleUrl: 'https://www.washingtonpost.com/business/2023/04/03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search/56fc1756-d1d8-11ed-ac8b-cd7da05168e9_story.html',
-		logo: wapo,
-		publication: 'Washinton Post',
-		date: 'April 3, 2023',
-		headline: 'ChatGPT’s ‘IPhone Moment’ Poses a New Threat to Google'
-	},
-	{
-		articleUrl: 'https://www.foxbusiness.com/technology/ai-vs-job-market-experts-tech-roles-immune-automation-could-face-disruption',
-		logo: fox,
-		publication: 'Fox Business',
-		date: 'March 30, 2023',
-		headline: 'AI vs the job market: Experts say tech roles thought \'immune\' to automation could face disruption',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security wants to make GenAI safe for the enterprise'
 	}
 ];
 
 ---
-<Layout title="Public Relations for B2B tech companies | Concrete Media">
+<Layout title="Public Relations for B2B tech companies | Concrete Media" subTitle='Concrete Media is a tech PR agency that secures high-level media coverage for some of the most dynamic B2B companies.'>
 	<Header class="home-sticky-header"/>
 	<main>
 		<div class="hero">
@@ -64,9 +64,9 @@ const results = [
 			<div class="logos">
 				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots} alt="buildots logo"/></a>
 				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm} alt="qm logo"/></a>
-				<a class="client" href="https://anyword.com/" target="_blank"><img src={anyword} alt="anyword logo"/></a>
 				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone} alt="pinecone logo"/></a>
-				<a class="client" href="https://ox.security/" target="_blank"><img src={ox} alt="ox security logo"/></a>
+				<a class="client" href="https://deepdub.ai/" target="_blank"><img src={deepdub} alt="deepdub logo"/></a>
+				<a class="client" href="https://www.akeyless.io/" target="_blank"><img src={akeyless} alt="Akeyless logo"/></a>
 				<a class="client" href="https://run.ai/" target="_blank"><img src={runai} alt="run:ai logo"/></a>
 			</div>
 		</section>

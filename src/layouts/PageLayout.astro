@@ -5,19 +5,20 @@ import Layout from "../layouts/Layout.astro";
 
 export interface Props {
 	pageTitle: string;
-    title: string;
-    subTitle: string;
+    title?: string;
+    subTitle?: string;
 }
 
 const { pageTitle, title, subTitle } = Astro.props;
+const hasHeader = title || subTitle;
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} subTitle={subTitle}>
     <Header />
-    <section class="header">
+    {hasHeader && <section class="header">
         <h3>{title}</h3>
         <p class="desc-text" set:html={subTitle}/>
-    </section>
+    </section>}
     <slot/>
     <Footer />
 </Layout>

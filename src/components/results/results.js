@@ -58,6 +58,23 @@ import co from '../../assets/publication-logos/co.png';
 import techeu from '../../assets/publication-logos/techeu.png';
 import infosec from '../../assets/publication-logos/infosec.png';
 import thewrap from '../../assets/publication-logos/thewrap.svg';
+import nypost from '../../assets/publication-logos/nypost.png';
+import nyt from '../../assets/publication-logos/nyt.png';
+import reuters from '../../assets/publication-logos/reuters.svg';
+import cnbc from '../../assets/publication-logos/cnbc.png';
+import thestreet from '../../assets/publication-logos/thestreet.png';
+import foxnews from '../../assets/publication-logos/FoxNews.png';
+import mmr from '../../assets/publication-logos/mmr.png';
+import secmag from '../../assets/publication-logos/secmag.svg';
+import theinformation from '../../assets/publication-logos/The_Information.png';
+import techradar from '../../assets/publication-logos/techradar.svg';
+import fortune from '../../assets/publication-logos/fortune.png';
+import aibusiness from '../../assets/publication-logos/ai-business.svg';
+import designnews from '../../assets/publication-logos/designnews.svg';
+import startuphub from '../../assets/publication-logos/startuphub.png';
+import inc from '../../assets/publication-logos/inc.png';
+import supplychainbrain from '../../assets/publication-logos/supplychainbrain.png';
+import timesofisrael from '../../assets/publication-logos/toi.svg';
 
 
 export default [
@@ -84,6 +101,942 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/2ZcqxyVLpXYZ9pqhNkPip3',
         tags: ['podcast']
+	},
+	{
+		articleUrl: 'https://www.inc.com/peter-cohan/this-venture-firm-sees-opportunity-in-generative-ai-heres-how-to-win-its-capital.html',
+		logo: inc,
+		publication: 'Inc.',
+		date: 'March 9, 2024',
+		headline: 'This Venture Firm Sees Opportunity in Generative AI: Here\'s How to Win Its Capital',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.supplychainbrain.com/blogs/1-think-tank/post/39091-embracing-ai-how-to-balance-short-term-gains-with-long-term-promise',
+		logo: supplychainbrain,
+		publication: 'Supply Chain Brain',
+		date: 'March 8, 2024',
+		headline: 'Embracing AI: How To Balance Short-Term Gains With Long-Term Promise',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/invgates-ai-hub-automatically-generates-knowledge-articles-from-it-incidents/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'March 6, 2024',
+		headline: 'InvGate’s AI Hub automatically generates knowledge articles from IT incidents',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://blogs.timesofisrael.com/rising-above-israeli-tech-startups-show-resilience-amid-conflict/',
+		logo: timesofisrael,
+		publication: 'Times Of Israel',
+		date: 'March 6, 2024',
+		headline: 'Rising above: Israeli tech startups show resilience amid conflict',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.bloomberg.com/news/articles/2024-03-05/microsoft-walmart-back-israel-vc-s-500-million-in-fund-raising',
+		logo: bloomberg,
+		publication: 'Bloomberg',
+		date: 'March 5, 2024',
+		headline: 'Microsoft, Walmart Back Israel VC’s $500 Million in Fund Raising',
+        tags: ['highlights', 'saas', 'AI & ML', 'security', 'medtech', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/israeli-venture-group-team8-raises-500-million-new-tech-funds-2024-03-05/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'March 5, 2024',
+		headline: 'Israeli venture group Team8 raises $500 million for new tech funds',
+        tags: ['highlights', 'saas', 'AI & ML', 'security', 'medtech', 'fintech']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/investment-firm-team8-raises-additional-500-million/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'March 5, 2024',
+		headline: 'Investment Firm Team8 Raises Additional $500 Million',
+        tags: ['saas', 'security']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/games/deepdub-adds-ai-dubbing-tech-that-can-change-a-speakers-accent/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'February 29, 2024',
+		headline: 'Deepdub adds AI dubbing tech that can change a speaker’s accent',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/02/29/how-to-use-a-vector-database/?sh=247b3096793d',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'February 29, 2024',
+		headline: 'How To Use A Vector Database',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.helpnetsecurity.com/2024/02/28/itamar-friedman-codium-ai-ai-devops-software-development/',
+		logo: helpnetsec,
+		publication: 'HelpNetSecurity',
+		date: 'February 28, 2024',
+		headline: 'AI-driven DevOps: Revolutionizing software engineering practices',
+        tags: ['saas', 'AI & ML', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/akeyless-wants-you-to-throw-away-the-encryption-key/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'February 26, 2024',
+		headline: 'Akeyless Wants You to Throw Away the Encryption Key',
+        tags: ['saas', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.designnews.com/design-engineering/create-your-own-guitar-with-3d-vr-design-technology',
+		logo: designnews,
+		publication: 'DesignNews',
+		date: 'February 26, 2024',
+		headline: 'Create Your Own Guitar with 3D/AR Design Technology',
+        tags: ['saas']
+	},
+	{
+		articleUrl: 'https://www.startuphub.ai/from-big-data-to-voice-activation-the-founding-journey-behind-aiolas-speech-ai-revolution/',
+		logo: startuphub,
+		publication: 'StartupHub.ai',
+		date: 'February 22, 2024',
+		headline: 'From Big Data to Voice Activation: The Founding Journey Behind aiOla\'s Speech AI Revolution',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.theregister.com/2024/02/19/codium_ai_interview/',
+		logo: register,
+		publication: 'The Register',
+		date: 'February 19, 2024',
+		headline: 'Going with the flow makes AI better at solving coding problems',
+        tags: ['saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/sam-altman-and-the-7t-geopolitics-of-ai-chips-the-ai-beat/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'February 12, 2024',
+		headline: 'Sam Altman and the $7T geopolitics of AI chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2024/02/scaleops-container-slash-costs/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'February 5, 2024',
+		headline: 'ScaleOps Automates Rightsizing to Reduce Kubernetes Costs',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.infoq.com/news/2024/02/pinecone-serverless-database/',
+		logo: infoq,
+		publication: 'InfoQ',
+		date: 'February 3, 2024',
+		headline: 'Pinecone Introduces Its Serverless Vector Database',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://aibusiness.com/data/using-vector-databases-for-generative-ai',
+		logo: aibusiness,
+		publication: 'AI Business',
+		date: 'February 1, 2024',
+		headline: 'Gen AI is Raising the Popularity of Vector Databases',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.darkreading.com/cybersecurity-operations/israeli-cybersecurity-companies-enduring-conflict',
+		logo: darkreading,
+		publication: 'Dark Reading',
+		date: 'January 30, 2024',
+		headline: 'How Israeli Cybersecurity Companies Endure Through the Conflict',
+        tags: ['saas', 'security']
+	},
+	{
+		articleUrl: 'https://archive.is/PRdtH#selection-1177.0-1180.0',
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'January 30, 2024',
+		headline: 'Prompt School: Go with the flow - Eye on AI',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/new-open-source-ai-coding-tool-surpasses-its-inspiration-google-deepminds-alphacode/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 26, 2024',
+		headline: 'New open source AI coding tool surpasses its inspiration: Google DeepMind’s AlphaCode',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/24/prompt-security-wants-to-make-genai-safe-for-the-enterprise/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security wants to make GenAI safe for the enterprise',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/24/prompt-security-raises-5m-exits-stealth-ensure-llms-dont-give-corporate-secrets/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security raises $5M to ensure LLMs don’t give up corporate secrets',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/israeli-startup-gets-5m-seed-capital-to-tackle-ai-security/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'January 24, 2024',
+		headline: 'Israeli Startup Gets $5M Seed Capital to Tackle AI Security',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://www.darkreading.com/cyber-risk/prompt-security-launches-ai-protection-enterprise',
+		logo: darkreading,
+		publication: 'DarkReading',
+		date: 'January 24, 2024',
+		headline: 'Prompt Security Launches With AI Protection for the Enterprise',
+        tags: ['dev', 'saas', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/ai-assisted-dependency-updates-without-breaking-things/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'January 22, 2024',
+		headline: 'AI-Assisted Dependency Updates without Breaking Things',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/dev-news-python-ai-tool-a-copilot-alternative-and-rsc-news/#:~:text=Vector%20Database%20Pinecone%20Goes%20Serverless',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'January 20, 2024',
+		headline: 'Vector Database Pinecone Goes Serverless',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.techtarget.com/searchdatamanagement/news/366566676/Pinecone-unveils-serverless-vector-database-targets-costs',
+		logo: techtarget,
+		publication: 'TechTarget',
+		date: 'January 17, 2024',
+		headline: 'Pinecone unveils serverless vector database, targets costs',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://archive.is/CgQih#selection-1015.0-1015.82',
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'January 16, 2024',
+		headline: 'Pinecone debuts “serverless” solution that it says can dramatically lower AI cost.',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/16/infield-wants-to-make-open-source-dependency-management-trivial/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 16, 2024',
+		headline: 'Infield wants to make open source dependency management trivial',
+        tags: ['highlights', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/janakirammsv/2024/01/16/pinecone-brings-serverless-to-vector-databases/',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 16, 2024',
+		headline: 'Pinecone Brings Serverless To Vector Databases',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/01/16/pinecones-vector-database-gets-a-new-serverless-architecture/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'January 16, 2024',
+		headline: 'Pinecone’s vector database gets a new serverless architecture',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/pinecone-new-vector-database-architecture-a-breakthrough-to-curb-ai-hallucinations/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 16, 2024',
+		headline: 'Pinecone: New vector database architecture a ‘breakthrough’ to curb AI hallucinations',
+        tags: ['highlights', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/16/pinecones-vector-database-goes-serverless/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 16, 2024',
+		headline: 'Pinecone’s vector database goes serverless',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/ask-ai-gets-11m-to-advance-customer-support-and-more-with-ask-chrome-extension/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'January 10, 2024',
+		headline: 'Ask-AI gets $11M to advance customer support and more with ‘ASK’ Chrome extension',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/01/10/generative-ai-startup-ask-ai-breaks-data-silos-customer-service-teams-raises-11m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'January 10, 2024',
+		headline: 'Generative AI startup Ask-AI, which breaks down data silos for customer service teams, raises $11M',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/ai-dominate-this-years-ces-even-without-openais-altman-hand-2024-01-04/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'January 9, 2024',
+		headline: 'AI to dominate this year\'s CES, even without OpenAI\'s Altman on hand',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/adrianbridgwater/2024/01/09/scaleops-composes-new-score-for-cloud-native-orchestration/?sh=20e14daf742f',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'January 9, 2024',
+		headline: 'ScaleOps Composes New Score For Cloud-Native Orchestration',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.pymnts.com/news/artificial-intelligence/2024/deepdub-ceo-on-the-power-of-ai-voice-clones-to-reshape-streaming-content',
+		logo: pymnts,
+		publication: 'PYMNTS.com',
+		date: 'January 4, 2024',
+		headline: 'Deepdub CEO on the Power of AI Voice Clones to Reshape Streaming Content',
+        tags: ['saas', 'AI & ML', 'fintech']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/12/19/scaleops-looks-to-cut-cloud-bills-by-automating-kubernetes-configurations/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 19, 2023',
+		headline: 'ScaleOps looks to cut cloud bills by automating Kubernetes configurations',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/12/15/how-is-the-israel-hamas-war-impacting-the-tech-scene.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'December 15, 2023',
+		headline: 'How is the Israel-Hamas war impacting the tech scene?',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/citrusx-emerges-from-stealth-to-make-ai-explainable-streamline-compliance-for-enterprises/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 11, 2023',
+		headline: 'Citrusx emerges from stealth to make AI explainable, streamline compliance for enterprises',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/12/11/with-regulation-looming-citrusx-helps-ensure-ai-models-are-in-compliance/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 11, 2023',
+		headline: 'With regulation looming, Citrusx helps ensure AI models are in compliance',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/deepdub-startup-with-ties-to-hbo-max-and-fox-launches-royalty-program-for-ai-voice-clones/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 7, 2023',
+		headline: 'Deepdub, startup with ties to HBO Max and Fox, launches royalty program for AI voice clones',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/security/how-arnicas-ceo-foresees-generative-ais-impact-on-devops-security/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 5, 2023',
+		headline: 'How Arnica’s CEO foresees generative AI’s impact on DevOps security',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev', 'security']
+	},
+	{
+		articleUrl: 'https://www.fastcompany.com/90977385/next-big-things-tech-buildings-real-estate-2023',
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'November 28, 2023',
+		headline: 'The 4 next big things in buildings and real estate technology for 2023',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/amir-haramaty-ceo-co-founder-of-aiola-interview-series/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'November 27, 2023',
+		headline: 'Amir Haramaty, CEO & Co-Founder of aiOla – Interview Series',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/11/20/why-secrets-management-is-key-to-securing-your-systems-qa/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'November 20, 2023',
+		headline: 'Why secrets management is key to securing your systems [Q&A]',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/11/14/96-percent-of-organizations-vulnerable-due-to-mismanaged-secrets/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'November 14, 2023',
+		headline: '96 percent of organizations vulnerable due to mismanaged secrets',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/11/09/lunar-dev-wants-to-help-developers-take-control-of-their-external-api-costs/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 9, 2023',
+		headline: 'Lunar.dev wants to help developers take control of third-party API costs',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.wired.com/story/amazons-ai-van-inspections-powerful-data-feed/',
+		logo: wired,
+		publication: 'Wired',
+		date: 'October 25, 2023',
+		headline: 'Amazon’s AI-Powered Van Inspections Give It a Powerful New Data Feed',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/10/25/how-ai-can-help-secure-the-software-supply-chain-qa/',
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'October 25, 2023',
+		headline: 'How AI can help secure the software supply chain',
+        tags: ['security', 'AI & ML', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/amazon-partners-with-israeli-startup-uveye-on-ai-inspections-of-delivery-vans/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 19, 2023',
+		headline: 'Amazon partners with Israeli startup UVeye on AI inspections of delivery vans',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/edgarsten/2023/10/18/amazon-chooses-uveye-drive-through-tech-to-prevent-van-breakdowns/?sh=30e29f8d4cf0',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'October 18, 2023',
+		headline: 'Amazon Chooses UVeye Drive-Through Tech To Prevent Van Breakdowns',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/10/18/statement-a-cash-flow-management-platform-for-enterprises-raises-12m/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 18, 2023',
+		headline: 'Statement, a cash flow management platform for enterprises, raises $12M',
+        tags: ['highlights', 'fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/10/18/statement-real-time-cash-flow-intelligence-platform-raises-12m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'October 18, 2023',
+		headline: 'Statement, a real-time cash flow intelligence platform, raises $12M',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/rytw1ua11a',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'October 18, 2023',
+		headline: 'Fintech startup Statement raises $12 million for multi-banking, global liquidity management platform',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://finovate.com/statement-raises-12-million-for-ai-powered-treasury-tools/',
+		logo: finovate,
+		publication: 'Finovate',
+		date: 'October 18, 2023',
+		headline: 'Statement Raises $12 Million for AI-Powered Treasury Tools',
+        tags: ['fintech', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/10/13/israels-startup-ecosystem-down-but-not-out/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 13, 2023',
+		headline: 'Israel’s startup ecosystem: Down but not out',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/israels-ai-startups-carry-on-as-employees-mobilize-for-war-run-to-shelters/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 10, 2023',
+		headline: 'Israel’s AI startups carry on as employees mobilize for war, run to shelters',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/27/gem-security-raises-23m-for-its-cloud-security-platform/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 27, 2023',
+		headline: 'Gem Security raises $23M for its cloud security platform',
+        tags: ['highlights', 'saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/27/cloud-native-threat-detection-response-startup-gem-security-raises-23m/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 27, 2023',
+		headline: 'Cloud-native threat detection and response startup Gem Security raises $23M',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/gem-security-lands-23m-series-a-funding/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 27, 2023',
+		headline: 'Gem Security Lands $23 Million Series A Funding',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/25/ai-writers-strike-film-industry/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 25, 2023',
+		headline: '‘Nobody has lost their job because of what we do,’ says CEO of film industry AI tool',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://insidebigdata.com/2023/09/19/generative-ai-report-9-19-2023/',
+		logo: insidebigdata,
+		publication: 'InsideBigData',
+		date: 'September 19, 2023',
+		headline: 'Pinecone working with AWS to solve Generative AI hallucination challenges',
+        tags: ['dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/13/port-is-aging-well-as-developer-portal-concept-takes-shape/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 13, 2023',
+		headline: 'Port is aging well as developer portal concept takes shape',
+        tags: ['highlights', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/13/port-raises-18m-simplify-devops-processes-developer-teams/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'September 13, 2023',
+		headline: 'Port raises $18M to simplify DevOps processes for developer teams',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/vector-embeddings-antidote-to-psychotic-llms-and-a-cure-for-alert-fatigue/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 12, 2023',
+		headline: 'Vector Embeddings – Antidote to Psychotic LLMs and a Cure for Alert Fatigue?',
+        tags: ['AI & ML', 'security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/11/scala-biodesign-makes-it-easy-to-re-engineer-proteins-one-molecule-at-a-time-or-50/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 11, 2023',
+		headline: 'Scala Biodesign makes it easy to re-engineer proteins one molecule at a time – or 50',
+        tags: ['highlights', 'AI & ML', 'medtech']
+	},
+	{
+		articleUrl: 'https://www.wsj.com/articles/companies-look-to-squeeze-more-power-out-of-ai-chips-fe33e2f2',
+		logo: wsj,
+		publication: 'Wall Street Journal',
+		date: 'September 8, 2023',
+		headline: 'Companies Look to Squeeze More Power Out of AI Chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.techradar.com/pro/anyword-review-is-this-the-ai-writing-solution-for-you',
+		logo: techradar,
+		publication: 'Techradar',
+		date: 'September 7, 2023',
+		headline: 'Anyword review: Is this the AI writing solution for you?',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://betanews.com/2023/09/07/cisos-see-budgets-increase-despite-economic-slowdown/',
+		logo: betanews,
+		publication: 'Beta News',
+		date: 'September 7, 2023',
+		headline: 'CISOs see budgets increase despite economic slowdown',
+        tags: ['security']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/the-team8-foundry-method-for-selecting-investable-startups/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'September 7, 2023',
+		headline: 'The Team8 Foundry Method for Selecting Investable Startups',
+        tags: ['security']
+	},
+	{
+		articleUrl: 'https://www.csoonline.com/article/651241/iam-cloud-security-to-drive-new-cybersecurity-spending.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'September 7, 2023',
+		headline: 'IAM, cloud security to drive new cybersecurity spending',
+        tags: ['security', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/06/api-security-startup-pynt-raises-6m/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 6, 2023',
+		headline: 'API security startup Pynt raises $6M',
+        tags: ['highlights', 'security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/06/pynt-raises-6m-announces-general-availability-api-security-autopilot/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 6, 2023',
+		headline: 'Pynt raises $6M as it announces general availability of its API security autopilot',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://sdtimes.com/pynt-unveils-industry-first-platform-to-automate-api-security-backed-by-6m-in-seed-funding-and-global-user-traction/',
+		logo: sdtimes,
+		publication: 'SD Times',
+		date: 'September 5, 2023',
+		headline: 'Pynt unveils industry-first platform to automate API security, backed by $6M in Seed funding and global user traction',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/09/05/harmonya-20m-product-data-cpg/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 5, 2023',
+		headline: 'Harmonya bags $20M to decipher product data for CPG brands',
+        tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/09/05/harmonya-raises-20m/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'September 5, 2023',
+		headline: 'Generative AI startup Harmonya raises $20M to squeeze more insights from product data',
+        tags: ['AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.csoonline.com/article/650786/bitbucket-integrates-arnicas-application-security-tools.html',
+		logo: cso,
+		publication: 'CSO',
+		date: 'August 31, 2023',
+		headline: 'Bitbucket integrates Arnica’s application security tools',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/08/29/quantum-machines-next-gen-quantum-control-solution-that-can-scale-beyond-1000-qubits/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'August 29, 2023',
+		headline: 'Quantum Machines’ next-gen quantum control solution that can scale beyond 1,000 qubits',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/08/15/developer-security-operations-startup-ox-security-adds-ibm-investor-list/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'August 15, 2023',
+		headline: 'Developer security operations startup OX Security adds IBM to its investor list',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.nytimes.com/2023/08/15/business/artificial-intelligence-construction-real-estate.html',
+		logo: nyt,
+		publication: 'The New York Times',
+		date: 'August 15, 2023',
+		headline: 'A.I. Can’t Build a High-Rise, but It Can Speed Up the Job',
+        tags: ['AI & ML', 'highlights']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/08/15/configu-raises-a-3m-pre-seed-round-for-its-configuration-as-code-platform/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'August 15, 2023',
+		headline: 'Configu raises a $3M pre-seed round for its configuration-as-code platform',
+        tags: ['dev', 'highlights', 'saas']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/ry6x00lw32',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'August 14, 2023',
+		headline: 'Configu raises $3 million pre-Seed funding for its open-source configuration orchestration platform',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/08/14/application-configuration-startup-configu-raises-3m-pre-seed-funding/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'August 14, 2023',
+		headline: 'Application configuration startup Configu raises $3M in pre-seed funding',
+        tags: ['dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.theinformation.com/articles/pinecone-and-cohere-ceos-warn-about-leaving-the-gpu-faucet-running-in-the-age-of-ai',
+		logo: theinformation,
+		publication: 'The Information',
+		date: 'August 14, 2023',
+		headline: 'Pinecone and Cohere CEOs Warn About Leaving the GPU ‘Faucet’ Running in the Age of AI',
+        tags: ['saas', 'dev', 'AI & ML', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.scmagazine.com/brief/experts-warn-of-growing-dependency-confusion-attacks',
+		logo: scmagazine,
+		publication: 'SC Magazine',
+		date: 'August 14, 2023',
+		headline: 'Experts warn of growing dependency confusion attacks',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/all-about-oscr-a-software-supply-chain-security-framework/',
+		logo: tns,
+		publication: 'The New Stack',
+		date: 'August 14, 2023',
+		headline: 'All about OSC&R, a Software Supply Chain Security Framework',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://mobilemarketingreads.com/barbie-has-been-the-search-term-with-the-highest-search-count-on-amazon/',
+		logo: mmr,
+		publication: 'Mobile Marketing Reads',
+		date: 'August 9, 2023',
+		headline: '“Barbie” has been the search term with the highest search count on Amazon',
+        tags: ['AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securitymagazine.com/articles/99741-large-user-applications-vulnerable-to-dependency-confusion-attacks',
+		logo: secmag,
+		publication: 'Security Magazine',
+		date: 'August 9, 2023',
+		headline: 'Large-user applications vulnerable to dependency confusion attacks',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.insiderintelligence.com/content/amazon-shopify-mattel-boost-barbie-movie',
+		logo: bi,
+		publication: 'Insider Intelligence',
+		date: 'August 7, 2023',
+		headline: 'Amazon, Shopify, Mattel get a boost from the ‘Barbie’ movie',
+        tags: ['AI & ML', 'saas', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/ami-hever-co-founder-ceo-of-uveye-interview-series/',
+		logo: uniteai,
+		publication: 'UniteAI',
+		date: 'August 7, 2023',
+		headline: 'Amir Hever, Co-Founder & CEO of UVeye – Interview Series',
+        tags: ['AI & ML']
+	},
+	{
+		articleUrl: 'https://www.foxnews.com/media/ai-pioneers-promise-safer-roads-construction-sites-help-new-technology',
+		logo: foxnews,
+		publication: 'Fox News',
+		date: 'July 27, 2023',
+		headline: 'AI pioneers expect safer roads, construction sites with the help of new technology',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.cnbc.com/video/2023/07/25/israels-government-is-acting-against-its-people-and-economy-vc-firm.html',
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'July 25, 2023',
+		headline: 'TLV Partners: "The Israeli government is acting against its people and economy"',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.thestreet.com/technology/this-tech-startup-is-powering-part-of-the-core-of-ai-models',
+		logo: thestreet,
+		publication: 'The Street',
+		date: 'July 21, 2023',
+		headline: 'This Tech Startup Is Powering \'the Core Infrastructure\' of AI Models',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.nytimes.com/2023/07/20/technology/an-ai-supercomputer-whirs-to-life-powered-by-giant-computer-chips.html',
+		logo: nyt,
+		publication: 'New York Times',
+		date: 'July 20, 2023',
+		headline: 'An A.I. Supercomputer Whirs to Life, Powered by Giant Computer Chips',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/gilpress/2023/07/18/making-chatgpt-a-highly-targeted-marketing-tool-anyword-predicts-its-performance/',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'July 18, 2023',
+		headline: 'Making ChatGPT A Highly-Targeted Marketing Tool, Anyword Predicts Its Performance',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/marketing-software-anyword-adds-integrations-to-chatgpt-notion-ai-and-canva-ai/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 18, 2023',
+		headline: 'Marketing software Anyword adds integrations to ChatGPT, Notion AI, and Canva AI',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/technology/tlv-250-mln-fund-looks-further-afield-israeli-tech-startups-2023-07-17/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'July 17, 2023',
+		headline: 'TLV $250 mln fund looks further afield for Israeli tech startups',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/07/17/tlv-partners-raises-new-250m-fund/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'July 17, 2023',
+		headline: 'TLV Partners raises new $250M fund',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/pinecone-leads-explosion-in-vector-databases-for-generative-ai/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 14, 2023',
+		headline: 'Pinecone leads ‘explosion’ in vector databases for generative AI',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.theregister.com/2023/07/11/vector_databases/',
+		logo: register,
+		publication: 'The Register',
+		date: 'July 11, 2023',
+		headline: 'Putting LLMs into production is a monumental task – vector databases could light the way',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/games/deepdub-go-brings-ai-localization-to-indie-games-and-content-creators/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 6, 2023',
+		headline: 'Deepdub Go brings AI localization to indie games and content creators',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.businessinsider.com/ai-startups-netflix-marvel-lucasfilm-holllywood-deepfake-dubbing-vc-funding-2023-3',
+		logo: bi,
+		publication: 'Business Insider',
+		date: 'July 6, 2023',
+		headline: '11 startups developing AI to disrupt Hollywood and scoring hundreds of millions in VC and private equity funding',
+        tags: ['highlights', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/07/06/deepdub-go-uses-generative-ai-platform-professionally-dub-video-content/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'July 6, 2023',
+		headline: 'Deepdub GO uses generative AI platform to dub any video content professionally',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/07/05/announcing-the-saas-stage-agenda-at-techcrunch-disrupt/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'July 5, 2023',
+		headline: 'Announcing the SaaS Stage agenda at TechCrunch Disrupt 2023',
+        tags: ['highlights']
+	},
+	{
+		articleUrl: 'https://www.foxbusiness.com/media/ai-comes-construction-tech-360-degree-cameras-deployed-first-time-new-york-project',
+		logo: fox,
+		publication: 'Fox Business',
+		date: 'June 20, 2023',
+		headline: 'AI comes for construction: New tech with 360-degree cameras deployed for first time in New York project',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/nir-valtman-ceo-founder-at-arnica-interview-series/',
+		logo: uniteai,
+		publication: 'Uniteai.ai',
+		date: 'June 20, 2023',
+		headline: 'Nir Valtman, CEO & Founder at Arnica – Interview Series',
+        tags: ['security', 'dev', 'saas']
+	},
+	{
+		articleUrl: 'https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-746928',
+		logo: jpost,
+		publication: 'Jerusalem Post',
+		date: 'June 20, 2023',
+		headline: 'Noogata unveils AI assistant to increase sales on Amazon',
+        tags: ['AI & ML', 'saas']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/akeyless-launches-saas-based-external-secrets-manager/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'June 19, 2023',
+		headline: 'Akeyless Launches SaaS-based External Secrets Manager',
+        tags: ['security', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/06/15/deepchecks-snags-14m-seed-to-continuously-validate-ml-models/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks snags $14M seed to continuously validate ML models',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/deepchecks-raises-funding-and-launches-open-source-validation-platform-for-ml-models/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks raises funding and launches open source validation platform for ML models',
+        tags: ['highlights', 'saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2023/06/15/deepchecks-raises-14m-continuously-validate-machine-learning-models/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'June 15, 2023',
+		headline: 'Deepchecks raises $14M to validate machine learning models continuously',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/will-llm-and-generative-ai-solve-a-20-year-old-problem-in-application-security/',
+		logo: uniteai,
+		publication: 'Uniteai.ai',
+		date: 'June 14, 2023',
+		headline: 'Will LLM and Generative AI Solve a 20-Year-Old Problem in Application Security?',
+        tags: ['security', 'dev', 'saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://nypost.com/2023/06/07/openais-sam-altman-complained-chip-shortage-is-delaying-chatgpt-plans/',
+		logo: nypost,
+		publication: 'NY Post',
+		date: 'June 7, 2023',
+		headline: 'OpenAI’s Sam Altman complained chip shortage ‘delaying’ ChatGPT plans: deleted post',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2023/06/01/ariga-is-helping-developers-define-database-schema-as-code/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'June 1, 2023',
+		headline: 'Ariga is helping developers define database schema as code',
+        tags: ['highlights', 'saas', 'dev']
 	},
 	{
 		articleUrl: 'https://www.calcalistech.com/ctechnews/article/bl93aqoik',

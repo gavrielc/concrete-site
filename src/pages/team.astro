@@ -1,13 +1,14 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import lazer from "../assets/team/Lazer.jpg";
-import jeremy from "../assets/team/Jeremy.jpg";
-import daria from "../assets/team/Daria.jpg";
 import zack from "../assets/team/Zack.jpg";
 import kevin from "../assets/team/Kevin.jpg";
-import rivka from "../assets/team/Rivka.jpg";
 import gavriel from "../assets/team/Gavriel.jpg";
-import netanya from "../assets/team/Netanya.jpg";
+import ali from "../assets/team/Ali.jpg";
+import daphne from "../assets/team/Daphne.jpg";
+import anna from "../assets/team/Anna.jpg";
+import julia from "../assets/team/Julia.jpeg";
+import tamara from "../assets/team/tamara.jpg";
 import TeamCard from "../components/TeamCard.astro";
 
 const team = [
@@ -20,57 +21,64 @@ const team = [
         twitter: 'https://twitter.com/Lazer_Cohen'
     },
     {
-        name: 'Daria Khodorovsky',
-        title: 'Account Executive',
-        bio: 'Daria is an Account Executive for Concrete Media. A journalism graduate of Moscow State University, she lived in Rome for eight years before moving to Israel where she promptly fell in love with Tel Aviv and the Israeli tech environment. She leverages her decade of experience in marketing, corporate communications and content creation to create innovative opportunities for Concrete\'s portfolio of clients. A keen foodie, she recently married her interest in cuisine with her passion for writing by publishing a book on the restaurant culture of Rome.',
-        image: daria,
-        linkedin: 'https://www.linkedin.com/in/dariakhodorovskaya/',
-        twitter: 'https://twitter.com/DKhodorovsky'
-    },
-    {
-        name: 'Jeremy Seidman',
-        title: 'New Media Manager',
-        bio: 'Jeremy is a New Media Manager at Concrete Media. Originally from New Jersey, Jeremy made aliya in September 2022 with his dog Cassie. He has extensive experience in researching new markets/methodologies, data analysis, client service, and process improvement. Jeremy previously worked for Intercontinental Exchange (ICE) for seven years in their commodities operations group and puts his business and technical acumen to use for some of the most exciting companies operating in the Israeli start-up scene.',
-        image: jeremy,
-        linkedin: 'https://www.linkedin.com/in/jseidman30/'
-    },
-    {
-        name: 'Kevin Capon Goldszmidt',
-        title: 'Senior Account Manager',
-        bio: 'Kevin is a Senior PR Account Manager at Concrete Media. Originally from Mexico City, he emigrated to Israel in 2012 and earned his BA in Psychology at IDC Herzliya. A huge football and gaming fan, he is also passionate about learning about new technologies and the latest developments in areas like AI, Cybersecurity, and software development. “In PR you will always keep learning, and at Concrete you work surrounded by the brightest minds in Israel and probably the world, so there is no better place to learn”.',
-        image: kevin,
-        linkedin: 'https://www.linkedin.com/in/kcgoldszmidt/',
-        twitter: 'https://twitter.com/KCGoldszmidt'
-    },
-    {
-        name: 'Zack Rothbart',
-        title: 'Senior Strategist',
-        bio: 'Zack Rothbart is Senior Strategist at Concrete.media. He previously served as international spokesman at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Zack enjoys drawing upon diverse experiences and perspectives to help clients tell their stories and maximize their potential. He reads and writes in his spare time, tries to learn something from everyone, and lives in Jerusalem with his endearing and thought-provoking family, for which he is grateful.',
-        image: zack,
-        linkedin: 'https://www.linkedin.com/in/zack-rothbart-37913b62/',
-        twitter: 'https://twitter.com/ZackRothbart'
-    },
-    {
-        name: 'Netanya Stein',
-        title: 'Senior Account Executive',
-        bio: 'Netanya is a Senior Account Executive at Concrete Media. She made the move to Israel from New Jersey in the midst of the pandemic and worked at a global PR firm where she developed a keen interest in medtech and artificial intelligence. Netanya has a BA in English/PR and a passion for writing and forging relationships with clients and the media.',
-        image: netanya,
-        linkedin: 'https://www.linkedin.com/in/netanya-stein/'
-    },
-    {
         name: 'Gavriel Cohen',
-        title: 'Tech Consultant and Account Manager',
-        bio: 'Gavriel is an Account Manager and technical consultant at Concrete Media. Originally from New York City, he did a year and half voluntary service in the IDF as a combat soldier in 2009, before emigrating to Israel in 2013. He studied at Tel Aviv University, where he earned a BSc with honors in Computer Science and Physics. He worked as a Software Developer and Team Leader at Wix for 6 years. With a keen interest in the intersection between Tech and Media, he closely follows trends in Machine Learning, CyberSecurity and Software Development.',
+        title: 'Vice President',
+        bio: 'Gavriel is Vice President of Concrete Media. Originally from New York City, he did a year and half voluntary service in the IDF as a combat soldier in 2009, before emigrating to Israel in 2013. He studied at Tel Aviv University, where he earned a BSc with honors in Computer Science and Physics. He worked as a Software Developer and Team Leader at Wix for 6 years. With a keen interest in the intersection between Tech and Media, he closely follows trends in Machine Learning, CyberSecurity and Software Development.',
         image: gavriel,
         linkedin: 'https://www.linkedin.com/in/gavrielco/',
         twitter: 'https://twitter.com/Gavriel_Cohen'
     },
     {
-        name: 'Rivka Richler',
+        name: 'Kevin Capon Goldszmidt',
+        title: 'Head of Madrid Office',
+        bio: 'Kevin is the Head of Concrete Media\'s Madrid office. Originally from Mexico City, he emigrated to Israel in 2012 and earned his BA in Psychology at IDC Herzliya. A huge football and gaming fan, he is also passionate about learning about new technologies and the latest developments in areas like AI, Cybersecurity, and software development. “In PR you will always keep learning, and at Concrete you work surrounded by the brightest minds in Israel and probably the world, so there is no better place to learn”.',
+        image: kevin,
+        linkedin: 'https://www.linkedin.com/in/kcgoldszmidt/',
+        twitter: 'https://twitter.com/KCGoldszmidt'
+    },
+    {
+        name: 'Ali Goldberg',
         title: 'New Media Manager',
-        bio: 'Rivka is a new media manager at Concrete Media. While working on her BA in marketing, Rivka practiced her new knowledge on a jewelry brand she created. She has been working in the marketing field since 2019 and her responsibilities have included strategic content writing and social media management. She’s energized by hearing about different businesses and how people are solving problems with new technology. After being in love with Israel from a distance for many years, Rivka took the leap in 2022 and moved to Jerusalem with her husband.',
-        image: rivka,
-        linkedin: 'https://www.linkedin.com/in/rivka-richler-6287a4bb/'
+        bio: 'Ali is a New Media Manager at Concrete Media. She graduated with honors in Political Science & Journalism from San Diego State University. Her curious personality drove her to Israel, where she taught children English and was enamored by Tel Aviv\'s startup culture. Ali began blogging and managing clients\' social media, which led her to a marketing job at a hardware manufacturer. She fell in love with the pursuit of knowledge and finding an interesting angle for every story.',
+        image: ali,
+        linkedin: 'https://www.linkedin.com/in/alipgoldberg'
+    },
+    {
+        name: 'Anna Mikhailova',
+        title: 'New Media Manager',
+        bio: 'Anna relocated from Moscow to Israel in 2022, bringing with her a rich background in journalism. Anna\'s reporting spans diverse topics, from politics to the evolving world of tech. Anna holds a BA in Journalism and an MA in Art Management from the University of Manchester. Her career in PR began with crafting communication campaigns for major cultural institutions. Anna\'s interests have shifted towards the vibrant startup culture, especially focusing on how AI is reshaping the way we consume information. Anna lives in Tel Aviv with her son and enjoys spending her free time exploring museums and watching arthouse movies.',
+        image: anna,
+        linkedin: 'https://www.linkedin.com/in/anna-mikhailova-a39631230'
+    },
+    {
+        name: 'Daphne Cavanaugh',
+        title: 'New Media Manager',
+        bio: 'Daphne made Aliyah from Florida in 2018 to join the IDF, where she served for two years as an International Cooperation NCO. She then received her MBA in Innovation & Entrepreneurship and her MA in Conflict Resolution & Mediation from Tel Aviv University. Daphne won several elite competitions for her innovative uses of technology within various sectors of entrepreneurship. She also served as a project manager at MINDSTATE, facilitating entrepreneurial endeavors in the MedTech sector. Daphne is an avid advocate for advancing the uses of AI and is dedicated to supporting Israeli start-ups.',
+        image: daphne,
+        linkedin: 'https://www.linkedin.com/in/daphnecavanaugh/'
+    },
+    {
+        name: 'Zack Rothbart',
+        title: 'Senior Strategist',
+        bio: 'Zack Rothbart is Senior Strategist at Concrete Media. He previously served as international spokesman at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Zack enjoys drawing upon diverse experiences and perspectives to help clients tell their stories and maximize their potential. He reads and writes in his spare time, tries to learn something from everyone, and lives in Jerusalem with his endearing and thought-provoking family, for which he is grateful.',
+        image: zack,
+        linkedin: 'https://www.linkedin.com/in/zack-rothbart-37913b62/',
+        twitter: 'https://twitter.com/ZackRothbart'
+    },
+    {
+        name: 'Tamara Raynor-Cote',
+        title: 'Senior Account Manager',
+        bio: 'After many trips to Israel as a youth leader, volunteer, and ESL teacher, Tamara made Aliya to Beer Sheva in 2014 where she pursued a master\'s degree in Foreign Literature. After some time in the desert, she found her way to Tel Aviv and embraced the world of tech and innovation wholeheartedly. Working in PR and representing some of Israel\'s largest startups, unicorns, and emerging leaders has given Tamara amazing insight into the engine that drives the startup nation. When not at work you can find Tamara cruising the city on her bicycle looking for a good coffee.',
+        image: tamara,
+        linkedin: 'https://www.linkedin.com/in/tamara-raynor-cote-535346104/',
+        twitter: 'https://twitter.com/RaynorTamaraPR'
+    },
+    {
+        name: 'Julia Bocharov',
+        title: 'Human Resources Manager',
+        bio: 'Julia is the Human Resources manager at Concrete Media. She grew up in Ukraine and emigrated to Israel in 2012. Julia holds an MA from Tel Aviv University in English literature and American studies. With a decade of experience in senior management positions in tech, Julia is enthusiastic about collaborating with individuals and developing talent. “I’m inspired by the people at Concrete Media and proud to be a part of the Israeli tech landscape”. In her spare time she loves painting and going on bike rides in nature.',
+        image: julia,
+        linkedin: 'https://www.linkedin.com/in/julia-bocharov-2bb38788/'
     },
 ];
 
