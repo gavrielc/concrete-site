@@ -7,7 +7,7 @@
     margin: 0 0 40px;
 
     .tag {
-        padding: 16px 24px;
+        padding: 12px 24px;
         border-radius: 16px;
         border: none;
         font-family: 'Inter';
@@ -16,6 +16,12 @@
         color: #7022FB;
         background: #F8FAFC;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 8px;
+        }
     }
 
     .tag.active {

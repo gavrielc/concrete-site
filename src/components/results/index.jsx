@@ -2,6 +2,7 @@ import {useState} from 'preact/hooks';
 import styles from './styles.module.scss';
 import classNames from 'classnames/bind';
 import results from './results';
+import podcast from '../../assets/icons/microphone.svg';
 
 const cn = classNames.bind(styles);
 
@@ -14,7 +15,7 @@ const tags = [
     {name: 'Fintech', value: 'fintech'},
     {name: 'Medtech', value: 'medtech'},
     {name: 'HR Tech', value: 'hr'},
-    {name: 'Podcasts', value: 'podcast'}
+    {name: 'Podcasts', value: 'podcast', icon: podcast}
 ];
 
 export default function Results() {
@@ -23,7 +24,7 @@ export default function Results() {
     return (
         <>
             <div className={styles.tags}>
-                {tags.map(({name, value: val}) => <button className={cn('tag', {active: value == val})} onClick={() => setValue(val)}>{name}</button>)}
+                {tags.map(({name, value: val, icon}) => <button className={cn('tag', {active: value == val})} onClick={() => setValue(val)}>{icon ? <img class='social-icon' src={podcast} alt="podcast mic icon"></img> : null}{name}</button>)}
             </div>
             <div className={styles.resultsWrapper}>
                 {results.filter(({tags}) => !value || tags.includes(value)).map(({articleUrl, logo, headline, publication, date, url, tags}) => (
