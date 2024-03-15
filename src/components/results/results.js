@@ -75,9 +75,43 @@ import startuphub from '../../assets/publication-logos/startuphub.png';
 import inc from '../../assets/publication-logos/inc.png';
 import supplychainbrain from '../../assets/publication-logos/supplychainbrain.png';
 import timesofisrael from '../../assets/publication-logos/toi.svg';
+import indiewire from '../../assets/publication-logos/indiewire.svg';
+import acn from '../../assets/publication-logos/acn.webp';
 
 
 export default [
+	{
+		articleUrl: 'https://techcrunch.com/2024/03/13/io-river-lets-you-mix-and-match-cdns-without-the-hassle/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'March 13, 2024',
+		headline: 'IO River lets you mix and match CDNs without the hassle',
+        tags: ['highlights', 'saas', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/03/13/io-river-raises-5-4m-help-internet-companies-use-multiple-cdns-ease/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'March 13, 2024',
+		headline: 'IO River raises $5.4M to help internet companies use multiple CDNs with ease',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://www.indiewire.com/news/business/ai-tool-joaquin-phoenix-french-napoleon-deepdub-accent-control-1234958496/',
+		logo: indiewire,
+		publication: 'IndieWire',
+		date: 'March 13, 2024',
+		headline: 'This New AI Tool Could Have Made Joaquin Phoenix’s ‘Napoleon’ Sound French',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://aircargonext.com/featured-content/cargo-chat/cargo-chat-ai-solution-optimizes-supply-chain-ops/',
+		logo: acn,
+		publication: 'Air Cargo Next',
+		date: 'March 11, 2024',
+		headline: 'Cargo Chat: AI solution optimizes supply chain ops',
+        tags: ['saas', 'AI & ML']
+	},
 	{
 		articleUrl: 'https://www.inc.com/peter-cohan/this-venture-firm-sees-opportunity-in-generative-ai-heres-how-to-win-its-capital.html',
 		logo: inc,
