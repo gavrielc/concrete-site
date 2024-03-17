@@ -1,6 +1,17 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
-import Results from "../components/results";
+import PageLayout from "../../layouts/PageLayout.astro";
+import Results, {tags} from "../../components/results";
+
+export function getStaticPaths() {
+    return [
+        {params: {tag: undefined}}, 
+        ...tags.map(t => ({
+            params: { tag: t.value }
+        }))
+    ];
+}
+
+const { tag } = Astro.params;
 ---
 
 <PageLayout
@@ -9,7 +20,7 @@ import Results from "../components/results";
     subTitle="We identify the publications that will bring the greatest value to your company, and leverage our expertise and contacts to ensure you feature in them regularly. <br>These are some of the <b>recent</b> and <b>impactful</b> media items we've arranged in top business, tech, mainstream and industry publications."
 >
     <section class="results">
-        <Results client:idle/>
+        <Results client:idle tag={tag}/>
     </section>
 </PageLayout>
 
