@@ -6,7 +6,7 @@ import podcast from '../../assets/icons/microphone.svg';
 
 const cn = classNames.bind(styles);
 
-const tags = [
+export const tags = [
     {name: 'Highlights', value: 'highlights'},
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
@@ -15,11 +15,11 @@ const tags = [
     {name: 'Fintech', value: 'fintech'},
     {name: 'Medtech', value: 'medtech'},
     {name: 'HR Tech', value: 'hr'},
-    {name: 'Podcasts', value: 'podcast', icon: podcast}
+    {name: 'Podcasts', value: 'podcasts', icon: podcast}
 ];
 
-export default function Results() {
-    const [value, setValue] = useState('highlights');
+export default function Results({tag}) {
+    const [value, setValue] = useState(tag || 'highlights');
 
     return (
         <>
@@ -28,9 +28,9 @@ export default function Results() {
             </div>
             <div className={styles.resultsWrapper}>
                 {results.filter(({tags}) => !value || tags.includes(value)).map(({articleUrl, logo, headline, publication, date, url, tags}) => (
-                <li className={cn("result-card", {podcast: tags.includes('podcast')})} key={articleUrl}>
+                <li className={cn("result-card", {podcast: tags.includes('podcasts')})} key={articleUrl}>
                     {
-                        tags.includes('podcast')
+                        tags.includes('podcasts')
                         ? <iframe style="border-radius:16px" src={`${url}?utm_source=generator&theme=0`} width="100%" height="158" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         : (
                             <a href={articleUrl} target="_blank">
