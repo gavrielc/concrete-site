@@ -23,7 +23,7 @@ const { title, subTitle } = Astro.props;
 		<title>{title}</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-X678N0MN5C"></script>
-		<script>
+		<script is:inline>
 			// @ts-nocheck
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
