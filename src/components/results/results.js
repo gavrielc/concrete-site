@@ -77,9 +77,14 @@ import supplychainbrain from '../../assets/publication-logos/supplychainbrain.pn
 import timesofisrael from '../../assets/publication-logos/toi.svg';
 import indiewire from '../../assets/publication-logos/indiewire.svg';
 import acn from '../../assets/publication-logos/acn.webp';
+import nocamels from '../../assets/publication-logos/nocamels.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/2SLVkHP1vtBPmf8M9ihDfG',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/7AjsECoBWNI8xkQEJlvefo',
         tags: ['podcasts']
@@ -235,6 +240,30 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		articleUrl: 'https://www.inc.com/peter-cohan/why-codiumai-could-pass-four-tests-for-a-high-potential-startup.html',
+		logo: inc,
+		publication: 'Inc.',
+		date: 'March 20, 2024',
+		headline: 'Why CodiumAI Could Pass Four Tests for a High Potential Startup',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.fastcompany.com/91037469/uveye-most-innovative-companies-2024',
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'March 19, 2024',
+		headline: 'How UVeye is harnessing AI to automate vehicle inspections',
+        tags: ['highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://nocamels.com/2024/03/ai-assistant-smooths-out-mistakes-in-maze-of-code/',
+		logo: nocamels,
+		publication: 'No Camels',
+		date: 'March 18, 2024',
+		headline: 'AI Assistant Smooths Out Mistakes In Maze Of Code',
+        tags: ['AI & ML', 'dev', 'saas']
 	},
 	{
 		articleUrl: 'https://techcrunch.com/2024/03/13/io-river-lets-you-mix-and-match-cdns-without-the-hassle/',
