@@ -10,7 +10,8 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   site: 'https://concrete.media/',
   integrations: [sitemap(), preact()],
-  build: {
-    inlineStylesheets: 'always',
-  },
+  scopedStyleStrategy: "where",
+  // build: {
+  //   inlineStylesheets: 'never',
+  // },
 });

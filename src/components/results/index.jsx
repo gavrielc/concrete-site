@@ -24,7 +24,7 @@ export default function Results({tag}) {
     return (
         <>
             <div className={styles.tags}>
-                {tags.map(({name, value: val, icon}) => <button className={cn('tag', {active: value == val})} onClick={() => setValue(val)}>{icon ? <img class='social-icon' src={podcast} alt="podcast mic icon"></img> : null}{name}</button>)}
+                {tags.map(({name, value: val, icon}) => <button className={cn('tag', {active: value == val})} onClick={() => setValue(val)}>{icon ? <img class='social-icon' src={podcast.src} alt="podcast mic icon"></img> : null}{name}</button>)}
             </div>
             <div className={styles.resultsWrapper}>
                 {results.filter(({tags}) => !value || tags.includes(value)).map(({articleUrl, logo, headline, publication, date, url, tags}) => (
@@ -34,7 +34,7 @@ export default function Results({tag}) {
                         ? <iframe style="border-radius:16px" src={`${url}?utm_source=generator&theme=0`} width="100%" height="158" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                         : (
                             <a href={articleUrl} target="_blank">
-                                <img src={logo} alt={`${publication} logo`}/>
+                                <img src={logo.src} alt={`${publication} logo`}/>
                                 <h4>{headline}</h4>
                                 <p>{date}</p>
                             </a>
