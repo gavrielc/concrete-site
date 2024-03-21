@@ -31,7 +31,7 @@ const type = inline ? 'inline' : 'regular';
     </div>
 	<button class="close-menu"><img src="/x.svg" alt="close mobile menu"/></button>
 </header>
-<script is:inline>
+<script defer is:inline>
 	document.querySelectorAll(`.hamburger`).forEach(h => h.addEventListener('click', () => {
 		document.querySelector(`header.regular`).classList.add('mobile-open');
 	}));
