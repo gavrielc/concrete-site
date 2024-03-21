@@ -15,14 +15,14 @@ const { name, title, bio, image, linkedin, twitter} = Astro.props;
 ---
 
 <div class="team-card">
-	<img class="headshot" src={image} alt={`Headshot of ${name}, ${title} at Concrete Media`} width="280" height="516"/>
+	<img class="headshot" src={image.src} alt={`Headshot of ${name}, ${title} at Concrete Media`} width="280" height="516"/>
 	<div class="details-wrapper">
 		<p class="name">{name}</p>
 		<p class="title">{title}</p>
 		<p class="bio">{bio}</p>
 		<div class="socials-wrapper">
-			<a href={linkedin} target="_blank"><img class='social-icon' src={linkedinLogo} alt="linkedin logo"></a>
-			{twitter && <a href={twitter} target="_blank"><img class='social-icon' src={twitterLogo} alt="twitter logo"></a>}
+			<a href={linkedin} target="_blank"><img class='social-icon' src={linkedinLogo.src} alt="linkedin logo"></a>
+			{twitter && <a href={twitter} target="_blank"><img class='social-icon' src={twitterLogo.src} alt="twitter logo"></a>}
 		</div>
 	</div>
 </div>

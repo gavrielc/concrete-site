@@ -12,7 +12,7 @@ const { logo, headline, date, articleUrl, publication } = Astro.props;
 
 <li class="result-card">
 	<a href={articleUrl} target="_blank">
-		<img src={logo} alt={`${publication} logo`}/>
+		<img src={logo.src} alt={`${publication} logo`}/>
 		<h4>{headline}</h4>
 		<p>{date}</p>
 	</a>

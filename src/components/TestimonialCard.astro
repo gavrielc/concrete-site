@@ -11,7 +11,7 @@ const { logo, text, name, title } = Astro.props;
 
 <div class="testimonial-card">
 	<p class="text">{text}</p>
-	<img src={logo} alt={`Headshot of ${name}, ${title}`}/>
+	<img src={logo.src} alt={`Headshot of ${name}, ${title}`}/>
 	<p class="name">{name}</p>
 	<p class="title">{title}</p>
 </div>

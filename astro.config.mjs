@@ -9,5 +9,9 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://concrete.media/',
-  integrations: [sitemap(), preact()]
+  integrations: [sitemap(), preact()],
+  scopedStyleStrategy: "where",
+  // build: {
+  //   inlineStylesheets: 'never',
+  // },
 });

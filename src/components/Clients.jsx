@@ -153,7 +153,7 @@ export default function Clients() {
                 {tags.map(({name, value: val}) => <button className={'tag'.concat(value == val ? ' active' : '')} onClick={() => filter(val)}>{name}</button>)}
             </div>
             <div className='logos-wrapper'>
-                {clients.filter(({tags}) => !value || tags.includes(value)).map(({logo, site, name}) => <a href={site} target="_blank" key={name}><img class="logo" src={logo} alt={`${name} logo`}/></a>)}
+                {clients.filter(({tags}) => !value || tags.includes(value)).map(({logo, site, name}) => <a href={site} target="_blank" key={name}><img class="logo" src={logo.src} alt={`${name} logo`}/></a>)}
             </div>
         </>
     );
