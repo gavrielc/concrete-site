@@ -11,7 +11,7 @@ export default defineConfig({
   site: 'https://concrete.media/',
   integrations: [sitemap(), preact()],
   scopedStyleStrategy: "where",
-  // build: {
-  //   inlineStylesheets: 'never',
-  // },
+  build: {
+    inlineStylesheets: 'always',
+  },
 });
