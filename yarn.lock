@@ -313,6 +313,16 @@
   resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.20.2.tgz"
   integrity sha512-4J6IRT+10J3aJH3l1yzEg9y3wkTDgDk7TSDFX+wKFiWjqWp/iCfLIYzGyasx9l0SAFPT1HwSCR+0w/h1ES/MjA==
 
+"@fontsource/inter@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.npmjs.org/@fontsource/inter/-/inter-5.0.17.tgz"
+  integrity sha512-2meBGx1kt7u5LwzGc5Sz5rka6ZDrydg6nT3x6Wkt310vHXUchIywrO8pooWMzZdHYcyFY/cv4lEpJZgMD94bCg==
+
+"@fontsource/outfit@^5.0.12":
+  version "5.0.12"
+  resolved "https://registry.npmjs.org/@fontsource/outfit/-/outfit-5.0.12.tgz"
+  integrity sha512-mkvxy74aCPkXzJA0teZZI31oORwm6rqjTkpTkAUxmkbrRNOmB6vgr7bBdTa5rUVk1rxMVETE23/ntUPIUrvnbQ==
+
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz"
