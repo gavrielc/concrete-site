@@ -78,9 +78,14 @@ import timesofisrael from '../../assets/publication-logos/toi.svg';
 import indiewire from '../../assets/publication-logos/indiewire.svg';
 import acn from '../../assets/publication-logos/acn.webp';
 import nocamels from '../../assets/publication-logos/nocamels.png';
+import techzine from '../../assets/publication-logos/techzine.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/1S5RbQOJtqzmDJwryDFXaM',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/2SLVkHP1vtBPmf8M9ihDfG',
         tags: ['podcasts']
@@ -240,6 +245,14 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		articleUrl: 'https://www.techzine.eu/blogs/applications/118176/the-ai-shift-from-prompt-engineering-to-flow-engineering/',
+		logo: techzine,
+		publication: 'Techzine',
+		date: 'March 27, 2024',
+		headline: 'The AI shift from prompt engineering to flow engineering',
+        tags: ['saas', 'dev', 'AI & ML']
 	},
 	{
 		articleUrl: 'https://www.inc.com/peter-cohan/why-codiumai-could-pass-four-tests-for-a-high-potential-startup.html',

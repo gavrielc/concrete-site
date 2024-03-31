@@ -63,6 +63,7 @@ import lunar from '../assets/client-logos/lunar.svg';
 import askai from '../assets/client-logos/askai.svg';
 import statement from '../assets/client-logos/statement.svg';
 import scala from '../assets/client-logos/scala.webp';
+import ioriver from '../assets/client-logos/ioriver.png';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2024']},
@@ -81,6 +82,7 @@ const clients = [
     {logo: lunar, name: "Lunar.dev", site: 'https://www.lunar.dev/', tags: ['saas', 'dev', '2024']},
     {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2024']},
     {logo: prompt, name: "Prompt Security", site: 'https://www.prompt.security/', tags: ['saas', 'dev', 'security', 'AI & ML', '2024']},
+    {logo: ioriver, name: "IO River", site: 'https://www.ioriver.io/', tags: ['saas', 'dev', '2024']},
     {logo: statement, name: 'Statement', site: 'https://www.statement.io/', tags: ['fintech', 'AI & ML', 'saas']},
     {logo: dig, name: 'dig', site: 'https://www.dig.security/', tags: ['security', 'saas']},
     {logo: wilco, name: "wilco", site: 'https://www.trywilco.com/', tags: ['dev']},
