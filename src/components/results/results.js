@@ -247,6 +247,46 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		articleUrl: 'https://tech.eu/2024/04/04/vectary-api-allows-more-startups-to-model-using-ar/',
+		logo: techeu,
+		publication: 'Tech.eu',
+		date: 'April 4, 2024',
+		headline: 'Vectary API allows more startups to design 3D models',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/programming-development/codium-announces-codiumate-a-new-ai-agent-that-seeks-to-be-devin-for-enterprise-software-development/',
+		logo: vb,
+		publication: 'Venture Beat',
+		date: 'April 3, 2024',
+		headline: 'Codium announces Codiumate, a new AI agent that seeks to be Devin for enterprise software development',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.computerweekly.com/blog/CW-Developer-Network/CodiumAI-eyes-agentic-future-for-AI-powered-software-developers',
+		logo: computerweekly,
+		publication: 'Computer Weekly',
+		date: 'April 3, 2024',
+		headline: 'CodiumAI eyes ‘agentic future’ for AI-powered software developers',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/04/03/codiumai-enhances-generative-ai-powered-code-testing-improve-software-quality/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'April 3, 2024',
+		headline: 'CodiumAI enhances generative AI-powered code testing to improve software quality',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.pymnts.com/artificial-intelligence-2/2024/ai-wearables-that-let-you-talk-instead-of-type/',
+		logo: pymnts,
+		publication: 'PYMNTS.com',
+		date: 'April 1, 2024',
+		headline: 'AI Wearables That Let You Talk Instead of Type',
+        tags: ['saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://www.techzine.eu/blogs/applications/118176/the-ai-shift-from-prompt-engineering-to-flow-engineering/',
 		logo: techzine,
 		publication: 'Techzine',
