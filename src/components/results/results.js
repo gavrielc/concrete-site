@@ -83,6 +83,10 @@ import techzine from '../../assets/publication-logos/techzine.png';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/4DYhB9Qy3ioEfA8KxTRxPq',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/1S5RbQOJtqzmDJwryDFXaM',
         tags: ['podcasts']
 	},
