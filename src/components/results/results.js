@@ -79,9 +79,19 @@ import indiewire from '../../assets/publication-logos/indiewire.svg';
 import acn from '../../assets/publication-logos/acn.webp';
 import nocamels from '../../assets/publication-logos/nocamels.png';
 import techzine from '../../assets/publication-logos/techzine.png';
+import automationworld from '../../assets/publication-logos/automationworld.png';
+import digitalengineering from '../../assets/publication-logos/digitalengineering.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/3zgFDE3TsLeCcUiyHyDhSx',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/0I76KlacW4KVDZsZcF6Yw2',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/4DYhB9Qy3ioEfA8KxTRxPq',
         tags: ['podcasts']
@@ -249,6 +259,94 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		articleUrl: 'https://www.helpnetsecurity.com/2024/04/25/asaf-mischari-team8-health-genai-healthcare-risks/',
+		logo: helpnetsec,
+		publication: 'Help Net Security',
+		date: 'April 25, 2024',
+		headline: 'Overcoming GenAI challenges in healthcare cybersecurity',
+        tags: ['saas', 'AI & ML', 'medtech', 'security']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/daniel-ciolek-head-of-research-and-development-at-invgate-interview-series/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'April 22, 2024',
+		headline: 'Daniel Ciolek, Head of Research and Development at InvGate – Interview Series',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.digitalengineering247.com/article/vectary-api-brings-product-digital-twins-to-life/digital-thread',
+		logo: digitalengineering,
+		publication: 'Digital Engineering',
+		date: 'April 19, 2024',
+		headline: 'Vectary API Brings Product Digital Twins to Life',
+        tags: ['saas', 'dev']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/exclusive-powerful-new-ai-model-accurately-converts-speech-to-text-even-your-companys-jargon/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'April 18, 2024',
+		headline: 'Exclusive: Powerful new AI model accurately converts speech to text, even your company’s jargon',
+        tags: ['saas', 'highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.automationworld.com/design/article/55017555/3d-design-and-augmented-reality-tech-aids-custom-configuration',
+		logo: automationworld,
+		publication: 'Automation World',
+		date: 'April 16, 2024',
+		headline: '3D Design and Augmented Reality Tech Aids Custom Configuration',
+        tags: ['saas']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/sylvainduranton/2024/04/15/are-coders-jobs-at-risk-ais-impact-on-the-future-of-programming/?sh=a3b7d1673e55',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'April 15, 2024',
+		headline: 'Are Coders\' Jobs At Risk? AI\'s Impact On The Future Of Programming',
+        tags: ['saas', 'dev', 'highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/04/15/pvml-combines-an-ai-centric-data-access-and-analysis-platform-with-differential-privacy/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'April 15, 2024',
+		headline: 'PVML combines an AI-centric data access and analysis platform with differential privacy',
+        tags: ['saas', 'dev', 'highlights', 'AI & ML', 'security']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/lists/ai50/?sh=7e5a2827290f',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'April 11, 2024',
+		headline: 'Forbes AI 50: Pinecone',
+        tags: ['saas', 'dev', 'highlights', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.reuters.com/markets/deals/israel-cyber-firm-claroty-eyes-2025-us-ipo-35-bln-value-report-says-2024-04-09/',
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'April 9, 2024',
+		headline: 'Israel cyber firm eyes 2025 US IPO at $3.5 bln value, report says',
+        tags: ['saas', 'security', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/chatgpt-the-enterprise-balancing-caution-and-innovation-in-the-age-of-ai/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'April 9, 2024',
+		headline: 'ChatGPT & the Enterprise: Balancing Caution and Innovation in the Age of AI',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.forbes.com/sites/technology/article/unit-testing/?sh=30c926e748a6',
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'April 7, 2024',
+		headline: 'The 15 Top AI-Powered Tools For Automated Unit Testing',
+        tags: ['highlights', 'saas', 'dev', 'AI & ML']
 	},
 	{
 		articleUrl: 'https://tech.eu/2024/04/04/vectary-api-allows-more-startups-to-model-using-ar/',
