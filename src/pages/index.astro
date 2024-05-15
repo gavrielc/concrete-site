@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import inc from '../assets/publication-logos/inc.png';
+import wsj from '../assets/publication-logos/wsj.png';
 import vb from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
 import forbes from '../assets/publication-logos/forbes.webp';
@@ -18,18 +18,25 @@ import LinkButton from '../components/LinkButton.astro';
 
 const results = [
 	{
-		articleUrl: 'https://venturebeat.com/ai/exclusive-powerful-new-ai-model-accurately-converts-speech-to-text-even-your-companys-jargon/',
-		logo: vb,
-		publication: 'Venture Beat',
-		date: 'April 18, 2024',
-		headline: 'Exclusive: Powerful new AI model accurately converts speech to text, even your company’s jargon',
+		articleUrl: 'https://www.wsj.com/articles/ai-startups-are-making-their-home-in-new-york-can-they-turn-it-into-an-aipowerhouse-bd5dab78',
+		logo: wsj,
+		publication: 'Wall Street Journal',
+		date: 'May 11, 2024',
+		headline: 'AI Startups Are Making Their Home in New York. Can They Turn It Into an AI Powerhouse?'
 	},
 	{
-		articleUrl: 'https://techcrunch.com/2024/04/15/pvml-combines-an-ai-centric-data-access-and-analysis-platform-with-differential-privacy/',
+		articleUrl: 'https://techcrunch.com/2024/05/09/fairgen-boosts-survey-results-using-synthetic-data-and-ai-generated-responses/',
 		logo: techcrunch,
 		publication: 'TechCrunch',
-		date: 'April 15, 2024',
-		headline: 'PVML combines an AI-centric data access and analysis platform with differential privacy',
+		date: 'May 9, 2024',
+		headline: 'Fairgen ‘boosts’ survey results using synthetic data and AI-generated responses'
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/aisap-announces-13m-seed-for-ai-powered-ultrasounds-that-offer-results-in-minutes/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'May 2, 2024',
+		headline: 'AISAP announces $13M seed for AI-powered ultrasounds that offer results in minutes'
 	},
 	{
 		articleUrl: 'https://www.forbes.com/lists/ai50/?sh=7e5a2827290f',
@@ -37,14 +44,7 @@ const results = [
 		publication: 'Forbes',
 		date: 'April 11, 2024',
 		headline: 'Forbes AI 50: Pinecone'
-	},
-	{
-		articleUrl: 'https://www.inc.com/peter-cohan/why-codiumai-could-pass-four-tests-for-a-high-potential-startup.html',
-		logo: inc,
-		publication: 'Inc.',
-		date: 'March 20, 2024',
-		headline: 'Why CodiumAI Could Pass Four Tests for a High Potential Startup'
-	},
+	}
 ];
 
 ---

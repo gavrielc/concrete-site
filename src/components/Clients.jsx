@@ -65,6 +65,9 @@ import statement from '../assets/client-logos/statement.svg';
 import scala from '../assets/client-logos/scala.webp';
 import ioriver from '../assets/client-logos/ioriver.png';
 import coralogix from '../assets/client-logos/Coralogix.svg';
+import fairgen from '../assets/client-logos/fairgen.svg';
+import pvml from '../assets/client-logos/pvml.svg';
+import aisap from '../assets/client-logos/aisap.svg';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2024']},
@@ -84,7 +87,10 @@ const clients = [
     {logo: deepdub, name: "deepdub", site: 'https://deepdub.ai/', tags: ['AI & ML', 'saas', '2024']},
     {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2024']},
     {logo: prompt, name: "Prompt Security", site: 'https://www.prompt.security/', tags: ['saas', 'dev', 'security', 'AI & ML', '2024']},
+    {logo: pvml, name: "PVML", site: 'https://pvml.com/', tags: ['saas', 'AI & ML', 'dev', '2024']},
+    {logo: fairgen, name: "Fairgen", site: 'https://www.fairgen.ai/', tags: ['saas', 'AI & ML', '2024']},
     {logo: ioriver, name: "IO River", site: 'https://www.ioriver.io/', tags: ['saas', 'dev', '2024']},
+    {logo: aisap, name: "aisap.ai", site: 'https://www.aisap.ai/', tags: ['saas', 'medtech', 'AI & ML', '2024']},
     {logo: statement, name: 'Statement', site: 'https://www.statement.io/', tags: ['fintech', 'AI & ML', 'saas']},
     {logo: dig, name: 'dig', site: 'https://www.dig.security/', tags: ['security', 'saas']},
     {logo: wilco, name: "wilco", site: 'https://www.trywilco.com/', tags: ['dev']},

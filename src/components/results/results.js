@@ -85,6 +85,22 @@ import digitalengineering from '../../assets/publication-logos/digitalengineerin
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/0f40PWgPOTyndgqXvjoucn',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/0U9SfR0xhaqMFnAR6BnOxi',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/7JbHzqlbo1yLUmWsH4qymJ',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/2R3Ku3X8aXCzOUXJsPJ47e',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/3zgFDE3TsLeCcUiyHyDhSx',
         tags: ['podcasts']
 	},
@@ -259,6 +275,62 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/r1f6hqqga',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'May 13, 2024',
+		headline: 'The 50 most promising Israeli startups - 2024',
+        tags: ['saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://www.wsj.com/articles/ai-startups-are-making-their-home-in-new-york-can-they-turn-it-into-an-aipowerhouse-bd5dab78',
+		logo: wsj,
+		publication: 'Wall Street Journal',
+		date: 'May 11, 2024',
+		headline: 'AI Startups Are Making Their Home in New York. Can They Turn It Into an AI Powerhouse?',
+        tags: ['saas', 'AI & ML', 'highlights', 'dev']
+	},
+	{
+		articleUrl: 'https://www.unite.ai/itamar-friedman-ceo-co-founder-of-codiumai-interview-series/',
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'May 10, 2024',
+		headline: 'Itamar Friedman, CEO & Co-Founder of CodiumAI',
+        tags: ['saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/05/09/fairgen-boosts-survey-results-using-synthetic-data-and-ai-generated-responses/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'May 9, 2024',
+		headline: 'Fairgen ‘boosts’ survey results using synthetic data and AI-generated responses',
+        tags: ['saas', 'AI & ML', 'highlights', 'deeptech']
+	},
+	{
+		articleUrl: 'https://venturebeat.com/ai/aisap-announces-13m-seed-for-ai-powered-ultrasounds-that-offer-results-in-minutes/',
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'May 2, 2024',
+		headline: 'AISAP announces $13M seed for AI-powered ultrasounds that offer results in minutes',
+        tags: ['saas', 'AI & ML', 'highlights', 'medtech', 'deeptech']
+	},
+	{
+		articleUrl: 'https://www.israel21c.org/quantum-computing-software-firm-orders-israeli-made-testbed/',
+		logo: israel21c,
+		publication: 'israel21c',
+		date: 'April 30, 2024',
+		headline: 'Quantum computing software firm orders Israeli-made testbed',
+        tags: ['saas', 'deeptech']
+	},
+	{
+		articleUrl: 'https://betanews.com/2024/04/29/understanding-the-good-and-bad-of-no-code-solutions-qa/',
+		logo: betanews,
+		publication: 'betanews',
+		date: 'April 29, 2024',
+		headline: 'Understanding the good and bad of no-code solutions',
+        tags: ['saas']
 	},
 	{
 		articleUrl: 'https://www.helpnetsecurity.com/2024/04/25/asaf-mischari-team8-health-genai-healthcare-risks/',
