@@ -81,9 +81,15 @@ import nocamels from '../../assets/publication-logos/nocamels.png';
 import techzine from '../../assets/publication-logos/techzine.png';
 import automationworld from '../../assets/publication-logos/automationworld.png';
 import digitalengineering from '../../assets/publication-logos/digitalengineering.png';
+import enr from '../../assets/publication-logos/enr.svg';
+import afp from '../../assets/publication-logos/afp.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/1Hgz4PyivtLlOTozRSRoQh',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/0f40PWgPOTyndgqXvjoucn',
         tags: ['podcasts']
@@ -277,12 +283,52 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		articleUrl: 'https://www.yahoo.com/tech/rid-artificial-intelligence-bias-014057031.html',
+		logo: afp,
+		publication: 'AFP',
+		date: 'May 19, 2024',
+		headline: 'Can we rid artificial intelligence of bias?',
+        tags: ['saas', 'AI & ML', 'dev', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/b1dci4mx0',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'May 16, 2024',
+		headline: 'aiOla appoints Alon Peleg as Chief Operating Officer',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://nocamels.com/2024/05/startup-unveils-ai-platform-to-keep-construction-projects-on-track/',
+		logo: nocamels,
+		publication: 'NoCamels',
+		date: 'May 16, 2024',
+		headline: 'Startup Unveils AI Platform To Keep Construction Projects On Track',
+        tags: ['saas', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://www.enr.com/articles/58630-checking-in-on-autodesks-ai-3d-image-generator-buildots-delay-forecast-and-nvidias-robotics-partnership',
+		logo: enr,
+		publication: 'ENR',
+		date: 'May 15, 2024',
+		headline: 'Checking In on Autodesk\'s AI 3D Image Generator, Buildots\' Delay Forecast and NVIDIA\'s Robotics Partnership',
+        tags: ['saas', 'AI & ML']
+	},
+	{
 		articleUrl: 'https://www.calcalistech.com/ctechnews/article/r1f6hqqga',
 		logo: ctech,
 		publication: 'CTech',
 		date: 'May 13, 2024',
 		headline: 'The 50 most promising Israeli startups - 2024',
         tags: ['saas', 'AI & ML', 'dev']
+	},
+	{
+		articleUrl: 'https://thenewstack.io/taking-a-machine-first-approach-to-identity-management/',
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'May 13, 2024',
+		headline: 'Taking a ‘Machine-First’ Approach to Identity Management',
+        tags: ['saas', 'dev', 'security']
 	},
 	{
 		articleUrl: 'https://www.wsj.com/articles/ai-startups-are-making-their-home-in-new-york-can-they-turn-it-into-an-aipowerhouse-bd5dab78',
@@ -307,6 +353,30 @@ export default [
 		date: 'May 9, 2024',
 		headline: 'Fairgen ‘boosts’ survey results using synthetic data and AI-generated responses',
         tags: ['saas', 'AI & ML', 'highlights', 'deeptech']
+	},
+	{
+		articleUrl: 'https://www.darkreading.com/identity-access-management-security/token-security-launches-machine-centric-iam-platform',
+		logo: darkreading,
+		publication: 'Dark Reading',
+		date: 'May 9, 2024',
+		headline: 'Token Security Launches Machine-Centric IAM Platform',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://www.securityweek.com/token-security-raises-7-million-seed-funding-for-machine-first-identity-security/',
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'May 8, 2024',
+		headline: 'Token Security Raises $7 Million Seed Funding for Machine-First Identity Security',
+        tags: ['saas', 'security', 'dev']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/05/08/token-security-raises-7m-change-focus-identity-management-machines/',
+		logo: siliconangle,
+		publication: 'Silicon Angle',
+		date: 'May 8, 2024',
+		headline: 'Token Security raises $7M to change the focus of identity management to machines',
+        tags: ['saas', 'security', 'dev']
 	},
 	{
 		articleUrl: 'https://venturebeat.com/ai/aisap-announces-13m-seed-for-ai-powered-ultrasounds-that-offer-results-in-minutes/',
