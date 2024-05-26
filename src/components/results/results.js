@@ -83,6 +83,7 @@ import automationworld from '../../assets/publication-logos/automationworld.png'
 import digitalengineering from '../../assets/publication-logos/digitalengineering.png';
 import enr from '../../assets/publication-logos/enr.svg';
 import afp from '../../assets/publication-logos/afp.png';
+import aec from '../../assets/publication-logos/aec.png';
 
 
 export default [
@@ -281,6 +282,54 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/05/23/finout-lands-cash-to-grow-its-cloud-spend-management-platform/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'May 23, 2024',
+		headline: 'Finout lands cash to grow its cloud spend management platform',
+        tags: ['saas', 'fintech', 'dev', 'highlights']
+	},
+	{
+		articleUrl: 'https://siliconangle.com/2024/05/23/cloud-cost-optimization-startup-finout-reels-26-3m-series-b-funding/',
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'May 23, 2024',
+		headline: 'Cloud cost optimization startup Finout reels in $26.3M in Series B funding',
+        tags: ['saas', 'fintech', 'dev']
+	},
+	{
+		articleUrl: 'https://www.calcalistech.com/ctechnews/article/skrz03nxc',
+		logo: ctech,
+		publication: 'CTech',
+		date: 'May 23, 2024',
+		headline: 'Top 5 most promising AI startups in Israel - 2024',
+        tags: ['saas', 'dev', 'AI & ML']
+	},
+	{
+		articleUrl: 'https://techcrunch.com/2024/05/21/pinecone-launches-its-serverless-vector-database-out-of-preview/',
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'May 21, 2024',
+		headline: 'Pinecone launches its serverless vector database out of preview',
+        tags: ['saas', 'AI & ML', 'dev', 'highlights']
+	},
+	{
+		articleUrl: 'https://www.wsj.com/articles/how-a-decades-old-technology-and-a-paper-from-meta-created-an-ai-industry-standard-354a810e',
+		logo: wsj,
+		publication: 'The Wall Street Journal',
+		date: 'May 21, 2024',
+		headline: 'How a Decades-Old Technology and a Paper From Meta Created an AI Industry Standard',
+        tags: ['saas', 'AI & ML', 'dev', 'highlights']
+	},
+	{
+		articleUrl: 'https://aec-business.com/buildots-latest-ai-feature-to-combat-construction-delays/',
+		logo: aec,
+		publication: 'AEC',
+		date: 'May 19, 2024',
+		headline: 'Buildots’ Latest AI Feature to Combat Construction Delays',
+        tags: ['saas', 'AI & ML']
 	},
 	{
 		articleUrl: 'https://www.yahoo.com/tech/rid-artificial-intelligence-bias-014057031.html',
