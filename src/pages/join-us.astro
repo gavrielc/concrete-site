@@ -1,0 +1,186 @@
+---
+import LinkButton from "../components/LinkButton.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import teamPicture from "../assets/team.jpeg";
+import compensationIcon from "../assets/icons/compensation.svg";
+import transparencyIcon from "../assets/icons/transparency.svg";
+import supportIcon from "../assets/icons/support.svg";
+import cultureIcon from "../assets/icons/culture.svg";
+import clientsIcon from "../assets/icons/clients.svg";
+
+
+const teamImgSrc = `url(${teamPicture.src})`;
+const teamImgRatio = teamPicture.width / teamPicture.height;
+
+---
+
+<PageLayout
+    pageTitle="Join us | Public Relations for serious tech companies | concrete.media"
+    title="Do PR at the highest level with top tech startups."
+    subTitle={`We deliver top-tier Public Relations services to the brightest and most innovative tech startups. By joining us, you have the opportunity to impact the narrative and success of some of the world's most dynamic tech companies.`}
+>
+    <section class="positions">
+        <h3>Open positions</h3>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="job-title">New Media Manager</div>
+                <div class="location txt">Tel Aviv – Jerusalem</div>
+                <div class="experience txt">One Year Experience</div>
+                <LinkButton class="apply-btn" href="https://www.linkedin.com/jobs/view/3913666581" type='hollow' openInNewWindow>Apply now</LinkButton>
+              </div>
+              <div class="card">
+                <div class="job-title">Senior Account Manager</div>
+                <div class="location txt">Tel Aviv – Jerusalem</div>
+                <div class="experience txt">Two years experience</div>
+                <LinkButton class="apply-btn" href="https://www.linkedin.com/jobs/view/3913666581/" type='hollow' openInNewWindow>Apply now</LinkButton>
+              </div>
+        </div>
+    </section>
+    <section class="hero-section">
+        <div class="hero">
+          We strongly believe that Public Relations, when done with skill and passion, can serve as a fulfilling long-term career. We take an approach that values our team members as much as our clients.
+        </div>
+    </section>
+    <section class="difference">
+      <h3>Here's how we stand apart</h3>
+      <div class="difference-cards">
+        <div class="difference-card">
+          <img src={compensationIcon.src} alt="compensation icon"/>
+          <h4>Competitive compensation</h4>
+          <p>We recognize that skilled PR professionals add tremendous value to the tech companies they work with. Therefore, we're committed to offering competitive compensation packages that are in line with in-house tech PR roles.</p>
+        </div>
+        <div class="difference-card">
+          <img src={transparencyIcon.src} alt="transparency icon"/>
+          <h4>Honesty and Transparency</h4>
+          <p>We pride ourselves in our integrity. We don't overpromise or under-deliver, striving instead to provide realistic and achievable goals for both our team and our clients. Honesty and transparency are the cornerstone of our operations.</p>
+        </div>
+        <div class="difference-card">
+          <img src={clientsIcon.src} alt="clients icon"/>
+          <h4>Premier Clientele</h4>
+          <p>We have the privilege of working with some of the most innovative minds and leading companies in the tech industry. We carefully select our partners, ensuring we collaborate only with high-caliber organizations we're confident we can bring substantial value to.</p>
+        </div>
+        <div class="difference-card">
+          <img src={supportIcon.src} alt="support icon"/>
+          <h4>Supportive Environment</h4>
+          <p>We equip you with the tools, guidance, and resources necessary for success. We're committed to your personal and professional growth, providing opportunities for continuous learning and development.</p>
+        </div>
+        <div class="difference-card">
+          <img src={cultureIcon.src} alt="culture icon"/>
+          <h4>Collaborative Team Culture</h4>
+          <p>We believe in fostering a collaborative and inclusive culture that encourages creative thinking and innovation. We work together, we celebrate together, and we overcome challenges together.</p>
+        </div>
+      </div>
+      <LinkButton href="/team">Learn more about us</LinkButton>
+  </section>
+</PageLayout>
+
+<style define:vars={{teamImgSrc, teamImgRatio}}>
+    .positions, .hero-section, .difference {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 32px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: rgba(248, 250, 252, 1);
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 240px;
+      padding: 24px;
+    }
+
+    .apply-btn {
+      margin-top: auto;
+    }
+
+    .job-title, h4 {
+      font-family: 'Outfit';
+      font-weight: 600;
+      font-size: 24px;
+      color: #7022FB;
+    }
+
+    .job-title {
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      margin: 10px 0;
+    }
+
+    .txt {
+      color: rgba(0, 0, 0, 0.6);
+      font-family: "Inter", Helvetica;
+    }
+
+    .location {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-section, .difference {
+      padding-top: 0;
+    }
+
+    .hero {
+      aspect-ratio: var(--teamImgRatio);
+      background-size: cover;
+      border-radius: 32px;
+      background-image: linear-gradient(76.32deg, rgba(112, 34, 251, 0.6) 0%, rgba(112, 34, 251, 0) 100%), var(--teamImgSrc);
+      font-size: 36px;
+      line-height: 41.4px;
+      font-weight: 600;
+      letter: -1%;
+      font-family: 'Outfit';
+      color: white;
+      padding: 40px 40% 40px 40px;
+      display: flex;
+      align-items: end;
+    }
+
+    .difference h3 {
+      margin: 0 0 30px;
+      text-align: center;
+    }
+
+    .difference-cards {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .difference-card {
+      background: rgba(248, 250, 252, 1);
+      border-radius: 32px;
+      padding: 24px;
+      flex: 384px 0 1;
+    }
+
+    p {
+      font-family: "Inter";
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 23.2px;
+    }
+
+    @media screen and (max-width: 680px) {
+      .hero {
+        padding: 32px;
+        font-size: 20px;
+        line-height: 23px;
+        aspect-ratio: 2 / 3;
+        background-position: center;
+      }
+    }
+</style>

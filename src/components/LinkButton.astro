@@ -3,12 +3,13 @@ export interface Props {
     type?: 'hollow' | 'full';
     href: string;
     openInNewWindow?: boolean;
+    class?: string;
 }
 
-const {href, type = 'full', openInNewWindow = false} = Astro.props;
+const {href, type = 'full', openInNewWindow = false, class: className} = Astro.props;
 ---
 
-<a href={href} class={type} target={openInNewWindow ? '_blank' : null}><slot/></a>
+<a href={href} class:list={[type, className]} target={openInNewWindow ? '_blank' : null}><slot/></a>
 
 <style>
     a {
