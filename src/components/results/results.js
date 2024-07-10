@@ -92,15 +92,19 @@ import itpro from '../../assets/publication-logos/itpro.jpeg';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/1nucvsWoEIWSvy3stzRk6P',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/4g6sqVZiivAK7KXp2yTCah',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/3YeepHvvlCNROM3kIrI2nh',
         tags: ['podcasts']
 	},
 	{
 		url: 'https://open.spotify.com/embed/episode/6xkNnZuwoGdgNH64rpFncl',
-        tags: ['podcasts']
-	},
-	{
-		url: 'https://open.spotify.com/embed/episode/4g6sqVZiivAK7KXp2yTCah',
         tags: ['podcasts']
 	},
 	{
@@ -304,12 +308,36 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://venturebeat.com/ai/how-codiumai-is-accelerating-ai-agent-driven-enterprise-application-development/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 9, 2024',
+		headline: "How CodiumAI is accelerating AI agent driven enterprise application development",
+		tags: ['dev', 'highlights', 'AI & ML', 'saas']
+	},
+	{
+		url: "https://www.forbes.com/sites/gilpress/2024/07/08/see-the-future-data-center-at-the-israeli-quantum-computing-center/",
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'July 8, 2024',
+		headline: "See The Future Data Center At The Israeli Quantum Computing Center",
+		tags: ['deeptech', 'highlights']
+	},
+	{
+		url: "https://venturebeat.com/ai/ai-stack-attack-navigating-the-generative-tech-maze/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'July 8, 2024',
+		headline: "AI stack attack: Navigating the generative tech maze",
+		tags: ['dev', 'highlights', 'AI & ML', 'saas']
+	},
+	{
 		url: "https://venturebeat.com/ai/exclusive-speech-recognition-ai-learns-industry-jargon-with-aiolas-novel-approach/",
 		logo: vb,
 		publication: 'VentureBeat',
 		date: 'July 3, 2024',
 		headline: "Exclusive: Speech recognition AI learns industry jargon with aiOla's novel approach",
-		tags: ['dev', 'highlights', 'AI & ML']
+		tags: ['dev', 'highlights', 'AI & ML', 'saas']
 	},
 	{
 		url: "https://aec-business.com/ai-powered-construction-management-at-the-university-of-tennessee-knoxville/",
