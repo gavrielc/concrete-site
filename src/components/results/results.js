@@ -308,6 +308,38 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://techcrunch.com/2024/07/11/intel-capital-backs-ai-construction-startup-that-could-boost-intels-own-manufacturing-prospects/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'July 11, 2024',
+		headline: "Intel Capital backs AI construction startup that could boost Intel’s own manufacturing prospects",
+		tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		url: "https://www.reuters.com/technology/artificial-intelligence/intel-leads-investment-israeli-ai-construction-tech-startup-buildots-2024-07-11/",
+		logo: reuters,
+		publication: 'Reuters',
+		date: 'July 11, 2024',
+		headline: "Intel leads investment in Israeli AI construction tech startup Buildots",
+		tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		url: "https://www.unite.ai/buildots-secures-15m-investment-from-intel-capital-to-drive-strategic-growth/",
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'July 11, 2024',
+		headline: "Buildots Secures $15M Investment from Intel Capital to Drive Strategic Growth",
+		tags: ['AI & ML', 'saas']
+	},
+	{
+		url: "https://www.enr.com/articles/58936-intel-capital-invests-in-15m-venture-round-for-ai-powered-buildots",
+		logo: enr,
+		publication: 'ENR',
+		date: 'July 11, 2024',
+		headline: "Intel Capital Invests in $15M Venture Round for AI-Powered Buildots",
+		tags: ['AI & ML', 'saas']
+	},
+	{
 		url: "https://venturebeat.com/ai/how-codiumai-is-accelerating-ai-agent-driven-enterprise-application-development/",
 		logo: vb,
 		publication: 'VentureBeat',
