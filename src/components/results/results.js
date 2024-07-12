@@ -88,6 +88,8 @@ import datacenterdynamics from '../../assets/publication-logos/datacenterdynamic
 import arstechnica from '../../assets/publication-logos/arstechnica.png';
 import cyberexpress from '../../assets/publication-logos/cyberexpress.png';
 import itpro from '../../assets/publication-logos/itpro.jpeg';
+import mashable from '../../assets/publication-logos/mashable.png';
+import gizmodo from '../../assets/publication-logos/gizmodo.png';
 
 
 export default [
@@ -364,6 +366,14 @@ export default [
 		tags: ['dev', 'highlights', 'AI & ML', 'saas']
 	},
 	{
+		url: "https://me.mashable.com/tech/43629/over-3-million-apple-apps-at-risk-due-to-cocoapods-security-breach",
+		logo: mashable,
+		publication: 'Mashable',
+		date: 'July 4, 2024',
+		headline: "Over 3 million Apple apps at risk due to CocoaPods security breach",
+		tags: ['dev', 'highlights', 'security']
+	},
+	{
 		url: "https://venturebeat.com/ai/exclusive-speech-recognition-ai-learns-industry-jargon-with-aiolas-novel-approach/",
 		logo: vb,
 		publication: 'VentureBeat',
@@ -394,6 +404,14 @@ export default [
 		date: 'July 3, 2024',
 		headline: "Critical vulnerabilities left millions of Apple devices at the mercy of hackers – and nobody noticed for nearly a decade",
 		tags: ['dev', 'security']
+	},
+	{
+		url: "https://gizmodo.com/new-open-source-bugs-leave-thousands-of-ios-apps-vulner-1851573395",
+		logo: gizmodo,
+		publication: 'Gizmodo',
+		date: 'July 2, 2024',
+		headline: "Over 3 million Apple apps at risk due to CocoaPods security breach",
+		tags: ['highlights', 'dev', 'security']
 	},
 	{
 		url: "https://www.csoonline.com/article/2512935/cocoapods-flaws-left-ios-macos-apps-open-to-supply-chain-attack.html",
