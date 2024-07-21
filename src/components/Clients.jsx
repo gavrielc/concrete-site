@@ -68,6 +68,7 @@ import coralogix from '../assets/client-logos/Coralogix.svg';
 import fairgen from '../assets/client-logos/fairgen.svg';
 import pvml from '../assets/client-logos/pvml.svg';
 import aisap from '../assets/client-logos/aisap.svg';
+import illumex from '../assets/client-logos/illumex.svg';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2024']},
@@ -79,7 +80,8 @@ const clients = [
     {logo: coralogix, name: "Coralogix", site: 'https://coralogix.com/', tags: ['saas', 'dev', 'security', '2024']},
     {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML', '2024']},
     {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2024']},
-    {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2024']},
+    {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2024', 'saas']},
+    {logo: illumex, name: "illumex", site: 'https://illumex.ai/', tags: ['AI & ML', '2024', 'saas']},
     {logo: tlv, name: "TLV Partners", site: 'https://www.tlv.partners/', tags: ['AI & ML', 'deep tech', 'security', 'saas', 'dev']},
     {logo: vectary, name: "Vectary", site: 'https://www.vectary.com/', tags: ['saas', 'dev', '2024']},
     {logo: invgate, name: "InvGate", site: 'https://invgate.com/', tags: ['saas', '2024']},
