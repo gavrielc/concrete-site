@@ -32,7 +32,7 @@ import storai from '../assets/client-logos/Storai.png';
 import datree from '../assets/client-logos/Datree.png';
 import anima from '../assets/client-logos/Anima.png';
 import bright from '../assets/client-logos/Bright.png';
-import cybermdx from '../assets/client-logos/Cybermdx.png';
+import cybermdx from '../assets/client-logos/cyber-mdx.png';
 import dia from '../assets/client-logos/DIA.webp';
 import dig from '../assets/client-logos/Dig.svg';
 import lightrun from '../assets/client-logos/Lightrun.png';
@@ -69,6 +69,9 @@ import fairgen from '../assets/client-logos/fairgen.svg';
 import pvml from '../assets/client-logos/pvml.svg';
 import aisap from '../assets/client-logos/aisap.svg';
 import illumex from '../assets/client-logos/illumex.svg';
+import onelayer from '../assets/client-logos/onelayer.svg';
+import helios from '../assets/client-logos/helios.png';
+import ozcode from '../assets/client-logos/ozcode.png';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2024']},
@@ -120,10 +123,13 @@ const clients = [
     {logo: wiremock, name: "wiremock", site: 'https://wiremock.org/', tags: ['dev', 'saas']},
     {logo: sayata, name: "sayata", site: 'https://www.sayatalabs.com/', tags: ['insurtech']},
     {logo: armo, name: "armo", site: 'https://www.armosec.io/', tags: ['dev', 'security']},
+    {logo: helios, name: "Helios", site: 'https://snyk.io/blog/welcoming-helios-to-snyk/', tags: ['dev', 'saas']},
+    {logo: ozcode, name: "ozcode", site: 'https://www.datadoghq.com/blog/datadog-acquires-ozcode/', tags: ['dev', 'saas']},
     {logo: scopio, name: "scopio", site: 'https://scopiolabs.com/', tags: ['medtech']},
     {logo: lumigo, name: "lumigo", site: 'https://www.lumigo.io/', tags: ['dev', 'saas']},
     {logo: rookout, name: "rookout", site: 'https://www.rookout.com/', tags: ['dev', 'saas']},
     {logo: imperva, name: "imperva", site: 'https://www.imperva.com/', tags: ['security', 'saas']},
+    {logo: onelayer, name: "OneLayer", site: 'https://onelayer.com/', tags: ['security', 'saas']},
     {logo: explorium, name: "explorium", site: 'https://www.explorium.ai/', tags: ['AI & ML', 'saas']},
     {logo: tatio, name: "tatio", site: 'https://www.tatio.io/', tags: ['saas', 'hr']},
     {logo: masterschool, name: "masterschool", site: 'https://www.masterschool.com/', tags: ['dev']},

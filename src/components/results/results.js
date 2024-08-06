@@ -90,9 +90,18 @@ import cyberexpress from '../../assets/publication-logos/cyberexpress.png';
 import itpro from '../../assets/publication-logos/itpro.jpeg';
 import mashable from '../../assets/publication-logos/mashable.png';
 import gizmodo from '../../assets/publication-logos/gizmodo.png';
+import devops from '../../assets/publication-logos/DevOps.webp';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/3l2mt1luidoeh4wSJOBKl2',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/0KJjbVM5zkjjPkiWyZFRhu',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/1nucvsWoEIWSvy3stzRk6P',
         tags: ['podcasts']
@@ -308,6 +317,54 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		url: "https://venturebeat.com/ai/aiola-drops-ultra-fast-multi-head-speech-recognition-model-beats-openai-whisper/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'August 1, 2024',
+		headline: "aiOla drops ultra-fast ‘multi-head’ speech recognition model, beats OpenAI Whisper",
+		tags: ['highlights', 'AI & ML', 'saas']
+	},
+	{
+		url: "https://aec-business.com/buildots-merges-automated-and-manual-task-management/",
+		logo: aec,
+		publication: 'AEC',
+		date: 'July 31, 2024',
+		headline: "Buildots Merges Automated and Manual Task Management",
+		tags: ['AI & ML']
+	},
+	{
+		url: "https://www.forbes.com/sites/adrianbridgwater/2024/07/28/a-journey-up-and-down-the-ai-stack/",
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'July 28, 2024',
+		headline: "A Journey Up (And Down) The AI Stack",
+		tags: ['highlights', 'AI & ML', 'dev', 'saas']
+	},
+	{
+		url: 'https://www.datanami.com/2024/07/25/the-white-label-powering-ibms-new-cloud-logs-solution/',
+		logo: datanami,
+		publication: 'Datanami',
+		date: 'July 25, 2023',
+		headline: 'The White Label Powering IBM’s New Cloud Logs Solution',
+        tags: ['dev', 'saas']
+	},
+	{
+		url: 'https://devops.com/coralogix-extends-reach-of-observability-platform-to-ios-applications/',
+		logo: devops,
+		publication: 'DevOps.com',
+		date: 'July 24, 2023',
+		headline: 'Coralogix Extends Reach of Observability Platform to Mobile Applications',
+        tags: ['dev', 'saas']
+	},
+	{
+		url: 'https://www.israel21c.org/israeli-startup-bests-5000-nominees-for-top-ai-prize',
+		logo: israel21c,
+		publication: 'ISRAEL21c',
+		date: 'July 15, 2024',
+		headline: 'Speech to text startup bests 5,000 nominees for top AI prize',
+        tags: ['saas', 'AI & ML']
 	},
 	{
 		url: "https://techcrunch.com/2024/07/11/intel-capital-backs-ai-construction-startup-that-could-boost-intels-own-manufacturing-prospects/",
