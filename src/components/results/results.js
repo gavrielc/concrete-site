@@ -95,6 +95,30 @@ import devops from '../../assets/publication-logos/DevOps.webp';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/3CUzPfnUuZGBl8c3aYZkBt',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/5ICZ8sQXicOL6i5606cErz',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/6NRd6jA6Q2NIR2iJ9XfLAu',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/2Z1jN3tSoKbxIpXeYjhFDi',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/75Dj1VBRBOyieFJv3ZFrEa',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/4ooAeYKibQ1NpZIXeLuGEM',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/3l2mt1luidoeh4wSJOBKl2',
         tags: ['podcasts']
 	},
@@ -317,6 +341,126 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		url: "https://www.unite.ai/yehuda-holtzman-ceo-of-cipia-interview-series/",
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'September 12, 2024',
+		headline: "Yehuda Holtzman, CEO of Cipia – Interview Series",
+		tags: ['AI & ML', 'saas']
+	},
+	{
+		url: "https://www.finextra.com/newsarticle/44717/datricks-raises-15m-for-ai-powered-risk-management-platform",
+		logo: finextra,
+		publication: 'FinExtra',
+		date: 'September 12, 2024',
+		headline: "Datricks raises $15m for AI-powered risk management platform",
+		tags: ['AI & ML', 'saas', 'security', 'fintech']
+	},
+	{
+		url: "https://venturebeat.com/ai/datricks-gets-15m-from-sap-and-others-for-ai-powered-risk-and-compliance-platform/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'September 11, 2024',
+		headline: "Datricks gets $15M from SAP and others for AI-powered risk and compliance platform",
+		tags: ['AI & ML', 'saas', 'security', 'fintech', 'highlights']
+	},
+	{
+		url: "https://www.securityweek.com/compliance-and-risk-management-startup-datricks-raises-15-million/",
+		logo: securityweek,
+		publication: 'SecurityWeek',
+		date: 'September 11, 2024',
+		headline: "Compliance and Risk Management Startup Datricks Raises $15 Million",
+		tags: ['AI & ML', 'saas', 'security', 'fintech']
+	},
+	{
+		url: "https://siliconangle.com/2024/09/11/financial-risk-management-startup-datricks-raises-15m-help-enterprises-identify-fraud/",
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 11, 2024',
+		headline: "Financial risk management startup Datricks raises $15M to help enterprises identify fraud",
+		tags: ['AI & ML', 'saas', 'security', 'fintech']
+	},
+	{
+		url: "https://www.infosecurity-magazine.com/news/us-internet-routing-security/",
+		logo: infosec,
+		publication: 'InfoSecurity Magazine',
+		date: 'September 4, 2024',
+		headline: "US Government Set Out to Improve Internet Routing Security",
+		tags: ['saas', 'dev', 'security']
+	},
+	{
+		url: "https://venturebeat.com/data-infrastructure/pinecone-serverless-goes-multicloud-as-vector-database-market-heats-up/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'August 27, 2024',
+		headline: "Pinecone serverless goes multicloud as vector database market heats up",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.techtarget.com/searchdatamanagement/news/366609193/Pinecone-launches-serverless-vector-database-on-Azure-GCP",
+		logo: techtarget,
+		publication: 'TechTarget',
+		date: 'August 27, 2024',
+		headline: "Pinecone launches serverless vector database on Azure, GCP",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://blocksandfiles.com/2024/08/27/pinecone-aws-azure-google-clouds/",
+		logo: blocksfiles,
+		publication: 'Blocks & Files',
+		date: 'August 27, 2024',
+		headline: "Pinecone vector database available on AWS, Azure, and Google clouds",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://www.datanami.com/2024/08/27/pinecone-expands-serverless-vector-dbs-in-the-cloud/",
+		logo: datanami,
+		publication: 'Datanami',
+		date: 'August 27, 2024',
+		headline: "Pinecone Expands Serverless Vector DBs In the Cloud",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://thenewstack.io/5-ways-ai-improves-knowledge-management/",
+		logo: tns,
+		publication: 'TheNewStack',
+		date: 'August 23, 2024',
+		headline: "5 Ways AI Improves Knowledge Management",
+		tags: ['AI & ML', 'saas']
+	},
+	{
+		url: "https://devops.com/dont-shift-left-without-a-platform/",
+		logo: devops,
+		publication: 'DevOps.com',
+		date: 'August 20, 2024',
+		headline: "Don’t Shift Left Without a Platform",
+		tags: ['dev', 'saas']
+	},
+	{
+		url: "https://siliconangle.com/2024/08/15/generative-semantic-fabric-supercloud7/",
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'August 15, 2024',
+		headline: "Generative Semantic Fabric bridges business and data management gaps",
+		tags: ['AI & ML', 'saas']
+	},
+	{
+		url: "https://www.calcalistech.com/ctechnews/article/r1bok4j9a",
+		logo: ctech,
+		publication: 'CTech',
+		date: 'August 15, 2024',
+		headline: "aiOla appoints three new executive staff members",
+		tags: ['AI & ML', 'saas']
+	},
+	{
+		url: "https://www.helpnetsecurity.com/2024/08/06/itsm-ai-integration/",
+		logo: helpnetsec,
+		publication: 'Help Net Security',
+		date: 'August 6, 2024',
+		headline: "ITSM concerns when integrating new AI services",
+		tags: ['security', 'saas']
 	},
 	{
 		url: "https://venturebeat.com/ai/aiola-drops-ultra-fast-multi-head-speech-recognition-model-beats-openai-whisper/",
