@@ -90,10 +90,16 @@ import cyberexpress from '../../assets/publication-logos/cyberexpress.png';
 import itpro from '../../assets/publication-logos/itpro.jpeg';
 import mashable from '../../assets/publication-logos/mashable.png';
 import gizmodo from '../../assets/publication-logos/gizmodo.png';
+import investopedia from '../../assets/publication-logos/investopedia.png';
 import devops from '../../assets/publication-logos/DevOps.webp';
+import cybernews from '../../assets/publication-logos/cybernews.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/2Xog8s6sBk3Ol4Ri2ODEUy',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/3CUzPfnUuZGBl8c3aYZkBt',
         tags: ['podcasts']
@@ -341,6 +347,86 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		url: "https://venturecapital.createsend1.com/t/d-e-eutjhdt-l-r/",
+		logo: wsj,
+		publication: 'WSJ',
+		date: 'October 2, 2024',
+		headline: "Dealmaking Continues for Israeli VCs and Startup Founders Amid Attack",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://techcrunch.com/2024/09/30/qodo-raises-40m-series-a-to-bring-quality-first-code-generation-to-the-enterprise/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'September 30, 2024',
+		headline: "Qodo raises $40M Series A to bring quality-first code generation and testing to the enterprise",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.bloomberg.com/news/articles/2024-09-30/ai-code-checker-qodo-raises-40-million-to-serve-bigger-clients",
+		logo: bloomberg,
+		publication: 'Bloomberg',
+		date: 'September 30, 2024',
+		headline: "AI Code Checker Qodo Raises $40 Million to Serve Bigger Clients",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://siliconangle.com/2024/09/30/qodo-raises-40m-advance-ai-driven-code-integrity-solutions/",
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'September 30, 2024',
+		headline: "Qodo raises $40M to advance AI-driven code integrity solutions",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://www.unite.ai/qodo-raises-40m-to-enhance-ai-driven-code-integrity-and-developer-efficiency/",
+		logo: uniteai,
+		publication: 'Unite.ai',
+		date: 'September 30, 2024',
+		headline: "Qodo Raises $40M to Enhance AI-Driven Code Integrity and Developer Efficiency",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://www.securitymagazine.com/articles/101068-75-of-organizations-say-phishing-poses-the-greatest-ai-risk",
+		logo: secmag,
+		publication: 'Security Magazine',
+		date: 'September 25, 2024',
+		headline: "75% of organizations say phishing poses the greatest AI risk",
+		tags: ['security', 'saas']
+	},
+	{
+		url: "https://insight.scmagazineuk.com/ai-threats-concern-cisos",
+		logo: scmagazine,
+		publication: 'SC Magazine',
+		date: 'September 24, 2024',
+		headline: "AI Threats Concern CISOs",
+		tags: ['security', 'saas']
+	},
+	{
+		url: "https://www.investopedia.com/these-are-cyber-chiefs-biggest-fears-about-ai-8717374",
+		logo: investopedia,
+		publication: 'Investopedia',
+		date: 'September 24, 2024',
+		headline: "These Are Cyber Chiefs' Biggest Fears About AI",
+		tags: ['security', 'saas']
+	},
+	{
+		url: "https://betanews.com/2024/09/24/phishing-and-deepfakes-are-leading-ai-powered-threats/",
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'September 24, 2024',
+		headline: "Phishing and deepfakes are leading AI-powered threats",
+		tags: ['security', 'saas']
+	},
+	{
+		url: "https://cybernews.com/security/ai-threats-pushing-cyber-pros/",
+		logo: cybernews,
+		publication: 'CyberNews',
+		date: 'September 24, 2024',
+		headline: "AI threats pushing cyber pros to seek legal safeguards",
+		tags: ['security', 'saas']
 	},
 	{
 		url: "https://www.unite.ai/yehuda-holtzman-ceo-of-cipia-interview-series/",
