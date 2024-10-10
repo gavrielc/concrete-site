@@ -349,6 +349,14 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://venturebeat.com/security/prime-rethinks-enterprise-security-by-design-with-ai-system-risk-analysis-and-suggested-actions/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 9, 2024',
+		headline: "Prime rethinks enterprise security by design with AI system risk analysis and suggested actions",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights', 'security']
+	},
+	{
 		url: "https://venturecapital.createsend1.com/t/d-e-eutjhdt-l-r/",
 		logo: wsj,
 		publication: 'WSJ',
