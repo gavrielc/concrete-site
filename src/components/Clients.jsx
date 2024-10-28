@@ -49,7 +49,7 @@ import uveye from '../assets/client-logos/UVeye.svg';
 import noogata from '../assets/client-logos/Noogata.svg';
 import tlv from '../assets/client-logos/TLV.svg';
 import deepchecks from '../assets/client-logos/deepchecks.svg';
-import codium from '../assets/client-logos/codium.svg';
+import qodo from '../assets/client-logos/qodo.svg';
 import leapxpert from '../assets/client-logos/LeapXpert.png';
 import wiremock from '../assets/client-logos/wiremock.png';
 import aiola from '../assets/client-logos/aiOla.png';
@@ -78,7 +78,7 @@ const clients = [
     {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2024']},
     {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas', '2024']},
     {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2024']},
-    {logo: codium, name: "Codium", site: 'https://www.codium.ai/', tags: ['AI & ML', 'saas', 'dev', '2024']},
+    {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2024']},
     {logo: team8, name: "Team8", site: 'https://team8.vc/', tags: ['AI & ML', 'security', 'fintech', 'medtech', '2024']},
     {logo: coralogix, name: "Coralogix", site: 'https://coralogix.com/', tags: ['saas', 'dev', 'security', '2024']},
     {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML', '2024']},
