@@ -349,6 +349,38 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://fortune.com/2024/10/23/softbank-mastercard-anthropic-cyber-ai-phishing-deepfakes-fears/",
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'October 23, 2024',
+		headline: "SoftBank, Mastercard, and Anthropic cyber chiefs sound alarms on AI phishing and deepfakes—but those aren’t the only things keeping them up at night",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights', 'security']
+	},
+	{
+		url: "https://techcrunch.com/2024/10/15/early-automates-code-testing-for-developers/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 15, 2024',
+		headline: "Early automates code testing for developers",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.cnbc.com/video/2024/10/15/cybersecurity-expert-explains-ai-powered-phishing-and-deep-fake-threats.html",
+		logo: cnbc,
+		publication: 'CNBC',
+		date: 'October 15, 2024',
+		headline: "Cybersecurity expert explains AI-powered phishing and deep-fake threats",
+		tags: ['AI & ML', 'highlights']
+	},
+	{
+		url: "https://techcrunch.com/2024/10/15/port-is-building-internal-tool-hubs-for-devs/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 15, 2024',
+		headline: "Port hosts internal tool hubs for devs",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
 		url: "https://venturebeat.com/security/prime-rethinks-enterprise-security-by-design-with-ai-system-risk-analysis-and-suggested-actions/",
 		logo: vb,
 		publication: 'VentureBeat',
