@@ -8,13 +8,14 @@ export interface Props {
     title?: string;
     subTitle?: string;
     canonicalUrl?: string;
+    noIndex?: boolean;
 }
 
-const { pageTitle, title, subTitle, canonicalUrl } = Astro.props;
+const { pageTitle, title, subTitle, canonicalUrl, noIndex } = Astro.props;
 const hasHeader = title || subTitle;
 ---
 
-<Layout title={pageTitle} subTitle={subTitle} canonicalUrl={canonicalUrl}>
+<Layout title={pageTitle} subTitle={subTitle} canonicalUrl={canonicalUrl} noIndex={noIndex}>
     <Header />
     {hasHeader && <section class="header">
         <h3>{title}</h3>

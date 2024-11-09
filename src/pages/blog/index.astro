@@ -1,0 +1,139 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<PageLayout 
+  pageTitle="Blog | Concrete Media"
+  title="Blog"
+  subTitle="Insights and updates from the Concrete Media team on PR, tech, and media."
+  noIndex={true}
+>
+  <section class="blog-grid">
+    {sortedPosts.map(post => (
+      <article class="post-card">
+        {post.data.image && (
+          <a href={`/blog/${post.slug}`} class="post-image">
+            <Image 
+              src={post.data.image} 
+              alt={post.data.title}
+              width={400}
+              height={300}
+              class="post-image"
+              quality={80}
+            />
+          </a>
+        )}
+        <div class="post-content">
+          <h2 class="post-title">
+            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          </h2>
+          <p class="post-description">{post.data.description}</p>
+          <div class="post-metadata">
+            <span>{post.data.author}</span>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {post.data.pubDate.toLocaleDateString()}
+            </time>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+</PageLayout>
+
+<style lang="scss">
+  .blog-grid {
+    padding: 0 max(calc((100vw - 1216px)/2), 48px);
+    margin-bottom: 84px;
+    display: grid;
+    gap: 48px;
+  }
+
+  .post-card {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 400px 1fr;
+    background: #F8FAFC;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .post-image {
+    height: 100%;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post-title {
+    margin: 0 0 16px;
+    
+    a {
+      font-family: 'Outfit';
+      font-weight: 600;
+      font-size: 32px;
+      color: #7022FB;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post-description {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 0 24px;
+  }
+
+  .post-metadata {
+    margin-top: auto;
+    display: flex;
+    gap: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Inter';
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    .blog-grid {
+      padding: 0 16px;
+    }
+
+    .post-card {
+      grid-template-columns: 1fr;
+    }
+
+    .post-image {
+      height: 300px;
+    }
+
+    .post-content {
+      padding: 24px;
+    }
+
+    .post-title a {
+      font-size: 24px;
+    }
+
+    .post-description {
+      font-size: 16px;
+    }
+  }
+</style> 

@@ -8,9 +8,10 @@ export interface Props {
 	title: string;
 	subTitle: string;
 	canonicalUrl?: string;
+	noIndex?: boolean;
 }
 
-const { title, subTitle, canonicalUrl } = Astro.props;
+const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -26,6 +27,7 @@ const { title, subTitle, canonicalUrl } = Astro.props;
 		<meta property="og:title" content={title}>
 		<meta property="og:image" content="https://concrete.media/social1.png">
 		<meta property="og:site_name" content="Concrete Media">
+		{noIndex && <meta name="robots" content="noindex" />}
 		<title>{title}</title>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-X678N0MN5C"></script>
