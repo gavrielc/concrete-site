@@ -349,6 +349,38 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://venturebeat.com/ai/xpander-ais-agent-graph-system-makes-ai-agents-more-reliable-by-giving-them-info-step-by-step/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'November 21, 2024',
+		headline: "xpander.ai’s Agent Graph System makes AI agents more reliable, gives them info step-by-step",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://techcrunch.com/2024/11/20/converge-bios-everything-store-for-biotech-llms-brings-in-5-5m-seed/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 20, 2024',
+		headline: "Converge Bio’s ‘everything store’ for biotech LLMs brings in $5.5M seed",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://venturebeat.com/ai/aiola-unveils-open-source-ai-audio-transcription-model-that-obscures-sensitive-info-in-realtime/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'November 20, 2024',
+		headline: "aiOla unveils open source AI audio transcription model that obscures sensitive info in realtime",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.fastcompany.com/91207924/enterprise-next-big-things-in-tech-2024",
+		logo: fastcompany,
+		publication: 'Fast Company',
+		date: 'November 19, 2024',
+		headline: "The 6 next big things in enterprise technology for 2024",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
 		url: "https://fortune.com/2024/10/23/softbank-mastercard-anthropic-cyber-ai-phishing-deepfakes-fears/",
 		logo: fortune,
 		publication: 'Fortune',
