@@ -93,6 +93,8 @@ import gizmodo from '../../assets/publication-logos/gizmodo.png';
 import investopedia from '../../assets/publication-logos/investopedia.png';
 import devops from '../../assets/publication-logos/DevOps.webp';
 import cybernews from '../../assets/publication-logos/cybernews.png';
+import crn from '../../assets/publication-logos/CRN.png';
+import mobihealth from '../../assets/publication-logos/mobihealthnews.png';
 
 
 export default [
@@ -349,6 +351,14 @@ export default [
         tags: ['podcasts']
 	},
 	{
+		url: "https://www.mobihealthnews.com/news/converge-bio-raises-55m-expedite-drug-discovery-development-genai",
+		logo: mobihealth,
+		publication: 'MobiHealthNews',
+		date: 'November 22, 2024',
+		headline: "Converge Bio raises $5.5M to expedite drug discovery, development with GenAI",
+		tags: ['AI & ML', 'saas', 'dev', 'medtech']
+	},
+	{
 		url: "https://venturebeat.com/ai/xpander-ais-agent-graph-system-makes-ai-agents-more-reliable-by-giving-them-info-step-by-step/",
 		logo: vb,
 		publication: 'VentureBeat',
@@ -357,12 +367,28 @@ export default [
 		tags: ['AI & ML', 'saas', 'dev', 'highlights']
 	},
 	{
+		url: "https://www.theregister.com/2024/11/21/ai_policy_trump/",
+		logo: register,
+		publication: 'The Register',
+		date: 'November 21, 2024',
+		headline: "Prepare for an AI policy upending under Trump, say experts",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://fortune.com/ranking/ai-innovators/2024/",
+		logo: fortune,
+		publication: 'Fortune',
+		date: 'November 20, 2024',
+		headline: "Fortune 50 AI Innovators — Pinecone",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
 		url: "https://techcrunch.com/2024/11/20/converge-bios-everything-store-for-biotech-llms-brings-in-5-5m-seed/",
 		logo: techcrunch,
 		publication: 'TechCrunch',
 		date: 'November 20, 2024',
 		headline: "Converge Bio’s ‘everything store’ for biotech LLMs brings in $5.5M seed",
-		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+		tags: ['AI & ML', 'saas', 'dev', 'highlights', 'medtech']
 	},
 	{
 		url: "https://venturebeat.com/ai/aiola-unveils-open-source-ai-audio-transcription-model-that-obscures-sensitive-info-in-realtime/",
@@ -379,6 +405,86 @@ export default [
 		date: 'November 19, 2024',
 		headline: "The 6 next big things in enterprise technology for 2024",
 		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://techcrunch.com/2024/11/12/scaleops-aims-to-take-the-frustration-out-of-cloud-management/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 12, 2024',
+		headline: "ScaleOps aims to take the frustration out of cloud management",
+		tags: ['saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.crn.com/news/software/2024/stellar-startup-big-data-vendors-to-know-in-2024?page=9",
+		logo: crn,
+		publication: 'CRN',
+		date: 'November 11, 2024',
+		headline: "Here Are The Stellar Startup Big Data Vendors To Know In 2024",
+		tags: ['AI & ML','saas', 'dev']
+	},
+	{
+		url: "https://www.scworld.com/brief/noma-security-emerges-from-stealth-with-32m",
+		logo: scmagazine,
+		publication: 'SC Magazine',
+		date: 'November 4, 2024',
+		headline: "Noma Security emerges from stealth with $32M",
+		tags: ['AI & ML', 'dev', 'security', 'saas']
+	},
+	{
+		url: "https://techcrunch.com/2024/11/02/quantum-machines-and-nvidia-use-machine-learning-to-get-closer-to-an-error-corrected-quantum-computer/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'November 2, 2024',
+		headline: "Quantum Machines and Nvidia use machine learning to get closer to an error-corrected quantum computer",
+		tags: ['AI & ML', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.securityweek.com/noma-security-raises-32-million-to-safeguard-gen-ai-applications/",
+		logo: securityweek,
+		publication: 'Security Week',
+		date: 'November 2, 2024',
+		headline: "Noma Security Raises $32 Million to Safeguard Gen-AI Applications",
+		tags: ['AI & ML', 'dev', 'security', 'saas']
+	},
+	{
+		url: "https://www.sdxcentral.com/articles/stringerai-announcements/noma-launches-application-security-platform-with-32m-funding/2024/10/",
+		logo: sdxcentral,
+		publication: 'sdxcentral',
+		date: 'November 1, 2024',
+		headline: "Noma launches application security platform with $32M funding",
+		tags: ['AI & ML', 'dev', 'security', 'saas']
+	},
+	{
+		url: "https://techcrunch.com/2024/10/31/noma-is-building-tools-to-spot-security-issues-with-ai-apps/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'October 31, 2024',
+		headline: "Noma is building tools to spot security issues with AI apps",
+		tags: ['AI & ML', 'dev', 'security', 'saas', 'highlights']
+	},
+	{
+		url: "https://venturebeat.com/ai/noma-arrives-to-provide-security-from-data-storage-to-deployment-for-enterprise-ai-solutions/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'October 31, 2024',
+		headline: "Noma arrives to provide security from data storage to deployment for enterprise AI solutions",
+		tags: ['AI & ML', 'dev', 'security', 'saas', 'highlights']
+	},
+	{
+		url: "https://siliconangle.com/2024/10/31/israeli-ai-security-startup-noma-launches-32m-secure-data-ai-lifecycle/",
+		logo: siliconangle,
+		publication: 'SiliconAngle',
+		date: 'October 31, 2024',
+		headline: "Israeli AI security startup Noma launches with $32M to secure the ‘Data and AI Lifecycle’",
+		tags: ['AI & ML', 'dev', 'security', 'saas']
+	},
+	{
+		url: "https://www.darkreading.com/application-security/noma-launches-secure-data-ai-lifecycle",
+		logo: darkreading,
+		publication: 'DarkReading',
+		date: 'October 31, 2024',
+		headline: "Noma Launches With Plans to Secure Data, AI Life Cycle",
+		tags: ['AI & ML', 'dev', 'security', 'saas']
 	},
 	{
 		url: "https://fortune.com/2024/10/23/softbank-mastercard-anthropic-cyber-ai-phishing-deepfakes-fears/",
