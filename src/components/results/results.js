@@ -99,6 +99,30 @@ import mobihealth from '../../assets/publication-logos/mobihealthnews.png';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/6Dm8SFknHvNQxfyVaiuNs0',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/2yYV5VBhDmsM9DnZKh6Y41',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/6YxbHlAZMQgDTxDS2JU7C6',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/6PpeLUZWayIc7NdSuiUy9B',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/7dNSvspdROBG98oXLyjBlo',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/7dx2LKilFcM1wohXAdcRQ1',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/2Xog8s6sBk3Ol4Ri2ODEUy',
         tags: ['podcasts']
 	},
