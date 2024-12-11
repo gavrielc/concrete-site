@@ -26,13 +26,67 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
                 <div class="job-title">New Media Manager</div>
                 <div class="location txt">Tel Aviv – Jerusalem</div>
                 <div class="experience txt">One Year Experience</div>
-                <LinkButton class="apply-btn" href="https://www.linkedin.com/jobs/view/3913666581" type='hollow' openInNewWindow>Apply now</LinkButton>
+                <details class="job-details">
+                    <summary class="txt">View Role Description</summary>
+                    <div class="job-description">
+                        <h5>Role Overview</h5>
+                        <p>As a New Media Manager, you'll be responsible for managing key media channels, including podcasts, analyst outreach, and awards across multiple client accounts. You'll develop deep knowledge of client companies, their products, spaces, and executives while helping shape their public narrative.</p>
+                        
+                        <h5>What Makes a Great New Media Manager?</h5>
+                        <ul>
+                            <li>Strong communication and organizational abilities demonstrated through previous experience</li>
+                            <li>Native-level English with exceptional writing capabilities</li>
+                            <li>Quick learner who can adapt to various technology spaces</li>
+                            <li>Creative approach to problem-solving and content creation</li>
+                            <li>Genuine enthusiasm for technology and current events</li>
+                            <li>Drive to contribute to the success of Israeli startups</li>
+                        </ul>
+                        
+                        <h5>What You'll Do</h5>
+                        <ul>
+                            <li>Develop and execute media strategies across multiple channels</li>
+                            <li>Manage podcast appearances and speaking opportunities</li>
+                            <li>Coordinate award submissions and analyst relations</li>
+                            <li>Create compelling narratives that align with client objectives</li>
+                            <li>Track and report on media coverage and campaign success</li>
+                        </ul>
+                    </div>
+                </details>
+                <LinkButton class="apply-btn" href="mailto:careers@concrete.media?subject=Application for New Media Manager Position" type='hollow' openInNewWindow>Apply now</LinkButton>
               </div>
               <div class="card">
                 <div class="job-title">Senior Account Manager</div>
                 <div class="location txt">Tel Aviv – Jerusalem</div>
                 <div class="experience txt">Two years experience</div>
-                <LinkButton class="apply-btn" href="https://www.linkedin.com/jobs/view/3944962196/" type='hollow' openInNewWindow>Apply now</LinkButton>
+                <details class="job-details">
+                    <summary class="txt">View Role Description</summary>
+                    <div class="job-description">
+                        <h5>Role Overview</h5>
+                        <p>As a Senior Account Manager, you'll be a driving force behind major stories for some of the most exciting Israeli and international tech startups. You'll apply your media expertise to secure valuable results across multiple client accounts, from creating media strategies to writing press releases and pitching journalists. Working with our team of technology and media experts, you'll have the freedom to execute strategic and creative decisions while receiving strong support.</p>
+                        
+                        <h5>What Makes a Great Senior Account Manager?</h5>
+                        <ul>
+                            <li>Native-level English with strong writing capabilities</li>
+                            <li>At least two to three years experience in tech PR or startup communications</li>
+                            <li>Proven track record of delivering high-level media results</li>
+                            <li>Strong interpersonal skills and leadership in collaborative projects</li>
+                            <li>Creative thinking and problem-solving abilities</li>
+                            <li>Passion for technology and current events</li>
+                            <li>Drive to impact the success of promising Israeli startups</li>
+                        </ul>
+                        
+                        <h5>What You'll Do</h5>
+                        <ul>
+                            <li>Craft compelling press releases and effective media pitches</li>
+                            <li>Lead media outreach and secure valuable coverage</li>
+                            <li>Collaborate with executives to define PR and media strategy</li>
+                            <li>Serve as the main point of contact for company executives</li>
+                            <li>Handle client communications and set realistic expectations</li>
+                            <li>Execute strategic and creative decisions with team support</li>
+                        </ul>
+                    </div>
+                </details>
+                <LinkButton class="apply-btn" href="mailto:careers@concrete.media?subject=Application for Senior Account Manager Position" type='hollow' openInNewWindow>Apply now</LinkButton>
               </div>
         </div>
     </section>
@@ -82,10 +136,10 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
     }
 
     .card-wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
       gap: 32px;
       width: 100%;
-      flex-wrap: wrap;
     }
 
     .card {
@@ -93,9 +147,10 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
       border-radius: 32px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-      height: 240px;
+      height: auto;
+      min-height: 240px;
       padding: 24px;
+      align-self: start;
     }
 
     .apply-btn {
@@ -172,6 +227,69 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
       font-size: 16px;
       color: rgba(0, 0, 0, 0.6);
       line-height: 23.2px;
+    }
+
+    .job-details {
+      margin: 16px 0;
+    }
+
+    .job-details summary {
+      cursor: pointer;
+      color: #7022FB;
+      font-weight: 500;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .job-details summary::before {
+      content: "►";
+      margin-right: 8px;
+      font-size: 12px;
+    }
+
+    .job-details[open] summary::before {
+      content: "▼";
+    }
+
+    .job-description {
+      padding: 16px 0;
+      margin-right: 32px;
+    }
+
+    .job-description h5 {
+      font-family: 'Outfit';
+      font-weight: 600;
+      font-size: 18px;
+      color: #7022FB;
+      margin: 24px 0 16px;
+    }
+
+    .job-description h5:first-child {
+      margin-top: 0;
+    }
+
+    .job-description p, .job-description li {
+      color: rgba(0, 0, 0, 0.6);
+      font-family: "Inter";
+      font-size: 16px;
+      line-height: 24px;
+      max-width: none;
+    }
+
+    .job-description ul {
+      list-style-type: disc;
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+
+    .job-description li {
+      margin-bottom: 8px;
+      padding-left: 8px;
+    }
+
+    .job-description li:last-child {
+      margin-bottom: 0;
     }
 
     @media screen and (max-width: 680px) {
