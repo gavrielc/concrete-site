@@ -53,6 +53,10 @@
             &:hover .deleteButton {
                 opacity: 1;
             }
+
+            &:nth-child(n+13):nth-child(-n+16) {
+                margin-bottom: 64px;
+            }
         }
     }
 
