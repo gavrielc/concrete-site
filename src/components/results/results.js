@@ -42,7 +42,6 @@ import datanami from '../../assets/publication-logos/datanami.png';
 import betanews from '../../assets/publication-logos/betanews.png';
 import axios from '../../assets/publication-logos/axios.png';
 import uniteai from '../../assets/publication-logos/uniteai.png';
-import wapo from '../../assets/publication-logos/WaPo.png';
 import fox from '../../assets/publication-logos/fox.png';
 import finextra from '../../assets/publication-logos/finextra.png';
 import finovate from '../../assets/publication-logos/finovate.png';
@@ -95,9 +94,18 @@ import devops from '../../assets/publication-logos/DevOps.webp';
 import cybernews from '../../assets/publication-logos/cybernews.png';
 import crn from '../../assets/publication-logos/CRN.png';
 import mobihealth from '../../assets/publication-logos/mobihealthnews.png';
+import eweek from '../../assets/publication-logos/EWeek.png';
 
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/1S5wpehBKEGCFsEdupRy3B',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/4xZD1OGypvQiNqZaY9kI9X',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/6Dm8SFknHvNQxfyVaiuNs0',
         tags: ['podcasts']
@@ -373,6 +381,94 @@ export default [
 	{
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
+	},
+	{
+		url: "https://techcrunch.com/2024/12/11/stigg-makes-it-easy-to-change-your-saas-pricing/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 11, 2024',
+		headline: "Stigg makes it easy to change your SaaS pricing",
+		tags: ['saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://techcrunch.com/2024/12/11/founder-who-built-snaps-ai-launches-a-snappy-new-take-on-video-chatbots/",
+		logo: techcrunch,
+		publication: 'TechCrunch',
+		date: 'December 11, 2024',
+		headline: "Founder who built Snap’s AI launches a snappy new take on video chatbots",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.forbes.com/sites/gilpress/2024/12/10/nvidia-rigetti-quantum-machines-deliver-ai-powered-quantum-computing/",
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'December 10, 2024',
+		headline: "Nvidia, Rigetti, Quantum Machines Deliver AI-Powered Quantum Computing",
+		tags: ['AI & ML', 'dev', 'highlights']
+	},
+	{
+		url: "https://venturebeat.com/ai/qodos-fully-autonomous-agent-tackles-the-complexities-of-regression-testing/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 4, 2024',
+		headline: "Qodo’s fully autonomous agent tackles the complexities of regression testing",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://www.helpnetsecurity.com/2024/12/04/niv-braun-noma-security-data-ai-lifecycle/",
+		logo: helpnetsec,
+		publication: 'Help Net Security',
+		date: 'December 4, 2024',
+		headline: "Securing AI’s new frontier: Visibility, governance, and mitigating compliance risks",
+		tags: ['AI & ML', 'saas', 'dev', 'security']
+	},
+	{
+		url: "https://www.forbes.com/sites/adrianbridgwater/2024/12/02/pinecone-spruces-up-ai-knowledge-platform/",
+		logo: forbes,
+		publication: 'Forbes',
+		date: 'December 2, 2024',
+		headline: "Pinecone Spruces Up AI Knowledge Platform",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://venturebeat.com/data-infrastructure/pinecone-expands-vector-database-with-cascading-retrieval-boosting-enterprise-ai-accuracy-by-up-to-48/",
+		logo: vb,
+		publication: 'VentureBeat',
+		date: 'December 2, 2024',
+		headline: "Pinecone expands vector database with cascading retrieval, boosting enterprise AI accuracy by up to 48%",
+		tags: ['AI & ML', 'saas', 'dev', 'highlights']
+	},
+	{
+		url: "https://thenewstack.io/pinecone-revamps-retrieval-capabilities-for-its-vector-database-platform/",
+		logo: tns,
+		publication: 'The New Stack',
+		date: 'December 2, 2024',
+		headline: "Pinecone Revamps Retrieval Capabilities for Its Vector Database Platform",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://blocksandfiles.com/2024/12/02/pinecone-integrates-ai-inferencing-with-its-vector-database/",
+		logo: blocksfiles,
+		publication: 'Blocks and Files',
+		date: 'December 2, 2024',
+		headline: "Pinecone integrates AI inferencing with vector database",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://betanews.com/2024/12/02/new-platform-lets-developers-build-more-accurate-ai-apps-faster/",
+		logo: betanews,
+		publication: 'BetaNews',
+		date: 'December 2, 2024',
+		headline: "New platform lets developers build more accurate AI apps faster",
+		tags: ['AI & ML', 'saas', 'dev']
+	},
+	{
+		url: "https://www.eweek.com/news/israeli-ai-companies-attract-major-funding/",
+		logo: eweek,
+		publication: 'eWeek',
+		date: 'November 26, 2024',
+		headline: "AI Companies in Israel Attract 47% of Tech Funding in Major Investment Push",
+		tags: ['AI & ML', 'saas', 'dev']
 	},
 	{
 		url: "https://www.mobihealthnews.com/news/converge-bio-raises-55m-expedite-drug-discovery-development-genai",
@@ -2543,9 +2639,9 @@ export default [
         tags: ['dev', 'security', 'saas']
 	},
 	{
-		url: 'https://www.washingtonpost.com/business/2023/04/03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search/56fc1756-d1d8-11ed-ac8b-cd7da05168e9_story.html',
-		logo: wapo,
-		publication: 'Washinton Post',
+		url: 'https://www.bloomberg.com/opinion/articles/2023-04-03/chatgpt-s-plugins-may-be-ai-s-iphone-moment-and-threat-to-google-search',
+		logo: bloomberg,
+		publication: 'Bloomberg',
 		date: 'April 3, 2023',
 		headline: 'ChatGPT’s ‘IPhone Moment’ Poses a New Threat to Google',
         tags: ['highlights', 'AI & ML', 'saas', 'dev']
