@@ -45,11 +45,22 @@
     flex-wrap: wrap;
     gap: 24px 32px;
 
+    &.editMode {
+        .result-card {
+            flex: 0 1 calc((100% - 96px) / 4) !important;
+            min-width: unset;
+
+            &:hover .deleteButton {
+                opacity: 1;
+            }
+        }
+    }
+
     .result-card {
         border: 1px solid rgba(255, 255, 255, 0.2);
         filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
         border-radius: 16px;
-
+        position: relative;
         flex: 0 1 calc((100% - 64px) / 3);
         min-width: 380px;
         display: block;
@@ -66,6 +77,30 @@
         @media screen and (max-width: 823px) {
             flex: 0 1 100%;
             min-width: initial;
+        }
+    }
+
+    .deleteButton {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        z-index: 1;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
         }
     }
     

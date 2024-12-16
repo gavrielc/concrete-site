@@ -20,14 +20,28 @@ const { tag } = Astro.params;
     subTitle="We identify the publications that will bring the greatest value to your company, and leverage our expertise and contacts to ensure you feature in them regularly. <br>These are some of the <b>recent</b> and <b>impactful</b> media items we've arranged in top business, tech, mainstream and industry publications."
     canonicalUrl="https://concrete.media/results/"
 >
-    <section class="results">
+    <section class="results" id="resultsSection">
         <Results client:idle tag={tag}/>
     </section>
 </PageLayout>
+
+<script>
+    const searchParams = new URLSearchParams(window.location.search);
+    const isEditMode = searchParams.get('edit') === 'true';
+    if (isEditMode) {
+        document.getElementById('resultsSection').classList.add('edit-mode');
+    }
+</script>
 
 <style>
     .results {
         display: flex;
         flex-direction: column;
+    }
+
+    .results.edit-mode {
+        width: 100%;
+        padding: 84px 48px;
+        max-width: 100vw;
     }
 </style>
