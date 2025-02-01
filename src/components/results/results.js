@@ -95,9 +95,36 @@ import cybernews from '../../assets/publication-logos/cybernews.png';
 import crn from '../../assets/publication-logos/CRN.png';
 import mobihealth from '../../assets/publication-logos/mobihealthnews.png';
 import eweek from '../../assets/publication-logos/EWeek.png';
-
+import wapo from '../../assets/publication-logos/WaPo.png';
+import thehackernews from '../../assets/publication-logos/thehackernews.png';
+import cyberscoop from '../../assets/publication-logos/cyberscoop.svg';
+import informationweek from '../../assets/publication-logos/informationweek.svg';
+import ccj from '../../assets/publication-logos/commercialcarrierjournal.svg';
+import eetimes from '../../assets/publication-logos/EE-Times.png';
+import constructionexecutive from '../../assets/publication-logos/constructionexecutive.png';
+import techstrong from '../../assets/publication-logos/techstrongtv.png';
 
 export default [
+	{
+		url: 'https://open.spotify.com/embed/episode/27Q8W283Z8YjusWAZ1SSd7',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/6Qpykkdc152wKgPyTAdbcH',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/7bjZwqJwbazdwVfk3xBSRV',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/5SGTeBdXAXAWo5FCZwYBj1',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/3Z7hJdvOc9MdYJm9qJoyB8',
+        tags: ['podcasts']
+	},
 	{
 		url: 'https://open.spotify.com/embed/episode/1S5wpehBKEGCFsEdupRy3B',
         tags: ['podcasts']
@@ -382,6 +409,174 @@ export default [
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
 	},
+    {
+        url: "https://www.technologyreview.com/2025/01/31/1110740/how-deepseek-ripped-up-the-ai-playbook-and-why-everyones-going-to-follow-it/",
+        logo: mit,
+        publication: 'MIT Technology Review',
+        date: 'January 31, 2025',
+        headline: "How DeepSeek ripped up the AI playbook—and why everyone's going to follow it",
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+    },
+    {
+        url: "https://www.washingtonpost.com/technology/2025/01/31/deepseek-ai-china-us-nvidia/",
+        logo: wapo,
+        publication: 'Washington Post',
+        date: 'January 31, 2025',
+        headline: "Did DeepSeek really develop on a shoestring budget?",
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+    },
+    {
+        url: "https://www.forbes.com/sites/rashishrivastava/2025/01/30/no-deepseek-is-not-a-sputnik-moment/",
+        logo: forbes,
+        publication: 'Forbes',
+        date: 'January 30, 2025',
+        headline: "No, DeepSeek Is Not A 'Sputnik Moment'",
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+    },
+    {
+        url: "https://www.unite.ai/inna-tokarev-sela-ceo-and-founder-of-illumex-interview-series/",
+        logo: uniteai,
+        publication: 'Unite.ai',
+        date: 'January 30, 2025',
+        headline: "Inna Tokarev Sela, CEO and Founder of illumex - Interview Series",
+        tags: ['AI & ML', 'saas']
+    },
+    {
+        url: "https://techcrunch.com/2025/01/30/backline-automatically-remediates-security-vulnerabilities/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'January 30, 2025',
+        headline: "Backline automatically remediates security vulnerabilities",
+        tags: ['highlights', 'security', 'dev', 'saas']
+    },
+    {
+        url: "https://thehackernews.com/2025/01/lightning-ai-studio-vulnerability.html",
+        logo: thehackernews,
+        publication: 'The Hacker News',
+        date: 'January 30, 2025',
+        headline: "Lightning AI Studio Vulnerability Could've Allowed RCE via Hidden URL Parameter",
+        tags: ['security', 'AI & ML', 'dev']
+    },
+	{
+        url: "https://fortune.com/2025/01/29/how-the-u-s-could-and-should-respond-to-deepseek/",
+        logo: fortune,
+        publication: 'Fortune',
+        date: 'January 29, 2025',
+        headline: "How the U.S. could (and should) respond to DeepSeek",
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+    },
+    {
+        url: "https://cyberscoop.com/lightningai-vulnerability-noma-cloud-phishing/",
+        logo: cyberscoop,
+        publication: 'CyberScoop',
+        date: 'January 29, 2025',
+        headline: "Vulnerability in popular AI developer could 'shut down essentially everything you own'",
+        tags: ['security', 'AI & ML', 'dev']
+    },
+    {
+        url: "https://cybernews.com/security/critical-vulnerability-ai-development-platform-lightning-ai/",
+        logo: cybernews,
+        publication: 'CyberNews',
+        date: 'January 29, 2025',
+        headline: "Critical vulnerability plagued AI development platform Lightning AI",
+        tags: ['security', 'AI & ML', 'dev']
+    },
+    {
+        url: "https://techcrunch.com/2025/01/29/finout-raises-40m-series-c-for-its-cloud-cost-management-service/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'January 29, 2025',
+        headline: "Finout raises $40M Series C for its cloud cost management service",
+        tags: ['highlights', 'fintech', 'saas', 'dev']
+    },
+	{
+        url: "https://fortune.com/2025/01/28/trump-administration-policy-response-deepseek-ai-openai-stargate-export-controls-taiwan-tariffs/",
+        logo: fortune,
+        publication: 'Fortune',
+        date: 'January 28, 2025',
+        headline: "Trump seemed blindsided by the sudden rise of Chinese AI service DeepSeek",
+        tags: ['highlights', 'AI & ML', 'saas', 'dev']
+    },
+    {
+        url: "https://techcrunch.com/2025/01/27/hackers-are-targeting-machine-identities-token-security-just-raised-20m-to-stop-them/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'January 27, 2025',
+        headline: "Hackers are targeting machine identities. Token Security just raised $20M to stop them",
+        tags: ['highlights', 'security', 'dev', 'saas']
+    },
+    {
+        url: "https://blocksandfiles.com/2025/01/23/pinecone-assistant-builds-rag-ai-agents/",
+        logo: blocksfiles,
+        publication: 'Blocks & Files',
+        date: 'January 23, 2025',
+        headline: "Pinecone launches AI agent-building API to simplify RAG development",
+        tags: ['AI & ML', 'dev', 'saas']
+    },
+    {
+        url: "https://venturebeat.com/ai/the-path-forward-for-gen-ai-powered-code-development-in-2025/",
+        logo: vb,
+        publication: 'VentureBeat',
+        date: 'January 16, 2025',
+        headline: "The path forward for gen AI-powered code development in 2025",
+        tags: ['highlights', 'AI & ML', 'dev', 'saas']
+    },
+    {
+        url: "https://www.helpnetsecurity.com/2025/01/16/ross-young-team8-cybersecurity-boardroom-discussions/",
+        logo: helpnetsec,
+        publication: 'Help Net Security',
+        date: 'January 16, 2025',
+        headline: "How CISOs can elevate cybersecurity in boardroom discussions",
+        tags: ['security']
+    },
+    {
+        url: "https://www.informationweek.com/cyber-resilience/how-cisos-can-build-a-disaster-recovery-skillset",
+        logo: informationweek,
+        publication: 'InformationWeek',
+        date: 'January 15, 2025',
+        headline: "How CISOs Can Build a Disaster Recovery Skillset",
+        tags: ['security']
+    },
+    {
+        url: "https://www.ccjdigital.com/technology/video/15712084/a-safetyfocused-video-telematics-solution-a-fleet-optimization-platforms-new-features-and-more",
+        logo: ccj,
+        publication: 'Commercial Carrier Journal',
+        date: 'January 14, 2025',
+        headline: "A safety-focused video telematics solution, a fleet optimization platform's new features and more",
+        tags: ['AI & ML', 'saas']
+    },
+    {
+        url: "https://techcrunch.com/2024/12/30/from-ai-agents-to-enterprise-budgets-20-vcs-share-their-predictions-on-enterprise-tech-in-2025/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'December 30, 2024',
+        headline: "From AI agents to enterprise budgets, 20 VCs share their predictions on enterprise tech in 2025",
+        tags: ['highlights', 'AI & ML', 'saas']
+    },
+	{
+        url: "https://www.crn.com/news/software/2024/the-10-hottest-big-data-tools-of-2024",
+        logo: crn,
+        publication: 'CRN',
+        date: 'December 20, 2024',
+        headline: "The 10 Hottest Big Data Tools Of 2024",
+        tags: ['AI & ML', 'dev', 'saas']
+    },
+	{
+        url: "https://techstrong.tv/videos/interviews/ai-ready-data-with-illumexs-inna-tokarev-sela",
+        logo: techstrong,
+        publication: 'Techstrong TV',
+        date: 'December 19, 2024',
+        headline: "AI-Ready Data with illumex's Inna Tokarev Sela",
+        tags: ['AI & ML', 'saas']
+    },
+    {
+        url: "https://www.eetimes.com/in-vehicle-gesture-control-requires-better-human-behavior-tech/",
+        logo: eetimes,
+        publication: 'EE Times',
+        date: 'December 16, 2024',
+        headline: "In-Vehicle Gesture Control Requires Better Human Behavior Tech",
+        tags: ['AI & ML']
+    },
 	{
 		url: "https://techcrunch.com/2024/12/11/stigg-makes-it-easy-to-change-your-saas-pricing/",
 		logo: techcrunch,
@@ -422,6 +617,14 @@ export default [
 		headline: "Securing AI’s new frontier: Visibility, governance, and mitigating compliance risks",
 		tags: ['AI & ML', 'saas', 'dev', 'security']
 	},
+	{
+        url: "https://www.constructionexec.com/article/hammers-saws-drills-ai",
+        logo: constructionexecutive,
+        publication: 'Construction Executive',
+        date: 'December 4, 2024',
+        headline: "Hammers, Saws, Drills…AI?",
+        tags: ['AI & ML']
+    },
 	{
 		url: "https://www.forbes.com/sites/adrianbridgwater/2024/12/02/pinecone-spruces-up-ai-knowledge-platform/",
 		logo: forbes,
