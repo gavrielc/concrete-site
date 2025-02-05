@@ -514,6 +514,14 @@ export default [
         tags: ['AI & ML', 'dev', 'saas']
     },
     {
+        url: "https://venturebeat.com/security/how-axis-security-is-using-xpander-ais-agent-platform-to-supercharge-customer-support-ticket-management/",
+        logo: vb,
+        publication: 'VentureBeat',
+        date: 'January 21, 2025',
+        headline: "How Axis Security is using Xpander.AI’s agent platform to supercharge customer support ticket management",
+        tags: ['highlights', 'AI & ML', 'dev', 'saas', 'security']
+    },
+    {
         url: "https://venturebeat.com/ai/the-path-forward-for-gen-ai-powered-code-development-in-2025/",
         logo: vb,
         publication: 'VentureBeat',
