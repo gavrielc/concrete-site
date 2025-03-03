@@ -72,30 +72,42 @@ import illumex from '../assets/client-logos/illumex.svg';
 import onelayer from '../assets/client-logos/onelayer.svg';
 import helios from '../assets/client-logos/helios.png';
 import ozcode from '../assets/client-logos/ozcode.png';
+import noma from '../assets/client-logos/Noma.svg';
+import primesec from '../assets/client-logos/Prime.svg';
+import token from '../assets/client-logos/Token.gif';
+import backline from '../assets/client-logos/Backline.svg';
+import finout from '../assets/client-logos/Finout.svg';
+import eself from '../assets/client-logos/eSelf.png';
 
 const clients = [
-    {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2024']},
-    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2024']},
-    {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas', '2024']},
-    {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2024']},
-    {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2024']},
-    {logo: team8, name: "Team8", site: 'https://team8.vc/', tags: ['AI & ML', 'security', 'fintech', 'medtech', '2024']},
-    {logo: coralogix, name: "Coralogix", site: 'https://coralogix.com/', tags: ['saas', 'dev', 'security', '2024']},
-    {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML', '2024']},
-    {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2024']},
-    {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2024', 'saas']},
-    {logo: illumex, name: "illumex", site: 'https://illumex.ai/', tags: ['AI & ML', '2024', 'saas']},
+    {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2025']},
+    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2025']},
+    {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas']},
+    {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2025']},
+    {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
+    {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2025']},
+    {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2025', 'saas']},
+    {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
+    {logo: noma, name: "Noma", site: 'https://noma.security/', tags: ['security', 'saas', 'dev', '2025']},
+    {logo: eself, name: "eSelf", site: 'https://eself.ai/', tags: ['AI & ML', 'saas', '2025']},
+    {logo: primesec, name: "Prime", site: 'https://www.primesec.ai/', tags: ['security', 'AI & ML', 'saas', 'dev', '2025']},
+    {logo: token, name: "Token Security", site: 'https://www.token.security/', tags: ['security', 'saas', 'dev', '2025']},
+    {logo: backline, name: "Backline", site: 'https://backline.ai/', tags: ['AI & ML', 'saas', 'dev', 'security', '2025']},
+    {logo: finout, name: "Finout", site: 'https://www.finout.io/', tags: ['saas', 'fintech', '2025']},
+    {logo: team8, name: "Team8", site: 'https://team8.vc/', tags: ['AI & ML', 'security', 'fintech', 'medtech', '2025']},
+    {logo: coralogix, name: "Coralogix", site: 'https://coralogix.com/', tags: ['saas', 'dev', 'security', '2025']},
+    {logo: cipia, name: "cipia", site: 'https://cipia.com/', tags: ['AI & ML', '2025']},
+    {logo: illumex, name: "illumex", site: 'https://illumex.ai/', tags: ['AI & ML', '2025', 'saas']},
     {logo: tlv, name: "TLV Partners", site: 'https://www.tlv.partners/', tags: ['AI & ML', 'deep tech', 'security', 'saas', 'dev']},
-    {logo: vectary, name: "Vectary", site: 'https://www.vectary.com/', tags: ['saas', 'dev', '2024']},
-    {logo: invgate, name: "InvGate", site: 'https://invgate.com/', tags: ['saas', '2024']},
-    {logo: lunar, name: "Lunar.dev", site: 'https://www.lunar.dev/', tags: ['saas', 'dev', '2024']},
-    {logo: deepdub, name: "deepdub", site: 'https://deepdub.ai/', tags: ['AI & ML', 'saas', '2024']},
-    {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2024']},
-    {logo: prompt, name: "Prompt Security", site: 'https://www.prompt.security/', tags: ['saas', 'dev', 'security', 'AI & ML', '2024']},
-    {logo: pvml, name: "PVML", site: 'https://pvml.com/', tags: ['saas', 'AI & ML', 'dev', '2024']},
-    {logo: fairgen, name: "Fairgen", site: 'https://www.fairgen.ai/', tags: ['saas', 'AI & ML', '2024']},
-    {logo: ioriver, name: "IO River", site: 'https://www.ioriver.io/', tags: ['saas', 'dev', '2024']},
-    {logo: aisap, name: "aisap.ai", site: 'https://www.aisap.ai/', tags: ['saas', 'medtech', 'AI & ML', '2024']},
+    {logo: vectary, name: "Vectary", site: 'https://www.vectary.com/', tags: ['saas', 'dev']},
+    {logo: invgate, name: "InvGate", site: 'https://invgate.com/', tags: ['saas']},
+    {logo: lunar, name: "Lunar.dev", site: 'https://www.lunar.dev/', tags: ['saas', 'dev']},
+    {logo: deepdub, name: "deepdub", site: 'https://deepdub.ai/', tags: ['AI & ML', 'saas']},
+    {logo: prompt, name: "Prompt Security", site: 'https://www.prompt.security/', tags: ['saas', 'dev', 'security', 'AI & ML']},
+    {logo: pvml, name: "PVML", site: 'https://pvml.com/', tags: ['saas', 'AI & ML', 'dev']},
+    {logo: fairgen, name: "Fairgen", site: 'https://www.fairgen.ai/', tags: ['saas', 'AI & ML']},
+    {logo: ioriver, name: "IO River", site: 'https://www.ioriver.io/', tags: ['saas', 'dev']},
+    {logo: aisap, name: "aisap.ai", site: 'https://www.aisap.ai/', tags: ['saas', 'medtech', 'AI & ML']},
     {logo: statement, name: 'Statement', site: 'https://www.statement.io/', tags: ['fintech', 'AI & ML', 'saas']},
     {logo: dig, name: 'dig', site: 'https://www.dig.security/', tags: ['security', 'saas']},
     {logo: wilco, name: "wilco", site: 'https://www.trywilco.com/', tags: ['dev']},
@@ -119,7 +131,7 @@ const clients = [
     {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
     {logo: deepchecks, name: "Deepchecks", site: 'https://deepchecks.com/', tags: ['saas', 'AI & ML', 'dev']},
     {logo: axiom, name: "axiom", site: 'https://axiom.security/', tags: ['security', 'saas']},
-    {logo: infield, name: "Infield", site: 'https://www.infield.ai/', tags: ['saas', 'dev', 'AI & ML', '2024']},
+    {logo: infield, name: "Infield", site: 'https://www.infield.ai/', tags: ['saas', 'dev', 'AI & ML']},
     {logo: wiremock, name: "wiremock", site: 'https://wiremock.org/', tags: ['dev', 'saas']},
     {logo: sayata, name: "sayata", site: 'https://www.sayatalabs.com/', tags: ['insurtech']},
     {logo: armo, name: "armo", site: 'https://www.armosec.io/', tags: ['dev', 'security']},
@@ -149,7 +161,7 @@ const clients = [
 ];
 
 const tags = [
-    {name: '2024', value: '2024'},
+    {name: '2025', value: '2025'},
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
     {name: 'CyberSecurity', value: 'security'},
@@ -159,7 +171,7 @@ const tags = [
 ];
 
 export default function Clients() {
-    const [value, setValue] = useState('2024');
+    const [value, setValue] = useState('2025');
     const filter = useCallback((tag) => {
         const newValue = value == tag ? null : tag;
         setValue(newValue);
