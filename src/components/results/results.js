@@ -110,6 +110,18 @@ import bbc from '../../assets/publication-logos/BBC.png';
 
 export default [
 	{
+		url: 'https://open.spotify.com/embed/episode/4dh5naxMVgYrvk3p6Uh8Pt',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/2z6gIJdFMV2xhfrRslDahm',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/0tuZNVWPugR8XSJg4zGMg9',
+        tags: ['podcasts']
+	},
+	{
 		url: 'https://open.spotify.com/embed/episode/27Q8W283Z8YjusWAZ1SSd7',
         tags: ['podcasts']
 	},
