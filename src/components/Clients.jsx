@@ -78,6 +78,7 @@ import token from '../assets/client-logos/Token.gif';
 import backline from '../assets/client-logos/Backline.svg';
 import finout from '../assets/client-logos/Finout.svg';
 import eself from '../assets/client-logos/eSelf.png';
+import converge from '../assets/client-logos/Converge.svg';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2025']},
@@ -88,6 +89,7 @@ const clients = [
     {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2025']},
     {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2025', 'saas']},
     {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
+    {logo: converge, name: "Converge Bio", site: 'https://converge-bio.com/', tags: ['medtech', 'AI & ML', '2025']},
     {logo: noma, name: "Noma", site: 'https://noma.security/', tags: ['security', 'saas', 'dev', '2025']},
     {logo: eself, name: "eSelf", site: 'https://eself.ai/', tags: ['AI & ML', 'saas', '2025']},
     {logo: primesec, name: "Prime", site: 'https://www.primesec.ai/', tags: ['security', 'AI & ML', 'saas', 'dev', '2025']},
@@ -124,7 +126,7 @@ const clients = [
     {logo: noogata, name: "noogata", site: 'https://noogata.com/', tags: ['AI & ML', 'saas']},
     {logo: privya, name: "privya", site: 'https://privya.ai/', tags: ['security']},
     {logo: askai, name: "Ask-AI", site: 'https://www.ask-ai.com/', tags: ['saas', 'AI & ML']},
-    {logo: scala, name: "Scala", site: 'https://www.scala-bio.com/', tags: ['AI & ML']},
+    {logo: scala, name: "Scala", site: 'https://www.scala-bio.com/', tags: ['AI & ML', 'medtech']},
     {logo: gable, name: "gable", site: 'https://www.gable.to/', tags: ['saas', 'hr']},
     {logo: leapxpert, name: "LeapXpert", site: 'https://www.leapxpert.com//', tags: ['dev', 'security', 'saas']},
     {logo: qwak, name: "qwak", site: 'https://www.qwak.com/', tags: ['AI & ML', 'saas']},
