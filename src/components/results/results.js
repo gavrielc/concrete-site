@@ -426,6 +426,14 @@ export default [
         tags: ['podcasts']
 	},
 	{
+        url: "https://venturebeat.com/programming-development/qodo-teams-up-with-google-cloud-to-provide-devs-with-free-ai-code-review-tools-directly-within-platform/",
+        logo: vb,
+        publication: 'VentureBeat',
+        date: 'June 18, 2025',
+        headline: "Qodo teams up with Google Cloud to provide devs with free AI code review tools directly within platform",
+        tags: ['AI & ML', 'dev', 'highlights']
+    },
+	{
         url: "https://www.safetydetectives.com/blog/akeyless-interview/",
         logo: safetydetectives,
         publication: 'Safety Detectives',
