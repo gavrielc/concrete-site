@@ -1,112 +1,110 @@
-import techcrunch from '../../assets/publication-logos/techcrunch.png';
-import forbes from '../../assets/publication-logos/forbes.webp';
-import mit from '../../assets/publication-logos/mit.png';
-import vb from '../../assets/publication-logos/vb.svg';
-import techtarget from '../../assets/publication-logos/techtarget.png';
-import ctech from '../../assets/publication-logos/ctech.png';
-import tns from '../../assets/publication-logos/tns.svg';
-import siliconangle from '../../assets/publication-logos/siliconangle.png';
-import sdtimes from '../../assets/publication-logos/sdtimes.png';
-import labiotech from '../../assets/publication-logos/labiotech.png';
-import healthcare from '../../assets/publication-logos/healthcare.png';
-import darkreading from '../../assets/publication-logos/dark-reading.png';
-import sdxcentral from '../../assets/publication-logos/sdxcentral.svg';
-import securityboulevard from '../../assets/publication-logos/security-boulevard.png';
-import containerjournal from '../../assets/publication-logos/container-journal.png';
-import scmagazine from '../../assets/publication-logos/scmagazine.png';
-import computerweekly from '../../assets/publication-logos/computer-weekly.png';
-import fastcompany from '../../assets/publication-logos/fast-company.png';
-import cbs from '../../assets/publication-logos/cbs.png';
-import newscientist from '../../assets/publication-logos/new-scientist.png';
-import register from '../../assets/publication-logos/register.png';
-import bi from '../../assets/publication-logos/bi.png';
-import infoq from '../../assets/publication-logos/infoq.svg';
-import cso from '../../assets/publication-logos/cso.png';
-import securityweek from '../../assets/publication-logos/security-week.jpeg';
-import engineering from '../../assets/publication-logos/engineering.jpeg';
-import infoage from '../../assets/publication-logos/information-age.png';
-import blocksfiles from '../../assets/publication-logos/blocksfiles.png';
-import helpnetsec from '../../assets/publication-logos/helpnet.png';
-import builtin from '../../assets/publication-logos/built-in.png';
-import israel21c from '../../assets/publication-logos/israel21c.svg';
-import insidebigdata from '../../assets/publication-logos/insidebigdata.png';
-import ft from '../../assets/publication-logos/ft.jpeg';
-import wired from '../../assets/publication-logos/wired.svg';
-import bloomberg from '../../assets/publication-logos/bloomberg.png';
-import wsj from '../../assets/publication-logos/wsj.png';
-import autoworld from '../../assets/publication-logos/auto-world.svg';
-import infoworld from '../../assets/publication-logos/info-world.png';
-import adex from '../../assets/publication-logos/adex.png';
-import jpost from '../../assets/publication-logos/jpost.svg';
-import datanami from '../../assets/publication-logos/datanami.png';
-import betanews from '../../assets/publication-logos/betanews.png';
-import axios from '../../assets/publication-logos/axios.png';
-import uniteai from '../../assets/publication-logos/uniteai.png';
-import fox from '../../assets/publication-logos/fox.png';
-import finextra from '../../assets/publication-logos/finextra.png';
-import finovate from '../../assets/publication-logos/finovate.png';
-import finmag from '../../assets/publication-logos/fintech-magazine.png';
-import fintechtimes from '../../assets/publication-logos/fintechtimes.png';
-import pymnts from '../../assets/publication-logos/PYMNTS.png';
-import skift from '../../assets/publication-logos/skift.png';
-import crunchbase from '../../assets/publication-logos/crunchbase.png';
-import globes from '../../assets/publication-logos/globes.png';
-import sfbt from '../../assets/publication-logos/sfbt.webp';
-import cbinsights from '../../assets/publication-logos/cbinsights.png';
-import co from '../../assets/publication-logos/co.png';
-import techeu from '../../assets/publication-logos/techeu.png';
-import infosec from '../../assets/publication-logos/infosec.png';
-import thewrap from '../../assets/publication-logos/thewrap.svg';
-import nypost from '../../assets/publication-logos/nypost.png';
-import nyt from '../../assets/publication-logos/nyt.png';
-import reuters from '../../assets/publication-logos/reuters.svg';
-import cnbc from '../../assets/publication-logos/cnbc.png';
-import thestreet from '../../assets/publication-logos/thestreet.png';
-import foxnews from '../../assets/publication-logos/FoxNews.png';
-import mmr from '../../assets/publication-logos/mmr.png';
-import secmag from '../../assets/publication-logos/secmag.svg';
-import theinformation from '../../assets/publication-logos/The_Information.png';
-import techradar from '../../assets/publication-logos/techradar.svg';
-import fortune from '../../assets/publication-logos/fortune.png';
-import aibusiness from '../../assets/publication-logos/ai-business.svg';
-import designnews from '../../assets/publication-logos/designnews.svg';
-import startuphub from '../../assets/publication-logos/startuphub.png';
-import inc from '../../assets/publication-logos/inc.png';
-import supplychainbrain from '../../assets/publication-logos/supplychainbrain.png';
-import timesofisrael from '../../assets/publication-logos/toi.svg';
-import indiewire from '../../assets/publication-logos/indiewire.svg';
-import acn from '../../assets/publication-logos/acn.webp';
-import nocamels from '../../assets/publication-logos/nocamels.png';
-import techzine from '../../assets/publication-logos/techzine.png';
-import automationworld from '../../assets/publication-logos/automationworld.png';
-import digitalengineering from '../../assets/publication-logos/digitalengineering.png';
-import enr from '../../assets/publication-logos/enr.svg';
-import afp from '../../assets/publication-logos/afp.png';
-import aec from '../../assets/publication-logos/aec.png';
-import datacenterdynamics from '../../assets/publication-logos/datacenterdynamics.jpeg';
-import arstechnica from '../../assets/publication-logos/arstechnica.png';
-import cyberexpress from '../../assets/publication-logos/cyberexpress.png';
-import itpro from '../../assets/publication-logos/itpro.jpeg';
-import mashable from '../../assets/publication-logos/mashable.png';
-import gizmodo from '../../assets/publication-logos/gizmodo.png';
-import investopedia from '../../assets/publication-logos/investopedia.png';
-import devops from '../../assets/publication-logos/DevOps.webp';
-import cybernews from '../../assets/publication-logos/cybernews.png';
-import crn from '../../assets/publication-logos/CRN.png';
-import mobihealth from '../../assets/publication-logos/mobihealthnews.png';
-import eweek from '../../assets/publication-logos/EWeek.png';
-import wapo from '../../assets/publication-logos/WaPo.png';
-import thehackernews from '../../assets/publication-logos/thehackernews.png';
-import cyberscoop from '../../assets/publication-logos/cyberscoop.svg';
-import informationweek from '../../assets/publication-logos/informationweek.svg';
-import ccj from '../../assets/publication-logos/commercialcarrierjournal.svg';
-import eetimes from '../../assets/publication-logos/EE-Times.png';
-import constructionexecutive from '../../assets/publication-logos/constructionexecutive.png';
-import techstrong from '../../assets/publication-logos/techstrongtv.png';
-import safetydetectives from '../../assets/publication-logos/safety-detectives.webp';
-import bigdatawire from '../../assets/publication-logos/bigdatawire.png';
-import cloudnativenow from '../../assets/publication-logos/CloudNativeNow.png';
-import bbc from '../../assets/publication-logos/BBC.png';
+import techcrunch from '../../../assets/publication-logos/techcrunch.png';
+import forbes from '../../../assets/publication-logos/forbes.webp';
+import mit from '../../../assets/publication-logos/mit.png';
+import vb from '../../../assets/publication-logos/vb.svg';
+import techtarget from '../../../assets/publication-logos/techtarget.png';
+import ctech from '../../../assets/publication-logos/ctech.png';
+import tns from '../../../assets/publication-logos/tns.svg';
+import siliconangle from '../../../assets/publication-logos/siliconangle.png';
+import sdtimes from '../../../assets/publication-logos/sdtimes.png';
+import labiotech from '../../../assets/publication-logos/labiotech.png';
+import healthcare from '../../../assets/publication-logos/healthcare.png';
+import darkreading from '../../../assets/publication-logos/dark-reading.png';
+import sdxcentral from '../../../assets/publication-logos/sdxcentral.svg';
+import securityboulevard from '../../../assets/publication-logos/security-boulevard.png';
+import containerjournal from '../../../assets/publication-logos/container-journal.png';
+import scmagazine from '../../../assets/publication-logos/scmagazine.png';
+import computerweekly from '../../../assets/publication-logos/computer-weekly.png';
+import fastcompany from '../../../assets/publication-logos/fast-company.png';
+import cbs from '../../../assets/publication-logos/cbs.png';
+import newscientist from '../../../assets/publication-logos/new-scientist.png';
+import register from '../../../assets/publication-logos/register.png';
+import bi from '../../../assets/publication-logos/bi.png';
+import infoq from '../../../assets/publication-logos/infoq.svg';
+import cso from '../../../assets/publication-logos/cso.png';
+import securityweek from '../../../assets/publication-logos/security-week.jpeg';
+import engineering from '../../../assets/publication-logos/engineering.jpeg';
+import infoage from '../../../assets/publication-logos/information-age.png';
+import blocksfiles from '../../../assets/publication-logos/blocksfiles.png';
+import helpnetsec from '../../../assets/publication-logos/helpnet.png';
+import builtin from '../../../assets/publication-logos/built-in.png';
+import israel21c from '../../../assets/publication-logos/israel21c.svg';
+import insidebigdata from '../../../assets/publication-logos/insidebigdata.png';
+import ft from '../../../assets/publication-logos/ft.jpeg';
+import wired from '../../../assets/publication-logos/wired.svg';
+import bloomberg from '../../../assets/publication-logos/bloomberg.png';
+import wsj from '../../../assets/publication-logos/wsj.png';
+import autoworld from '../../../assets/publication-logos/auto-world.svg';
+import infoworld from '../../../assets/publication-logos/info-world.png';
+import adex from '../../../assets/publication-logos/adex.png';
+import jpost from '../../../assets/publication-logos/jpost.svg';
+import datanami from '../../../assets/publication-logos/datanami.png';
+import betanews from '../../../assets/publication-logos/betanews.png';
+import axios from '../../../assets/publication-logos/axios.png';
+import uniteai from '../../../assets/publication-logos/uniteai.png';
+import fox from '../../../assets/publication-logos/fox.png';
+import finextra from '../../../assets/publication-logos/finextra.png';
+import finovate from '../../../assets/publication-logos/finovate.png';
+import finmag from '../../../assets/publication-logos/fintech-magazine.png';
+import fintechtimes from '../../../assets/publication-logos/fintechtimes.png';
+import pymnts from '../../../assets/publication-logos/PYMNTS.png';
+import skift from '../../../assets/publication-logos/skift.png';
+import crunchbase from '../../../assets/publication-logos/crunchbase.png';
+import globes from '../../../assets/publication-logos/globes.png';
+import sfbt from '../../../assets/publication-logos/sfbt.webp';
+import cbinsights from '../../../assets/publication-logos/cbinsights.png';
+import co from '../../../assets/publication-logos/co.png';
+import techeu from '../../../assets/publication-logos/techeu.png';
+import infosec from '../../../assets/publication-logos/infosec.png';
+import thewrap from '../../../assets/publication-logos/thewrap.svg';
+import nypost from '../../../assets/publication-logos/nypost.png';
+import nyt from '../../../assets/publication-logos/nyt.png';
+import reuters from '../../../assets/publication-logos/reuters.svg';
+import cnbc from '../../../assets/publication-logos/cnbc.png';
+import thestreet from '../../../assets/publication-logos/thestreet.png';
+import foxnews from '../../../assets/publication-logos/FoxNews.png';
+import mmr from '../../../assets/publication-logos/mmr.png';
+import secmag from '../../../assets/publication-logos/secmag.svg';
+import theinformation from '../../../assets/publication-logos/The_Information.png';
+import techradar from '../../../assets/publication-logos/techradar.svg';
+import fortune from '../../../assets/publication-logos/fortune.png';
+import aibusiness from '../../../assets/publication-logos/ai-business.svg';
+import designnews from '../../../assets/publication-logos/designnews.svg';
+import startuphub from '../../../assets/publication-logos/startuphub.png';
+import inc from '../../../assets/publication-logos/inc.png';
+import supplychainbrain from '../../../assets/publication-logos/supplychainbrain.png';
+import timesofisrael from '../../../assets/publication-logos/toi.svg';
+import indiewire from '../../../assets/publication-logos/indiewire.svg';
+import acn from '../../../assets/publication-logos/acn.webp';
+import nocamels from '../../../assets/publication-logos/nocamels.png';
+import techzine from '../../../assets/publication-logos/techzine.png';
+import automationworld from '../../../assets/publication-logos/automationworld.png';
+import digitalengineering from '../../../assets/publication-logos/digitalengineering.png';
+import enr from '../../../assets/publication-logos/enr.svg';
+import afp from '../../../assets/publication-logos/afp.png';
+import aec from '../../../assets/publication-logos/aec.png';
+import datacenterdynamics from '../../../assets/publication-logos/datacenterdynamics.jpeg';
+import arstechnica from '../../../assets/publication-logos/arstechnica.png';
+import cyberexpress from '../../../assets/publication-logos/cyberexpress.png';
+import itpro from '../../../assets/publication-logos/itpro.jpeg';
+import mashable from '../../../assets/publication-logos/mashable.png';
+import gizmodo from '../../../assets/publication-logos/gizmodo.png';
+import investopedia from '../../../assets/publication-logos/investopedia.png';
+import devops from '../../../assets/publication-logos/DevOps.webp';
+import cybernews from '../../../assets/publication-logos/cybernews.png';
+import crn from '../../../assets/publication-logos/CRN.png';
+import mobihealth from '../../../assets/publication-logos/mobihealthnews.png';
+import eweek from '../../../assets/publication-logos/EWeek.png';
+import wapo from '../../../assets/publication-logos/WaPo.png';
+import thehackernews from '../../../assets/publication-logos/thehackernews.png';
+import cyberscoop from '../../../assets/publication-logos/cyberscoop.svg';
+import informationweek from '../../../assets/publication-logos/informationweek.svg';
+import ccj from '../../../assets/publication-logos/commercialcarrierjournal.svg';
+import eetimes from '../../../assets/publication-logos/EE-Times.png';
+import constructionexecutive from '../../../assets/publication-logos/constructionexecutive.png';
+import techstrong from '../../../assets/publication-logos/techstrongtv.png';
+import bigdatawire from '../../../assets/publication-logos/bigdatawire.png';
+import bbc from '../../../assets/publication-logos/BBC.png';
 
 export default [
 	{
@@ -425,142 +423,6 @@ export default [
 		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
         tags: ['podcasts']
 	},
-	{
-        url: "https://www.safetydetectives.com/blog/akeyless-interview/",
-        logo: safetydetectives,
-        publication: 'Safety Detectives',
-        date: 'February 28, 2025',
-        headline: "Secrets Management Is Broken—And Most Companies Don't Even Know It: A Warning by Akeyless CTO Refael Angel",
-        tags: ['security', 'dev']
-    },
-    {
-        url: "https://venturebeat.com/programming-development/qodos-open-code-embedding-model-sets-new-enterprise-standard-beating-openai-salesforce/",
-        logo: vb,
-        publication: 'VentureBeat',
-        date: 'February 27, 2025',
-        headline: "Qodo's open code embedding model sets new enterprise standard, beating OpenAI, Salesforce",
-        tags: ['AI & ML', 'dev', 'highlights']
-    },
-    {
-        url: "https://thenewstack.io/pinecone-revamps-vector-database-architecture-for-ai-apps/",
-        logo: tns,
-        publication: 'The New Stack',
-        date: 'February 27, 2025',
-        headline: "Pinecone Revamps Vector Database Architecture for AI Apps",
-        tags: ['AI & ML', 'dev', 'saas']
-    },
-    {
-        url: "https://thenewstack.io/carving-relevance-cost-effectively-from-observability-data/",
-        logo: tns,
-        publication: 'The New Stack',
-        date: 'February 27, 2025',
-        headline: "Carving Relevance Cost-Effectively From Observability Data",
-        tags: ['saas', 'dev', 'AI & ML']
-    },
-    {
-        url: "https://www.enr.com/articles/60367-durham-nc-tower-project-team-stays-informed-with-buildots",
-        logo: enr,
-        publication: 'Engineering News-Record',
-        date: 'February 27, 2025',
-        headline: "Durham, NC, Tower Project Team Stays Informed With Buildots",
-        tags: ['saas', 'dev', 'AI & ML']
-    },
-	{
-        url: "https://www.cnbc.com/video/2025/02/26/quantum-machines-raises-170-million-in-series-c-funding.html",
-        logo: cnbc,
-        publication: 'CNBC',
-        date: 'February 26, 2025',
-        headline: "Quantum Machines raises $170 million in Series C funding",
-        tags: ['highlights']
-    },
-    {
-        url: "https://www.bloomberg.com/news/videos/2025-02-26/quantum-machines-ceo-on-most-important-tech-race-video",
-        logo: bloomberg,
-        publication: 'Bloomberg',
-        date: 'February 26, 2025',
-        headline: "Watch Quantum Machines CEO on 'Most Important Tech Race'",
-        tags: ['highlights']
-    },
-	{
-		url: "https://fortune.com/2025/02/25/quantum-machines-computing-startup-170-million-series-c-funding/",
-		logo: fortune,
-		publication: 'Fortune',
-		date: 'February 25, 2025',
-		headline: "Quantum computing startup secures $170M in funding as Big Tech accelerates industry breakthroughs",
-		tags: ['highlights']
-	},
-	{
-		url: "https://www.wsj.com/articles/startup-quantum-machines-raises-170-million-in-series-c-round-69affccd?mod=business_lead_story",
-		logo: wsj,
-		publication: 'Wall Street Journal',
-		date: 'February 25, 2025',
-		headline: "Startup Quantum Machines Raises $170 Million in Series C Round",
-		tags: ['highlights']
-	},
-	{
-		url: "https://techcrunch.com/2025/02/25/quantum-machines-raises-170m-says-its-working-with-more-than-half-of-all-quantum-computing-companies/",
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'February 25, 2025',
-		headline: "Quantum Machines raises $170M, says it's working with more than half of all quantum computing companies",
-		tags: ['highlights']
-	},
-	{
-        url: "https://www.forbes.com/sites/gilpress/2025/02/25/after-google-microsoft-breakthroughs-quantum-machines-raises-170m/",
-        logo: forbes,
-        publication: 'Forbes',
-        date: 'February 25, 2025',
-        headline: "After Google, Microsoft Breakthroughs, Quantum Machines Raises $170M",
-        tags: ['highlights']
-    },
-    {
-        url: "https://www.foxbusiness.com/real-estate/first-ever-ai-real-estate-agent-generates-100m-sales-portugal",
-        logo: fox,
-        publication: 'Fox Business',
-        date: 'February 25, 2025',
-        headline: "Game-changing AI real estate agent generates $100M in sales for Portuguese firm",
-        tags: ['AI & ML', 'saas', 'dev', 'highlights']
-    },
-    {
-        url: "https://venturebeat.com/games/quantum-machines-raises-170m-to-accelerate-adoption-of-quantum-computing/",
-        logo: vb,
-        publication: 'VentureBeat',
-        date: 'February 25, 2025',
-        headline: "Quantum Machines raises $170M to accelerate adoption of quantum computing",
-        tags: ['highlights']
-    },
-    {
-        url: "https://www.reuters.com/technology/1400-gmt-quantum-machines-raises-170-million-computing-breakthroughs-build-2025-02-25/",
-        logo: reuters,
-        publication: 'Reuters',
-        date: 'February 25, 2025',
-        headline: "Quantum Machines raises $170 million as computing breakthroughs build",
-        tags: ['highlights']
-    },
-    {
-        url: "https://cloudnativenow.com/topics/cloudnativedevelopment/kubernetes/killing-clunky-kubernetes-scaleops-serves-marching-orders-on-unevictable-workloads/",
-        logo: cloudnativenow,
-        publication: 'Cloud Native Now',
-        date: 'February 25, 2025',
-        headline: "Killing Clunky Kubernetes, ScaleOps Serves Marching Orders On 'Unevictable' Workloads",
-        tags: ['dev', 'saas']
-    },
-	{
-        url: "https://www.forbes.com/sites/kolawolesamueladebayo/2025/02/25/why-proprietary-data-is-the-new-gold-for-ai-companies/",
-        logo: forbes,
-        publication: 'Forbes',
-        date: 'February 25, 2025',
-        headline: "Why Proprietary Data Is The New Gold For AI Companies",
-        tags: ['AI & ML', 'saas', 'dev', 'highlights']
-    },
-	{
-        url: "https://siliconangle.com/2025/02/25/quantum-hardware-startup-quantum-machines-raises-170m-funding/",
-        logo: siliconangle,
-        publication: 'SiliconANGLE',
-        date: 'February 25, 2025',
-        headline: "Quantum hardware startup Quantum Machines raises $170M in funding",
-        tags: ['dev']
-    },
 	{
         url: "https://www.bigdatawire.com/2025/02/24/how-sawmills-plans-to-cut-big-observability-data-down-to-size/",
         logo: bigdatawire,

@@ -3,8 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
-import wapo from '../assets/publication-logos/WaPo.png';
-import wsj from '../assets/publication-logos/wsj.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import qodo from '../assets/client-logos/qodo.svg';
 import pinecone from '../assets/client-logos/Pinecone.svg';
@@ -14,41 +12,39 @@ import noma from '../assets/client-logos/Noma.svg';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
-import bloomberg from '../assets/publication-logos/bloomberg.png';
+import vb from '../assets/publication-logos/vb.svg';
+import fortune from '../assets/publication-logos/fortune.png';
+import forbes from '../assets/publication-logos/forbes.webp';
 
 const results = [
-	{
-        url: "https://www.bloomberg.com/news/videos/2025-02-26/quantum-machines-ceo-on-most-important-tech-race-video",
-        logo: bloomberg,
-        publication: 'Bloomberg',
-        date: 'February 26, 2025',
-        headline: "Watch Quantum Machines CEO on 'Most Important Tech Race'",
-        tags: ['highlights']
+    {
+        url: "https://venturebeat.com/programming-development/qodo-teams-up-with-google-cloud-to-provide-devs-with-free-ai-code-review-tools-directly-within-platform/",
+        logo: vb,
+        publication: 'VentureBeat',
+        date: 'June 17, 2025',
+        headline: "Qodo teams up with Google Cloud to provide devs with free AI code review tools directly within platform",
     },
-	{
-		url: "https://www.wsj.com/articles/startup-quantum-machines-raises-170-million-in-series-c-round-69affccd?mod=business_lead_story",
-		logo: wsj,
-		publication: 'Wall Street Journal',
-		date: 'February 25, 2025',
-		headline: "Startup Quantum Machines Raises $170 Million in Series C Round",
-		tags: ['highlights']
-	},
-	{
-		url: "https://techcrunch.com/2025/02/25/quantum-machines-raises-170m-says-its-working-with-more-than-half-of-all-quantum-computing-companies/",
-		logo: techcrunch,
-		publication: 'TechCrunch',
-		date: 'February 25, 2025',
-		headline: "Quantum Machines raises $170M, says it's working with more than half of all quantum computing companies",
-		tags: ['highlights']
-	},
-	{
-        url: "https://www.washingtonpost.com/technology/2025/01/31/deepseek-ai-china-us-nvidia/",
-        logo: wapo,
-        publication: 'Washington Post',
-        date: 'January 31, 2025',
-        headline: "Did DeepSeek really develop on a shoestring budget?",
-        tags: ['highlights', 'AI & ML', 'saas', 'dev']
-    }
+    {
+        url: "https://techcrunch.com/2025/05/29/buildots-raises-45m-to-help-companies-track-construction-progress/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'May 29, 2025',
+        headline: "Buildots raises $45M to help companies track construction progress",
+    },
+    {
+        url: "https://fortune.com/2025/05/20/kumo-ai-rfm-foundation-model-for-predictions-shows-power-of-smaller-foundation-models-eye-on-ai/",
+        logo: fortune,
+        publication: 'Fortune',
+        date: 'May 20, 2025',
+        headline: "A new AI for making predictions shows the power of more narrowly-focused foundation models",
+    },
+    {
+        url: "https://www.forbes.com/sites/torconstantino/2025/05/08/ais-biggest-secret---creators-dont-understand-it-experts-split/",
+        logo: forbes,
+        publication: 'Forbes',
+        date: 'May 8, 2025',
+        headline: "AI's Biggest Secret — Creators Don't Understand It, Experts Split",
+    },
 ];
 
 ---
