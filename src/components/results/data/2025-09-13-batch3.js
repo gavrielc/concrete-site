@@ -11,10 +11,28 @@ import fortune from '../../../assets/publication-logos/fortune.png';
 import tns from '../../../assets/publication-logos/tns.svg';
 import securityboulevard from '../../../assets/publication-logos/security-boulevard.png';
 import blocksandfiles from '../../../assets/publication-logos/blocksfiles.png';
+import techcrunch from '../../../assets/publication-logos/techcrunch.png';
+import vb from '../../../assets/publication-logos/vb.svg';
 
 // September 2025 batch 3 results
 export default [
     // Successfully fetched articles
+    {
+        url: "https://techcrunch.com/2025/09/08/pinecone-founder-edo-liberty-explores-the-real-missing-link-in-enterprise-ai-at-techcrunch-disrupt-2025/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'September 8, 2025',
+        headline: "Pinecone founder Edo Liberty discusses why the next big AI breakthrough starts with search, at TechCrunch Disrupt 2025",
+        tags: ['AI & ML', 'dev', 'saas', 'highlights']
+    },
+    {
+        url: "https://venturebeat.com/data-infrastructure/pinecone-founder-edo-liberty-appoints-googler-ash-as-ceo",
+        logo: vb,
+        publication: 'VentureBeat',
+        date: 'September 8, 2025',
+        headline: "Exclusive: Pinecone founder Edo Liberty moves from CEO to Chief Scientist, names Googler Ash Ashutosh as leader",
+        tags: ['AI & ML', 'dev', 'saas', 'highlights']
+    },
     {
         url: "https://www.unite.ai/neatsun-ziv-co-founder-and-ceo-of-ox-interview-series/",
         logo: uniteai,
