@@ -65,7 +65,7 @@ export default [
         publication: 'MIT Technology Review',
         date: 'July 2, 2025',
         headline: "How generative AI could help make construction sites safer",
-        tags: ['AI & ML', 'saas']
+        tags: ['AI & ML', 'saas', 'highlights']
     },
     {
         url: "https://venturebeat.com/ai/kumos-relational-foundation-model-predicts-the-future-your-llm-cant-see/",
