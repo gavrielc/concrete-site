@@ -79,19 +79,24 @@ import backline from '../assets/client-logos/Backline.svg';
 import finout from '../assets/client-logos/Finout.svg';
 import eself from '../assets/client-logos/eSelf.png';
 import converge from '../assets/client-logos/Converge.svg';
+import C8 from '../assets/client-logos/C8.svg';
+import kumo from '../assets/client-logos/kumo.svg';
 
 const clients = [
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2025']},
+    {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2025']},
     {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas']},
     {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2025']},
-    {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
-    {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2025']},
     {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2025', 'saas']},
+    {logo: kumo, name: "Kumo", site: 'https://kumo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
+    {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas', '2025', 'dev']},
+    {logo: C8, name: "C8 Health", site: 'https://c8health.com/', tags: ['AI & ML', 'saas', 'medtech', '2025']},
+    {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2025']},
     {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
+    {logo: eself, name: "eSelf", site: 'https://eself.ai/', tags: ['AI & ML', 'saas', '2025']},
     {logo: converge, name: "Converge Bio", site: 'https://converge-bio.com/', tags: ['medtech', 'AI & ML', '2025']},
     {logo: noma, name: "Noma", site: 'https://noma.security/', tags: ['security', 'saas', 'dev', '2025']},
-    {logo: eself, name: "eSelf", site: 'https://eself.ai/', tags: ['AI & ML', 'saas', '2025']},
     {logo: primesec, name: "Prime", site: 'https://www.primesec.ai/', tags: ['security', 'AI & ML', 'saas', 'dev', '2025']},
     {logo: token, name: "Token Security", site: 'https://www.token.security/', tags: ['security', 'saas', 'dev', '2025']},
     {logo: backline, name: "Backline", site: 'https://backline.ai/', tags: ['AI & ML', 'saas', 'dev', 'security', '2025']},
@@ -116,7 +121,6 @@ const clients = [
     {logo: swimm, name: "swimm", site: 'https://swimm.io/', tags: ['dev', 'saas']},
     {logo: spectral, name: "spectral", site: 'https://spectralops.io/', tags: ['dev', 'security', 'saas']},
     {logo: aidoc, name: "aidoc", site: 'https://www.aidoc.com/', tags: ['medtech', 'AI & ML']},
-    {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas']},
     {logo: uveye, name: "UVEYE", site: 'https://www.uveye.com/', tags: ['AI & ML']},
     {logo: anyword, name: "anyword", site: 'https://anyword.com/', tags: ['AI & ML']},
     {logo: arnica, name: "arnica", site: 'https://www.arnica.io/', tags: ['security', 'dev', 'saas']},
