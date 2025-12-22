@@ -1,4 +1,5 @@
 // Import all date-based result files
+import results20251222 from './2025-12-22.js';
 import results20250913batch3 from './2025-09-13-batch3.js';
 import results20250913batch2 from './2025-09-13-batch2.js';
 import results20250913 from './2025-09-13.js';
@@ -11,6 +12,7 @@ import oldResults from './old-results.js';
 
 // Combine all results into a single array
 const combinedResults = [
+    ...results20251222,
     ...results20250913batch3,
     ...results20250913batch2,
     ...results20250913,

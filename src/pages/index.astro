@@ -12,38 +12,40 @@ import kumo from '../assets/client-logos/kumo.svg';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
-import wsj from '../assets/publication-logos/wsj.png';
-import fortune from '../assets/publication-logos/fortune.png';
-import wired from '../assets/publication-logos/wired.svg';
+import forbes from '../assets/publication-logos/forbes.png';
+import fastcompany from '../assets/publication-logos/fast-company.png';
+import bloomberg from '../assets/publication-logos/bloomberg.png';
 
 const results = [
     {
-        url: "https://techcrunch.com/2025/09/08/pinecone-founder-edo-liberty-explores-the-real-missing-link-in-enterprise-ai-at-techcrunch-disrupt-2025/",
+        url: "https://www.fastcompany.com/91446538/ai-manufacturing-factories",
+        logo: fastcompany,
+        publication: 'Fast Company',
+        date: 'December 15, 2025',
+        headline: "AI still isn't working on the factory floor",
+    },
+    {
+        url: "https://techcrunch.com/2025/12/11/port-raises-100m-at-800m-valuation-to-take-on-spotifys-backstage/",
         logo: techcrunch,
         publication: 'TechCrunch',
-        date: 'September 8, 2025',
-        headline: "Pinecone founder Edo Liberty discusses why the next big AI breakthrough starts with search, at TechCrunch Disrupt 2025",
-    },
-	{
-        url: "https://fortune.com/2025/09/07/stanford-professor-jure-leskovec-hand-written-graded-tests-ai/",
-        logo: fortune,
-        publication: 'Fortune',
-        date: 'September 7, 2025',
-        headline: "This Stanford computer science professor went to written exams 2 years ago because of AI. He says his students insisted on it",
+        date: 'December 11, 2025',
+        headline: "Port raises $100M at $800M valuation to take on Spotify's Backstage",
     },
     {
-        url: "https://www.wsj.com/tech/ai/ai-jobs-entry-level-salary-ab2a11c0",
-        logo: wsj,
-        publication: 'Wall Street Journal',
-        date: 'August 26, 2025',
-        headline: "These AI-Skilled 20-Somethings Are Making Hundreds of Thousands a Year",
+        url: "https://www.bloomberg.com/news/articles/2025-12-03/nobel-winner-warns-china-is-nanoseconds-behind-in-quantum-race",
+        logo: bloomberg,
+        publication: 'Bloomberg',
+        date: 'December 3, 2025',
+        headline: "Nobel Winner Warns China is Nanoseconds Behind in Quantum Race",
+        tags: ['highlights', 'dev']
     },
     {
-        url: "https://www.wired.com/story/gpt-5-coding-review-software-engineering/",
-        logo: wired,
-        publication: 'Wired',
-        date: 'August 15, 2025',
-        headline: "Developers Say GPT-5 Is a Mixed Bag",
+        url: "https://www.forbes.com/sites/quickerbettertech/2025/11/20/ai-in-construction-a-few-game-changing-tools-every-contractor-should-know/",
+        logo: forbes,
+        publication: 'Forbes',
+        date: 'November 20, 2025',
+        headline: "AI In Construction: A Few Game-Changing Tools Every Contractor Should Know",
+        tags: ['AI & ML', 'saas', 'highlights']
     },
 ];
 
