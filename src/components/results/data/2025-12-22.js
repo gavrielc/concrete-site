@@ -395,5 +395,25 @@ export default [
         date: 'September 10, 2025',
         headline: "Hush Security Emerges to Eliminate Need for Application Secrets",
         tags: ['security', 'dev']
-    }
+    },
+	{
+		url: 'https://open.spotify.com/embed/episode/18ktGobDBWZPYbzLXLUk2o',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/1HbbaV5QW71Wo9I79X5FEZ',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/1VpvLgaTxpwSzU7FcghCxe',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/7ipGhMdQc5YGdXEMXpWKZt',
+        tags: ['podcasts']
+	},
+	{
+		url: 'https://open.spotify.com/embed/episode/15MfgcghgI91F6R533iQM6',
+        tags: ['podcasts']
+	},
 ];
