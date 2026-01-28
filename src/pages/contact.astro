@@ -1,29 +1,12 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import lazer from '../assets/team/Lazer.jpg';
 import bullet from '../assets/icons/bullet.svg';
 ---
 
 <PageLayout pageTitle="Contact | Public Relations for serious tech companies | Concrete Media">
-    <section class='meeting'>
-        <div class='meeting-desc'>
-            <h3>Let's connect to discuss your PR needs</h3>
-            <p class="desc-text">Just grab any available slot on the calendar and I'll be happy to talk</p>
-            <div class='host'>
-                <img src={lazer.src} alt='Picture of Lazer Cohen, CEO and Founder of Concrete Media'/>
-                <div>
-                    <p class="name">Lazer Cohen</p>
-                    <p class="title">Concrete Media founder and CEO</p>
-                </div>
-            </div>
-        </div>
-        <div class="calendly-wrapper">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/lazer-rfs/let-s-talk-pr?text_color=171717&primary_color=7022fb&background_color=1a1a1a&hide_event_type_details=1"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-</iframe>
-        </div>
+    <section class='contact-hero'>
+        <h3>Let's connect to discuss your PR needs</h3>
+        <a class="email-button" href="mailto:lazer@concrete.media">lazer@concrete.media</a>
     </section>
     <section class="offices">
         <div class="office-location">
@@ -51,12 +34,6 @@ import bullet from '../assets/icons/bullet.svg';
             </div>
         </div>
     </section>
-    <section class="contact-email">
-        <div>
-            <h3>Get in touch</h3>
-            <a class="email" href="mailto:lazer@concrete.media">lazer@concrete.media</a>
-        </div>
-    </section>
 </PageLayout>
 
 <style lang="scss">
@@ -66,61 +43,32 @@ import bullet from '../assets/icons/bullet.svg';
         color: rgba(0, 0, 0, 0.6);
     }
 
-    .meeting {
-        gap: 80px;
-        flex-wrap: wrap;
-        align-items: flex-end;
+    .contact-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         padding-top: 110px;
+        padding-bottom: 40px;
 
-        .calendly-inline-widget {
-            border-radius: 16px;
-            height: 602px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
+        h3 {
+            margin: 0 0 32px;
         }
 
-        .calendly-wrapper {
-            flex: 1 0 358px;
+        .email-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: #7022FB;
+            color: #fff;
+            font-family: 'Outfit';
+            font-weight: 600;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.2s;
 
-            border-radius: 16px;
-            max-height: 602px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
-        }
-
-        .meeting-desc {
-            flex: 1 0 358px;
-
-            h3 {
-                margin: 0;
-            }
-
-            .desc-text {
-                margin-bottom: 80px;
-            }
-
-            .host {
-                display: flex;
-                align-items: flex-end;
-                gap: 26px;
-
-                img {
-                    object-fit: cover;
-                    object-position: top;
-                    height: 138px;
-                    width: 138px;
-                    border-radius: 50%;
-                }
-
-
-
-                .title {
-                    @include normal-text;
-                    font-weight: 600;
-                    margin-top: 8px;
-                }
+            &:hover {
+                background-color: #5a1ad4;
             }
         }
     }
@@ -164,47 +112,9 @@ import bullet from '../assets/icons/bullet.svg';
         margin: 0;
     }
 
-    .contact-email {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding-top: 62px;
-        padding-bottom: 62px;
-
-        h3 {
-            margin: 0 0 16px;
-        }
-
-        .email {
-            @include normal-text;
-            text-decoration: none;
-        }
-    }
-
     @media screen and (max-width: 827px) {
-        .meeting {
-            padding-top: 6px;
-            gap: 24px;
-
-            .meeting-desc {
-                text-align: center;
-
-                .desc-text {
-                    margin-bottom: 16px;
-                }
-
-                .host {
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 16px;
-
-                    img {
-                        height: 58px;
-                        width: 58px;
-                    }
-                }
-            }
+        .contact-hero {
+            padding-top: 40px;
         }
     }
 
