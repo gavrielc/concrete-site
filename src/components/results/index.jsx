@@ -45,9 +45,10 @@ export default function Results({tag}) {
                     .filter(({url}) => !hiddenCards.has(url))
                     .map(({url, logo, headline, publication, date, tags, embed = true}) => {
                         const isEmbeddedPodcast = tags.includes('podcasts') && embed !== false;
+                        const isExternalPodcast = tags.includes('podcasts') && embed === false;
 
                         return (
-                            <li className={cn("result-card", {podcast: isEmbeddedPodcast})} key={url}>
+                            <li className={cn("result-card", {podcast: isEmbeddedPodcast, externalPodcast: isExternalPodcast})} key={url}>
                                 {isEditMode && <button className={styles.deleteButton} onClick={() => hideCard(url)}>×</button>}
                                 {
                                     isEmbeddedPodcast
