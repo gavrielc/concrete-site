@@ -82,12 +82,13 @@
             padding: 0;
 
             a {
+                align-items: flex-start;
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
                 height: 152px;
-                justify-content: center;
+                justify-content: flex-start;
                 padding: 20px 24px;
             }
 
