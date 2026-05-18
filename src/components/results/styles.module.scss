@@ -75,7 +75,9 @@
         }
 
         &.externalPodcast {
-            min-height: 158px;
+            align-self: flex-start;
+            box-sizing: border-box;
+            height: 152px;
             overflow: hidden;
             padding: 0;
 
@@ -83,9 +85,15 @@
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
-                height: 158px;
+                gap: 12px;
+                height: 152px;
                 justify-content: center;
                 padding: 20px 24px;
+            }
+
+            h4,
+            p {
+                margin: 0;
             }
         }
 
