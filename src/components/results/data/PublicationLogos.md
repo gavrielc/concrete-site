@@ -2,6 +2,7 @@ techcrunch: techcrunch.png
 forbes: forbes.webp
 mit tech review: mit.png
 venturebeat: vb.svg
+tldr: tldr.jpg
 techtarget: techtarget.png
 ctech: ctech.png
 thenewstack: tns.svg
@@ -55,6 +56,8 @@ sfbt: sfbt.webp
 cbinsights: cbinsights.png
 co: co.png
 techeu: techeu.png
+cfo: cfo.svg
+accountingtoday: accountingtoday.svg
 infosec: infosec.png
 thewrap: thewrap.svg
 nypost: nypost.png

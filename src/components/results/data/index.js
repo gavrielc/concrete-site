@@ -1,4 +1,8 @@
 // Import all date-based result files
+import results20260518batch2 from './2026-05-18-batch2.js';
+import results20260518podcasts from './2026-05-18-podcasts.js';
+import results20260518 from './2026-05-18.js';
+import results20260515 from './2026-05-15.js';
 import results20251222 from './2025-12-22.js';
 import results20250913batch3 from './2025-09-13-batch3.js';
 import results20250913batch2 from './2025-09-13-batch2.js';
@@ -12,6 +16,10 @@ import oldResults from './old-results.js';
 
 // Combine all results into a single array
 const combinedResults = [
+    ...results20260518batch2,
+    ...results20260518podcasts,
+    ...results20260518,
+    ...results20260515,
     ...results20251222,
     ...results20250913batch3,
     ...results20250913batch2,
