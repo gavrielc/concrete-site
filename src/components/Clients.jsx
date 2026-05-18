@@ -1,5 +1,11 @@
 import {useState, useCallback} from 'preact/hooks';
 
+import band from '../assets/client-logos/Band.svg';
+import datarails from '../assets/client-logos/Datarails.png';
+import factify from '../assets/client-logos/Factify.svg';
+import echo from '../assets/client-logos/Echo.svg';
+import adaptive6 from '../assets/client-logos/Adaptive6.png';
+import milestone from '../assets/client-logos/Milestone.svg';
 import qm from '../assets/client-logos/QM.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import ox from '../assets/client-logos/Ox.png';
@@ -83,17 +89,24 @@ import C8 from '../assets/client-logos/C8.svg';
 import kumo from '../assets/client-logos/kumo.svg';
 
 const clients = [
+    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2025']},
+    {logo: band, name: "BAND", site: 'https://www.band.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
+    {logo: datarails, name: "Datarails", site: 'https://www.datarails.com/', tags: ['AI & ML', 'saas', 'fintech', '2025']},
+    {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
+    {logo: factify, name: "Factify", site: 'https://www.factify.com/', tags: ['AI & ML', 'saas', 'dev', '2025'], logoClass: 'factify-logo'},
+    {logo: echo, name: "Echo", site: 'https://www.echo.ai/', tags: ['security', 'dev', 'saas', '2025'], logoClass: 'echo-logo'},
+    {logo: adaptive6, name: "Adaptive6", site: 'https://www.adaptive6.com/', tags: ['AI & ML', 'saas', 'dev', '2025']},
+    {logo: kumo, name: "Kumo", site: 'https://kumo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
+    {logo: milestone, name: "Milestone", site: 'https://mstone.ai/', tags: ['AI & ML', 'saas', 'dev', '2025'], logoClass: 'invert-logo'},
+    {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2025']},
     {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
-    {logo: buildots, name: "buildots", site: 'https://buildots.com/', tags: ['AI & ML', '2025']},
     {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas']},
     {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2025']},
     {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2025', 'saas']},
-    {logo: kumo, name: "Kumo", site: 'https://kumo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas', '2025', 'dev']},
     {logo: C8, name: "C8 Health", site: 'https://c8health.com/', tags: ['AI & ML', 'saas', 'medtech', '2025']},
     {logo: akeyless, name: "akeyless", site: 'https://www.akeyless.io/', tags: ['security', 'saas', 'dev', '2025']},
-    {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
     {logo: eself, name: "eSelf", site: 'https://eself.ai/', tags: ['AI & ML', 'saas', '2025']},
     {logo: converge, name: "Converge Bio", site: 'https://converge-bio.com/', tags: ['medtech', 'AI & ML', '2025']},
     {logo: noma, name: "Noma", site: 'https://noma.security/', tags: ['security', 'saas', 'dev', '2025']},
@@ -134,7 +147,6 @@ const clients = [
     {logo: gable, name: "gable", site: 'https://www.gable.to/', tags: ['saas', 'hr']},
     {logo: leapxpert, name: "LeapXpert", site: 'https://www.leapxpert.com//', tags: ['dev', 'security', 'saas']},
     {logo: qwak, name: "qwak", site: 'https://www.qwak.com/', tags: ['AI & ML', 'saas']},
-    {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
     {logo: deepchecks, name: "Deepchecks", site: 'https://deepchecks.com/', tags: ['saas', 'AI & ML', 'dev']},
     {logo: axiom, name: "axiom", site: 'https://axiom.security/', tags: ['security', 'saas']},
     {logo: infield, name: "Infield", site: 'https://www.infield.ai/', tags: ['saas', 'dev', 'AI & ML']},
@@ -167,7 +179,7 @@ const clients = [
 ];
 
 const tags = [
-    {name: '2025', value: '2025'},
+    {name: 'All', value: null},
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
     {name: 'CyberSecurity', value: 'security'},
@@ -177,7 +189,7 @@ const tags = [
 ];
 
 export default function Clients() {
-    const [value, setValue] = useState('2025');
+    const [value, setValue] = useState(null);
     const filter = useCallback((tag) => {
         const newValue = value == tag ? null : tag;
         setValue(newValue);
@@ -189,7 +201,7 @@ export default function Clients() {
                 {tags.map(({name, value: val}) => <button className={'tag'.concat(value == val ? ' active' : '')} onClick={() => filter(val)}>{name}</button>)}
             </div>
             <div className='logos-wrapper'>
-                {clients.filter(({tags}) => !value || tags.includes(value)).map(({logo, site, name}) => <a href={site} target="_blank" key={name}><img class="logo" src={logo.src} alt={`${name} logo`}/></a>)}
+                {clients.filter(({tags}) => !value || tags.includes(value)).map(({logo, site, name, logoClass}) => <a href={site} target="_blank" key={name}><img class={'logo'.concat(logoClass ? ` ${logoClass}` : '')} src={logo.src} alt={`${name} logo`}/></a>)}
             </div>
         </>
     );
