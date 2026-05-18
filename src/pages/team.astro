@@ -2,60 +2,27 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import lazer from "../assets/team/Lazer.jpg";
 import zack from "../assets/team/Zack.jpg";
-import hannah from "../assets/team/Hannah.jpg";
-import gavriel from "../assets/team/Gavriel.jpg";
-import ali from "../assets/team/Ali.jpg";
 import julia from "../assets/team/Julia.jpeg";
 import sam from "../assets/team/Sam.jpg";
 import adam from "../assets/team/Adam.jpg";
-import rachel from "../assets/team/Rachel.jpg";
 import TeamCard from "../components/TeamCard.astro";
 
 const team = [
     {
-        name: 'Lazer Cohen',
-        title: 'Founder and CEO',
-        bio: 'Lazer is the CEO of Concrete Media which he founded in 2014. Originally from Brooklyn, New York, his entry into PR is worthy of a feature story of its own. He co-founded a PR firm in New York in 2009 before moving with his wife to Israel and starting Concrete. He believes a good PR pro is a reporter’s best asset and his decade-long relationships with some of the top tech reporters attest to that belief. Lazer and his wife have five children — who are much more interested in their mom’s floral design business than whatever it is their dad does on the computer.',
-        image: lazer,
-        linkedin: 'https://www.linkedin.com/in/lazercohen/',
-        twitter: 'https://twitter.com/Lazer_Cohen'
-    },
-    {
-        name: 'Gavriel Cohen',
-        title: 'Vice President',
-        bio: 'Gavriel is Vice President of Concrete Media. Originally from New York City, he did a year and half voluntary service in the IDF as a combat soldier in 2009, before emigrating to Israel in 2013. He studied at Tel Aviv University, where he earned a BSc with honors in Computer Science and Physics. He worked as a Software Developer and Team Leader at Wix for 6 years. With a keen interest in the intersection between Tech and Media, he closely follows trends in Machine Learning, CyberSecurity and Software Development.',
-        image: gavriel,
-        linkedin: 'https://www.linkedin.com/in/gavrielco/',
-        twitter: 'https://twitter.com/Gavriel_Cohen'
-    },
-    {
-        name: 'Ali Goldberg',
-        title: 'Account Manager',
-        bio: 'Ali is an Account Manager at Concrete Media. She graduated with honors in Political Science & Journalism from San Diego State University. Her curious personality drove her to Israel, where she taught children English and was enamored by Tel Aviv\'s startup culture. Ali began blogging and managing clients\' social media, which led her to a marketing job at a hardware manufacturer. She fell in love with the pursuit of knowledge and finding an interesting angle for every story.',
-        image: ali,
-        linkedin: 'https://www.linkedin.com/in/alipgoldberg'
-    },
-    {
         name: 'Zack Rothbart',
-        title: 'Senior Strategist',
-        bio: 'Zack Rothbart is Senior Strategist at Concrete Media. He previously served as international spokesman at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Zack enjoys drawing upon diverse experiences and perspectives to help clients tell their stories and maximize their potential. He reads and writes in his spare time, tries to learn something from everyone, and lives in Jerusalem with his endearing and thought-provoking family, for which he is grateful.',
+        title: 'Partner',
+        bio: 'Zack Rothbart is the Managing Partner at Concrete Media. He previously served as international spokesman at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Zack enjoys drawing upon diverse experiences and perspectives to help clients tell their stories and maximize their potential. He reads and writes in his spare time, tries to learn something from everyone, and lives in Jerusalem with his endearing and thought-provoking family, for which he is grateful.',
         image: zack,
         linkedin: 'https://www.linkedin.com/in/zack-rothbart-37913b62/',
         twitter: 'https://twitter.com/ZackRothbart'
     },
     {
-        name: 'Rachel Lejderman',
-        title: 'Account Executive',
-        bio: 'Rachel is an Account Executive at Concrete Media. She made Aliyah in 2019 and served as an NCO in the IDF Spokesperson’s Unit. She then pursued a BA in Geoinformatics and Linguistics, merging her interest in practical technology applications with her passion for language and writing. She also worked for the Ministry of Aliyah and Integration, where she supported their PR department, helping to craft clear and understandable communications for new immigrants to Israel. Rachel is motivated by her strong passion for Israel’s tech ecosystem, and drafting dynamic communication strategies.',
-        image: rachel,
-        linkedin: 'https://www.linkedin.com/in/rachel-lejderman-9b9278247/'
-    },
-    {
-        name: 'Hannah Yoken',
-        title: 'Account Executive',
-        bio: 'Hannah is an Account Executive at Concrete Media. She graduated with honors from Washington University in St. Louis with a degree in International Relations and Business. After becoming fluent in Spanish while teaching English in Granada, Spain, she moved to Israel to continue working in education and joined a marketing team focused on outreach connecting young adults to Israel. After making Aliyah, she pivoted into Israeli tech, leveraging her love for storytelling to highlight the region\'s groundbreaking advancements.',
-        image: hannah,
-        linkedin: 'https://www.linkedin.com/in/hannah-yoken-134114192/'
+        name: 'Lazer Cohen',
+        title: 'Founder',
+        bio: 'Lazer is the Founder of Concrete Media which he founded in 2014. Originally from Brooklyn, New York, his entry into PR is worthy of a feature story of its own. He co-founded a PR firm in New York in 2009 before moving with his wife to Israel and starting Concrete. He believes a good PR pro is a reporter’s best asset and his decade-long relationships with some of the top tech reporters attest to that belief. Lazer and his wife have five children — who are much more interested in their mom’s floral design business than whatever it is their dad does on the computer.',
+        image: lazer,
+        linkedin: 'https://www.linkedin.com/in/lazercohen/',
+        twitter: 'https://twitter.com/Lazer_Cohen'
     },
     {
         name: 'Sam Hass',
@@ -86,7 +53,7 @@ const team = [
 <PageLayout
     pageTitle="Our team | Public Relations for serious tech companies | concrete.media"
     title="There are six PR professionals for every reporter, so your PR firm has to be elite to get the earned media results you need to rise above the noise."
-    subTitle={`Concrete Media is fluent in technology and media. Our team includes coders and journalists: we get what you're doing and know how to communicate it to reporters. We become an extension of your team, absorbing every development in your company and the industry to proactively craft stories that will get you in the news.`}
+    subTitle={`Concrete Media is fluent in technology and media. We get what you're doing and know how to communicate it to reporters. We become an extension of your team, absorbing every development in your company and the industry to proactively craft stories that will get you in the news.`}
 >
     <section class="team">
         {team.map((e) => <TeamCard {...e}/>)}

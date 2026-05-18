@@ -3,49 +3,47 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import techcrunch from '../assets/publication-logos/techcrunch.png';
+import venturebeat from '../assets/publication-logos/vb.svg';
 import buildots from '../assets/client-logos/Buildots.webp';
-import qodo from '../assets/client-logos/qodo.svg';
-import pinecone from '../assets/client-logos/Pinecone.svg';
-import qm from '../assets/client-logos/QM.png';
-import aiola from '../assets/client-logos/aiOla.png';
+import band from '../assets/client-logos/Band.svg';
+import scaleops from '../assets/client-logos/scaleops.svg';
+import datarails from '../assets/client-logos/Datarails.png';
+import factify from '../assets/client-logos/Factify.svg';
 import kumo from '../assets/client-logos/kumo.svg';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 import forbes from '../assets/publication-logos/forbes.png';
-import fastcompany from '../assets/publication-logos/fast-company.png';
 import bloomberg from '../assets/publication-logos/bloomberg.png';
 
 const results = [
     {
-        url: "https://www.fastcompany.com/91446538/ai-manufacturing-factories",
-        logo: fastcompany,
-        publication: 'Fast Company',
-        date: 'December 15, 2025',
-        headline: "AI still isn't working on the factory floor",
+        url: "https://venturebeat.com/orchestration/claudes-next-enterprise-battle-is-not-models-its-the-agent-control-plane",
+        logo: venturebeat,
+        publication: 'VentureBeat',
+        date: 'May 15, 2026',
+        headline: "Claude’s next enterprise battle is not models: it’s the agent control plane",
     },
     {
-        url: "https://techcrunch.com/2025/12/11/port-raises-100m-at-800m-valuation-to-take-on-spotifys-backstage/",
-        logo: techcrunch,
-        publication: 'TechCrunch',
-        date: 'December 11, 2025',
-        headline: "Port raises $100M at $800M valuation to take on Spotify's Backstage",
-    },
-    {
-        url: "https://www.bloomberg.com/news/articles/2025-12-03/nobel-winner-warns-china-is-nanoseconds-behind-in-quantum-race",
+        url: "https://www.bloomberg.com/news/newsletters/2026-05-10/cfo-pay-surges-even-as-job-security-declines",
         logo: bloomberg,
         publication: 'Bloomberg',
-        date: 'December 3, 2025',
-        headline: "Nobel Winner Warns China is Nanoseconds Behind in Quantum Race",
-        tags: ['highlights', 'dev']
+        date: 'May 10, 2026',
+        headline: "CFO Pay Surges Even as Job Security Declines",
     },
     {
-        url: "https://www.forbes.com/sites/quickerbettertech/2025/11/20/ai-in-construction-a-few-game-changing-tools-every-contractor-should-know/",
+        url: "https://www.forbes.com/sites/ronschmelzer/2026/04/14/why-structured-data-may-be-ais-next-enterprise-frontier/",
         logo: forbes,
         publication: 'Forbes',
-        date: 'November 20, 2025',
-        headline: "AI In Construction: A Few Game-Changing Tools Every Contractor Should Know",
-        tags: ['AI & ML', 'saas', 'highlights']
+        date: 'April 14, 2026',
+        headline: "Why Structured Data May Be AI’s Next Enterprise Frontier",
+    },
+    {
+        url: "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/",
+        logo: techcrunch,
+        publication: 'TechCrunch',
+        date: 'March 30, 2026',
+        headline: "ScaleOps raises $130M to improve computing efficiency amid AI demand",
     },
 ];
 
@@ -76,11 +74,11 @@ const results = [
 			</div>
 			<div class="logos">
 				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots.src} alt="buildots logo"/></a>
-				<a class="client" href="https://quantum-machines.co/" target="_blank"><img src={qm.src} alt="qm logo"/></a>
-				<a class="client" href="https://pinecone.io/" target="_blank"><img src={pinecone.src} alt="pinecone logo"/></a>
-				<a class="client" href="https://aiola.com/" target="_blank"><img src={aiola.src} alt="aiola logo"/></a>
-				<a class="client" href="https://www.qodo.ai/" target="_blank"><img src={qodo.src} alt="Qodo logo"/></a>
+				<a class="client" href="https://www.band.ai/" target="_blank"><img src={band.src} alt="BAND logo"/></a>
+				<a class="client" href="https://scaleops.com/" target="_blank"><img src={scaleops.src} alt="ScaleOps logo"/></a>
+				<a class="client" href="https://www.datarails.com/" target="_blank"><img class="datarails-logo" src={datarails.src} alt="Datarails logo"/></a>
 				<a class="client" href="https://kumo.ai/" target="_blank"><img src={kumo.src} alt="kumo logo"/></a>
+				<a class="client" href="https://www.factify.com/" target="_blank"><img class="factify-logo" src={factify.src} alt="Factify logo"/></a>
 			</div>
 		</section>
 		<section class="section" id="results">
@@ -221,7 +219,19 @@ const results = [
 
 	.client img {
 		max-width: 130px;
-		height: 37px;
+		max-height: 41px;
+		height: auto;
+	}
+
+	.client img.datarails-logo {
+		height: auto;
+		max-height: 50px;
+		max-width: 145px;
+	}
+
+	.client img.factify-logo {
+		width: 128px;
+		max-width: 128px;
 	}
 
 	#results {

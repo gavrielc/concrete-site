@@ -5,13 +5,14 @@ import twitterLogo from '../assets/icons/twitterFull.svg';
 export interface Props {
 	name: string;
 	title: string;
-	bio: string;
+	bio?: string;
 	image: string;
-	linkedin: string;
+	linkedin?: string;
 	twitter?: string;
 }
 
-const { name, title, bio, image, linkedin, twitter} = Astro.props;
+const { name, title, bio = '', image, linkedin, twitter} = Astro.props;
+const hasBio = Boolean(bio?.trim());
 ---
 
 <div class="team-card">
@@ -19,11 +20,13 @@ const { name, title, bio, image, linkedin, twitter} = Astro.props;
 	<div class="details-wrapper">
 		<p class="name">{name}</p>
 		<p class="title">{title}</p>
-		<p class="bio">{bio}</p>
+		<p class:list={['bio', !hasBio && 'bio--pending']}>{hasBio ? bio : '\u00A0'}</p>
+		{(linkedin || twitter) && (
 		<div class="socials-wrapper">
-			<a href={linkedin} target="_blank"><img class='social-icon' src={linkedinLogo.src} alt="linkedin logo"></a>
-			{twitter && <a href={twitter} target="_blank"><img class='social-icon' src={twitterLogo.src} alt="twitter logo"></a>}
+			{linkedin && <a href={linkedin} target="_blank" rel="noopener noreferrer"><img class='social-icon' src={linkedinLogo.src} alt={`${name} on LinkedIn`}></a>}
+			{twitter && <a href={twitter} target="_blank" rel="noopener noreferrer"><img class='social-icon' src={twitterLogo.src} alt="twitter logo"></a>}
 		</div>
+		)}
 	</div>
 </div>
 
@@ -73,6 +76,10 @@ const { name, title, bio, image, linkedin, twitter} = Astro.props;
 		font-size: 14px;
 		line-height: 145%;
 		color: rgba(0, 0, 0, 0.6);
+	}
+
+	.bio--pending {
+		min-height: calc(14px * 1.45 * 5);
 	}
 
 	.details-wrapper {
