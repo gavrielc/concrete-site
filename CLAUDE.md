@@ -137,3 +137,16 @@ const allResults = [
 - If a logo isn't saved yet, track it down and save it. Get the official logo from the publication site
 - Use parallel subagents when fetching multiple results
 - Use spotify mcp search to find the episode. Search with "type" of "episode" and limit to 1
+
+## Local preview
+
+`astro.config.mjs` pins the dev server to **port 4321** with `strictPort: true` (Astro will not silently move to 4322/4323).
+
+From the project root (use **yarn** if you use `yarn.lock`, otherwise **npm**):
+
+- **`yarn dev:clean`** or **`npm run dev:clean`** — kills anything on ports 4321–4323, then starts dev (recommended if preview failed before)
+- **`yarn dev`** / **`npm run dev`** — same port 4321 when nothing else is bound
+
+Open **http://localhost:4321** and keep the terminal running. If you see `ERR_CONNECTION_REFUSED`, the dev server is not running or an old tab is on the wrong port. Run `dev:clean` again.
+
+Production build preview (after `build`): `npm run preview:local` or `yarn preview:local`.
