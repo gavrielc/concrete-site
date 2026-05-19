@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
-# Free Astro dev ports (4321-4323) then start on 4321. Works with npm and yarn.
+# Free Astro dev ports (4321-4323) then start on 4321.
 set -e
+
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
@@ -12,24 +13,39 @@ install_hint() {
   fi
 }
 
-for port in 4321 4322 4323; do
-  if command -v lsof >/dev/null 2>&1; then
-    pids=$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null || true)
-    if [ -n "$pids" ]; then
-      echo "Stopping process(es) on port $port: $pids"
+stop_port() {
+  port="$1"
+  pids="$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null || true)"
+
+  if [ -z "$pids" ]; then
+    return 0
+  fi
+
+  echo "Stopping process(es) on port $port: $pids"
+
+  # Try graceful shutdown first.
+  # shellcheck disable=SC2086
+  kill $pids 2>/dev/null || true
+
+  i=0
+  while lsof -tiTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1 && [ "$i" -lt 12 ]; do
+    sleep 0.25
+    i=$((i + 1))
+  done
+
+  if lsof -tiTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1; then
+    stubborn="$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null || true)"
+    if [ -n "$stubborn" ]; then
+      echo "Force-stopping process(es) on port $port: $stubborn"
       # shellcheck disable=SC2086
-      kill -9 $pids 2>/dev/null || true
+      kill -9 $stubborn 2>/dev/null || true
     fi
   fi
-done
+}
 
 if command -v lsof >/dev/null 2>&1; then
   for port in 4321 4322 4323; do
-    i=0
-    while lsof -tiTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1 && [ "$i" -lt 20 ]; do
-      sleep 0.25
-      i=$((i + 1))
-    done
+    stop_port "$port"
   done
 fi
 
@@ -41,7 +57,7 @@ fi
 
 echo ""
 echo "  Local preview:  http://localhost:4321"
-echo "  (strict port 4321 — if this fails, run dev:clean again)"
+echo "  (strict port 4321; cleanup of 4321-4323 is automatic)"
 echo ""
 
-exec "$ASTRO" dev
+exec "$ASTRO" dev --host --port 4321 --strictPort

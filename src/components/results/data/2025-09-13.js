@@ -85,51 +85,51 @@ export default [
     },
     // Podcast entries (using Apple Podcasts URLs since Spotify search failed)
 	{
-		url: 'https://open.spotify.com/embed/episode/0lOO8Rp3q22MfAT4dAyxGn',
+		url: 'https://embed.podcasts.apple.com/us/podcast/from-pinterest-and-airbnb-to-kumo-ai-reinventing/id1018727913?i=1000724204973',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0s8IZaRU0YxZPlf3UzyNLU',
+		url: 'https://embed.podcasts.apple.com/us/podcast/from-failure-to-fortune-amir-haramaty-on-resilience/id1747508583?i=1000723600705',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5Fof96inZuL9sOrjS6vl1X',
+		url: 'https://embed.podcasts.apple.com/us/podcast/dr-ido-zamberg-on-the-role-of-ai-in-modern/id1241441038?i=1000723391553',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/69fPyaUY5cHOFL1TSCjziF',
+		url: 'https://embed.podcasts.apple.com/us/podcast/voice-ai-for-frontline-workers-assaf-asbag-chief-product/id1809847184?i=1000722961125',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6ZqrtgEXfHUOMFbIiG9Xjl',
+		url: 'https://embed.podcasts.apple.com/us/podcast/from-building-at-pinterest-and-airbnb-to/id1509495585?i=1000722786588',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4h97ygQGMvEtzBCgzox2Qf',
+		url: 'https://embed.podcasts.apple.com/us/podcast/week-in-edtech-8-6-25-googles-guided-learning-vs-openais/id1592196859?i=1000722087304',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5Ya93Yv0npQZHTZYZMYP4X',
+		url: 'https://embed.podcasts.apple.com/us/podcast/video-episode-databases-in-higher-dimensions-a/id1479593355?i=1000719665988',
         tags: ['podcasts']
 	},
     {
-		url: 'https://open.spotify.com/embed/episode/0LKI2uekiLxB4IPYMQYdJp',
+		url: 'https://embed.podcasts.apple.com/us/podcast/dr-alan-bekker-on-multimodal-avatars-education-and/id1241441038?i=1000718702015',
         tags: ['podcasts']
 	},
     {
-		url: 'https://open.spotify.com/embed/episode/55IwPq7cfqSw8G6HjIJGIY',
+		url: 'https://embed.podcasts.apple.com/us/podcast/beyond-words-the-rise-of-voice-in-a-hands-free-world/id1111785290?i=1000718481548',
         tags: ['podcasts']
 	},
     {
-		url: 'https://open.spotify.com/embed/episode/6Any0hdXUJ6aQdas2KGLlj',
+		url: 'https://embed.podcasts.apple.com/us/podcast/machines-running-amok-weve-created-more-than-we-can/id1354145110?i=1000717379743',
         tags: ['podcasts']
 	},
     {
-        url: "https://open.spotify.com/embed/episode/2ktmgpsDMtUC4kTZUjC93I",
+        url: "https://embed.podcasts.apple.com/us/podcast/reach-for-what-you-preach-bridging-ux-and-cybersecurity/id1725324656?i=1000716619121",
         tags: ['podcasts']
     },
 	{
-		url: 'https://open.spotify.com/embed/episode/3QvnErykScml3LdTftkhyO',
+		url: 'https://embed.podcasts.apple.com/us/podcast/from-customer-service-to-the-classroom-ai-agents-are/id1271691895?i=1000714637743',
         tags: ['podcasts']
 	},
 ];
