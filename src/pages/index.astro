@@ -73,7 +73,7 @@ const results = [
 				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
 			</div>
 			<div class="logos">
-				<a class="client" href="https://buildots.com/" target="_blank"><img src={buildots.src} alt="buildots logo"/></a>
+				<a class="client" href="https://buildots.com/" target="_blank"><img class="buildots-logo" src={buildots.src} alt="buildots logo"/></a>
 				<a class="client" href="https://www.band.ai/" target="_blank"><img src={band.src} alt="BAND logo"/></a>
 				<a class="client" href="https://scaleops.com/" target="_blank"><img src={scaleops.src} alt="ScaleOps logo"/></a>
 				<a class="client" href="https://www.datarails.com/" target="_blank"><img class="datarails-logo" src={datarails.src} alt="Datarails logo"/></a>
@@ -227,6 +227,14 @@ const results = [
 		height: auto;
 		max-height: 50px;
 		max-width: 145px;
+	}
+
+	/* Match /clients: wide logo is width-constrained (184px in 280px card → 116px in 176px card) */
+	.client img.buildots-logo {
+		width: 116px;
+		max-width: 116px;
+		max-height: 48px;
+		height: auto;
 	}
 
 	#results {
