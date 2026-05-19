@@ -2,8 +2,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "command": "yarn dev:clean",
+      "name": "Development server (port 4321)",
       "request": "launch",
       "type": "node-terminal"
     }

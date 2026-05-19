@@ -10,6 +10,7 @@ import qm from '../assets/client-logos/QM.png';
 import buildots from '../assets/client-logos/Buildots.webp';
 import ox from '../assets/client-logos/Ox.png';
 import pinecone from '../assets/client-logos/Pinecone.svg';
+import commcrete from '../assets/client-logos/Commcrete.svg';
 import runai from '../assets/client-logos/Runai.svg';
 import wilco from '../assets/client-logos/Wilco.png';
 import aporia from '../assets/client-logos/Aporia.svg';
@@ -93,16 +94,17 @@ const clients = [
     {logo: band, name: "BAND", site: 'https://www.band.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: datarails, name: "Datarails", site: 'https://www.datarails.com/', tags: ['AI & ML', 'saas', 'fintech', '2025']},
     {logo: scaleops, name: "ScaleOps", site: 'https://scaleops.com/', tags: ['saas', 'dev', '2025']},
+    {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
     {logo: factify, name: "Factify", site: 'https://www.factify.com/', tags: ['AI & ML', 'saas', 'dev', '2025'], logoClass: 'factify-logo'},
     {logo: echo, name: "Echo", site: 'https://www.echo.ai/', tags: ['security', 'dev', 'saas', '2025'], logoClass: 'echo-logo'},
     {logo: adaptive6, name: "Adaptive6", site: 'https://www.adaptive6.com/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: kumo, name: "Kumo", site: 'https://kumo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: milestone, name: "Milestone", site: 'https://mstone.ai/', tags: ['AI & ML', 'saas', 'dev', '2025'], logoClass: 'invert-logo'},
-    {logo: port, name: "port", site: 'https://www.getport.io/', tags: ['dev', 'saas']},
     {logo: qm, name: "qm", site: 'https://www.quantum-machines.co/', tags: ['deep tech', '2025']},
     {logo: qodo, name: "Qodo", site: 'https://www.qodo.ai/', tags: ['AI & ML', 'saas', 'dev', '2025']},
     {logo: runai, name: "runai", site: 'https://www.run.ai/', tags: ['AI & ML', 'saas']},
     {logo: pinecone, name: "pinecone", site: 'https://www.pinecone.io/', tags: ['AI & ML', 'saas', '2025']},
+    {logo: commcrete, name: "Commcrete", site: 'https://www.commcrete.com/', tags: ['AI & ML', 'saas', '2025']},
     {logo: aiola, name: "aiOla", site: 'https://aiola.com/', tags: ['AI & ML', '2025', 'saas']},
     {logo: ox, name: "ox", site: 'https://www.ox.security/', tags: ['security', 'saas', '2025', 'dev']},
     {logo: C8, name: "C8 Health", site: 'https://c8health.com/', tags: ['AI & ML', 'saas', 'medtech', '2025']},

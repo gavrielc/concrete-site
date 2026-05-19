@@ -397,23 +397,23 @@ export default [
         tags: ['security', 'dev']
     },
 	{
-		url: 'https://open.spotify.com/embed/episode/18ktGobDBWZPYbzLXLUk2o',
+		url: 'https://embed.podcasts.apple.com/us/podcast/271-how-aiola-turns-natural-multilingual-speech-into/id1491483083?i=1000738773766',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1HbbaV5QW71Wo9I79X5FEZ',
+		url: 'https://embed.podcasts.apple.com/us/podcast/relational-foundation-models-unlocking-the-next/id1505372978?i=1000738359003',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1VpvLgaTxpwSzU7FcghCxe',
+		url: 'https://embed.podcasts.apple.com/us/podcast/data-unstuck-jure-leskovec-on-unleashing-the-power/id1469564683?i=1000736399025',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7ipGhMdQc5YGdXEMXpWKZt',
+		url: 'https://embed.podcasts.apple.com/us/podcast/transforming-classrooms-understanding-the-impact-of/id519685828?i=1000732583415',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/15MfgcghgI91F6R533iQM6',
+		url: 'https://embed.podcasts.apple.com/us/podcast/unlocking-the-power-of-relational-data-with-kumo/id1671914429?i=1000728061211',
         tags: ['podcasts']
 	},
 ];

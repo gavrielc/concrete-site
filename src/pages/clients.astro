@@ -22,32 +22,8 @@ import Clients from "../components/Clients";
     }
 
     .logos :global(.tags) {
-        display: flex;
-        gap: 24px;
-        flex-wrap: wrap;
-        align-self: flex-start;
-        margin: 0 calc(50% - 608px) 40px;
+        display: none;
     }
-
-    @media screen and (max-width: 1311px) {
-        .logos :global(.tags) {
-            margin: 0 calc(50% - 452px) 40px;
-        }
-	}
-
-    @media screen and (max-width: 935px) {
-        .logos :global(.tags) {
-            margin: 0 max(calc(50% - 296px), 0px) 40px;
-        }
-	}
-
-    @media screen and (max-width: 623px) {
-        .logos :global(.tags) {
-            justify-content: center;
-        }
-	}
-
-
 
     .logos :global(.tag) {
         padding: 16px 24px;

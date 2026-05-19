@@ -108,321 +108,310 @@ import bbc from '../../../assets/publication-logos/BBC.png';
 
 export default [
 	{
-		url: 'https://open.spotify.com/embed/episode/4dh5naxMVgYrvk3p6Uh8Pt',
+		url: 'https://embed.podcasts.apple.com/us/podcast/an-application-free-future-speaking-directly-to-data/id1669813431?i=1000692600073',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2z6gIJdFMV2xhfrRslDahm',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-446-team8-coo-cfo-roy-heldshtein/id1368800817?i=1000688811319',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0tuZNVWPugR8XSJg4zGMg9',
+		url: 'https://embed.podcasts.apple.com/us/podcast/arjun-patel-on-vector-databases-and-the-future/id1241441038?i=1000684900291',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/27Q8W283Z8YjusWAZ1SSd7',
+		url: 'https://embed.podcasts.apple.com/us/podcast/niv-braun-on-ai-security-measures-and-emerging-threats/id1241441038?i=1000683961834',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6Qpykkdc152wKgPyTAdbcH',
+		url: 'https://embed.podcasts.apple.com/us/podcast/chat-your-way-to-construction-success-with-buildots-dot/id661778206?i=1000681211576',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7bjZwqJwbazdwVfk3xBSRV',
+		url: 'https://embed.podcasts.apple.com/us/podcast/inna-tokarev-sela-on-approaching-data-challenges-with/id1241441038?i=1000680871037',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5SGTeBdXAXAWo5FCZwYBj1',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-432-pinecone-coo-lauren-nemeth/id1368800817?i=1000680666496',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3Z7hJdvOc9MdYJm9qJoyB8',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-31-generative-ai-and-the-enterprise/id1550972541?i=1000678766507',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1S5wpehBKEGCFsEdupRy3B',
+		url: 'https://embed.podcasts.apple.com/us/podcast/trends-in-engineering-leadership-observability-agile/id1161431874?i=1000677058386',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4xZD1OGypvQiNqZaY9kI9X',
+		url: 'https://embed.podcasts.apple.com/us/podcast/inna-tokarev-sela-ceo-founder-of-illumex-%2413-million/id1619104989?i=1000676924398',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6Dm8SFknHvNQxfyVaiuNs0',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ai-and-the-new-age-of-reason/id1638921761?i=1000674529832',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2yYV5VBhDmsM9DnZKh6Y41',
+		url: 'https://embed.podcasts.apple.com/us/podcast/chris-cooney-modern-state-of-agile/id1532372413?i=1000674262324',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6YxbHlAZMQgDTxDS2JU7C6',
+		url: 'https://embed.podcasts.apple.com/us/podcast/agl-387-itamar-friedman/id1043194456?i=1000673577708',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6PpeLUZWayIc7NdSuiUy9B',
+		url: 'https://embed.podcasts.apple.com/us/podcast/qe-ai-code-quality-in-devops-with-itamar-friedman/id1478816027?i=1000672380670',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7dNSvspdROBG98oXLyjBlo',
+		url: 'https://embed.podcasts.apple.com/us/podcast/akeyless-ceo-oded-hareven-on-vaultless-secrets-management/id1545294976?i=1000670545247',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7dx2LKilFcM1wohXAdcRQ1',
+		url: 'https://embed.podcasts.apple.com/us/podcast/se-radio-633-itamar-friedman-on-automated-testing-with/id120906714?i=1000669214267',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2Xog8s6sBk3Ol4Ri2ODEUy',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ai-and-cyber-security-the-cat-and-mouse/id1638921761?i=1000666442969',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3CUzPfnUuZGBl8c3aYZkBt',
+		url: 'https://embed.podcasts.apple.com/us/podcast/452-dario-amodei-anthropic-ceo-on-claude-agi-the/id1434243584?i=1000676542285',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5ICZ8sQXicOL6i5606cErz',
+		url: 'https://embed.podcasts.apple.com/us/podcast/how-team8-collaborates-with-founders-to-build-in/id1277584354?i=1000665562688',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6NRd6jA6Q2NIR2iJ9XfLAu',
+		url: 'https://embed.podcasts.apple.com/us/podcast/234-high-performance-generative-ai-applications-with/id1336150688?i=1000665018002',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2Z1jN3tSoKbxIpXeYjhFDi',
+		url: 'https://embed.podcasts.apple.com/us/podcast/rob-alvarez-promoting-collaboration-using-3d-ar-and-vr/id1532372413?i=1000664698293',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/75Dj1VBRBOyieFJv3ZFrEa',
+		url: 'https://embed.podcasts.apple.com/us/podcast/%D7%90%D7%99%D7%9A-%D7%AA%D7%99%D7%A8%D7%90%D7%94-%D7%9E%D7%94%D7%A4%D7%9B%D7%AA-%D7%94%D7%9E%D7%99%D7%97%D7%A9%D7%95%D7%91-%D7%94%D7%A7%D7%95%D7%95%D7%A0%D7%98%D7%99-%D7%A4%D7%A8%D7%A7-325/id1458523296?i=1000663868767',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4ooAeYKibQ1NpZIXeLuGEM',
+		url: 'https://embed.podcasts.apple.com/us/podcast/60-the-talking-cloud-podcast-audio-only-guest-ori/id1474415564?i=1000661568845',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3l2mt1luidoeh4wSJOBKl2',
+		url: 'https://embed.podcasts.apple.com/us/podcast/7-from-intelligence-service-to-innovation-ori-barzilay/id1699226735?i=1000661563931',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0KJjbVM5zkjjPkiWyZFRhu',
+		url: 'https://embed.podcasts.apple.com/us/podcast/223-radar-recap-charting-the-path-what-the-future/id1336150688?i=1000661129578',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1nucvsWoEIWSvy3stzRk6P',
+		url: 'https://embed.podcasts.apple.com/us/podcast/everything-you-need-to-know-about-ai-and-construction/id1597774745?i=1000660790210',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4g6sqVZiivAK7KXp2yTCah',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-321-exploring-ai-with-itamar-friedman/id1344107244?i=1000660831013',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3YeepHvvlCNROM3kIrI2nh',
+		url: 'https://embed.podcasts.apple.com/us/podcast/193-itamar-friedman-how-codiumai-is-making-bug-free/id1438378439?i=1000658909768',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6xkNnZuwoGdgNH64rpFncl',
+		url: 'https://embed.podcasts.apple.com/us/podcast/digitizing-construction-sites/id1583805017?i=1000655780479',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2b0Tgd4FdxzNgf7yAl40Dg',
+		url: 'https://embed.podcasts.apple.com/us/podcast/186-ronen-dar-maximizing-gpu-utilization-for-ai-with-run-ai/id1438378439?i=1000655315261',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1Hgz4PyivtLlOTozRSRoQh',
+		url: 'https://embed.podcasts.apple.com/us/podcast/the-ai-edge-ai-innovations-driving-supply-chain-efficiency/id1466599957?i=1000654635566',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0f40PWgPOTyndgqXvjoucn',
+		url: 'https://embed.podcasts.apple.com/us/podcast/yonatan-cohen-co-founder-and-cto-quantum-machines/id1644728013?i=1000653914858',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0U9SfR0xhaqMFnAR6BnOxi',
+		url: 'https://embed.podcasts.apple.com/us/podcast/vector-databases-and-the-power-of-rag/id1740178076?i=1000653690454',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7JbHzqlbo1yLUmWsH4qymJ',
+		url: 'https://embed.podcasts.apple.com/us/podcast/eyal-solomon-on-api-consumption-management/id120906714?i=1000652671828',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2R3Ku3X8aXCzOUXJsPJ47e',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-32-ceo-and-founder-of-pinecone-edo-liberty/id1672188924?i=1000652643540',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3zgFDE3TsLeCcUiyHyDhSx',
+		url: 'https://embed.podcasts.apple.com/us/podcast/395-ai-driven-construction-with-jessica-herrala/id1256694214?i=1000651872190',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0I76KlacW4KVDZsZcF6Yw2',
+		url: 'https://embed.podcasts.apple.com/us/podcast/navigating-the-vector-database-landscape-with/id1504567418?i=1000650748630',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4DYhB9Qy3ioEfA8KxTRxPq',
+		url: 'https://embed.podcasts.apple.com/us/podcast/oracle-wins-tik-tok-the-future-of-ai-chips-and/id1073226719?i=1000491312931',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1S5RbQOJtqzmDJwryDFXaM',
+		url: 'https://embed.podcasts.apple.com/us/podcast/integration-and-observability-of-3rd-party-apis/id417826820?i=1000649007594',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2SLVkHP1vtBPmf8M9ihDfG',
+		url: 'https://embed.podcasts.apple.com/us/podcast/187-the-power-of-vector-databases-and-semantic/id1336150688?i=1000648738108',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7AjsECoBWNI8xkQEJlvefo',
+		url: 'https://embed.podcasts.apple.com/us/podcast/improving-search-with-rag-architecture-with-pinecone/id1668002688?i=1000646380213',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1EEQTW0vtqsUa1yZhdfhhp',
+		url: 'https://embed.podcasts.apple.com/us/podcast/vector-databases-101-with-edo-liberty-ceo-founder/id1604676234?i=1000646231073',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6xuZgPnoeAVGMZw4iBGy6e',
+		url: 'https://embed.podcasts.apple.com/us/podcast/special-guest-oz-krakowski-deepdub/id1238870667?i=1000646006703',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6az2WleJK5oHjJCCnQy8LW',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ronen-dar-on-gpu-orchestration-for-building-ml-models/id1241441038?i=1000644184771',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6JffCeTREMcJdcgNwxhMqS',
+		url: 'https://embed.podcasts.apple.com/us/podcast/21st-century-gold-ronen-dar-co-founder-cto-at-run-ai/id1469564683?i=1000643648987',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/01c0vedMH4ey0WrXnzRMrG',
+		url: 'https://embed.podcasts.apple.com/us/podcast/246-oz-krakowski-deepdub-ai/id1607222388?i=1000639794385',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0oTYPmzu0yKflFjq1OgJyN',
+		url: 'https://embed.podcasts.apple.com/us/podcast/amir-haramaty-evolution-of-speech-technology-in/id1532372413?i=1000639893488',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2BJt73xZ1Kn023BtTC1WbX',
+		url: 'https://embed.podcasts.apple.com/us/podcast/security-in-ci-cd-pipelines-strategies-and-best/id1475784710?i=1000637329377',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/0Cnf5gsCa5u0lk23oAUFXF',
+		url: 'https://embed.podcasts.apple.com/us/podcast/running-an-ai-based-dubbing-company-with-deepdubs/id1006416952?i=1000632285106',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7JTa0lyrZaUtxvgQCUohb4',
+		url: 'https://embed.podcasts.apple.com/us/podcast/reaching-global-audiences-with-oz-krakowski-018/id1678705059?i=1000631945789',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5jzKfJONY1VGX6jOX8pXfc',
+		url: 'https://embed.podcasts.apple.com/us/podcast/upskill-your-knowledge-using-wilco/id1462366641?i=1000631715974',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3LXTt522TBPS8GJ6aoYySl',
+		url: 'https://embed.podcasts.apple.com/us/podcast/software-supply-chain-security-with-neatsun-ziv-devops-178/id1475784710?i=1000632827863',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7uleBId0eH12cvbaxJUTE6',
+		url: 'https://embed.podcasts.apple.com/us/podcast/real-time-application-security-using-arnica/id1462366641?i=1000630939400',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4COyBXoTEBwxuCjcxF1RnP',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-125-deepdub-ai-cro-oz-krakowski/id1244964011?i=1000631484588',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1bh7NNeVfirEspK6YZTRYK',
+		url: 'https://embed.podcasts.apple.com/us/podcast/dtsr-episode-569-keeping-secrets-a-secret/id466659176?i=1000628365694',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/3Fb1cw2wkyDra8NAnp2tR7',
+		url: 'https://embed.podcasts.apple.com/us/podcast/solving-the-gpu-shortage-software-to-2-4x-existing/id1489519341?i=1000627551647',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1lRhWoZ8hluwFXP6pspXLP',
+		url: 'https://embed.podcasts.apple.com/us/podcast/pinecones-edo-liberty-ai-is-infrastructure/id1233991021?i=1000626402522',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4plcHhaM1CJRxEIIPu2Eqs',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ai-ends-localization-think-again-meet-deepdub-a/id1688770183?i=1000623833216',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1BfnKkDM41hbd7AiFQtVyg',
+		url: 'https://embed.podcasts.apple.com/us/podcast/deepdubs-ofir-krakowski-on-redefining-dubbing-from/id1186480811?i=1000626205626',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/694dE1911CF9ODPMNl9oN1',
+		url: 'https://embed.podcasts.apple.com/us/podcast/quantum-tech-pod-episode-55-quantum-machines-cto-yonatan/id1577210670?i=1000626322310',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/55s2bWSgUFgWETBGThmnlP',
+		url: 'https://embed.podcasts.apple.com/us/podcast/se-radio-578-ori-mankali-on-secrets-management-using/id120906714?i=1000625315099',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2SIQ1lEiotm0vQCQVt62wF',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ep-174-akeyless-security-secrets-management-with-sean/id1500452446?i=1000624078938',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7zRbEX46242SmZW4ihAWGX',
+		url: 'https://embed.podcasts.apple.com/us/podcast/ox-security-neatsun-ziv-on-software-supply-chain-threat/id1545294976?i=1000623910606',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/6vwsOGnGsUcAxpRzaTIdpK',
+		url: 'https://embed.podcasts.apple.com/us/podcast/how-one-ai-powered-tool-is-transforming-construction/id1456494446?i=1000623353718',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4kaxItf06e2ezOIDF6ztVp',
+		url: 'https://embed.podcasts.apple.com/us/podcast/building-large-ai-models/id417826820?i=1000622361367',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/5MvyeWTzMeSpMFBslpFi2K',
+		url: 'https://embed.podcasts.apple.com/us/podcast/gpumaxing-with-dr-ronen-dar-of-run-ai/id1669813431?i=1000622291531',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/1Y7AFoIwHnGqesCPUvIrPq',
+		url: 'https://embed.podcasts.apple.com/us/podcast/49-the-talking-cloud-podcast-audio-only-guest-neatsun/id1474415564?i=1000622281223',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4gDqRvFRRIlrWWmnzWQCSI',
+		url: 'https://embed.podcasts.apple.com/us/podcast/173-hollywood-grade-ai-dubbing-with-deepdub-ceo-ofir/id1491483083?i=1000619781593',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/7wKKyTzzIw51LJudXuu9TC',
+		url: 'https://embed.podcasts.apple.com/us/podcast/255-the-power-of-human-connection-in-b2b-sales-w/id1453581989?i=1000616791962',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4sydvTktKS1t4XianDit0a',
+		url: 'https://embed.podcasts.apple.com/us/podcast/se-radio-568-simon-bennetts-on-owasp-dynamic-application/id120906714?i=1000617064604',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2T5HQyvre8mF5xaZzSVJCQ',
+		url: 'https://embed.podcasts.apple.com/us/podcast/leveraging-ai-without-losing-creativity-yaniv-makover/id1360406217?i=1000615145068',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4zj5FGq0tjzGp9mZuNGMF4',
+		url: 'https://embed.podcasts.apple.com/us/podcast/construction-technology-is-a-process-with-aviv-leibovici/id1494235724?i=1000612654069',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/2utGF7gWTpAJdEWRv7Xnoc',
+		url: 'https://embed.podcasts.apple.com/us/podcast/157-kubernetes-with-craig-box/id427166321?i=1000612194725',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4T4R5FsISgFtwaYkHczKEP',
+		url: 'https://embed.podcasts.apple.com/us/podcast/high-tech-on-the-low-ft-nir-valtman-secure-your-code/id1546549218?i=1000612282415',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/4efa6CThJcaPxafenJA9FH',
+		url: 'https://embed.podcasts.apple.com/us/podcast/high-tech-on-the-low-ft-on-freund-develop-your-skills/id1546549218?i=1000611399962',
         tags: ['podcasts']
 	},
 	{
-		url: 'https://open.spotify.com/embed/episode/08KOY6dAXJVTytAs2knY3u',
+		url: 'https://embed.podcasts.apple.com/us/podcast/170-tanya-janca-building-security-into-software/id912568441?i=1000597490591',
         tags: ['podcasts']
 	},
-	{
-		url: 'https://open.spotify.com/embed/episode/28kzdDh0fp3zZwRwFkMrWh',
-        tags: ['podcasts']
-	},
-	{
-		url: 'https://open.spotify.com/embed/episode/2ZcqxyVLpXYZ9pqhNkPip3',
-        tags: ['podcasts']
-	},
-	{
-		url: 'https://open.spotify.com/embed/episode/0XSHWdR87Lnc8NiW5pV9jF',
-        tags: ['podcasts']
-	},
+
 	{
         url: "https://www.bigdatawire.com/2025/02/24/how-sawmills-plans-to-cut-big-observability-data-down-to-size/",
         logo: bigdatawire,
