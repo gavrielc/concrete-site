@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "sh scripts/dev-clean.sh",
     "dev:local": "astro dev",
     "dev:clean": "sh scripts/dev-clean.sh",
     "start": "astro dev",
