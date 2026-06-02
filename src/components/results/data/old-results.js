@@ -2,7 +2,7 @@ import techcrunch from '../../../assets/publication-logos/techcrunch.png';
 import forbes from '../../../assets/publication-logos/forbes.webp';
 import mit from '../../../assets/publication-logos/mit.png';
 import vb from '../../../assets/publication-logos/vb.svg';
-import techtarget from '../../../assets/publication-logos/techtarget.png';
+import techtarget from '../../../assets/publication-logos/techtarget.svg';
 import ctech from '../../../assets/publication-logos/ctech.png';
 import tns from '../../../assets/publication-logos/tns.svg';
 import siliconangle from '../../../assets/publication-logos/siliconangle.png';
