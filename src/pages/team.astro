@@ -4,8 +4,8 @@ import lazer from "../assets/team/Lazer.jpg";
 import zack from "../assets/team/Zack.jpg";
 import rachel from "../assets/team/RachelGlaser.jpg";
 import julia from "../assets/team/Julia.jpeg";
+import ben from "../assets/team/BenRothbart.png";
 import sam from "../assets/team/Sam.jpg";
-import adam from "../assets/team/Adam.jpg";
 import TeamCard from "../components/TeamCard.astro";
 
 const team = [
@@ -34,6 +34,13 @@ Based in Israel and working globally, Rachel brings a collaborative, hands-on ap
         image: rachel,
     },
     {
+        name: 'Julia Bocharov',
+        title: 'Human Resources Manager',
+        bio: 'Julia is the Human Resources manager at Concrete Media. She grew up in Ukraine and emigrated to Israel in 2012. Julia holds an MA from Tel Aviv University in English literature and American studies. With a decade of experience in senior management positions in tech, Julia is enthusiastic about collaborating with individuals and developing talent. “I’m inspired by the people at Concrete Media and proud to be a part of the Israeli tech landscape”. In her spare time she loves painting and going on bike rides in nature.',
+        image: julia,
+        linkedin: 'https://www.linkedin.com/in/julia-bocharov-2bb38788/'
+    },
+    {
         name: 'Sam Hass',
         title: 'New Media Manager',
         bio: 'Samuel is a New Media Manager at Concrete Media. Originally from London and now based in Jerusalem, he brings a background in psychology with a deep interest in communication, narrative, and human behavior. Before transitioning into PR, Samuel worked in the NHS, where he developed a strong foundation in clear communication, client relations, and managing complex projects under pressure. He is particularly drawn to narrative-driven work that helps clients clarify their message and connect with the right audiences. In his spare time, he enjoys martial arts, snooker, and brainstorming ideas for a stand-up debut that may or may not ever happen.',
@@ -41,18 +48,11 @@ Based in Israel and working globally, Rachel brings a collaborative, hands-on ap
         linkedin: 'https://www.linkedin.com/in/samuel-hass-nelftnhs/'
     },
     {
-        name: 'Adam Finkelstein',
-        title: 'New Media Manager',
-        bio: 'Adam is a New Media Manager at Concrete Media. He brings a cross-disciplinary background that spans technology, communications, and international affairs. Originally from New York and now based in Tel Aviv, he holds an MA in International Security and Diplomacy from Tel Aviv University. His prior experience as a Technical Account Manager in Israel’s high-tech sector gives him a unique perspective on how to translate complex ideas into clear, compelling narratives. He’s passionate about using his background to help clients connect with audiences in authentic and engaging ways. When he’s offline, you’ll find him hiking, reading, or playing tennis.',
-        image: adam,
-        linkedin: 'https://www.linkedin.com/in/adam-f-0b2009162/'
-    },
-    {
-        name: 'Julia Bocharov',
-        title: 'Human Resources Manager',
-        bio: 'Julia is the Human Resources manager at Concrete Media. She grew up in Ukraine and emigrated to Israel in 2012. Julia holds an MA from Tel Aviv University in English literature and American studies. With a decade of experience in senior management positions in tech, Julia is enthusiastic about collaborating with individuals and developing talent. “I’m inspired by the people at Concrete Media and proud to be a part of the Israeli tech landscape”. In her spare time she loves painting and going on bike rides in nature.',
-        image: julia,
-        linkedin: 'https://www.linkedin.com/in/julia-bocharov-2bb38788/'
+        name: 'Ben Rothbart',
+        title: 'Strategist',
+        bio: 'Ben brings over 15 years of diverse experience spanning marketing, advertising, PR, partnerships, and program management roles across the fintech, edtech, insurtech, biotech, and non-profit sectors. He excels at translating complex, deep-tech concepts into clear, impactful narratives that resonate with journalists and markets alike. Having guided teams through the entire business lifecycle, from high-growth startups to publicly traded companies, he possesses a holistic perspective that strategically ensures clients of any size meet their goals. Based in the mountains of Colorado, Ben spends his time offline cooking, playing music, and going on outdoor adventures with his son.',
+        image: ben,
+        linkedin: 'https://www.linkedin.com/in/benrothbart/'
     },
 ];
 
@@ -73,6 +73,7 @@ Based in Israel and working globally, Rachel brings a collaborative, hands-on ap
     .team {
         flex-wrap: wrap;
         gap: 44px 64px;
+        align-items: flex-start;
     }
 
 
