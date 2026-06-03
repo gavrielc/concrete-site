@@ -160,7 +160,10 @@ export default function Results({tag}) {
                                 <PodcastEmbed url={url} />
                             ) : (
                                 <a href={url} target="_blank" rel="noreferrer">
-                                    {logo && <img className={cn({techtargetLogo: publication === 'TechTarget'})} src={logo.src} alt={`${publication} logo`} />}
+                                    {logo && <img className={cn({
+                                        techtargetLogo: publication === 'TechTarget',
+                                        tldrLogo: publication.startsWith('TLDR')
+                                    })} src={logo.src} alt={`${publication} logo`} />}
                                     <h4>{headline}</h4>
                                     <p>{date}</p>
                                 </a>
