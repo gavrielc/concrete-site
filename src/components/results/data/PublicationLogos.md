@@ -3,7 +3,7 @@ forbes: forbes.webp
 mit tech review: mit.png
 venturebeat: vb.svg
 tldr: tldr.jpg
-techtarget: techtarget.svg
+techtarget: techtarget.png
 ctech: ctech.png
 thenewstack: tns.svg
 siliconangle: siliconangle.png

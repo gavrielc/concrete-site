@@ -1,4 +1,4 @@
-import techtarget from '../../../assets/publication-logos/techtarget.svg';
+import techtarget from '../../../assets/publication-logos/techtarget.png';
 
 const results20260602 = [
     {
