@@ -18,7 +18,7 @@ export default [
         tags: ['podcasts']
     },
     {
-        url: "https://www.datacamp.com/webinars/making-ai-work-in-healthcare",
+        url: "https://www.datacamp.com/resources/webinars/making-ai-work-in-healthcare-ug",
         logo: datacamp,
         publication: "DataCamp",
         date: "March 12, 2026",

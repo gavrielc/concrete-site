@@ -7,47 +7,69 @@ import podcast from '../../assets/icons/microphone.svg';
 const cn = classNames.bind(styles);
 const PODCASTS_BATCH = 10;
 
-function embedSrc(url) {
-    return `${url}${url.includes('?') ? '&' : '?'}utm_source=generator&theme=0`;
+function formatPodcastDate(date) {
+    const parsed = new Date(`${date}T00:00:00`);
+
+    if (Number.isNaN(parsed.getTime())) {
+        return date;
+    }
+
+    return parsed.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+    }).toUpperCase();
 }
 
-function PodcastEmbed({url}) {
-    const containerRef = useRef(null);
-    const [src, setSrc] = useState(null);
+function formatPodcastDuration(duration) {
+    if (!duration) return null;
 
-    useEffect(() => {
-        const el = containerRef.current;
-        if (!el || src) return;
+    return duration
+        .toUpperCase()
+        .replace(/\bH\b/g, 'HR')
+        .replace(/\bM\b/g, 'MIN');
+}
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setSrc(embedSrc(url));
-                    observer.disconnect();
-                }
-            },
-            {rootMargin: '200px 0px'}
-        );
-
-        observer.observe(el);
-        return () => observer.disconnect();
-    }, [url, src]);
+function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}) {
+    const details = [
+        date ? formatPodcastDate(date) : null,
+        formatPodcastDuration(duration),
+    ].filter(Boolean);
 
     return (
-        <div ref={containerRef} className={styles.podcastEmbed}>
-            {src ? (
-                <iframe
-                    style="border-radius:16px"
-                    src={src}
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                />
-            ) : (
-                <div className={styles.podcastPlaceholder} aria-hidden="true" />
-            )}
+        <div className={styles.podcastCardSurface}>
+            <a className={styles.podcastCardMain} href={href} target="_blank" rel="noreferrer">
+                <div className={styles.podcastCardHeader}>
+                    <span className={styles.podcastCardLabel}>
+                        <span className={styles.applePodcastLogo} aria-hidden="true"></span>
+                        Podcasts
+                    </span>
+                </div>
+                <div className={styles.podcastCardBody}>
+                    <div className={styles.podcastArtworkWrap}>
+                        {artwork ? (
+                            <img
+                                className={cn('podcastArtwork', {podcastLogoArtwork: artworkIsLogo})}
+                                src={artwork}
+                                alt={`${show} artwork`}
+                                loading="lazy"
+                            />
+                        ) : (
+                            <img className={styles.podcastArtworkFallback} src={podcast.src} alt="" aria-hidden="true" />
+                        )}
+                    </div>
+                    <div className={styles.podcastCardCopy}>
+                        <span className={styles.podcastMeta}>{details.join(' · ')}</span>
+                        <h4>{title}</h4>
+                        <p>{show}</p>
+                    </div>
+                </div>
+            </a>
+            <div className={styles.podcastActions}>
+                <a href={href} target="_blank" rel="noreferrer" className={styles.podcastPlay}>
+                    <span aria-hidden="true">▶</span>
+                    Play
+                </a>
+            </div>
         </div>
     );
 }
@@ -142,13 +164,29 @@ export default function Results({tag}) {
                 ))}
             </div>
             <div className={cn(styles.resultsWrapper, {[styles.editMode]: isEditMode})}>
-                {displayedResults.map(({url, logo, headline, publication, date, tags, embed = true}) => {
-                    const isEmbeddedPodcast = tags.includes('podcasts') && embed !== false;
+                {displayedResults.map(({
+                    url,
+                    logo,
+                    headline,
+                    publication,
+                    date,
+                    tags,
+                    embed = true,
+                    podcastTitle,
+                    podcastShow,
+                    podcastDate,
+                    podcastDuration,
+                    podcastHref,
+                    podcastArtwork,
+                }) => {
                     const isExternalPodcast = tags.includes('podcasts') && embed === false;
+                    const isPodcast = tags.includes('podcasts');
 
                     return (
                         <li
-                            className={cn('result-card', {podcast: isEmbeddedPodcast, externalPodcast: isExternalPodcast})}
+                            className={cn('result-card', {
+                                podcastCard: isPodcast && !isExternalPodcast,
+                            })}
                             key={url}
                         >
                             {isEditMode && (
@@ -156,8 +194,25 @@ export default function Results({tag}) {
                                     ×
                                 </button>
                             )}
-                            {isEmbeddedPodcast ? (
-                                <PodcastEmbed url={url} />
+                            {isExternalPodcast ? (
+                                <a href={url} target="_blank" rel="noreferrer">
+                                    {logo && <img className={cn({
+                                        techtargetLogo: publication === 'TechTarget',
+                                        tldrLogo: publication.startsWith('TLDR')
+                                    })} src={logo.src} alt={`${publication} logo`} />}
+                                    <h4>{headline}</h4>
+                                    <p>{date}</p>
+                                </a>
+                            ) : isPodcast ? (
+                                <PodcastCard
+                                    title={podcastTitle || headline}
+                                    show={podcastShow || publication}
+                                    date={podcastDate || date}
+                                    duration={podcastDuration}
+                                    href={podcastHref || url}
+                                    artwork={podcastArtwork}
+                                    artworkIsLogo={false}
+                                />
                             ) : (
                                 <a href={url} target="_blank" rel="noreferrer">
                                     {logo && <img className={cn({

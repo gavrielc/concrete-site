@@ -74,28 +74,12 @@
             background: white;
         }
 
-        &.externalPodcast {
-            align-self: flex-start;
+        &.podcastCard {
+            background: #f4f2f8;
             box-sizing: border-box;
-            height: 152px;
+            min-height: 152px;
             overflow: hidden;
-            padding: 0;
-
-            a {
-                align-items: flex-start;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                height: 152px;
-                justify-content: flex-start;
-                padding: 20px 24px;
-            }
-
-            h4,
-            p {
-                margin: 0;
-            }
+            padding: 10px 12px 8px;
         }
 
         @media screen and (max-width: 1299px) {
@@ -135,7 +119,163 @@
     a {
         text-decoration: none;
     }
-    
+
+    .podcastCardSurface {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        height: 100%;
+    }
+
+    .podcastCardMain {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        min-width: 0;
+    }
+
+    .podcastCardHeader {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-height: 16px;
+    }
+
+    .podcastCardLabel {
+        align-items: center;
+        color: rgba(0, 0, 0, 0.48);
+        display: inline-flex;
+        font-family: 'Inter';
+        font-size: 12px;
+        font-weight: 600;
+        gap: 4px;
+        line-height: 1;
+
+        img {
+            height: 12px;
+            margin: 0;
+            opacity: 0.68;
+            width: 12px;
+        }
+    }
+
+    .applePodcastLogo {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1;
+        transform: translateY(-0.5px);
+    }
+
+    .podcastCardBody {
+        align-items: center;
+        display: flex;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .podcastArtworkWrap {
+        align-items: center;
+        background: linear-gradient(135deg, #efe7ff, #f9f7ff);
+        border-radius: 8px;
+        display: flex;
+        flex: 0 0 64px;
+        height: 64px;
+        justify-content: center;
+        overflow: hidden;
+        width: 64px;
+    }
+
+    .podcastArtwork,
+    .podcastArtworkFallback {
+        height: 64px;
+        margin: 0;
+        max-height: none;
+        max-width: none;
+        object-fit: cover;
+        width: 64px;
+    }
+
+    .podcastArtworkFallback {
+        height: 26px;
+        object-fit: contain;
+        opacity: 0.72;
+        width: 26px;
+    }
+
+    .podcastLogoArtwork {
+        background: white;
+        box-sizing: border-box;
+        object-fit: contain;
+        padding: 8px;
+    }
+
+    .podcastCardCopy {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-width: 0;
+
+        h4,
+        p {
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 16px;
+            line-clamp: 1;
+            line-height: 20px;
+            -webkit-line-clamp: 1;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.48);
+            font-size: 15px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .podcastMeta {
+        color: rgba(0, 0, 0, 0.48);
+        display: block;
+        font-family: 'Inter';
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 15px;
+    }
+
+    .podcastActions {
+        align-items: center;
+        display: flex;
+        gap: 6px;
+    }
+
+    .podcastPlay {
+        align-items: center;
+        border: 0;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex: 1;
+        font-family: 'Inter';
+        font-size: 15px;
+        font-weight: 700;
+        gap: 7px;
+        height: 32px;
+        justify-content: center;
+        line-height: 1;
+        padding: 0 12px;
+    }
+
+    .podcastPlay {
+        background: #8060D9;
+        color: white;
+        flex: 0 0 calc((100% - 6px) / 2);
+    }
+
     h4 {
         margin: 16px 0;
         font-family: 'Inter';
@@ -175,17 +315,6 @@
         max-height: 45px;
         margin-bottom: -15px;
         transform: translateY(-7.5px);
-    }
-
-    .podcastEmbed {
-        min-height: 152px;
-    }
-
-    .podcastPlaceholder {
-        background: #f8fafc;
-        border-radius: 16px;
-        height: 152px;
-        width: 100%;
     }
 
     .loadMoreSentinel {
