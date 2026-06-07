@@ -69,9 +69,6 @@ function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}
                     <span aria-hidden="true">▶</span>
                     Play
                 </a>
-                <a href={href} target="_blank" rel="noreferrer" className={styles.podcastMore}>
-                    See More ↗
-                </a>
             </div>
         </div>
     );

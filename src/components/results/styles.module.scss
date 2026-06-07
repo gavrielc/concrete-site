@@ -253,8 +253,7 @@
         gap: 6px;
     }
 
-    .podcastPlay,
-    .podcastMore {
+    .podcastPlay {
         align-items: center;
         border: 0;
         border-radius: 5px;
@@ -274,11 +273,7 @@
     .podcastPlay {
         background: #8060D9;
         color: white;
-    }
-
-    .podcastMore {
-        background: rgba(255, 255, 255, 0.68);
-        color: #8060D9;
+        flex: 0 0 calc((100% - 6px) / 2);
     }
 
     h4 {
