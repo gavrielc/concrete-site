@@ -111,8 +111,14 @@ async function loadTestimonials() {
     return testimonials.map((t) => ({...t, logo: {src: t.logo}}));
 }
 
+async function loadHomepageClients() {
+    const logos = await sanityQuery(`*[_id == "homepage"][0].clientLogos[]->{name, website, "logo": logo.asset->url}`);
+    return (logos || []).filter(Boolean).map((c) => ({...c, logo: {src: c.logo}}));
+}
+
 const loaders = {
     clients: loadClients,
+    'homepage-clients': loadHomepageClients,
     team: loadTeam,
     positions: loadPositions,
     testimonials: loadTestimonials,

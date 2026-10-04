@@ -16,6 +16,10 @@ export const structure = (S, context) =>
         .title('Content')
         .items([
             S.listItem()
+                .title('Homepage logos')
+                .icon(HomeIcon)
+                .child(S.document().schemaType('homepage').documentId('homepage').title('Homepage')),
+            S.listItem()
                 .title('Homepage coverage')
                 .icon(HomeIcon)
                 .child(

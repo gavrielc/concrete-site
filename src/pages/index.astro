@@ -3,12 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import results from 'virtual:cms/homepage-results';
-import buildots from '../assets/client-logos/Buildots.webp';
-import band from '../assets/client-logos/Band.svg';
-import scaleops from '../assets/client-logos/scaleops.svg';
-import datarails from '../assets/client-logos/Datarails.png';
-import port from '../assets/client-logos/Port.svg';
-import kumo from '../assets/client-logos/kumo.svg';
+import homepageClients from 'virtual:cms/homepage-clients';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
@@ -40,12 +35,9 @@ import LinkButton from '../components/LinkButton.astro';
 				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
 			</div>
 			<div class="logos">
-				<a class="client" href="https://buildots.com/" target="_blank"><img class="buildots-logo" src={buildots.src} alt="buildots logo"/></a>
-				<a class="client" href="https://www.band.ai/" target="_blank"><img src={band.src} alt="BAND logo"/></a>
-				<a class="client" href="https://scaleops.com/" target="_blank"><img src={scaleops.src} alt="ScaleOps logo"/></a>
-				<a class="client" href="https://www.datarails.com/" target="_blank"><img class="datarails-logo" src={datarails.src} alt="Datarails logo"/></a>
-				<a class="client" href="https://kumo.ai/" target="_blank"><img src={kumo.src} alt="kumo logo"/></a>
-				<a class="client" href="https://www.getport.io/" target="_blank"><img src={port.src} alt="Port logo"/></a>
+				{homepageClients.map((c) => (
+					<a class="client" href={c.website} target="_blank"><img class={`${c.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-logo`} src={c.logo.src} alt={`${c.name} logo`}/></a>
+				))}
 			</div>
 		</section>
 		<section class="section" id="results">
