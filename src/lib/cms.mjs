@@ -75,7 +75,8 @@ async function loadResults() {
                 podcastDate: item.date,
                 podcastDuration: item.duration,
                 podcastHref: item.url,
-                podcastArtwork: item.artwork || item.artworkUrl,
+                // Shown at 64px; request a 2x square from the Sanity image CDN.
+                podcastArtwork: item.artwork ? `${item.artwork}?w=128&h=128&fit=crop&auto=format` : item.artworkUrl,
             });
         }
         return compact({
