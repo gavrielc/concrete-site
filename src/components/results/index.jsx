@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef, useMemo} from 'preact/hooks';
 import styles from './styles.module.scss';
 import classNames from 'classnames/bind';
-import results from './data';
+import results from 'virtual:cms/results';
 import podcast from '../../assets/icons/microphone.svg';
 
 const cn = classNames.bind(styles);

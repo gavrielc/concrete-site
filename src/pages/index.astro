@@ -2,8 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
-import techcrunch from '../assets/publication-logos/techcrunch.png';
-import venturebeat from '../assets/publication-logos/vb.svg';
+import results from 'virtual:cms/homepage-results';
 import buildots from '../assets/client-logos/Buildots.webp';
 import band from '../assets/client-logos/Band.svg';
 import scaleops from '../assets/client-logos/scaleops.svg';
@@ -13,39 +12,7 @@ import kumo from '../assets/client-logos/kumo.svg';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
-import forbes from '../assets/publication-logos/forbes.png';
-import bloomberg from '../assets/publication-logos/bloomberg.png';
 
-const results = [
-    {
-        url: "https://venturebeat.com/orchestration/claudes-next-enterprise-battle-is-not-models-its-the-agent-control-plane",
-        logo: venturebeat,
-        publication: 'VentureBeat',
-        date: 'May 15, 2026',
-        headline: "Claude’s next enterprise battle is not models: it’s the agent control plane",
-    },
-    {
-        url: "https://www.bloomberg.com/news/newsletters/2026-05-10/cfo-pay-surges-even-as-job-security-declines",
-        logo: bloomberg,
-        publication: 'Bloomberg',
-        date: 'May 10, 2026',
-        headline: "CFO Pay Surges Even as Job Security Declines",
-    },
-    {
-        url: "https://www.forbes.com/sites/ronschmelzer/2026/04/14/why-structured-data-may-be-ais-next-enterprise-frontier/",
-        logo: forbes,
-        publication: 'Forbes',
-        date: 'April 14, 2026',
-        headline: "Why Structured Data May Be AI’s Next Enterprise Frontier",
-    },
-    {
-        url: "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/",
-        logo: techcrunch,
-        publication: 'TechCrunch',
-        date: 'March 30, 2026',
-        headline: "ScaleOps raises $130M to improve computing efficiency amid AI demand",
-    },
-];
 
 ---
 <Layout title="Public Relations for tech companies | Concrete Media" subTitle='Concrete Media is a PR agency that secures high-level media coverage for some of the most dynamic tech companies.'>

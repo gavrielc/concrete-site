@@ -6,6 +6,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 import preact from "@astrojs/preact";
 
+// Clients, team and coverage content comes from Sanity at build time
+import cmsContent from "./src/lib/cms.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   server: {
@@ -16,6 +19,9 @@ export default defineConfig({
   site: 'https://concrete.media/',
   integrations: [sitemap(), preact()],
   scopedStyleStrategy: "where",
+  vite: {
+    plugins: [cmsContent()],
+  },
   build: {
     inlineStylesheets: 'always',
   },
