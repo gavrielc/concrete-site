@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity';
 import {icons} from '@sanity/icons';
+import {logoThumb} from './logoThumb';
 
 export const publication = defineType({
     name: 'publication',
@@ -16,5 +17,8 @@ export const publication = defineType({
             validation: (rule) => rule.required(),
         }),
     ],
-    preview: {select: {title: 'name', media: 'logo'}},
+    preview: {
+        select: {title: 'name', logoUrl: 'logo.asset.url'},
+        prepare: ({title, logoUrl}) => ({title, media: logoThumb(logoUrl)}),
+    },
 });

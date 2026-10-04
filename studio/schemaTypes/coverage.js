@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity';
 import {icons} from '@sanity/icons';
+import {logoThumb} from './logoThumb';
 import {coverageCategories} from './options';
 
 const isPodcast = ({document}) => document?.kind === 'podcast';
@@ -127,18 +128,18 @@ export const coverage = defineType({
             show: 'show',
             publication: 'publication.name',
             date: 'date',
-            logo: 'publication.logo',
+            logoUrl: 'publication.logo.asset.url',
             artwork: 'artwork',
             home: 'showOnHomepage',
         },
-        prepare({kind, headline, title, show, publication, date, logo, artwork, home}) {
+        prepare({kind, headline, title, show, publication, date, logoUrl, artwork, home}) {
             const podcast = kind === 'podcast';
             return {
-                title: (podcast ? title : headline) || '(untitled)',
+                title: `${home && !podcast ? '★ ' : ''}${(podcast ? title : headline) || '(untitled)'}`,
                 subtitle: [podcast ? `Podcast: ${show || ''}` : publication, date, home ? '★ Homepage' : null]
                     .filter(Boolean)
                     .join(' · '),
-                media: podcast ? artwork : logo,
+                media: podcast ? artwork : logoThumb(logoUrl),
             };
         },
     },

@@ -1,6 +1,7 @@
 import {defineField, defineType} from 'sanity';
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list';
 import {icons} from '@sanity/icons';
+import {logoThumb} from './logoThumb';
 import {clientCategories} from './options';
 
 export const client = defineType({
@@ -42,5 +43,8 @@ export const client = defineType({
         }),
         orderRankField({type: 'client'}),
     ],
-    preview: {select: {title: 'name', subtitle: 'website', media: 'logo'}},
+    preview: {
+        select: {title: 'name', subtitle: 'website', logoUrl: 'logo.asset.url'},
+        prepare: ({title, subtitle, logoUrl}) => ({title, subtitle, media: logoThumb(logoUrl)}),
+    },
 });
