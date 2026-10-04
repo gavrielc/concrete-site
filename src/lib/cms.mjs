@@ -152,13 +152,19 @@ async function loadPages() {
     const pages = await sanityQuery(`*[_type == "page" && _id match "page-*" && !(_id in path("drafts.**"))]{
         _id, heading, intro, seoTitle, seoDescription,
         positionsHeading, bannerText, benefitsHeading, benefitsButtonLabel,
+        email, "offices": offices[]{name, address, map},
         "banner": bannerImage.asset->{url, "width": metadata.dimensions.width, "height": metadata.dimensions.height},
         "benefits": benefits[]{title, text, "icon": icon.asset->url}
     }`);
     return Object.fromEntries(
         pages.map((p) => [
             p._id.replace(/^page-/, ''),
-            {...p, intro: introHtml(p.intro)},
+            {
+                ...p,
+                intro: introHtml(p.intro),
+                // The map field accepts the embed link or the whole <iframe> code from Google Maps.
+                offices: (p.offices || []).map((o) => ({...o, mapSrc: o.map?.match(/src="([^"]+)"/)?.[1] || o.map?.trim()})),
+            },
         ])
     );
 }

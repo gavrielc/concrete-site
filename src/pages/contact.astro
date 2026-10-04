@@ -10,17 +10,19 @@ import pages from "virtual:cms/pages";
 >
     <section class='contact-hero'>
         <h3>{pages.contact.heading}</h3>
-        <a class="email-button" href="mailto:zack@concrete.media">zack@concrete.media</a>
+        <a class="email-button" href={`mailto:${pages.contact.email}`}>{pages.contact.email}</a>
     </section>
     <section class="offices">
-        <div class="office-location">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54282.40533331481!2d35.18313544691752!3d31.752743999999993!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502d7e1c8c8b099%3A0xfd0c5f7c7184d7be!2sGeneral%20Pierre%20Koenig%20St%2028%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1694523121272!5m2!1sen!2sil" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="location-desc">
-                <img src={bullet.src} alt="" />
-                <p class="name">Jerusalem office</p>
-                <p class="address">General Pierre Koenig St 28, Jerusalem</p>
+        {pages.contact.offices.map((office) => (
+            <div class="office-location">
+                {office.mapSrc && <iframe src={office.mapSrc} width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Map of ${office.name}`}></iframe>}
+                <div class="location-desc">
+                    <img src={bullet.src} alt="" />
+                    <p class="name">{office.name}</p>
+                    <p class="address">{office.address}</p>
+                </div>
             </div>
-        </div>
+        ))}
     </section>
 </PageLayout>
 

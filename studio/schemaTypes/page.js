@@ -6,6 +6,55 @@ import {icons} from '@sanity/icons';
 const isHome = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-home';
 const isContact = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-contact';
 const notJoinUs = ({document}) => document?._id?.replace(/^drafts\./, '') !== 'page-joinUs';
+const notContact = (ctx) => !isContact(ctx);
+
+// Accepts either the embed link or the whole <iframe …> code copied from Google Maps.
+export const mapEmbedSrc = (value) => value?.match(/src="([^"]+)"/)?.[1] || value?.trim();
+
+// Extra sections that only exist on the Contact page.
+const contactFields = [
+    defineField({
+        name: 'email',
+        title: 'Contact email',
+        type: 'email',
+        group: 'contact',
+        description: 'Shown on the purple button; clicking it opens an email to this address.',
+        hidden: notContact,
+    }),
+    defineField({
+        name: 'offices',
+        title: 'Offices',
+        type: 'array',
+        group: 'contact',
+        description: 'Each office shows a map with its name and address. Drag to reorder.',
+        hidden: notContact,
+        of: [
+            defineArrayMember({
+                type: 'object',
+                name: 'office',
+                fields: [
+                    defineField({name: 'name', title: 'Office name', type: 'string', validation: (rule) => rule.required()}),
+                    defineField({name: 'address', title: 'Address', type: 'string', validation: (rule) => rule.required()}),
+                    defineField({
+                        name: 'map',
+                        title: 'Google Maps embed',
+                        type: 'text',
+                        rows: 3,
+                        description:
+                            'In Google Maps: search the address → Share → "Embed a map" → "Copy HTML", and paste it here.',
+                        validation: (rule) =>
+                            rule.custom((value) =>
+                                !value || mapEmbedSrc(value)?.startsWith('https://www.google.com/maps/embed')
+                                    ? true
+                                    : 'Paste the code from Google Maps → Share → "Embed a map".'
+                            ),
+                    }),
+                ],
+                preview: {select: {title: 'name', subtitle: 'address'}},
+            }),
+        ],
+    }),
+];
 
 // Extra sections that only exist on the Join Us page.
 const joinUsFields = [
@@ -78,6 +127,7 @@ export const page = defineType({
     groups: [
         {name: 'content', title: 'Page text', default: true},
         {name: 'joinUs', title: 'Join Us sections', hidden: notJoinUs},
+        {name: 'contact', title: 'Contact details', hidden: notContact},
         {name: 'seo', title: 'SEO (Google)'},
     ],
     fields: [
@@ -107,6 +157,7 @@ export const page = defineType({
             ],
         }),
         ...joinUsFields,
+        ...contactFields,
         defineField({
             name: 'seoTitle',
             title: 'SEO title',
