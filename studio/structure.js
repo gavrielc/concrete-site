@@ -1,7 +1,7 @@
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list';
 import {icons} from '@sanity/icons';
 
-const {users: UsersIcon, tags: TagsIcon, 'document-text': DocumentTextIcon, book: BookIcon} = icons;
+const {users: UsersIcon, tags: TagsIcon, 'document-text': DocumentTextIcon, book: BookIcon, case: CaseIcon} = icons;
 
 export const structure = (S, context) =>
     S.list()
@@ -26,4 +26,5 @@ export const structure = (S, context) =>
             S.divider(),
             orderableDocumentListDeskItem({type: 'client', title: 'Clients', icon: TagsIcon, S, context}),
             orderableDocumentListDeskItem({type: 'teamMember', title: 'Team', icon: UsersIcon, S, context}),
+            orderableDocumentListDeskItem({type: 'jobPosition', title: 'Open positions', icon: CaseIcon, S, context}),
         ]);

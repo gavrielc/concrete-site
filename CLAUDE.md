@@ -1,12 +1,12 @@
 # Content (Sanity CMS)
 
-Clients, team members and media coverage (results) are managed in **Sanity**, not in this repo.
+Clients, team members, media coverage (results) and open positions are managed in **Sanity**, not in this repo.
 
 - Studio (where the team edits content): https://concrete-media.sanity.studio/
 - Sanity project ID `o458gxs0`, dataset `production`
 - Studio source code: `studio/` (schemas in `studio/schemaTypes/`)
 
-To add or change a client, team member or coverage item, edit it in the Studio. Do not add content to the code.
+To add or change a client, team member, coverage item or open position, edit it in the Studio. Do not add content to the code.
 
 ## How the site gets the content
 
@@ -18,6 +18,7 @@ To add or change a client, team member or coverage item, edit it in the Studio. 
 | `virtual:cms/team` | `src/pages/team.astro` |
 | `virtual:cms/results` | `src/components/results/index.jsx` (Coverage page) |
 | `virtual:cms/homepage-results` | `src/pages/index.astro` (4 newest coverage items with "Show on homepage") |
+| `virtual:cms/positions` | `src/pages/join-us.astro` (open positions with "Show on website" on) |
 
 Publishing in Sanity triggers a Netlify rebuild (Sanity webhook → Netlify build hook). In local dev, restart the dev server to pick up new content.
 

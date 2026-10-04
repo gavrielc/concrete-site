@@ -97,9 +97,16 @@ async function loadResults() {
     return [...articles, ...podcasts].map(toResult);
 }
 
+async function loadPositions() {
+    return sanityQuery(`*[_type == "jobPosition" && isOpen != false] | order(orderRank) {
+        title, location, overview, applyEmail, "sections": sections[]{heading, points}
+    }`);
+}
+
 const loaders = {
     clients: loadClients,
     team: loadTeam,
+    positions: loadPositions,
     results: loadResults,
     'homepage-results': async () => (await load('results')).filter((r) => r.showOnHomepage && r.logo).slice(0, 4),
 };

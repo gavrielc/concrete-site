@@ -6,6 +6,7 @@ import compensationIcon from "../assets/icons/compensation.svg";
 import transparencyIcon from "../assets/icons/transparency.svg";
 import supportIcon from "../assets/icons/support.svg";
 import cultureIcon from "../assets/icons/culture.svg";
+import positions from "virtual:cms/positions";
 import clientsIcon from "../assets/icons/clients.svg";
 
 
@@ -19,75 +20,33 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
     title="Do PR at the highest level with top tech startups."
     subTitle={`We deliver top-tier Public Relations services to the brightest and most innovative tech startups. By joining us, you have the opportunity to impact the narrative and success of some of the world's most dynamic tech companies.`}
 >
-    <section class="positions">
+    {positions.length > 0 && (<section class="positions">
         <h3>Open positions</h3>
         <div class="card-wrapper">
-            <div class="card">
-                <div class="job-title">New Media Manager</div>
-                <div class="location txt">Jerusalem - Hybrid</div>
-                <details class="job-details">
-                    <summary class="txt">View Role Description</summary>
-                    <div class="job-description">
-                        <h5>Role Overview</h5>
-                        <p>As a New Media Manager, you'll be responsible for managing key media channels, including podcasts, analyst outreach, and awards across multiple client accounts. You'll develop deep knowledge of client companies, their products, spaces, and executives while helping shape their public narrative.</p>
-                        
-                        <h5>What Makes a Great New Media Manager?</h5>
-                        <ul>
-                            <li>Strong communication and organizational abilities demonstrated through previous experience</li>
-                            <li>Native-level English with exceptional writing capabilities</li>
-                            <li>Quick learner who can adapt to various technology spaces</li>
-                            <li>Creative approach to problem-solving and content creation</li>
-                            <li>Genuine enthusiasm for technology and current events</li>
-                            <li>Drive to contribute to the success of Israeli startups</li>
-                        </ul>
-                        
-                        <h5>What You'll Do</h5>
-                        <ul>
-                            <li>Develop and execute media strategies across multiple channels</li>
-                            <li>Manage podcast appearances and speaking opportunities</li>
-                            <li>Coordinate award submissions and analyst relations</li>
-                            <li>Create compelling narratives that align with client objectives</li>
-                            <li>Track and report on media coverage and campaign success</li>
-                        </ul>
-                    </div>
-                </details>
-                <LinkButton class="apply-btn" href="mailto:careers@concrete.media?subject=Application for New Media Manager Position" type='hollow' openInNewWindow>Apply now</LinkButton>
-              </div>
+            {positions.map((job) => (
               <div class="card">
-                <div class="job-title">Senior Account Manager</div>
-                <div class="location txt">Jerusalem - Hybrid</div>
+                <div class="job-title">{job.title}</div>
+                <div class="location txt">{job.location}</div>
                 <details class="job-details">
                     <summary class="txt">View Role Description</summary>
                     <div class="job-description">
                         <h5>Role Overview</h5>
-                        <p>As a Senior Account Manager, you'll be a driving force behind major stories for some of the most exciting Israeli and international tech startups. You'll apply your media expertise to secure valuable results across multiple client accounts, from creating media strategies to writing press releases and pitching journalists. Working with our team of technology and media experts, you'll have the freedom to execute strategic and creative decisions while receiving strong support.</p>
-                        
-                        <h5>What Makes a Great Senior Account Manager?</h5>
-                        <ul>
-                            <li>Native-level English with strong writing capabilities</li>
-                            <li>At least two years experience in tech PR or startup communications</li>
-                            <li>Proven track record of delivering high-level media results</li>
-                            <li>Strong interpersonal skills and leadership in collaborative projects</li>
-                            <li>Creative thinking and problem-solving abilities</li>
-                            <li>Passion for technology and current events</li>
-                            <li>Drive to impact the success of promising Israeli startups</li>
-                        </ul>
-                        
-                        <h5>What You'll Do</h5>
-                        <ul>
-                            <li>Craft compelling press releases and effective media pitches</li>
-                            <li>Lead media outreach and secure valuable coverage</li>
-                            <li>Collaborate with executives to define PR and media strategy</li>
-                            <li>Serve as the main point of contact for company executives</li>
-                            <li>Handle client communications and set realistic expectations</li>
-                            <li>Execute strategic and creative decisions with team support</li>
-                        </ul>
+                        <p>{job.overview}</p>
+                        {(job.sections || []).map((section) => (
+                          <>
+                            <h5>{section.heading}</h5>
+                            <ul>
+                                {(section.points || []).map((point) => <li>{point}</li>)}
+                            </ul>
+                          </>
+                        ))}
                     </div>
                 </details>
-                <LinkButton class="apply-btn" href="mailto:careers@concrete.media?subject=Application for Senior Account Manager Position" type='hollow' openInNewWindow>Apply now</LinkButton>
+                <LinkButton class="apply-btn" href={`mailto:${job.applyEmail}?subject=Application for ${job.title} Position`} type='hollow' openInNewWindow>Apply now</LinkButton>
               </div>
+            ))}
         </div>
-    </section>
+    </section>)}
     <section class="hero-section">
         <div class="hero">
           We strongly believe that Public Relations, when done with skill and passion, can serve as a fulfilling long-term career. We take an approach that values our team members as much as our clients.
