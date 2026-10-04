@@ -1,11 +1,15 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import bullet from '../assets/icons/bullet.svg';
+import pages from "virtual:cms/pages";
 ---
 
-<PageLayout pageTitle="Contact | Public Relations for serious tech companies | Concrete Media">
+<PageLayout
+    pageTitle={pages.contact.seoTitle}
+    description={pages.contact.seoDescription}
+>
     <section class='contact-hero'>
-        <h3>Let's connect to discuss your PR needs</h3>
+        <h3>{pages.contact.heading}</h3>
         <a class="email-button" href="mailto:zack@concrete.media">zack@concrete.media</a>
     </section>
     <section class="offices">

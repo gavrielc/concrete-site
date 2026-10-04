@@ -116,7 +116,37 @@ async function loadHomepageClients() {
     return (logos || []).filter(Boolean).map((c) => ({...c, logo: {src: c.logo}}));
 }
 
+const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Portable Text paragraphs -> the HTML the page intros used before ("<b>" for bold, "<br><br>" between paragraphs).
+function introHtml(blocks) {
+    return (blocks || [])
+        .map((block) =>
+            (block.children || [])
+                .map((span) => {
+                    let html = escapeHtml(span.text || '');
+                    if (span.marks?.includes('em')) html = `<i>${html}</i>`;
+                    if (span.marks?.includes('strong')) html = `<b>${html}</b>`;
+                    return html;
+                })
+                .join('')
+        )
+        .join('<br><br>');
+}
+
+// Page headings, intros and SEO, keyed by page: {home, coverage, clients, team, joinUs, contact}.
+async function loadPages() {
+    const pages = await sanityQuery(`*[_type == "page" && _id match "page-*" && !(_id in path("drafts.**"))]{_id, heading, intro, seoTitle, seoDescription}`);
+    return Object.fromEntries(
+        pages.map((p) => [
+            p._id.replace(/^page-/, ''),
+            {heading: p.heading, intro: introHtml(p.intro), seoTitle: p.seoTitle, seoDescription: p.seoDescription},
+        ])
+    );
+}
+
 const loaders = {
+    pages: loadPages,
     clients: loadClients,
     'homepage-clients': loadHomepageClients,
     team: loadTeam,

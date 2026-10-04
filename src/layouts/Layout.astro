@@ -6,12 +6,13 @@ import '@fontsource/outfit/600.css';
 
 export interface Props {
 	title: string;
-	subTitle: string;
+	subTitle?: string;
+	description?: string;
 	canonicalUrl?: string;
 	noIndex?: boolean;
 }
 
-const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
+const { title, subTitle, description = subTitle, canonicalUrl, noIndex } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,8 +23,8 @@ const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={subTitle}>
-		<meta property="og:description" content={subTitle}>
+		<meta name="description" content={description}>
+		<meta property="og:description" content={description}>
 		<meta property="og:title" content={title}>
 		<meta property="og:image" content="https://concrete.media/social1.png">
 		<meta property="og:site_name" content="Concrete Media">

@@ -5,5 +5,6 @@ import {teamMember} from './teamMember';
 import {jobPosition} from './jobPosition';
 import {testimonial} from './testimonial';
 import {homepage} from './homepage';
+import {page} from './page';
 
-export const schemaTypes = [coverage, publication, client, teamMember, jobPosition, testimonial, homepage];
+export const schemaTypes = [coverage, publication, client, teamMember, jobPosition, testimonial, homepage, page];

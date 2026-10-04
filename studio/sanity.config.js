@@ -11,11 +11,11 @@ export default defineConfig({
     plugins: [structureTool({structure})],
     schema: {
         types: schemaTypes,
-        // The homepage is a single document edited from the menu; don't offer it under "Create new".
-        templates: (templates) => templates.filter(({schemaType}) => schemaType !== 'homepage'),
+        // Homepage and page texts are fixed documents edited from the menu; don't offer it under "Create new".
+        templates: (templates) => templates.filter(({schemaType}) => !['homepage', 'page'].includes(schemaType)),
     },
     document: {
         actions: (actions, {schemaType}) =>
-            schemaType === 'homepage' ? actions.filter(({action}) => !['delete', 'duplicate', 'unpublish'].includes(action)) : actions,
+            ['homepage', 'page'].includes(schemaType) ? actions.filter(({action}) => !['delete', 'duplicate', 'unpublish'].includes(action)) : actions,
     },
 });

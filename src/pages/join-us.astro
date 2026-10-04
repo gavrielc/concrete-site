@@ -7,6 +7,7 @@ import transparencyIcon from "../assets/icons/transparency.svg";
 import supportIcon from "../assets/icons/support.svg";
 import cultureIcon from "../assets/icons/culture.svg";
 import positions from "virtual:cms/positions";
+import pages from "virtual:cms/pages";
 import clientsIcon from "../assets/icons/clients.svg";
 
 
@@ -16,9 +17,10 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
 ---
 
 <PageLayout
-    pageTitle="Join us | Public Relations for serious tech companies | concrete.media"
-    title="Do PR at the highest level with top tech startups."
-    subTitle={`We deliver top-tier Public Relations services to the brightest and most innovative tech startups. By joining us, you have the opportunity to impact the narrative and success of some of the world's most dynamic tech companies.`}
+    pageTitle={pages.joinUs.seoTitle}
+    description={pages.joinUs.seoDescription}
+    title={pages.joinUs.heading}
+    subTitle={pages.joinUs.intro}
 >
     {positions.length > 0 && (<section class="positions">
         <h3>Open positions</h3>

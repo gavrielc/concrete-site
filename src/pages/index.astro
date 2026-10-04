@@ -4,13 +4,14 @@ import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import results from 'virtual:cms/homepage-results';
 import homepageClients from 'virtual:cms/homepage-clients';
+import pages from 'virtual:cms/pages';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 
 ---
-<Layout title="Public Relations for tech companies | Concrete Media" subTitle='Concrete Media is a PR agency that secures high-level media coverage for some of the most dynamic tech companies.'>
+<Layout title={pages.home.seoTitle} description={pages.home.seoDescription}>
 	<Header class="home-sticky-header"/>
 	<main>
 		<div class="hero">

@@ -2,15 +2,17 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import TeamCard from "../components/TeamCard.astro";
 import team from "virtual:cms/team";
+import pages from "virtual:cms/pages";
 
 
 
 ---
 
 <PageLayout
-    pageTitle="Our team | Public Relations for serious tech companies | concrete.media"
-    title="There are six PR professionals for every reporter, so your PR firm has to be elite to get the earned media results you need to rise above the noise."
-    subTitle={`Concrete Media is fluent in technology and media. We get what you're doing and know how to communicate it to reporters. We become an extension of your team, absorbing every development in your company and the industry to proactively craft stories that will get you in the news.`}
+    pageTitle={pages.team.seoTitle}
+    description={pages.team.seoDescription}
+    title={pages.team.heading}
+    subTitle={pages.team.intro}
 >
     <section class="team">
         {team.map((e) => <TeamCard {...e}/>)}

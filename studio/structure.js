@@ -9,13 +9,24 @@ const {
     case: CaseIcon,
     home: HomeIcon,
     comment: CommentIcon,
+    document: PageIcon,
+    envelope: EnvelopeIcon,
 } = icons;
+
+// Fixed "page" documents, one per website page (see schemaTypes/page.js).
+const pageText = (S, id, title, icon = PageIcon) =>
+    S.listItem()
+        .id(id)
+        .title(title)
+        .icon(icon)
+        .child(S.document().schemaType('page').documentId(id).title(title));
 
 export const structure = (S, context) =>
     S.list()
         .title('Content')
-        // Grouped by website page: Homepage | Coverage | Clients | Team & Join Us.
+        // Grouped by website page: Homepage | Coverage | Clients | Team & Join Us | Contact.
         .items([
+            pageText(S, 'page-home', 'Homepage SEO', HomeIcon),
             S.listItem()
                 .title('Homepage logos')
                 .icon(HomeIcon)
@@ -32,6 +43,7 @@ export const structure = (S, context) =>
                         .defaultOrdering([{field: 'date', direction: 'desc'}])
                 ),
             S.divider(),
+            pageText(S, 'page-coverage', 'Coverage page text'),
             S.listItem()
                 .title('Coverage (Results)')
                 .icon(DocumentTextIcon)
@@ -49,9 +61,14 @@ export const structure = (S, context) =>
                         .defaultOrdering([{field: 'name', direction: 'asc'}])
                 ),
             S.divider(),
+            pageText(S, 'page-clients', 'Clients page text'),
             orderableDocumentListDeskItem({type: 'client', title: 'Clients', icon: TagsIcon, S, context}),
             orderableDocumentListDeskItem({type: 'testimonial', title: 'Testimonials', icon: CommentIcon, S, context}),
             S.divider(),
+            pageText(S, 'page-team', 'Team page text'),
             orderableDocumentListDeskItem({type: 'teamMember', title: 'Team', icon: UsersIcon, S, context}),
+            pageText(S, 'page-joinUs', 'Join Us page text'),
             orderableDocumentListDeskItem({type: 'jobPosition', title: 'Open positions', icon: CaseIcon, S, context}),
+            S.divider(),
+            pageText(S, 'page-contact', 'Contact page text', EnvelopeIcon),
         ]);
