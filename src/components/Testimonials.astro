@@ -1,12 +1,13 @@
 ---
 import TestimonialCard from "./TestimonialCard.astro";
 import testimonials from "virtual:cms/testimonials";
+import home from "virtual:cms/homepage";
 
 
 ---
 
 <section class="testimonials" id="testimonials">
-    <h3>What our clients say</h3>
+    <h3>{home.testimonialsHeading}</h3>
     <div class="cards-wrapper">
         {testimonials.map(t => <TestimonialCard {...t} />)}
     </div>

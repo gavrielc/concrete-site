@@ -111,12 +111,25 @@ async function loadTestimonials() {
     return testimonials.map((t) => ({...t, logo: {src: t.logo}}));
 }
 
+const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 async function loadHomepageClients() {
     const logos = await sanityQuery(`*[_id == "homepage"][0].clientLogos[]->{name, website, "logo": logo.asset->url}`);
     return (logos || []).filter(Boolean).map((c) => ({...c, logo: {src: c.logo}}));
 }
 
-const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Homepage section texts and images (the client logos are loaded separately above).
+async function loadHomepage() {
+    const home = await sanityQuery(`*[_id == "homepage"][0]{
+        heroText, "heroImage": heroImage.asset->url,
+        clientsHeading, clientsButtonLabel,
+        coverageHeading, coverageText, coverageButtonLabel,
+        testimonialsHeading,
+        "joinUsImage": joinUsImage.asset->url, joinUsImageAlt, joinUsHeading, joinUsText, joinUsButtonLabel
+    }`);
+    // Line breaks in the tagline become <br>
+    return {...home, heroHtml: escapeHtml(home?.heroText || '').replace(/\n/g, '<br>')};
+}
 
 // Portable Text paragraphs -> the HTML the page intros used before ("<b>" for bold, "<br><br>" between paragraphs).
 function introHtml(blocks) {
@@ -154,6 +167,7 @@ const loaders = {
     pages: loadPages,
     clients: loadClients,
     'homepage-clients': loadHomepageClients,
+    homepage: loadHomepage,
     team: loadTeam,
     positions: loadPositions,
     testimonials: loadTestimonials,

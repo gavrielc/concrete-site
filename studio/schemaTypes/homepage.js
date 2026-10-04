@@ -2,17 +2,46 @@ import {defineArrayMember, defineField, defineType} from 'sanity';
 import {icons} from '@sanity/icons';
 
 // Singleton (document ID "homepage"); see structure.js and sanity.config.js.
+// The homepage's SEO title/description live in the "page-home" document.
 export const homepage = defineType({
     name: 'homepage',
     title: 'Homepage',
     type: 'document',
     icon: icons.home,
+    groups: [
+        {name: 'hero', title: 'Top banner', default: true},
+        {name: 'clients', title: 'Clients'},
+        {name: 'coverage', title: 'Coverage'},
+        {name: 'testimonials', title: 'Testimonials'},
+        {name: 'joinUs', title: 'Join us'},
+    ],
     fields: [
+        // Top banner
+        defineField({
+            name: 'heroText',
+            title: 'Tagline',
+            type: 'text',
+            rows: 2,
+            group: 'hero',
+            description: 'The white text under the logo. Press Enter for a line break.',
+        }),
+        defineField({
+            name: 'heroImage',
+            title: 'Background photo',
+            type: 'image',
+            group: 'hero',
+            description: 'Full-screen photo behind the logo (a purple tint is added on top).',
+        }),
+
+        // Clients
+        defineField({name: 'clientsHeading', title: 'Heading', type: 'string', group: 'clients'}),
+        defineField({name: 'clientsButtonLabel', title: 'Button label', type: 'string', group: 'clients', description: 'Links to the Clients page.'}),
         defineField({
             name: 'clientLogos',
             title: 'Client logos',
             type: 'array',
-            description: 'The client logos next to "The most dynamic tech companies…". Drag to reorder. Best with 6 (two rows of 3).',
+            group: 'clients',
+            description: 'Drag to reorder. Best with 6 (two rows of 3).',
             of: [defineArrayMember({type: 'reference', to: [{type: 'client'}]})],
             validation: (rule) => [
                 rule.max(6).error('The homepage has room for up to 6 logos.'),
@@ -20,6 +49,39 @@ export const homepage = defineType({
                 rule.custom((logos) => (logos?.length === 6 ? true : 'The layout looks best with exactly 6 logos.')).warning(),
             ],
         }),
+
+        // Coverage
+        defineField({name: 'coverageHeading', title: 'Heading', type: 'string', group: 'coverage'}),
+        defineField({name: 'coverageText', title: 'Text', type: 'text', rows: 3, group: 'coverage'}),
+        defineField({
+            name: 'coverageButtonLabel',
+            title: 'Button label',
+            type: 'string',
+            group: 'coverage',
+            description: 'Links to the Coverage page. The 4 cards are chosen under "Homepage coverage".',
+        }),
+
+        // Testimonials
+        defineField({
+            name: 'testimonialsHeading',
+            title: 'Heading',
+            type: 'string',
+            group: 'testimonials',
+            description: 'Also used above the testimonials on the Clients page.',
+        }),
+
+        // Join us
+        defineField({name: 'joinUsImage', title: 'Photo', type: 'image', group: 'joinUs'}),
+        defineField({
+            name: 'joinUsImageAlt',
+            title: 'Photo description',
+            type: 'string',
+            group: 'joinUs',
+            description: 'Describes the photo for screen readers and Google.',
+        }),
+        defineField({name: 'joinUsHeading', title: 'Heading', type: 'string', group: 'joinUs'}),
+        defineField({name: 'joinUsText', title: 'Text', type: 'text', rows: 3, group: 'joinUs'}),
+        defineField({name: 'joinUsButtonLabel', title: 'Button label', type: 'string', group: 'joinUs', description: 'Links to the Join Us page.'}),
     ],
     preview: {prepare: () => ({title: 'Homepage'})},
 });

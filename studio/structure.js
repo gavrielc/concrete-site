@@ -26,11 +26,11 @@ export const structure = (S, context) =>
         .title('Content')
         // Grouped by website page: Homepage | Coverage | Clients | Team & Join Us | Contact.
         .items([
-            pageText(S, 'page-home', 'Homepage SEO', HomeIcon),
             S.listItem()
-                .title('Homepage logos')
+                .title('Homepage')
                 .icon(HomeIcon)
                 .child(S.document().schemaType('homepage').documentId('homepage').title('Homepage')),
+            pageText(S, 'page-home', 'Homepage SEO', HomeIcon),
             S.listItem()
                 .title('Homepage coverage')
                 .icon(HomeIcon)

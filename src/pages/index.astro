@@ -5,16 +5,17 @@ import ResultCard from '../components/ResultCard.astro';
 import results from 'virtual:cms/homepage-results';
 import homepageClients from 'virtual:cms/homepage-clients';
 import pages from 'virtual:cms/pages';
+import home from 'virtual:cms/homepage';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
-
+const heroImage = home.heroImage ? `url(${home.heroImage})` : "none";
 ---
 <Layout title={pages.home.seoTitle} description={pages.home.seoDescription}>
 	<Header class="home-sticky-header"/>
 	<main>
-		<div class="hero">
+		<div class="hero" style={`--heroImage: ${heroImage}`}>
 			<Header inline={true} class="home-inline-header"/>
 			<svg class="hero-logo" width="1216" height="122" viewBox="0 0 1216 122" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svg-title" role="img">
 				<title id="svg-title">Concrete Media logo</title>
@@ -28,12 +29,12 @@ import LinkButton from '../components/LinkButton.astro';
 				<path d="M576.109 121C552.261 121 538.024 107.031 538.024 83.6342V11.7993H563.862V30.5933H594.667V52.5465H563.862V82.9176C563.862 92.2338 569.294 97.8054 578.401 97.8054C583.682 97.8054 590.103 96.0996 594.021 93.6469L594.667 93.2432V116.579L594.475 116.7C589.528 119.87 581.491 120.99 576.119 120.99L576.109 121Z" fill="white"/>
 				<path d="M664.203 90.3162C659.892 95.908 655.247 98.6231 648.059 98.6231C637.184 98.6231 628.713 91.911 627.28 81.8478H693.777C694.261 79.4456 694.413 77.3764 694.413 74.8127C694.413 47.3283 674.108 26.3945 647.574 26.3945C621.04 26.3945 601.058 48.4487 601.058 74.0153C601.058 99.582 622.484 121 648.059 121C663.436 121 677.077 113.329 686.154 99.8545L664.203 90.3162ZM647.574 48.7616C657.802 48.7616 665.799 54.8378 667.878 63.9421H627.593C629.673 54.5148 637.982 48.7616 647.574 48.7616Z" fill="white"/>
 			</svg>
-			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
+			<h2 set:html={home.heroHtml}/>
 		</div>
 		<section class="section" id="clients">
 			<div class='clients-content-wrapper'>
-				<h3>The most dynamic tech companies turn to Concrete to promote them globally.</h3>
-				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
+				<h3>{home.clientsHeading}</h3>
+				<LinkButton href="/clients" type='hollow'>{home.clientsButtonLabel}</LinkButton>
 			</div>
 			<div class="logos">
 				{homepageClients.map((c) => (
@@ -46,18 +47,18 @@ import LinkButton from '../components/LinkButton.astro';
 				{results.map(r => <ResultCard {...r}/>)}
 			</ul>
 			<div class="results-desc">
-				<h3>Media coverage that makes an impact</h3>
-				<p class="desc-text">We specialize in maximizing the media coverage for your big announcements and in proactively creating continuous results between the major stories.</p>
-				<LinkButton href="/results" type='hollow'>See more coverage</LinkButton>
+				<h3>{home.coverageHeading}</h3>
+				<p class="desc-text">{home.coverageText}</p>
+				<LinkButton href="/results" type='hollow'>{home.coverageButtonLabel}</LinkButton>
 			</div>
 		</section>
 		<Testimonials />
 		<section class="section" id="team">
 			<div>
-				<img src="/team1.webp" alt="The team at concrete media working in the Jerusalem, Israel office of their B2B tech Public Relations agency."/>
-				<h3>Join us</h3>
-				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest companies.</p>
-				<LinkButton href="/join-us">See open positions</LinkButton>
+				{home.joinUsImage && <img src={home.joinUsImage} alt={home.joinUsImageAlt || ""}/>}
+				<h3>{home.joinUsHeading}</h3>
+				<p class="desc-text">{home.joinUsText}</p>
+				<LinkButton href="/join-us">{home.joinUsButtonLabel}</LinkButton>
 			</div>
 		</section>
 		<Footer />
@@ -122,7 +123,7 @@ import LinkButton from '../components/LinkButton.astro';
 	}
 
 	.hero {
-		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-32.webp);
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), var(--heroImage);
 		background-size: cover;
 		background-position: center;
 		height: 100vh;
