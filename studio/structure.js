@@ -8,6 +8,7 @@ const {
     book: BookIcon,
     case: CaseIcon,
     home: HomeIcon,
+    comment: CommentIcon,
 } = icons;
 
 export const structure = (S, context) =>
@@ -43,6 +44,7 @@ export const structure = (S, context) =>
                 ),
             S.divider(),
             orderableDocumentListDeskItem({type: 'client', title: 'Clients', icon: TagsIcon, S, context}),
+            orderableDocumentListDeskItem({type: 'testimonial', title: 'Testimonials', icon: CommentIcon, S, context}),
             orderableDocumentListDeskItem({type: 'teamMember', title: 'Team', icon: UsersIcon, S, context}),
             orderableDocumentListDeskItem({type: 'jobPosition', title: 'Open positions', icon: CaseIcon, S, context}),
         ]);

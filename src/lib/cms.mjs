@@ -103,10 +103,19 @@ async function loadPositions() {
     }`);
 }
 
+async function loadTestimonials() {
+    const testimonials = await sanityQuery(`*[_type == "testimonial" && isVisible != false] | order(orderRank) {
+        "text": quote, name, title, "company": client->name,
+        "logo": coalesce(logoOverride.asset->url, client->logo.asset->url)
+    }`);
+    return testimonials.map((t) => ({...t, logo: {src: t.logo}}));
+}
+
 const loaders = {
     clients: loadClients,
     team: loadTeam,
     positions: loadPositions,
+    testimonials: loadTestimonials,
     results: loadResults,
     'homepage-results': async () => (await load('results')).filter((r) => r.showOnHomepage && r.logo).slice(0, 4),
 };
