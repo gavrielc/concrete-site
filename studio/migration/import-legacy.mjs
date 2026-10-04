@@ -54,14 +54,11 @@ function isoDate(value) {
 }
 
 async function createAll(docs) {
-    const ids = [];
     for (let i = 0; i < docs.length; i += 50) {
         const tx = client.transaction();
         docs.slice(i, i + 50).forEach((doc) => tx.create(doc));
-        const {results} = await tx.commit({visibility: 'async'});
-        ids.push(...results.map((r) => r.id));
+        await tx.commit({visibility: 'sync'});
     }
-    return ids;
 }
 
 function ranks(count) {
@@ -97,11 +94,14 @@ await uploadAll([
 ]);
 console.log(`Uploaded ${assetIds.size} images.`);
 
-const publicationIds = await createAll(
-    publicationLogos.map(([name, logo]) => ({_type: 'publication', name, logo: image(logo)}))
-);
-const publicationByName = new Map(publicationLogos.map(([name], i) => [name, publicationIds[i]]));
-console.log(`Created ${publicationIds.length} publications.`);
+await createAll(publicationLogos.map(([name, logo]) => ({_type: 'publication', name, logo: image(logo)})));
+// Look the new documents up by name; transaction results are not guaranteed to be in creation order.
+const createdPublications = await client.fetch('*[_type == "publication"]{_id, name}', {}, {perspective: 'raw'});
+const publicationByName = new Map(createdPublications.map((p) => [p.name, p._id]));
+if (publicationByName.size !== publicationLogos.length) {
+    throw new Error(`Expected ${publicationLogos.length} publications, found ${publicationByName.size}`);
+}
+console.log(`Created ${publicationByName.size} publications.`);
 
 const clientRanks = ranks(clients.length);
 await createAll(
