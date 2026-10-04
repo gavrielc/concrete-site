@@ -1,18 +1,13 @@
 ---
 import LinkButton from "../components/LinkButton.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import teamPicture from "../assets/team.jpeg";
-import compensationIcon from "../assets/icons/compensation.svg";
-import transparencyIcon from "../assets/icons/transparency.svg";
-import supportIcon from "../assets/icons/support.svg";
-import cultureIcon from "../assets/icons/culture.svg";
 import positions from "virtual:cms/positions";
 import pages from "virtual:cms/pages";
-import clientsIcon from "../assets/icons/clients.svg";
 
 
-const teamImgSrc = `url(${teamPicture.src})`;
-const teamImgRatio = teamPicture.width / teamPicture.height;
+const joinUs = pages.joinUs;
+const teamImgSrc = joinUs.banner ? `url(${joinUs.banner.url})` : "none";
+const teamImgRatio = joinUs.banner ? joinUs.banner.width / joinUs.banner.height : 1.5;
 
 ---
 
@@ -23,7 +18,7 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
     subTitle={pages.joinUs.intro}
 >
     {positions.length > 0 && (<section class="positions">
-        <h3>Open positions</h3>
+        <h3>{joinUs.positionsHeading}</h3>
         <div class="card-wrapper">
             {positions.map((job) => (
               <div class="card">
@@ -51,39 +46,21 @@ const teamImgRatio = teamPicture.width / teamPicture.height;
     </section>)}
     <section class="hero-section">
         <div class="hero">
-          We strongly believe that Public Relations, when done with skill and passion, can serve as a fulfilling long-term career. We take an approach that values our team members as much as our clients.
+          {joinUs.bannerText}
         </div>
     </section>
     <section class="difference">
-      <h3>Here's how we stand apart</h3>
+      <h3>{joinUs.benefitsHeading}</h3>
       <div class="difference-cards">
-        <div class="difference-card">
-          <img src={compensationIcon.src} alt="compensation icon"/>
-          <h4>Competitive compensation</h4>
-          <p>We recognize that skilled PR professionals add tremendous value to the tech companies they work with. Therefore, we're committed to offering competitive compensation packages that are in line with in-house tech PR roles.</p>
-        </div>
-        <div class="difference-card">
-          <img src={transparencyIcon.src} alt="transparency icon"/>
-          <h4>Honesty and Transparency</h4>
-          <p>We pride ourselves in our integrity. We don't overpromise or under-deliver, striving instead to provide realistic and achievable goals for both our team and our clients. Honesty and transparency are the cornerstone of our operations.</p>
-        </div>
-        <div class="difference-card">
-          <img src={clientsIcon.src} alt="clients icon"/>
-          <h4>Premier Clientele</h4>
-          <p>We have the privilege of working with some of the most innovative minds and leading companies in the tech industry. We carefully select our partners, ensuring we collaborate only with high-caliber organizations we're confident we can bring substantial value to.</p>
-        </div>
-        <div class="difference-card">
-          <img src={supportIcon.src} alt="support icon"/>
-          <h4>Supportive Environment</h4>
-          <p>We equip you with the tools, guidance, and resources necessary for success. We're committed to your personal and professional growth, providing opportunities for continuous learning and development.</p>
-        </div>
-        <div class="difference-card">
-          <img src={cultureIcon.src} alt="culture icon"/>
-          <h4>Collaborative Team Culture</h4>
-          <p>We believe in fostering a collaborative and inclusive culture that encourages creative thinking and innovation. We work together, we celebrate together, and we overcome challenges together.</p>
-        </div>
+        {(joinUs.benefits || []).map((benefit) => (
+          <div class="difference-card">
+            {benefit.icon && <img src={benefit.icon} alt={`${benefit.title} icon`}/>}
+            <h4>{benefit.title}</h4>
+            <p>{benefit.text}</p>
+          </div>
+        ))}
       </div>
-      <LinkButton href="/team">Learn more about us</LinkButton>
+      <LinkButton href="/team">{joinUs.benefitsButtonLabel}</LinkButton>
   </section>
 </PageLayout>
 

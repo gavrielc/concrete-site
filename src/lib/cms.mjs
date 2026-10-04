@@ -136,11 +136,16 @@ function introHtml(blocks) {
 
 // Page headings, intros and SEO, keyed by page: {home, coverage, clients, team, joinUs, contact}.
 async function loadPages() {
-    const pages = await sanityQuery(`*[_type == "page" && _id match "page-*" && !(_id in path("drafts.**"))]{_id, heading, intro, seoTitle, seoDescription}`);
+    const pages = await sanityQuery(`*[_type == "page" && _id match "page-*" && !(_id in path("drafts.**"))]{
+        _id, heading, intro, seoTitle, seoDescription,
+        positionsHeading, bannerText, benefitsHeading, benefitsButtonLabel,
+        "banner": bannerImage.asset->{url, "width": metadata.dimensions.width, "height": metadata.dimensions.height},
+        "benefits": benefits[]{title, text, "icon": icon.asset->url}
+    }`);
     return Object.fromEntries(
         pages.map((p) => [
             p._id.replace(/^page-/, ''),
-            {heading: p.heading, intro: introHtml(p.intro), seoTitle: p.seoTitle, seoDescription: p.seoDescription},
+            {...p, intro: introHtml(p.intro)},
         ])
     );
 }

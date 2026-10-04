@@ -5,6 +5,70 @@ import {icons} from '@sanity/icons';
 // The homepage only has SEO fields here; its other content lives in the "homepage" document.
 const isHome = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-home';
 const isContact = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-contact';
+const notJoinUs = ({document}) => document?._id?.replace(/^drafts\./, '') !== 'page-joinUs';
+
+// Extra sections that only exist on the Join Us page.
+const joinUsFields = [
+    defineField({
+        name: 'positionsHeading',
+        title: 'Open positions heading',
+        type: 'string',
+        group: 'joinUs',
+        hidden: notJoinUs,
+    }),
+    defineField({
+        name: 'bannerText',
+        title: 'Banner text',
+        type: 'text',
+        rows: 3,
+        group: 'joinUs',
+        description: 'The large white text over the team photo.',
+        hidden: notJoinUs,
+    }),
+    defineField({
+        name: 'bannerImage',
+        title: 'Banner photo',
+        type: 'image',
+        group: 'joinUs',
+        description: 'A wide photo works best; the text sits on its left side.',
+        hidden: notJoinUs,
+    }),
+    defineField({
+        name: 'benefitsHeading',
+        title: '"Stand apart" heading',
+        type: 'string',
+        group: 'joinUs',
+        hidden: notJoinUs,
+    }),
+    defineField({
+        name: 'benefits',
+        title: '"Stand apart" cards',
+        type: 'array',
+        group: 'joinUs',
+        description: 'Drag to reorder.',
+        hidden: notJoinUs,
+        of: [
+            defineArrayMember({
+                type: 'object',
+                name: 'benefit',
+                fields: [
+                    defineField({name: 'icon', title: 'Icon', type: 'image', description: 'Square icon, ideally SVG.'}),
+                    defineField({name: 'title', title: 'Title', type: 'string', validation: (rule) => rule.required()}),
+                    defineField({name: 'text', title: 'Text', type: 'text', rows: 4, validation: (rule) => rule.required()}),
+                ],
+                preview: {select: {title: 'title', subtitle: 'text', media: 'icon'}},
+            }),
+        ],
+    }),
+    defineField({
+        name: 'benefitsButtonLabel',
+        title: 'Button label',
+        type: 'string',
+        group: 'joinUs',
+        description: 'The button under the cards (links to the Team page).',
+        hidden: notJoinUs,
+    }),
+];
 
 export const page = defineType({
     name: 'page',
@@ -13,6 +77,7 @@ export const page = defineType({
     icon: icons.document,
     groups: [
         {name: 'content', title: 'Page text', default: true},
+        {name: 'joinUs', title: 'Join Us sections', hidden: notJoinUs},
         {name: 'seo', title: 'SEO (Google)'},
     ],
     fields: [
@@ -41,6 +106,7 @@ export const page = defineType({
                 }),
             ],
         }),
+        ...joinUsFields,
         defineField({
             name: 'seoTitle',
             title: 'SEO title',
