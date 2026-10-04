@@ -40,7 +40,7 @@ function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}
             <a className={styles.podcastCardMain} href={href} target="_blank" rel="noreferrer">
                 <div className={styles.podcastCardHeader}>
                     <span className={styles.podcastCardLabel}>
-                        <span className={styles.applePodcastLogo} aria-hidden="true"></span>
+                        <img src={podcast.src} alt="" aria-hidden="true" />
                         Podcasts
                     </span>
                 </div>
