@@ -2,8 +2,7 @@ import {defineArrayMember, defineField, defineType} from 'sanity';
 import {icons} from '@sanity/icons';
 
 // One fixed document per website page (IDs like "page-clients"); see structure.js.
-// The homepage only has SEO fields here; its other content lives in the "homepage" document.
-const isHome = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-home';
+// The homepage is edited in the "homepage" document instead.
 const isContact = ({document}) => document?._id?.replace(/^drafts\./, '') === 'page-contact';
 const notJoinUs = ({document}) => document?._id?.replace(/^drafts\./, '') !== 'page-joinUs';
 const notContact = (ctx) => !isContact(ctx);
@@ -138,7 +137,6 @@ export const page = defineType({
             type: 'string',
             group: 'content',
             description: 'The large purple title at the top of the page.',
-            hidden: isHome,
         }),
         defineField({
             name: 'intro',
@@ -146,7 +144,7 @@ export const page = defineType({
             type: 'array',
             group: 'content',
             description: 'The paragraph under the heading. Select text to make it bold.',
-            hidden: (ctx) => isHome(ctx) || isContact(ctx),
+            hidden: isContact,
             of: [
                 defineArrayMember({
                     type: 'block',

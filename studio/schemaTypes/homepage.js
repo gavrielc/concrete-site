@@ -2,7 +2,6 @@ import {defineArrayMember, defineField, defineType} from 'sanity';
 import {icons} from '@sanity/icons';
 
 // Singleton (document ID "homepage"); see structure.js and sanity.config.js.
-// The homepage's SEO title/description live in the "page-home" document.
 export const homepage = defineType({
     name: 'homepage',
     title: 'Homepage',
@@ -14,6 +13,7 @@ export const homepage = defineType({
         {name: 'coverage', title: 'Coverage'},
         {name: 'testimonials', title: 'Testimonials'},
         {name: 'joinUs', title: 'Join us'},
+        {name: 'seo', title: 'SEO (Google)'},
     ],
     fields: [
         // Top banner
@@ -82,6 +82,25 @@ export const homepage = defineType({
         defineField({name: 'joinUsHeading', title: 'Heading', type: 'string', group: 'joinUs'}),
         defineField({name: 'joinUsText', title: 'Text', type: 'text', rows: 3, group: 'joinUs'}),
         defineField({name: 'joinUsButtonLabel', title: 'Button label', type: 'string', group: 'joinUs', description: 'Links to the Join Us page.'}),
+
+        // SEO
+        defineField({
+            name: 'seoTitle',
+            title: 'SEO title',
+            type: 'string',
+            group: 'seo',
+            description: 'Shown in Google results and the browser tab. Ideally up to 60 characters.',
+            validation: (rule) => [rule.required(), rule.max(60).warning('Google usually cuts titles longer than 60 characters.')],
+        }),
+        defineField({
+            name: 'seoDescription',
+            title: 'SEO description',
+            type: 'text',
+            rows: 3,
+            group: 'seo',
+            description: 'The short text under the title in Google results. Ideally 120–160 characters.',
+            validation: (rule) => [rule.required(), rule.max(160).warning('Google usually cuts descriptions longer than 160 characters.')],
+        }),
     ],
     preview: {prepare: () => ({title: 'Homepage'})},
 });

@@ -125,7 +125,8 @@ async function loadHomepage() {
         clientsHeading, clientsButtonLabel,
         coverageHeading, coverageText, coverageButtonLabel,
         testimonialsHeading,
-        "joinUsImage": joinUsImage.asset->url, joinUsImageAlt, joinUsHeading, joinUsText, joinUsButtonLabel
+        "joinUsImage": joinUsImage.asset->url, joinUsImageAlt, joinUsHeading, joinUsText, joinUsButtonLabel,
+        seoTitle, seoDescription
     }`);
     // Line breaks in the tagline become <br>
     return {...home, heroHtml: escapeHtml(home?.heroText || '').replace(/\n/g, '<br>')};
@@ -147,7 +148,7 @@ function introHtml(blocks) {
         .join('<br><br>');
 }
 
-// Page headings, intros and SEO, keyed by page: {home, coverage, clients, team, joinUs, contact}.
+// Page headings, intros and SEO, keyed by page: {coverage, clients, team, joinUs, contact}.
 async function loadPages() {
     const pages = await sanityQuery(`*[_type == "page" && _id match "page-*" && !(_id in path("drafts.**"))]{
         _id, heading, intro, seoTitle, seoDescription,

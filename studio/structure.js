@@ -30,7 +30,6 @@ export const structure = (S, context) =>
                 .title('Homepage')
                 .icon(HomeIcon)
                 .child(S.document().schemaType('homepage').documentId('homepage').title('Homepage')),
-            pageText(S, 'page-home', 'Homepage SEO', HomeIcon),
             S.listItem()
                 .title('Homepage coverage')
                 .icon(HomeIcon)
