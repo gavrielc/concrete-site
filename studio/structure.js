@@ -14,6 +14,7 @@ const {
 export const structure = (S, context) =>
     S.list()
         .title('Content')
+        // Grouped by website page: Homepage | Coverage | Clients | Team & Join Us.
         .items([
             S.listItem()
                 .title('Homepage logos')
@@ -30,6 +31,7 @@ export const structure = (S, context) =>
                         .filter('_type == "coverage" && showOnHomepage == true')
                         .defaultOrdering([{field: 'date', direction: 'desc'}])
                 ),
+            S.divider(),
             S.listItem()
                 .title('Coverage (Results)')
                 .icon(DocumentTextIcon)
@@ -49,6 +51,7 @@ export const structure = (S, context) =>
             S.divider(),
             orderableDocumentListDeskItem({type: 'client', title: 'Clients', icon: TagsIcon, S, context}),
             orderableDocumentListDeskItem({type: 'testimonial', title: 'Testimonials', icon: CommentIcon, S, context}),
+            S.divider(),
             orderableDocumentListDeskItem({type: 'teamMember', title: 'Team', icon: UsersIcon, S, context}),
             orderableDocumentListDeskItem({type: 'jobPosition', title: 'Open positions', icon: CaseIcon, S, context}),
         ]);
