@@ -42,7 +42,7 @@ const QUERY = `{
     },
     "dates": *[_type == "coverage" && defined(date)]{kind, date},
     "categories": {${CATEGORIES.map((c, i) => `"c${i}": count(*[_type == "coverage" && "${c.value}" in categories])`).join(', ')}},
-    "homepage": *[_type == "coverage" && showOnHomepage == true] | order(date desc)[0...4]{
+    "homepage": *[_id == "homepage"][0].coverageItems[]->{
         _id, headline, date, "publication": publication->name
     },
     "latest": *[_type == "coverage" && defined(date)] | order(date desc, _createdAt desc)[0...5]{
@@ -279,7 +279,7 @@ export function HomeTool() {
                                 <p className={styles.featureText}>{featured.publication} · {formatDate(featured.date)}</p>
                             </IntentLink>
                         ) : (
-                            <p className={styles.featureText}>No coverage is marked “Show on homepage”.</p>
+                            <p className={styles.featureText}>No coverage cards are chosen under Homepage → Coverage.</p>
                         )}
                         <div className={styles.dots}>
                             {data.homepage.map((item, i) => (

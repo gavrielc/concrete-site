@@ -15,7 +15,7 @@ export const coverage = defineType({
     title: 'Coverage',
     type: 'document',
     icon: Newspaper,
-    initialValue: {kind: 'article', showOnHomepage: false},
+    initialValue: {kind: 'article'},
     fields: [
         defineField({
             name: 'kind',
@@ -71,13 +71,6 @@ export const coverage = defineType({
             hidden: (ctx) => !isArticle(ctx),
             validation: requiredFor(isArticle),
         }),
-        defineField({
-            name: 'showOnHomepage',
-            title: 'Show on homepage',
-            type: 'boolean',
-            description: 'The 4 newest items with this turned on appear on the homepage.',
-            hidden: (ctx) => !isArticle(ctx),
-        }),
 
         // Podcast fields
         defineField({
@@ -130,13 +123,12 @@ export const coverage = defineType({
             date: 'date',
             logoUrl: 'publication.logo.asset.url',
             artwork: 'artwork',
-            home: 'showOnHomepage',
         },
-        prepare({kind, headline, title, show, publication, date, logoUrl, artwork, home}) {
+        prepare({kind, headline, title, show, publication, date, logoUrl, artwork}) {
             const podcast = kind === 'podcast';
             return {
-                title: `${home && !podcast ? '★ ' : ''}${(podcast ? title : headline) || '(untitled)'}`,
-                subtitle: [podcast ? `Podcast: ${show || ''}` : publication, date, home ? '★ Homepage' : null]
+                title: (podcast ? title : headline) || '(untitled)',
+                subtitle: [podcast ? `Podcast: ${show || ''}` : publication, date]
                     .filter(Boolean)
                     .join(' · '),
                 media: podcast ? artwork : logoThumb(logoUrl),

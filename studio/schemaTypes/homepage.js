@@ -51,6 +51,19 @@ export const homepage = defineType({
         }),
 
         // Coverage
+        defineField({
+            name: 'coverageItems',
+            title: 'Coverage cards',
+            type: 'array',
+            group: 'coverage',
+            description: 'The coverage cards on the homepage. Drag to reorder. Best with 4.',
+            of: [defineArrayMember({type: 'reference', to: [{type: 'coverage'}], options: {filter: 'kind == "article"'}})],
+            validation: (rule) => [
+                rule.max(4).error('The homepage has room for up to 4 coverage cards.'),
+                rule.unique().error('Each article can appear only once.'),
+                rule.custom((items) => (items?.length === 4 ? true : 'The layout looks best with exactly 4 cards.')).warning(),
+            ],
+        }),
         defineField({name: 'coverageHeading', title: 'Heading', type: 'string', group: 'coverage'}),
         defineField({name: 'coverageText', title: 'Text', type: 'text', rows: 3, group: 'coverage'}),
         defineField({
@@ -58,7 +71,7 @@ export const homepage = defineType({
             title: 'Button label',
             type: 'string',
             group: 'coverage',
-            description: 'Links to the Coverage page. The 4 cards are chosen under "Homepage coverage".',
+            description: 'Links to the Coverage page.',
         }),
 
         // Testimonials

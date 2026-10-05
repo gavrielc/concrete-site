@@ -21,7 +21,7 @@ export default defineConfig({
         templates: (templates) => [
             // Homepage and page texts are fixed documents; coverage is created as an article or a podcast.
             ...templates.filter(({schemaType}) => !['homepage', 'page', 'coverage'].includes(schemaType)),
-            {id: 'coverage-article', title: 'Coverage article', schemaType: 'coverage', value: {kind: 'article', showOnHomepage: false}},
+            {id: 'coverage-article', title: 'Coverage article', schemaType: 'coverage', value: {kind: 'article'}},
             {id: 'coverage-podcast', title: 'Podcast episode', schemaType: 'coverage', value: {kind: 'podcast', categories: ['podcasts']}},
         ],
     },

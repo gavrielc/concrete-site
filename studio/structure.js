@@ -1,5 +1,5 @@
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list';
-import {BookOpen, Briefcase, Building2, FileText, House, Mail, MessageSquareQuote, Newspaper, Star, Users} from 'lucide-react';
+import {BookOpen, Briefcase, Building2, FileText, House, Mail, MessageSquareQuote, Newspaper, Users} from 'lucide-react';
 
 // Fixed "page" documents, one per website page (see schemaTypes/page.js).
 const pageText = (S, id, title, icon = FileText) =>
@@ -18,17 +18,6 @@ export const structure = (S, context) =>
                 .title('Homepage')
                 .icon(House)
                 .child(S.document().schemaType('homepage').documentId('homepage').title('Homepage')),
-            S.listItem()
-                .title('Homepage coverage')
-                .icon(Star)
-                .child(
-                    // The homepage shows the 4 newest of these, so the top 4 of this list are live.
-                    S.documentList()
-                        .title('On homepage (top 4 are shown)')
-                        .schemaType('coverage')
-                        .filter('_type == "coverage" && showOnHomepage == true')
-                        .defaultOrdering([{field: 'date', direction: 'desc'}])
-                ),
             S.divider(),
             pageText(S, 'page-coverage', 'Coverage page text'),
             S.listItem()

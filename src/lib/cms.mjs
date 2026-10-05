@@ -51,7 +51,7 @@ async function loadTeam() {
 // Same shape and order the results page used when the data lived in src/components/results/data.
 async function loadResults() {
     const items = await sanityQuery(`*[_type == "coverage"] {
-        _createdAt, kind, url, date, categories, headline, showOnHomepage, legacyOrder,
+        _createdAt, kind, url, date, categories, headline, legacyOrder,
         title, show, duration, artworkUrl, "artwork": artwork.asset->url,
         "publication": publication->name, "logo": publication->logo.asset->url
     }`);
@@ -88,7 +88,6 @@ async function loadResults() {
             tags,
             // Articles shown under the Podcasts tab render as regular cards.
             embed: tags.includes('podcasts') ? false : undefined,
-            showOnHomepage: item.showOnHomepage || undefined,
         });
     };
 
@@ -110,6 +109,16 @@ async function loadTestimonials() {
         "logo": coalesce(logoOverride.asset->url, client->logo.asset->url)
     }`);
     return testimonials.map((t) => ({...t, logo: {src: t.logo}}));
+}
+
+// The coverage cards chosen (and ordered) in the Homepage document.
+async function loadHomepageResults() {
+    const items = await sanityQuery(`*[_id == "homepage"][0].coverageItems[]->{
+        url, date, headline, "publication": publication->name, "logo": publication->logo.asset->url
+    }`);
+    return (items || []).filter(Boolean).map((item) =>
+        compact({url: item.url, logo: item.logo ? {src: item.logo} : undefined, publication: item.publication || '', date: formatDate(item.date), headline: item.headline})
+    );
 }
 
 const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -180,7 +189,7 @@ const loaders = {
     positions: loadPositions,
     testimonials: loadTestimonials,
     results: loadResults,
-    'homepage-results': async () => (await load('results')).filter((r) => r.showOnHomepage && r.logo).slice(0, 4),
+    'homepage-results': loadHomepageResults,
 };
 
 const cache = new Map();
