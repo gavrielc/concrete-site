@@ -78,7 +78,6 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
         if (!items || !over || active.id === over.id) return;
 
         const next = arrayMove(items, items.findIndex((i) => i._id === active.id), items.findIndex((i) => i._id === over.id));
-        setItems(next);
         const index = next.findIndex((i) => i._id === active.id);
         const moved = next[index];
         const before = next[index - 1]?.orderRank;
@@ -90,6 +89,10 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
               : after
                 ? LexoRank.parse(after).genPrev()
                 : LexoRank.middle();
+
+        // Update the local copy too, so the next drag computes from the new position.
+        next[index] = {...moved, orderRank: rank.toString()};
+        setItems(next);
 
         // Keep the published document and any open draft in the same position.
         const tx = client.transaction().patch(moved._id, {set: {orderRank: rank.toString()}});
@@ -153,7 +156,7 @@ export function ClientsGallery() {
             type="client"
             title="Clients"
             addLabel="Add client"
-            query={`*[_type == "client"] | order(orderRank){_id, _originalId, orderRank, name, website, categories, logoStyle, "logo": logo.asset->url}`}
+            query={`*[_type == "client"] | order(orderRank, _id){_id, _originalId, orderRank, name, website, categories, logoStyle, "logo": logo.asset->url}`}
             searchText={(c) => `${c.name} ${c.website}`}
             renderCard={(c) => (
                 <>
@@ -180,7 +183,7 @@ export function TestimonialsGallery() {
             title="Testimonials"
             addLabel="Add testimonial"
             wide
-            query={`*[_type == "testimonial"] | order(orderRank){
+            query={`*[_type == "testimonial"] | order(orderRank, _id){
                 _id, _originalId, orderRank, quote, name, title, isVisible,
                 "logo": coalesce(logoOverride.asset->url, client->logo.asset->url)
             }`}

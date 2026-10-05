@@ -33,7 +33,7 @@ function formatDate(isoDate) {
 const compact = (obj) => Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined && v !== null));
 
 async function loadClients() {
-    const clients = await sanityQuery(`*[_type == "client"] | order(orderRank) {
+    const clients = await sanityQuery(`*[_type == "client"] | order(orderRank, _id) {
         name, website, categories, logoStyle, "logo": logo.asset->url
     }`);
     return clients.map((c) =>
@@ -42,7 +42,7 @@ async function loadClients() {
 }
 
 async function loadTeam() {
-    const team = await sanityQuery(`*[_type == "teamMember"] | order(orderRank) {
+    const team = await sanityQuery(`*[_type == "teamMember"] | order(orderRank, _id) {
         name, title, bio, linkedin, twitter, "image": photo.asset->url
     }`);
     return team.map((t) => compact({...t, image: {src: t.image}}));
@@ -99,13 +99,13 @@ async function loadResults() {
 }
 
 async function loadPositions() {
-    return sanityQuery(`*[_type == "jobPosition" && isOpen != false] | order(orderRank) {
+    return sanityQuery(`*[_type == "jobPosition" && isOpen != false] | order(orderRank, _id) {
         title, location, overview, applyEmail, "sections": sections[]{heading, points}
     }`);
 }
 
 async function loadTestimonials() {
-    const testimonials = await sanityQuery(`*[_type == "testimonial" && isVisible != false] | order(orderRank) {
+    const testimonials = await sanityQuery(`*[_type == "testimonial" && isVisible != false] | order(orderRank, _id) {
         "text": quote, name, title, "company": client->name,
         "logo": coalesce(logoOverride.asset->url, client->logo.asset->url)
     }`);
