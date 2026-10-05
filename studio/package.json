@@ -8,7 +8,8 @@
     "build": "sanity build",
     "deploy": "sanity deploy",
     "export-legacy": "node --import ./migration/register-assets.mjs migration/export-legacy.mjs",
-    "import-legacy": "sanity exec migration/import-legacy.mjs --with-user-token"
+    "import-legacy": "sanity exec migration/import-legacy.mjs --with-user-token",
+    "guide": "node help/build-guide.mjs"
   },
   "dependencies": {
     "@fontsource/outfit": "^5.3.0",

@@ -6,6 +6,7 @@ import {theme} from './theme';
 import {Logo} from './components/Logo';
 import {homeTool} from './components/HomeTool';
 import {viewOnWebsiteAction} from './components/viewOnWebsite';
+import {helpTool} from './components/HelpTool';
 
 export default defineConfig({
     name: 'default',
@@ -16,7 +17,7 @@ export default defineConfig({
     dataset: 'production',
     plugins: [structureTool({structure, title: 'Content'})],
     // The Home screen (quick links) opens first.
-    tools: (prev) => [homeTool, ...prev],
+    tools: (prev) => [homeTool, ...prev, helpTool],
     schema: {
         types: schemaTypes,
         templates: (templates) => [
