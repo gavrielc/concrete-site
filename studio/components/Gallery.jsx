@@ -1,11 +1,37 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {useClient} from 'sanity';
 import {IntentLink} from 'sanity/router';
 import {usePaneRouter} from 'sanity/structure';
+import {DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, useSensors} from '@dnd-kit/core';
+import {SortableContext, arrayMove, rectSortingStrategy, sortableKeyboardCoordinates, useSortable} from '@dnd-kit/sortable';
+import {CSS} from '@dnd-kit/utilities';
 import {LexoRank} from 'lexorank';
 import {EyeOff, GripVertical, Plus} from 'lucide-react';
 import '@fontsource/outfit/600.css';
 import styles from './gallery.module.css';
+
+// One card: the whole card can be dragged; a plain click opens the document.
+function SortableCard({id, disabled, children, link: Link}) {
+    const {attributes, listeners, setNodeRef, transform, transition, isDragging} = useSortable({id, disabled});
+    return (
+        <div
+            ref={setNodeRef}
+            style={{transform: CSS.Transform.toString(transform), transition, zIndex: isDragging ? 2 : undefined}}
+            className={isDragging ? styles.dragging : undefined}
+            {...attributes}
+            {...listeners}
+        >
+            <Link childId={id} className={styles.card} draggable={false} onDragStart={(e) => e.preventDefault()}>
+                {!disabled && (
+                    <span className={styles.handle} title="Drag to reorder">
+                        <GripVertical size={15} />
+                    </span>
+                )}
+                {children}
+            </Link>
+        </div>
+    );
+}
 
 // Card gallery with drag-and-drop ordering (writes the same orderRank field as the orderable lists).
 function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
@@ -13,8 +39,12 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
     const {ChildLink} = usePaneRouter();
     const [items, setItems] = useState(null);
     const [search, setSearch] = useState('');
-    const [dragId, setDragId] = useState(null);
-    const [overId, setOverId] = useState(null);
+    const justDragged = useRef(false);
+    const sensors = useSensors(
+        // A short movement is needed before a drag starts, so clicks still open the card.
+        useSensor(PointerSensor, {activationConstraint: {distance: 6}}),
+        useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates})
+    );
 
     const load = useCallback(
         () => client.fetch(query, {}, {perspective: 'drafts'}).then(setItems),
@@ -28,17 +58,18 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
         return () => subscription.unsubscribe();
     }, [client, load, type]);
 
-    async function move(fromId, toId) {
-        if (!items || fromId === toId) return;
-        const from = items.findIndex((i) => i._id === fromId);
-        const to = items.findIndex((i) => i._id === toId);
-        const next = [...items];
-        const [moved] = next.splice(from, 1);
-        next.splice(to, 0, moved);
-        setItems(next);
+    async function handleDragEnd({active, over}) {
+        // The pointer-up after a drag also fires a click; ignore it so the card doesn't open.
+        justDragged.current = true;
+        setTimeout(() => (justDragged.current = false), 0);
+        if (!items || !over || active.id === over.id) return;
 
-        const before = next[to - 1]?.orderRank;
-        const after = next[to + 1]?.orderRank;
+        const next = arrayMove(items, items.findIndex((i) => i._id === active.id), items.findIndex((i) => i._id === over.id));
+        setItems(next);
+        const index = next.findIndex((i) => i._id === active.id);
+        const moved = next[index];
+        const before = next[index - 1]?.orderRank;
+        const after = next[index + 1]?.orderRank;
         const rank = before && after
             ? LexoRank.parse(before).between(LexoRank.parse(after))
             : before
@@ -69,41 +100,25 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
             <input className={styles.search} placeholder="Search…" value={search} onChange={(e) => setSearch(e.target.value)} />
 
             {items && !visible.length && <div className={styles.empty}>Nothing found.</div>}
-            <div className={`${styles.grid} ${wide ? styles.gridWide : ''}`}>
-                {visible.map((item) => (
-                    <ChildLink
-                        key={item._id}
-                        childId={item._id}
-                        className={`${styles.card} ${dragId === item._id ? styles.dragging : ''} ${overId === item._id && dragId !== item._id ? styles.dropTarget : ''}`}
-                        draggable={!search}
-                        onDragStart={(e) => {
-                            setDragId(item._id);
-                            e.dataTransfer.effectAllowed = 'move';
-                        }}
-                        onDragOver={(e) => {
-                            e.preventDefault();
-                            setOverId(item._id);
-                        }}
-                        onDragEnd={() => {
-                            setDragId(null);
-                            setOverId(null);
-                        }}
-                        onDrop={(e) => {
-                            e.preventDefault();
-                            move(dragId, item._id);
-                            setDragId(null);
-                            setOverId(null);
+            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+                <SortableContext items={visible.map((i) => i._id)} strategy={rectSortingStrategy}>
+                    <div
+                        className={`${styles.grid} ${wide ? styles.gridWide : ''}`}
+                        onClickCapture={(e) => {
+                            if (justDragged.current) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                            }
                         }}
                     >
-                        {!search && (
-                            <span className={styles.handle} title="Drag to reorder" onClick={(e) => e.preventDefault()}>
-                                <GripVertical size={15} />
-                            </span>
-                        )}
-                        {renderCard(item)}
-                    </ChildLink>
-                ))}
-            </div>
+                        {visible.map((item) => (
+                            <SortableCard key={item._id} id={item._id} disabled={Boolean(search)} link={ChildLink}>
+                                {renderCard(item)}
+                            </SortableCard>
+                        ))}
+                    </div>
+                </SortableContext>
+            </DndContext>
             <p className={styles.hint}>
                 Drag a card to change its position on the website. Click a card to edit it.{search ? ' (Clear the search to reorder.)' : ''}
             </p>
