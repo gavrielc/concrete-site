@@ -36,7 +36,8 @@
 .primary { background: var(--brand); color: #fff; box-shadow: 0 6px 16px rgba(112, 34, 251, 0.28); }
 .primary:hover { background: var(--brand-dark); }
 
-.toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 22px; }
+.toolbarLabel { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); font-size: 13px; font-weight: 600; margin-left: 8px; }
 
 /* Grid */
 .grid { display: grid; gap: 18px; grid-template-columns: repeat(12, minmax(0, 1fr)); }

@@ -223,15 +223,19 @@ export function HomeTool() {
                             Edit the website content here. After you click Publish, the website updates within about a minute.
                         </p>
                     </div>
-                    <IntentLink className={styles.primary} intent="create" params={{type: 'coverage', template: 'coverage-article'}}>
-                        <Plus size={18} /> Add coverage
-                    </IntentLink>
+                    <a className={styles.primary} href={SITE_URL} target="_blank" rel="noreferrer">
+                        <ExternalLink size={18} /> View website
+                    </a>
                 </div>
 
+                {/* Same order as the website menu: Home, Clients, Team, Coverage, Join Us */}
                 <div className={styles.toolbar}>
-                    <IntentLink className={styles.pill} intent="create" params={{type: 'coverage', template: 'coverage-podcast'}}>
-                        <Mic size={16} /> Podcast
+                    <IntentLink className={styles.pill} intent="edit" params={{id: 'homepage', type: 'homepage'}}>
+                        <House size={16} /> Edit homepage
                     </IntentLink>
+                    <span className={styles.toolbarLabel}>
+                        <Plus size={14} /> Add:
+                    </span>
                     <IntentLink className={styles.pill} intent="create" params={{type: 'client'}}>
                         <Building2 size={16} /> Client
                     </IntentLink>
@@ -241,15 +245,15 @@ export function HomeTool() {
                     <IntentLink className={styles.pill} intent="create" params={{type: 'teamMember'}}>
                         <Users size={16} /> Team member
                     </IntentLink>
+                    <IntentLink className={styles.pill} intent="create" params={{type: 'coverage', template: 'coverage-article'}}>
+                        <Newspaper size={16} /> Coverage article
+                    </IntentLink>
+                    <IntentLink className={styles.pill} intent="create" params={{type: 'coverage', template: 'coverage-podcast'}}>
+                        <Mic size={16} /> Podcast
+                    </IntentLink>
                     <IntentLink className={styles.pill} intent="create" params={{type: 'jobPosition'}}>
                         <Briefcase size={16} /> Open position
                     </IntentLink>
-                    <IntentLink className={styles.pill} intent="edit" params={{id: 'homepage', type: 'homepage'}}>
-                        <House size={16} /> Homepage
-                    </IntentLink>
-                    <a className={styles.pill} href={SITE_URL} target="_blank" rel="noreferrer">
-                        <ExternalLink size={16} /> View website
-                    </a>
                 </div>
 
                 <div className={styles.grid}>
