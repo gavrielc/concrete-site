@@ -58,10 +58,23 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
         return () => subscription.unsubscribe();
     }, [client, load, type]);
 
-    async function handleDragEnd({active, over}) {
-        // The pointer-up after a drag also fires a click; ignore it so the card doesn't open.
+    // Releasing the mouse after a drag also fires a click on the card under it. Swallow clicks
+    // for a moment after every drag so the card doesn't open.
+    function blockClickAfterDrag() {
         justDragged.current = true;
-        setTimeout(() => (justDragged.current = false), 0);
+        const swallow = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        };
+        window.addEventListener('click', swallow, true);
+        setTimeout(() => {
+            window.removeEventListener('click', swallow, true);
+            justDragged.current = false;
+        }, 300);
+    }
+
+    async function handleDragEnd({active, over}) {
+        blockClickAfterDrag();
         if (!items || !over || active.id === over.id) return;
 
         const next = arrayMove(items, items.findIndex((i) => i._id === active.id), items.findIndex((i) => i._id === over.id));
@@ -100,7 +113,13 @@ function Gallery({type, title, addLabel, query, wide, searchText, renderCard}) {
             <input className={styles.search} placeholder="Search…" value={search} onChange={(e) => setSearch(e.target.value)} />
 
             {items && !visible.length && <div className={styles.empty}>Nothing found.</div>}
-            <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+            <DndContext
+                sensors={sensors}
+                collisionDetection={closestCenter}
+                onDragStart={() => (justDragged.current = true)}
+                onDragCancel={blockClickAfterDrag}
+                onDragEnd={handleDragEnd}
+            >
                 <SortableContext items={visible.map((i) => i._id)} strategy={rectSortingStrategy}>
                     <div
                         className={`${styles.grid} ${wide ? styles.gridWide : ''}`}
