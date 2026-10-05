@@ -33,7 +33,7 @@ function formatDate(isoDate) {
 const compact = (obj) => Object.fromEntries(Object.entries(obj).filter(([, v]) => v !== undefined && v !== null));
 
 async function loadClients() {
-    const clients = await sanityQuery(`*[_type == "client"] | order(orderRank, _id) {
+    const clients = await sanityQuery(`*[_type == "client" && isVisible != false] | order(orderRank, _id) {
         name, website, categories, logoStyle, "logo": logo.asset->url
     }`);
     return clients.map((c) =>
@@ -124,8 +124,8 @@ async function loadHomepageResults() {
 const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 async function loadHomepageClients() {
-    const logos = await sanityQuery(`*[_id == "homepage"][0].clientLogos[]->{name, website, "logo": logo.asset->url}`);
-    return (logos || []).filter(Boolean).map((c) => ({...c, logo: {src: c.logo}}));
+    const logos = await sanityQuery(`*[_id == "homepage"][0].clientLogos[]->{name, website, isVisible, "logo": logo.asset->url}`);
+    return (logos || []).filter((c) => c && c.isVisible !== false).map(({isVisible, ...c}) => ({...c, logo: {src: c.logo}}));
 }
 
 // Homepage section texts and images (the client logos are loaded separately above).

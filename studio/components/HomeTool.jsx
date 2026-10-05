@@ -19,8 +19,7 @@ import {
 import '@fontsource/outfit/600.css';
 import styles from './home.module.css';
 
-// Change to https://concrete.media/ at launch.
-export const SITE_URL = 'https://feature-sanity-cms--lucky-dodol-392453.netlify.app/';
+import {SITE_URL} from '../siteUrl';
 
 const CATEGORIES = [
     {value: 'highlights', label: 'Highlights'},
@@ -153,7 +152,7 @@ function BarChart({data}) {
     );
 }
 
-// Opens a Structure list by its pane path (e.g. "coverage-page;coverageResults").
+// Opens a Structure list by its pane path (e.g. "coverage-page;articles").
 function useOpenList() {
     const router = useRouter();
     return (paneId) => {
@@ -205,8 +204,8 @@ export function HomeTool() {
         {label: 'Podcasts without artwork', count: data.noArtwork, hint: 'Shown with a microphone placeholder.'},
     ];
     const totals = [
-        {label: 'Articles', count: data.counts.articles, icon: Newspaper, pane: 'coverage-page;coverageResults'},
-        {label: 'Podcasts', count: data.counts.podcasts, icon: Mic, pane: 'coverage-page;coverageResults'},
+        {label: 'Articles', count: data.counts.articles, icon: Newspaper, pane: 'coverage-page;articles'},
+        {label: 'Podcasts', count: data.counts.podcasts, icon: Mic, pane: 'coverage-page;podcasts'},
         {label: 'Clients', count: data.counts.clients, icon: Building2, pane: 'clients-page;orderable-client'},
         {label: 'Testimonials', count: data.counts.testimonials, icon: MessageSquareQuote, pane: 'clients-page;orderable-testimonial'},
     ];
@@ -261,7 +260,7 @@ export function HomeTool() {
                     <div className={`${styles.card} ${styles.span3}`}>
                         <div className={styles.cardHead}>
                             <h2 className={styles.cardTitle}>Coverage per month</h2>
-                            <button type="button" className={styles.ghost} onClick={() => openList('coverage-page;coverageResults')}>All</button>
+                            <button type="button" className={styles.ghost} onClick={() => openList('coverage-page;articles')}>All</button>
                         </div>
                         <div style={{display: 'flex', gap: 6, marginBottom: 8, flexWrap: 'wrap'}}>
                             <span className={`${styles.badge} ${styles.badgeDark}`}>{yearCount} this year</span>
@@ -338,7 +337,7 @@ export function HomeTool() {
                     <div className={`${styles.card} ${styles.span4}`}>
                         <div className={styles.cardHead}>
                             <h2 className={styles.cardTitle}>Latest coverage</h2>
-                            <button type="button" className={styles.ghost} onClick={() => openList('coverage-page;coverageResults')}>See all</button>
+                            <button type="button" className={styles.ghost} onClick={() => openList('coverage-page;articles')}>See all</button>
                         </div>
                         <div className={styles.list}>
                             {data.latest.map((item) => (

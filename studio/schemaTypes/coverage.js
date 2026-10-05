@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity';
 import {Newspaper} from 'lucide-react';
+import {UrlAutofillInput} from '../components/UrlAutofillInput';
 import {logoThumb} from './logoThumb';
 import {coverageCategories} from './options';
 
@@ -35,8 +36,24 @@ export const coverage = defineType({
             name: 'url',
             title: 'Link',
             type: 'url',
-            description: 'Link to the article or episode.',
-            validation: (rule) => rule.required(),
+            description: 'Link to the article or episode. Paste it first, then use the button to fill in the details.',
+            components: {input: UrlAutofillInput},
+            validation: (rule) => [
+                rule.required(),
+                // Warn when the same link is already in Coverage (ignoring http/https, www. and a trailing slash).
+                rule
+                    .custom(async (url, context) => {
+                        if (!url) return true;
+                        const linkKey = (link) => link.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+                        const id = context.document._id.replace(/^drafts\./, '');
+                        const others = await context
+                            .getClient({apiVersion: '2025-02-19'})
+                            .fetch('*[_type == "coverage" && !(_id in [$id, "drafts." + $id]) && defined(url)]{url, headline, title}', {id});
+                        const twin = others.find((o) => linkKey(o.url) === linkKey(url));
+                        return twin ? `This link is already in Coverage: "${twin.headline || twin.title || 'untitled'}"` : true;
+                    })
+                    .warning(),
+            ],
         }),
         defineField({
             name: 'date',

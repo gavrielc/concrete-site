@@ -10,6 +10,7 @@ export const client = defineType({
     type: 'document',
     icon: Building2,
     orderings: [orderRankOrdering],
+    initialValue: {isVisible: true},
     fields: [
         defineField({name: 'name', title: 'Company name', type: 'string', validation: (rule) => rule.required()}),
         defineField({
@@ -41,10 +42,20 @@ export const client = defineType({
                 ],
             },
         }),
+        defineField({
+            name: 'isVisible',
+            title: 'Show on website',
+            type: 'boolean',
+            description: 'Turn off to hide the client without deleting it (also hides it on the homepage).',
+        }),
         orderRankField({type: 'client'}),
     ],
     preview: {
-        select: {title: 'name', subtitle: 'website', logoUrl: 'logo.asset.url'},
-        prepare: ({title, subtitle, logoUrl}) => ({title, subtitle, media: logoThumb(logoUrl)}),
+        select: {title: 'name', subtitle: 'website', logoUrl: 'logo.asset.url', isVisible: 'isVisible'},
+        prepare: ({title, subtitle, logoUrl, isVisible}) => ({
+            title,
+            subtitle: [subtitle, isVisible === false ? 'Hidden' : null].filter(Boolean).join(' · '),
+            media: logoThumb(logoUrl),
+        }),
     },
 });

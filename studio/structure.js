@@ -1,5 +1,5 @@
 import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list';
-import {BookOpen, Briefcase, Building2, FileText, House, Mail, MessageSquareQuote, Newspaper, UserRound, Users} from 'lucide-react';
+import {BookOpen, Briefcase, Building2, FileText, House, Mail, MessageSquareQuote, Mic, Newspaper, UserRound, Users} from 'lucide-react';
 
 // Fixed "page" documents, one per website page (see schemaTypes/page.js).
 const pageText = (S, id, title = 'Page text', icon = FileText) =>
@@ -8,6 +8,23 @@ const pageText = (S, id, title = 'Page text', icon = FileText) =>
         .title(title)
         .icon(icon)
         .child(S.document().schemaType('page').documentId(id).title(title));
+
+// Coverage split by type; "+" creates the matching type.
+const coverageList = (S, id, title, icon, kind) =>
+    S.listItem()
+        .id(id)
+        .title(title)
+        .icon(icon)
+        .child(
+            S.documentList()
+                .id(id)
+                .title(title)
+                .schemaType('coverage')
+                .filter('_type == "coverage" && kind == $kind')
+                .params({kind})
+                .defaultOrdering([{field: 'date', direction: 'desc'}])
+                .initialValueTemplates([S.initialValueTemplateItem(`coverage-${kind}`)])
+        );
 
 // A folder per website page, holding its page text and its lists.
 const pageFolder = (S, id, title, icon, items) =>
@@ -34,15 +51,8 @@ export const structure = (S, context) =>
             ]),
             pageFolder(S, 'coverage-page', 'Coverage page', Newspaper, [
                 pageText(S, 'page-coverage'),
-                S.listItem()
-                    .id('coverageResults')
-                    .title('Coverage (Results)')
-                    .icon(Newspaper)
-                    .child(
-                        S.documentTypeList('coverage')
-                            .title('Coverage (Results)')
-                            .defaultOrdering([{field: 'date', direction: 'desc'}])
-                    ),
+                coverageList(S, 'articles', 'Articles', Newspaper, 'article'),
+                coverageList(S, 'podcasts', 'Podcasts', Mic, 'podcast'),
                 S.listItem()
                     .id('publications')
                     .title('Publications')

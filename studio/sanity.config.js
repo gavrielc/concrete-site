@@ -5,6 +5,7 @@ import {structure} from './structure';
 import {theme} from './theme';
 import {Logo} from './components/Logo';
 import {homeTool} from './components/HomeTool';
+import {viewOnWebsiteAction} from './components/viewOnWebsite';
 
 export default defineConfig({
     name: 'default',
@@ -26,7 +27,11 @@ export default defineConfig({
         ],
     },
     document: {
-        actions: (actions, {schemaType}) =>
-            ['homepage', 'page'].includes(schemaType) ? actions.filter(({action}) => !['delete', 'duplicate', 'unpublish'].includes(action)) : actions,
+        actions: (actions, {schemaType}) => [
+            ...(['homepage', 'page'].includes(schemaType)
+                ? actions.filter(({action}) => !['delete', 'duplicate', 'unpublish'].includes(action))
+                : actions),
+            viewOnWebsiteAction,
+        ],
     },
 });
