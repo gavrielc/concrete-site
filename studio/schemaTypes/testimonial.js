@@ -1,13 +1,13 @@
 import {defineField, defineType} from 'sanity';
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list';
-import {icons} from '@sanity/icons';
+import {MessageSquareQuote} from 'lucide-react';
 import {logoThumb} from './logoThumb';
 
 export const testimonial = defineType({
     name: 'testimonial',
     title: 'Testimonial',
     type: 'document',
-    icon: icons.comment,
+    icon: MessageSquareQuote,
     orderings: [orderRankOrdering],
     initialValue: {isVisible: true},
     fields: [

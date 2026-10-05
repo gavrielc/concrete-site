@@ -1,6 +1,6 @@
 import {defineField, defineType} from 'sanity';
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list';
-import {icons} from '@sanity/icons';
+import {Building2} from 'lucide-react';
 import {logoThumb} from './logoThumb';
 import {clientCategories} from './options';
 
@@ -8,7 +8,7 @@ export const client = defineType({
     name: 'client',
     title: 'Client',
     type: 'document',
-    icon: icons.tags,
+    icon: Building2,
     orderings: [orderRankOrdering],
     fields: [
         defineField({name: 'name', title: 'Company name', type: 'string', validation: (rule) => rule.required()}),

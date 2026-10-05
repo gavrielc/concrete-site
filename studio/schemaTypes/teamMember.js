@@ -1,12 +1,12 @@
 import {defineField, defineType} from 'sanity';
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list';
-import {icons} from '@sanity/icons';
+import {UserRound} from 'lucide-react';
 
 export const teamMember = defineType({
     name: 'teamMember',
     title: 'Team member',
     type: 'document',
-    icon: icons.user,
+    icon: UserRound,
     orderings: [orderRankOrdering],
     fields: [
         defineField({name: 'name', title: 'Name', type: 'string', validation: (rule) => rule.required()}),

@@ -1,12 +1,12 @@
 import {defineArrayMember, defineField, defineType} from 'sanity';
-import {icons} from '@sanity/icons';
+import {House} from 'lucide-react';
 
 // Singleton (document ID "homepage"); see structure.js and sanity.config.js.
 export const homepage = defineType({
     name: 'homepage',
     title: 'Homepage',
     type: 'document',
-    icon: icons.home,
+    icon: House,
     groups: [
         {name: 'hero', title: 'Top banner', default: true},
         {name: 'clients', title: 'Clients'},

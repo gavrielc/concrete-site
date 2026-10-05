@@ -1,5 +1,5 @@
 import {defineArrayMember, defineField, defineType} from 'sanity';
-import {icons} from '@sanity/icons';
+import {FileText} from 'lucide-react';
 
 // One fixed document per website page (IDs like "page-clients"); see structure.js.
 // The homepage is edited in the "homepage" document instead.
@@ -122,7 +122,7 @@ export const page = defineType({
     name: 'page',
     title: 'Page text',
     type: 'document',
-    icon: icons.document,
+    icon: FileText,
     groups: [
         {name: 'content', title: 'Page text', default: true},
         {name: 'joinUs', title: 'Join Us sections', hidden: notJoinUs},

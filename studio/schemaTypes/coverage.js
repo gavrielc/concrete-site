@@ -1,5 +1,5 @@
 import {defineField, defineType} from 'sanity';
-import {icons} from '@sanity/icons';
+import {Newspaper} from 'lucide-react';
 import {logoThumb} from './logoThumb';
 import {coverageCategories} from './options';
 
@@ -14,7 +14,7 @@ export const coverage = defineType({
     name: 'coverage',
     title: 'Coverage',
     type: 'document',
-    icon: icons['document-text'],
+    icon: Newspaper,
     initialValue: {kind: 'article', showOnHomepage: false},
     fields: [
         defineField({

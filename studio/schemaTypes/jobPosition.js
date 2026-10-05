@@ -1,12 +1,12 @@
 import {defineArrayMember, defineField, defineType} from 'sanity';
 import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list';
-import {icons} from '@sanity/icons';
+import {Briefcase} from 'lucide-react';
 
 export const jobPosition = defineType({
     name: 'jobPosition',
     title: 'Open position',
     type: 'document',
-    icon: icons.case,
+    icon: Briefcase,
     orderings: [orderRankOrdering],
     initialValue: {isOpen: true, location: 'Jerusalem - Hybrid', applyEmail: 'careers@concrete.media'},
     fields: [

@@ -1,12 +1,12 @@
 import {defineField, defineType} from 'sanity';
-import {icons} from '@sanity/icons';
+import {BookOpen} from 'lucide-react';
 import {logoThumb} from './logoThumb';
 
 export const publication = defineType({
     name: 'publication',
     title: 'Publication',
     type: 'document',
-    icon: icons.book,
+    icon: BookOpen,
     fields: [
         defineField({name: 'name', title: 'Name', type: 'string', validation: (rule) => rule.required()}),
         defineField({
