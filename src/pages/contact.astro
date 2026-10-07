@@ -63,7 +63,7 @@ import pages from "virtual:cms/pages";
         event.preventDefault();
         const button = form.querySelector('button')!;
         button.disabled = true;
-        status!.className = 'form-status';
+        status!.classList.remove('success', 'error');
         status!.textContent = 'Sending…';
         try {
             const response = await fetch('/', {
