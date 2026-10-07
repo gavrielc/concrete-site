@@ -22,7 +22,9 @@ const latest = allResults.filter(
 	(r) => r.tags?.includes('highlights') && !r.tags.includes('podcasts') && r.logo?.src && r.headline && !seen.has(r.url)
 );
 const scrollItems = [...results, ...latest].slice(0, SCROLL_COUNT);
-const scrollSeconds = scrollItems.length * 4;
+// Seconds each card takes to scroll past (higher = slower)
+const SECONDS_PER_CARD = 7;
+const scrollSeconds = scrollItems.length * SECONDS_PER_CARD;
 ---
 <Layout title={home.seoTitle} description={home.seoDescription} noIndex>
 	<Header class="home-sticky-header"/>
