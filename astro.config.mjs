@@ -17,8 +17,7 @@ export default defineConfig({
     strictPort: true,
   },
   site: 'https://concrete.media/',
-  // team-flip is a design preview for the customer, kept out of the sitemap.
-  integrations: [sitemap({filter: (page) => !page.includes('/team-flip')}), preact()],
+  integrations: [sitemap(), preact()],
   scopedStyleStrategy: "where",
   vite: {
     plugins: [cmsContent()],

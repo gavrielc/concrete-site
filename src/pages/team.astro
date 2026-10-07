@@ -1,11 +1,9 @@
 ---
+// Team photos flip on hover (or tap on touch screens) to show name, title, bio and LinkedIn.
 import PageLayout from "../layouts/PageLayout.astro";
-import TeamCard from "../components/TeamCard.astro";
+import linkedinLogo from '../assets/icons/linkedinFull.svg';
 import team from "virtual:cms/team";
 import pages from "virtual:cms/pages";
-
-
-
 ---
 
 <PageLayout
@@ -14,17 +12,168 @@ import pages from "virtual:cms/pages";
     title={pages.team.heading}
     subTitle={pages.team.intro}
 >
-    <section class="team">
-        {team.map((e) => <TeamCard {...e}/>)}
+    <section class="flip-team">
+        {team.map(({name, title, bio, image, linkedin}) => (
+            <div class="flip-card" tabindex="0" aria-label={`${name}, ${title}`}>
+                <div class="flip-inner">
+                    <div class="face front">
+                        <img src={image.src} alt={`Headshot of ${name}, ${title} at Concrete Media`} width="280" height="516" />
+                    </div>
+                    <div class="face back">
+                        <p class="name">{name}</p>
+                        <p class="title">{title}</p>
+                        {bio?.trim() && <p class="bio">{bio}</p>}
+                        {linkedin && (
+                            <a class="linkedin" href={linkedin} target="_blank" rel="noopener noreferrer">
+                                <img src={linkedinLogo.src} alt={`${name} on LinkedIn`} />
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        ))}
     </section>
 </PageLayout>
 
+<script>
+    // Touch screens have no hover: tap a card to flip it (tapping the LinkedIn link still opens it).
+    document.querySelectorAll<HTMLElement>('.flip-card').forEach((card) => {
+        card.addEventListener('click', (event) => {
+            if ((event.target as HTMLElement).closest('a')) return;
+            card.classList.toggle('flipped');
+        });
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                card.classList.toggle('flipped');
+            }
+        });
+    });
+</script>
+
 <style>
-    .team {
-        flex-wrap: wrap;
-        gap: 44px 64px;
-        align-items: flex-start;
+    .flip-team {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+        justify-content: center;
+        gap: 48px 40px;
     }
 
+    .flip-card {
+        width: 300px;
+        height: 553px;
+        perspective: 1400px;
+        cursor: pointer;
+        border-radius: 16px;
+        outline: none;
+    }
 
+    .flip-card:focus-visible {
+        box-shadow: 0 0 0 3px rgba(112, 34, 251, 0.4);
+    }
+
+    .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transform-style: preserve-3d;
+    }
+
+    @media (hover: hover) {
+        .flip-card:hover .flip-inner {
+            transform: rotateY(180deg);
+        }
+    }
+
+    .flip-card.flipped .flip-inner,
+    .flip-card:focus-visible .flip-inner {
+        transform: rotateY(180deg);
+    }
+
+    .face {
+        position: absolute;
+        inset: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Same purple corner tint as the Team page photos */
+    .front::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(31.17deg, rgba(112, 34, 251, 0.6) 0%, rgba(112, 34, 251, 0) 50%);
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 26px 22px 20px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid rgba(112, 34, 251, 0.12);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+        overflow-y: auto;
+    }
+
+    .back::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: #7022FB;
+    }
+
+    .name {
+        font-family: 'Outfit';
+        font-weight: 600;
+        font-size: 24px;
+        color: #7022FB;
+        margin: 0 0 6px;
+    }
+
+    .title {
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0 0 12px;
+    }
+
+    .bio {
+        font-family: 'Inter';
+        font-size: 13px;
+        line-height: 1.45;
+        color: rgba(0, 0, 0, 0.6);
+        white-space: pre-line;
+        margin: 0 0 16px;
+    }
+
+    .linkedin {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+    @media screen and (max-width: 360px) {
+        .flip-team {
+            grid-template-columns: 1fr;
+        }
+
+        .flip-card {
+            width: 100%;
+        }
+    }
 </style>
