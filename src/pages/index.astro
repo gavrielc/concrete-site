@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
 import results from 'virtual:cms/homepage-results';
+import allResults from 'virtual:cms/results';
 import homepageClients from 'virtual:cms/homepage-clients';
 import home from 'virtual:cms/homepage';
 import Footer from '../components/Footer.astro';
@@ -10,6 +11,18 @@ import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
 
 const heroImage = home.heroImage ? `url(${home.heroImage})` : "none";
+
+// The cards chosen in the Homepage document first, then the newest Highlights articles (12 in total;
+// a multiple of 4 keeps the staircase offsets seamless when the column loops).
+const SCROLL_COUNT = 12;
+const seen = new Set(results.map((r) => r.url));
+const latest = allResults.filter(
+	(r) => r.tags?.includes('highlights') && !r.tags.includes('podcasts') && r.logo?.src && r.headline && !seen.has(r.url)
+);
+const scrollItems = [...results, ...latest].slice(0, SCROLL_COUNT);
+// Seconds each card takes to scroll past (higher = slower)
+const SECONDS_PER_CARD = 7;
+const scrollSeconds = scrollItems.length * SECONDS_PER_CARD;
 ---
 <Layout title={home.seoTitle} description={home.seoDescription}>
 	<Header class="home-sticky-header"/>
@@ -42,9 +55,17 @@ const heroImage = home.heroImage ? `url(${home.heroImage})` : "none";
 			</div>
 		</section>
 		<section class="section" id="results">
-			<ul class:list={[{four: results.length == 4}]}>
-				{results.map(r => <ResultCard {...r}/>)}
-			</ul>
+			<!-- The list is rendered twice so the upward loop is seamless; the copy is hidden from screen readers and keyboard. -->
+			<div class="results-scroller" style={`--scroll-duration: ${scrollSeconds}s`}>
+				<div class="results-track">
+					<ul class="four">
+						{scrollItems.map(r => <ResultCard {...r}/>)}
+					</ul>
+					<ul class="four" aria-hidden="true" inert>
+						{scrollItems.map(r => <ResultCard {...r}/>)}
+					</ul>
+				</div>
+			</div>
 			<div class="results-desc">
 				<h3>{home.coverageHeading}</h3>
 				<p class="desc-text">{home.coverageText}</p>
@@ -250,6 +271,88 @@ const heroImage = home.heroImage ? `url(${home.heroImage})` : "none";
 	}
 
 
+
+	/* Scrolling coverage column: cards move up continuously and loop; hover pauses it. */
+	#results {
+		.results-scroller {
+			flex: 0 0 auto;
+			margin-right: 64px;
+			height: 1000px;
+			overflow: hidden;
+			/* room for the card shadows on the sides */
+			padding: 0 24px;
+			margin-left: -24px;
+			-webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 90px, #000 calc(100% - 90px), transparent 100%);
+			mask-image: linear-gradient(to bottom, transparent 0, #000 90px, #000 calc(100% - 90px), transparent 100%);
+		}
+
+		.results-track {
+			animation: results-scroll-up var(--scroll-duration, 48s) linear infinite;
+		}
+
+		.results-scroller:hover .results-track,
+		.results-scroller:focus-within .results-track {
+			animation-play-state: paused;
+		}
+
+		.results-track ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		/* Show full headlines (the static homepage cuts them to one line with "…") */
+		.results-track :global(h4) {
+			white-space: normal !important;
+			overflow: visible !important;
+			text-overflow: clip !important;
+		}
+
+		/* Staircase offsets, repeated every four cards */
+		.results-track :global(.result-card:nth-of-type(4n + 1)) {
+			margin-left: 0;
+		}
+
+		.results-track :global(.result-card:nth-of-type(4n + 2)) {
+			margin-left: 49px;
+		}
+
+		.results-track :global(.result-card:nth-of-type(4n + 3)) {
+			margin-left: 98px;
+		}
+
+		.results-track :global(.result-card:nth-of-type(4n + 4)) {
+			margin-left: 147px;
+		}
+	}
+
+	@keyframes results-scroll-up {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(-50%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#results .results-track {
+			animation: none;
+		}
+	}
+
+	@media screen and (max-width: 1050px) {
+		#results .results-scroller {
+			margin-right: 0;
+			margin-left: -16px;
+			padding: 0 16px;
+			height: 640px;
+		}
+
+		#results .results-track :global(.result-card) {
+			margin-left: 0 !important;
+		}
+	}
 
 	#team {
 		padding: 0 112px 96px;

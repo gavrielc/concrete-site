@@ -56,7 +56,7 @@ export const homepage = defineType({
             title: 'Coverage cards',
             type: 'array',
             group: 'coverage',
-            description: 'The coverage cards on the homepage. Drag to reorder. Best with 4.',
+            description: 'Shown first in the homepage scrolling column (drag to reorder). The column then continues with the newest Highlights articles, 12 cards in total.',
             of: [defineArrayMember({type: 'reference', to: [{type: 'coverage'}], options: {filter: 'kind == "article"'}})],
             validation: (rule) => [
                 rule.max(4).error('The homepage has room for up to 4 coverage cards.'),

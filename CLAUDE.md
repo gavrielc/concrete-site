@@ -28,7 +28,7 @@ To add or change a client, team member, coverage item or open position, edit it 
 | `virtual:cms/clients` | `src/components/Clients.jsx` |
 | `virtual:cms/team` | `src/pages/team.astro` |
 | `virtual:cms/results` | `src/components/results/index.jsx` (Coverage page) |
-| `virtual:cms/homepage-results` | `src/pages/index.astro` (coverage cards chosen and ordered in the Homepage document) |
+| `virtual:cms/homepage-results` | `src/pages/index.astro` (coverage cards chosen and ordered in the Homepage document; shown first in the scrolling coverage column, followed by the newest `highlights` articles from `virtual:cms/results`) |
 | `virtual:cms/pages` | Inner page headings, intro texts and SEO ("page-*" documents; the homepage SEO is in the "homepage" document) |
 | `virtual:cms/homepage` | `src/pages/index.astro` and `Testimonials.astro` (homepage texts and images) |
 | `virtual:cms/homepage-clients` | `src/pages/index.astro` (client logos chosen in the "Homepage" document) |

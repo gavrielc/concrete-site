@@ -62,7 +62,7 @@ export const guide = {
             title: 'Choose what’s on the homepage',
             paragraphs: [
                 'Open **Homepage**. Its tabs follow the homepage from top to bottom: Top banner, Clients, Coverage, Testimonials, Join us and SEO.',
-                'In **Coverage**, the **Coverage cards** list holds the 4 articles shown on the homepage. Click **Add item** to choose an article, drag the handle (⋮⋮) to change the order, or use **⋯ → Remove**. The **Clients** tab works the same way for the 6 client logos.',
+                'In **Coverage**, the **Coverage cards** list holds the articles shown first in the homepage’s scrolling column (it then continues with the newest **Select Coverage** articles). Click **Add item** to choose an article, drag the handle (⋮⋮) to change the order, or use **⋯ → Remove**. The **Clients** tab works the same way for the 6 client logos.',
                 'Click **Publish** when you’re done.',
             ],
             image: '07-homepage-coverage.jpg',
