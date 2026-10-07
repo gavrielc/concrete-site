@@ -17,7 +17,8 @@ export default defineConfig({
     strictPort: true,
   },
   site: 'https://concrete.media/',
-  integrations: [sitemap(), preact()],
+  // home-scroll is a design preview for the customer, kept out of the sitemap.
+  integrations: [sitemap({filter: (page) => !page.includes('/home-scroll')}), preact()],
   scopedStyleStrategy: "where",
   vite: {
     plugins: [cmsContent()],
