@@ -1,3 +1,14 @@
+# Environments
+
+| Environment | Git branch | URL |
+|---|---|---|
+| Production | `main` | https://concrete.media |
+| Staging | `staging` | https://staging--lucky-dodol-392453.netlify.app |
+
+- **Code changes:** work on `staging` (or a branch merged into `staging`), check the staging site, then merge `staging` into `main` to publish. Never push untested changes straight to `main`.
+- **Content changes:** one Sanity dataset feeds both sites. Publishing in the Studio rebuilds both sites (each through its own Sanity webhook and Netlify build hook).
+- Staging and other non-production Netlify builds are `noindex` (see `src/layouts/Layout.astro`). Netlify Deploy Previews for pull requests are turned off.
+
 # Content (Sanity CMS)
 
 Clients, team members, media coverage (results) and open positions are managed in **Sanity**, not in this repo.

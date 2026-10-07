@@ -12,7 +12,10 @@ export interface Props {
 	noIndex?: boolean;
 }
 
-const { title, subTitle, description = subTitle, canonicalUrl, noIndex } = Astro.props;
+const { title, subTitle, description = subTitle, canonicalUrl } = Astro.props;
+// Netlify sets CONTEXT at build time. Staging and other non-production builds are hidden from search engines.
+const isNetlifyNonProduction = Boolean(process.env.CONTEXT) && process.env.CONTEXT !== 'production';
+const noIndex = Astro.props.noIndex || isNetlifyNonProduction;
 ---
 
 <!DOCTYPE html>
