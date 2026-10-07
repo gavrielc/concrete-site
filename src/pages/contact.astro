@@ -10,7 +10,36 @@ import pages from "virtual:cms/pages";
 >
     <section class='contact-hero'>
         <h3>{pages.contact.heading}</h3>
-        <a class="email-button" href={`mailto:${pages.contact.email}`}>{pages.contact.email}</a>
+        <p class="email-line">Fill in the form below, or email us at <a href={`mailto:${pages.contact.email}`}>{pages.contact.email}</a></p>
+    </section>
+    <section class="contact-form-section">
+        <!-- Netlify Forms: submissions are emailed to the address set in Netlify (Forms → Form notifications). -->
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="company-website">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="honeypot" aria-hidden="true">
+                <label>Leave this empty <input name="company-website" tabindex="-1" autocomplete="off" /></label>
+            </p>
+            <div class="row">
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" autocomplete="name" required />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" autocomplete="email" required />
+                </label>
+            </div>
+            <label>
+                <span>Company <em>(optional)</em></span>
+                <input type="text" name="company" autocomplete="organization" />
+            </label>
+            <label>
+                <span>How can we help?</span>
+                <textarea name="message" rows="6" required></textarea>
+            </label>
+            <button type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
     </section>
     <section class="offices">
         {pages.contact.offices.map((office) => (
@@ -25,6 +54,35 @@ import pages from "virtual:cms/pages";
         ))}
     </section>
 </PageLayout>
+
+<script>
+    // Send without leaving the page. Without JavaScript the form still posts and Netlify shows its own thank-you page.
+    const form = document.querySelector<HTMLFormElement>('.contact-form');
+    const status = form?.querySelector<HTMLElement>('.form-status');
+    form?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = form.querySelector('button')!;
+        button.disabled = true;
+        status!.className = 'form-status';
+        status!.textContent = 'Sending…';
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: new URLSearchParams(new FormData(form) as any).toString(),
+            });
+            if (!response.ok) throw new Error(String(response.status));
+            form.reset();
+            status!.textContent = "Thanks! Your message is on its way, and we'll get back to you soon.";
+            status!.classList.add('success');
+        } catch {
+            status!.textContent = 'Something went wrong. Please try again, or email us directly.';
+            status!.classList.add('error');
+        } finally {
+            button.disabled = false;
+        }
+    });
+</script>
 
 <style lang="scss">
     @mixin normal-text {
@@ -42,23 +100,133 @@ import pages from "virtual:cms/pages";
         padding-bottom: 40px;
 
         h3 {
-            margin: 0 0 32px;
+            margin: 0 0 16px;
         }
 
-        .email-button {
-            display: inline-block;
+        .email-line {
+            @include normal-text;
+            margin: 0;
+
+            a {
+                color: #7022FB;
+                font-weight: 500;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .contact-form-section {
+        padding-bottom: 80px;
+    }
+
+    .contact-form {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px;
+        background: #fff;
+        border-radius: 16px;
+        filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.12)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.12));
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .row {
+            display: flex;
+            gap: 20px;
+
+            label {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 15px;
+            color: #000;
+
+            em {
+                font-style: normal;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        input, textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px 14px;
+            font-family: 'Inter';
+            font-size: 16px;
+            color: #000;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+
+            &:focus {
+                outline: none;
+                border-color: #7022FB;
+                box-shadow: 0 0 0 3px rgba(112, 34, 251, 0.15);
+            }
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            align-self: flex-start;
             padding: 16px 40px;
             background-color: #7022FB;
             color: #fff;
             font-family: 'Outfit';
             font-weight: 600;
             font-size: 18px;
-            text-decoration: none;
+            border: 0;
             border-radius: 8px;
+            cursor: pointer;
             transition: background-color 0.2s;
 
             &:hover {
                 background-color: #5a1ad4;
+            }
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: default;
+            }
+        }
+
+        .honeypot {
+            position: absolute;
+            left: -10000px;
+        }
+
+        .form-status {
+            @include normal-text;
+            margin: 0;
+
+            &:empty {
+                display: none;
+            }
+
+            &.success {
+                color: #16803c;
+            }
+
+            &.error {
+                color: #c62828;
             }
         }
     }
@@ -106,6 +274,22 @@ import pages from "virtual:cms/pages";
     @media screen and (max-width: 827px) {
         .contact-hero {
             padding-top: 40px;
+        }
+
+        .contact-form-section {
+            padding-bottom: 48px;
+        }
+
+        .contact-form {
+            padding: 24px;
+
+            .row {
+                flex-direction: column;
+            }
+
+            button {
+                align-self: stretch;
+            }
         }
     }
 

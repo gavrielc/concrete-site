@@ -17,7 +17,7 @@ const contactFields = [
         title: 'Contact email',
         type: 'email',
         group: 'contact',
-        description: 'Shown on the purple button; clicking it opens an email to this address.',
+        description: 'Shown under the heading ("Or email us at …"). Contact-form messages are emailed by Netlify, set under Forms → Form notifications.',
         hidden: notContact,
     }),
     defineField({
