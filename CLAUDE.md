@@ -28,7 +28,7 @@ Publishing in Sanity triggers a Netlify rebuild (Sanity webhook → Netlify buil
 ## Coverage content model
 
 - **Type**: Article or Podcast episode. Articles reference a **Publication** (name + logo, uploaded once and reused).
-- **Categories**: `highlights`, `AI & ML`, `saas`, `dev`, `security`, `podcasts` (plus `fintech`, `medtech`, `hr`, `deeptech`). The Coverage page shows the Highlights and Podcasts tabs.
+- **Categories**: `highlights`, `AI & ML`, `saas`, `dev`, `security`, `podcasts` (plus `fintech`, `medtech`, `hr`, `deeptech`). The Coverage page shows the "Select Coverage" (value `highlights`) and Podcasts tabs.
 - Items are sorted newest first by date. Podcasts are listed after articles.
 
 ## Studio development

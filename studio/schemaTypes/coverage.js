@@ -68,7 +68,7 @@ export const coverage = defineType({
             type: 'array',
             of: [{type: 'string'}],
             options: {list: coverageCategories},
-            description: 'Choose "Highlights" or "Podcasts" to show it on the Coverage page tabs.',
+            description: 'Choose "Select Coverage" or "Podcasts" to show it on the Coverage page tabs.',
         }),
 
         // Article fields

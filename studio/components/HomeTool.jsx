@@ -22,7 +22,7 @@ import styles from './home.module.css';
 import {SITE_URL} from '../siteUrl';
 
 const CATEGORIES = [
-    {value: 'highlights', label: 'Highlights'},
+    {value: 'highlights', label: 'Select Coverage'},
     {value: 'AI & ML', label: 'AI & ML'},
     {value: 'saas', label: 'SaaS'},
     {value: 'dev', label: 'Dev'},

@@ -37,7 +37,7 @@ export const guide = {
                 'Go to **Coverage page → Articles** and click **+** (or click **Coverage article** on the Home screen).',
                 'Paste the article link into **Link** and click **Fill in details from this link**. The headline, date and publication are filled in for you.',
                 'Check the details. If the publication isn’t in the list, choose **Create new** in the Publication field and upload its logo.',
-                'Tick the **Categories**. Choose **Highlights** to show it on the Coverage page’s main tab.',
+                'Tick the **Categories**. Choose **Select Coverage** to show it on the Coverage page’s main tab.',
                 'Click **Publish**.',
             ],
             tips: [

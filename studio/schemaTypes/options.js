@@ -1,6 +1,6 @@
 // Category values must match the tag values the website uses for filtering.
 export const coverageCategories = [
-    {title: 'Highlights', value: 'highlights'},
+    {title: 'Select Coverage', value: 'highlights'},
     {title: 'AI & ML', value: 'AI & ML'},
     {title: 'B2B SaaS', value: 'saas'},
     {title: 'Developer', value: 'dev'},

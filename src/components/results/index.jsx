@@ -75,7 +75,7 @@ function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}
 }
 
 export const tags = [
-    {name: 'Highlights', value: 'highlights'},
+    {name: 'Select Coverage', value: 'highlights'},
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
     {name: 'Developer', value: 'dev'},
