@@ -301,6 +301,13 @@ const scrollSeconds = scrollItems.length * 4;
 			list-style: none;
 		}
 
+		/* Show full headlines (the static homepage cuts them to one line with "…") */
+		.results-track :global(h4) {
+			white-space: normal !important;
+			overflow: visible !important;
+			text-overflow: clip !important;
+		}
+
 		/* Staircase offsets, repeated every four cards */
 		.results-track :global(.result-card:nth-of-type(4n + 1)) {
 			margin-left: 0;
