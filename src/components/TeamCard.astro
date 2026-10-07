@@ -1,6 +1,5 @@
 ---
 import linkedinLogo from '../assets/icons/linkedinFull.svg';
-import twitterLogo from '../assets/icons/twitterFull.svg';
 
 export interface Props {
 	name: string;
@@ -8,10 +7,9 @@ export interface Props {
 	bio?: string;
 	image: string;
 	linkedin?: string;
-	twitter?: string;
 }
 
-const { name, title, bio = '', image, linkedin, twitter} = Astro.props;
+const { name, title, bio = '', image, linkedin } = Astro.props;
 const hasBio = Boolean(bio?.trim());
 ---
 
@@ -21,10 +19,9 @@ const hasBio = Boolean(bio?.trim());
 		<p class="name">{name}</p>
 		<p class="title">{title}</p>
 		<p class:list={['bio', !hasBio && 'bio--pending']}>{hasBio ? bio : '\u00A0'}</p>
-		{(linkedin || twitter) && (
+		{linkedin && (
 		<div class="socials-wrapper">
 			{linkedin && <a href={linkedin} target="_blank" rel="noopener noreferrer"><img class='social-icon' src={linkedinLogo.src} alt={`${name} on LinkedIn`}></a>}
-			{twitter && <a href={twitter} target="_blank" rel="noopener noreferrer"><img class='social-icon' src={twitterLogo.src} alt="twitter logo"></a>}
 		</div>
 		)}
 	</div>

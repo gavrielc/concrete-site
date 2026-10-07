@@ -88,7 +88,7 @@ export const guide = {
             title: 'Team members',
             steps: [
                 'Go to **Team page → Team** and click **+**.',
-                'Add the name, role, photo, bio (leave an empty line between paragraphs) and LinkedIn / X links.',
+                'Add the name, role, photo, bio (leave an empty line between paragraphs) and LinkedIn link.',
                 'Click **Publish**. Drag the handle (⋮⋮) to change the order on the Team page.',
             ],
         },

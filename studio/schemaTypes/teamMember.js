@@ -25,7 +25,6 @@ export const teamMember = defineType({
             description: 'Leave an empty line between paragraphs.',
         }),
         defineField({name: 'linkedin', title: 'LinkedIn URL', type: 'url'}),
-        defineField({name: 'twitter', title: 'X / Twitter URL', type: 'url'}),
         orderRankField({type: 'teamMember'}),
     ],
     preview: {select: {title: 'name', subtitle: 'title', media: 'photo'}},

@@ -43,7 +43,7 @@ async function loadClients() {
 
 async function loadTeam() {
     const team = await sanityQuery(`*[_type == "teamMember"] | order(orderRank, _id) {
-        name, title, bio, linkedin, twitter, "image": photo.asset->url
+        name, title, bio, linkedin, "image": photo.asset->url
     }`);
     return team.map((t) => compact({...t, image: {src: t.image}}));
 }
