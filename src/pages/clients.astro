@@ -2,12 +2,14 @@
 import Testimonials from "../components/Testimonials.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import Clients from "../components/Clients";
+import pages from "virtual:cms/pages";
 ---
 
 <PageLayout
-    pageTitle="Our clients | Public Relations for serious tech companies | concrete.media"
-    title="Client Experience"
-    subTitle="Our clients represent the dynamic companies you know and respect across industries. Whether we're working as an extension of the team from seed to IPO or taking on a short-term launch project, we are proud to be partners in their success."
+    pageTitle={pages.clients.seoTitle}
+    description={pages.clients.seoDescription}
+    title={pages.clients.heading}
+    subTitle={pages.clients.intro}
 >
     <section class="logos">
         <Clients client:idle/>
@@ -68,7 +70,7 @@ import Clients from "../components/Clients";
     }
 
     .logos :global(a) {
-        width: 280px;
+        width: 276px;
         height: 140px;
         background: #F8FAFC;
         border-radius: 8px;

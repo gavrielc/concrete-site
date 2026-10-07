@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef, useMemo} from 'preact/hooks';
 import styles from './styles.module.scss';
 import classNames from 'classnames/bind';
-import results from './data';
+import results from 'virtual:cms/results';
 import podcast from '../../assets/icons/microphone.svg';
 
 const cn = classNames.bind(styles);
@@ -40,7 +40,7 @@ function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}
             <a className={styles.podcastCardMain} href={href} target="_blank" rel="noreferrer">
                 <div className={styles.podcastCardHeader}>
                     <span className={styles.podcastCardLabel}>
-                        <span className={styles.applePodcastLogo} aria-hidden="true"></span>
+                        <img src={podcast.src} alt="" aria-hidden="true" />
                         Podcasts
                     </span>
                 </div>
@@ -75,7 +75,7 @@ function PodcastCard({title, show, date, duration, href, artwork, artworkIsLogo}
 }
 
 export const tags = [
-    {name: 'Highlights', value: 'highlights'},
+    {name: 'Select Coverage', value: 'highlights'},
     {name: 'AI & ML', value: 'AI & ML'},
     {name: 'B2B SaaS', value: 'saas'},
     {name: 'Developer', value: 'dev'},

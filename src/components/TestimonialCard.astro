@@ -4,14 +4,15 @@ export interface Props {
 	text: string;
 	name: string;
 	title: string;
+	company?: string;
 }
 
-const { logo, text, name, title } = Astro.props;
+const { logo, text, name, title, company } = Astro.props;
 ---
 
 <div class="testimonial-card">
 	<p class="text">{text}</p>
-	<img src={logo.src} alt={`Headshot of ${name}, ${title}`}/>
+	<img src={logo.src} alt={company ? `${company} logo` : `Logo for ${name}, ${title}`}/>
 	<p class="name">{name}</p>
 	<p class="title">{title}</p>
 </div>

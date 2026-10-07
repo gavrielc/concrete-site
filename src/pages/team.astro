@@ -1,78 +1,18 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import lazer from "../assets/team/Lazer.jpg";
-import zack from "../assets/team/Zack.jpg";
-import rachel from "../assets/team/RachelGlaser.jpg";
-import david from "../assets/team/DavidBrummer.jpg";
-import julia from "../assets/team/Julia.jpeg";
-import ben from "../assets/team/BenRothbart.png";
-import sam from "../assets/team/Sam.jpg";
 import TeamCard from "../components/TeamCard.astro";
+import team from "virtual:cms/team";
+import pages from "virtual:cms/pages";
 
-const team = [
-    {
-        name: 'Zack Rothbart',
-        title: 'Managing Partner',
-        bio: 'Zack Rothbart is the Managing Partner at Concrete Media. He previously served as international spokesman at the National Library of Israel, where he created and implemented the institution’s global media relations strategy. Zack enjoys drawing upon diverse experiences and perspectives to help clients tell their stories and maximize their potential. He reads and writes in his spare time, tries to learn something from everyone, and lives in Jerusalem with his endearing and thought-provoking family, for which he is grateful.',
-        image: zack,
-        linkedin: 'https://www.linkedin.com/in/zack-rothbart-37913b62/',
-        twitter: 'https://twitter.com/ZackRothbart'
-    },
-    {
-        name: 'Lazer Cohen',
-        title: 'Founder',
-        bio: 'Lazer is the Founder of Concrete Media which he founded in 2014. Originally from Brooklyn, New York, his entry into PR is worthy of a feature story of its own. He co-founded a PR firm in New York in 2009 before moving with his wife to Israel and starting Concrete. He believes a good PR pro is a reporter’s best asset and his decade-long relationships with some of the top tech reporters attest to that belief. Lazer and his wife have five children — who are much more interested in their mom’s floral design business than whatever it is their dad does on the computer.',
-        image: lazer,
-        linkedin: 'https://www.linkedin.com/in/lazercohen/',
-        twitter: 'https://twitter.com/Lazer_Cohen'
-    },
-    {
-        name: 'Rachel Glaser',
-        title: 'Senior Strategist',
-        bio: `Rachel Glaser is a seasoned communications strategist for startups and growth-stage tech companies who excels at turning nuanced ideas into stories people actually want to read. With 13 years of agency leadership, she specializes in translating complex technologies, including cybersecurity, healthcare, enterprise tech, and fintech, into compelling narratives for journalists, customers, and investors.
-
-Based in Israel and working globally, Rachel brings a collaborative, hands-on approach to storytelling. In her free time, she explores the outdoors with her four children, reads, and swims.`,
-        image: rachel,
-    },
-    {
-        name: 'David Brummer',
-        title: 'Strategist',
-        bio: `David Brummer is a strategist at Concrete Media with a background spanning journalism, research, public relations and content creation. David served as digital Editor-in-Chief at i24NEWS in English and was a regular contributor to The Jerusalem Post before moving on to work in communications at leading venture investment platform OurCrowd.
-
-Originally from London and based in Israel since 2007, his varied adventures have included archaeological excavations in Jerusalem’s City of David and culinary school – experiences that reflect his enduring curiosity and fascination with the power of storytelling.`,
-        image: david,
-        linkedin: 'https://www.linkedin.com/in/david-b-29a4899/'
-    },
-    {
-        name: 'Julia Bocharov',
-        title: 'Human Resources Manager',
-        bio: 'Julia is the Human Resources manager at Concrete Media. She grew up in Ukraine and emigrated to Israel in 2012. Julia holds an MA from Tel Aviv University in English literature and American studies. With a decade of experience in senior management positions in tech, Julia is enthusiastic about collaborating with individuals and developing talent. “I’m inspired by the people at Concrete Media and proud to be a part of the Israeli tech landscape”. In her spare time she loves painting and going on bike rides in nature.',
-        image: julia,
-        linkedin: 'https://www.linkedin.com/in/julia-bocharov-2bb38788/'
-    },
-    {
-        name: 'Sam Hass',
-        title: 'New Media Manager',
-        bio: 'Samuel is a New Media Manager at Concrete Media. Originally from London and now based in Jerusalem, he brings a background in psychology with a deep interest in communication, narrative, and human behavior. Before transitioning into PR, Samuel worked in the NHS, where he developed a strong foundation in clear communication, client relations, and managing complex projects under pressure. He is particularly drawn to narrative-driven work that helps clients clarify their message and connect with the right audiences. In his spare time, he enjoys martial arts, snooker, and brainstorming ideas for a stand-up debut that may or may not ever happen.',
-        image: sam,
-        linkedin: 'https://www.linkedin.com/in/samuel-hass-nelftnhs/'
-    },
-    {
-        name: 'Ben Rothbart',
-        title: 'Strategist',
-        bio: 'Ben brings over 15 years of diverse experience spanning marketing, advertising, PR, partnerships, and program management roles across the fintech, edtech, insurtech, biotech, and non-profit sectors. He excels at translating complex, deep-tech concepts into clear, impactful narratives that resonate with journalists and markets alike. Having guided teams through the entire business lifecycle, from high-growth startups to publicly traded companies, he possesses a holistic perspective that strategically ensures clients of any size meet their goals. Based in the mountains of Colorado, Ben spends his time offline cooking, playing music, and going on outdoor adventures with his son.',
-        image: ben,
-        linkedin: 'https://www.linkedin.com/in/benrothbart/'
-    },
-];
 
 
 ---
 
 <PageLayout
-    pageTitle="Our team | Public Relations for serious tech companies | concrete.media"
-    title="There are six PR professionals for every reporter, so your PR firm has to be elite to get the earned media results you need to rise above the noise."
-    subTitle={`Concrete Media is fluent in technology and media. We get what you're doing and know how to communicate it to reporters. We become an extension of your team, absorbing every development in your company and the industry to proactively craft stories that will get you in the news.`}
+    pageTitle={pages.team.seoTitle}
+    description={pages.team.seoDescription}
+    title={pages.team.heading}
+    subTitle={pages.team.intro}
 >
     <section class="team">
         {team.map((e) => <TeamCard {...e}/>)}

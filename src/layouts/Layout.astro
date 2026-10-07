@@ -6,12 +6,13 @@ import '@fontsource/outfit/600.css';
 
 export interface Props {
 	title: string;
-	subTitle: string;
+	subTitle?: string;
+	description?: string;
 	canonicalUrl?: string;
 	noIndex?: boolean;
 }
 
-const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
+const { title, subTitle, description = subTitle, canonicalUrl, noIndex } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -22,21 +23,26 @@ const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={subTitle}>
-		<meta property="og:description" content={subTitle}>
+		<meta name="description" content={description}>
+		<meta property="og:description" content={description}>
 		<meta property="og:title" content={title}>
 		<meta property="og:image" content="https://concrete.media/social1.png">
 		<meta property="og:site_name" content="Concrete Media">
 		{noIndex && <meta name="robots" content="noindex" />}
 		<title>{title}</title>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-X678N0MN5C"></script>
+		<!-- Google tag (gtag.js). Loads only on the live domain, so preview and demo visits are not counted. -->
 		<script is:inline>
 			// @ts-nocheck
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-X678N0MN5C');
+			if (/(^|\.)concrete\.media$/.test(location.hostname)) {
+				var ga = document.createElement('script');
+				ga.async = true;
+				ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-X678N0MN5C';
+				document.head.appendChild(ga);
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-X678N0MN5C');
+			}
 		</script>
 	</head>
 	<body>
@@ -80,9 +86,9 @@ const { title, subTitle, canonicalUrl, noIndex } = Astro.props;
 
 	section {
 		display: flex;
-		padding: 84px max(calc((100vw - 1216px)/2), 48px);
+		padding: 84px max(calc((100% - 1216px)/2), 48px);
 		align-items: center;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.desc-text {

@@ -1,0 +1,25 @@
+{
+  "name": "concrete-media-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "export-legacy": "node --import ./migration/register-assets.mjs migration/export-legacy.mjs",
+    "import-legacy": "sanity exec migration/import-legacy.mjs --with-user-token",
+    "guide": "node help/build-guide.mjs"
+  },
+  "dependencies": {
+    "@fontsource/outfit": "^5.3.0",
+    "@sanity/icons": "^5.2.2",
+    "@sanity/orderable-document-list": "^2.0.25",
+    "lexorank": "^1.0.5",
+    "lucide-react": "^1.52.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sanity": "^6.17.0",
+    "styled-components": "^6.1.0"
+  }
+}

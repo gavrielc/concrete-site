@@ -2,56 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import ResultCard from '../components/ResultCard.astro';
-import techcrunch from '../assets/publication-logos/techcrunch.png';
-import venturebeat from '../assets/publication-logos/vb.svg';
-import buildots from '../assets/client-logos/Buildots.webp';
-import band from '../assets/client-logos/Band.svg';
-import scaleops from '../assets/client-logos/scaleops.svg';
-import datarails from '../assets/client-logos/Datarails.png';
-import port from '../assets/client-logos/Port.svg';
-import kumo from '../assets/client-logos/kumo.svg';
+import results from 'virtual:cms/homepage-results';
+import homepageClients from 'virtual:cms/homepage-clients';
+import home from 'virtual:cms/homepage';
 import Footer from '../components/Footer.astro';
 import Testimonials from '../components/Testimonials.astro';
 import LinkButton from '../components/LinkButton.astro';
-import forbes from '../assets/publication-logos/forbes.png';
-import bloomberg from '../assets/publication-logos/bloomberg.png';
 
-const results = [
-    {
-        url: "https://venturebeat.com/orchestration/claudes-next-enterprise-battle-is-not-models-its-the-agent-control-plane",
-        logo: venturebeat,
-        publication: 'VentureBeat',
-        date: 'May 15, 2026',
-        headline: "Claude’s next enterprise battle is not models: it’s the agent control plane",
-    },
-    {
-        url: "https://www.bloomberg.com/news/newsletters/2026-05-10/cfo-pay-surges-even-as-job-security-declines",
-        logo: bloomberg,
-        publication: 'Bloomberg',
-        date: 'May 10, 2026',
-        headline: "CFO Pay Surges Even as Job Security Declines",
-    },
-    {
-        url: "https://www.forbes.com/sites/ronschmelzer/2026/04/14/why-structured-data-may-be-ais-next-enterprise-frontier/",
-        logo: forbes,
-        publication: 'Forbes',
-        date: 'April 14, 2026',
-        headline: "Why Structured Data May Be AI’s Next Enterprise Frontier",
-    },
-    {
-        url: "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/",
-        logo: techcrunch,
-        publication: 'TechCrunch',
-        date: 'March 30, 2026',
-        headline: "ScaleOps raises $130M to improve computing efficiency amid AI demand",
-    },
-];
-
+const heroImage = home.heroImage ? `url(${home.heroImage})` : "none";
 ---
-<Layout title="Public Relations for tech companies | Concrete Media" subTitle='Concrete Media is a PR agency that secures high-level media coverage for some of the most dynamic tech companies.'>
+<Layout title={home.seoTitle} description={home.seoDescription}>
 	<Header class="home-sticky-header"/>
 	<main>
-		<div class="hero">
+		<div class="hero" style={`--heroImage: ${heroImage}`}>
 			<Header inline={true} class="home-inline-header"/>
 			<svg class="hero-logo" width="1216" height="122" viewBox="0 0 1216 122" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="svg-title" role="img">
 				<title id="svg-title">Concrete Media logo</title>
@@ -65,20 +28,17 @@ const results = [
 				<path d="M576.109 121C552.261 121 538.024 107.031 538.024 83.6342V11.7993H563.862V30.5933H594.667V52.5465H563.862V82.9176C563.862 92.2338 569.294 97.8054 578.401 97.8054C583.682 97.8054 590.103 96.0996 594.021 93.6469L594.667 93.2432V116.579L594.475 116.7C589.528 119.87 581.491 120.99 576.119 120.99L576.109 121Z" fill="white"/>
 				<path d="M664.203 90.3162C659.892 95.908 655.247 98.6231 648.059 98.6231C637.184 98.6231 628.713 91.911 627.28 81.8478H693.777C694.261 79.4456 694.413 77.3764 694.413 74.8127C694.413 47.3283 674.108 26.3945 647.574 26.3945C621.04 26.3945 601.058 48.4487 601.058 74.0153C601.058 99.582 622.484 121 648.059 121C663.436 121 677.077 113.329 686.154 99.8545L664.203 90.3162ZM647.574 48.7616C657.802 48.7616 665.799 54.8378 667.878 63.9421H627.593C629.673 54.5148 637.982 48.7616 647.574 48.7616Z" fill="white"/>
 			</svg>
-			<h2>You’ve built something amazing. <br>We’ll help tell the world.</h2>
+			<h2 set:html={home.heroHtml}/>
 		</div>
 		<section class="section" id="clients">
 			<div class='clients-content-wrapper'>
-				<h3>The most dynamic tech companies turn to Concrete to promote them globally.</h3>
-				<LinkButton href="/clients" type='hollow'>See all our clients</LinkButton>
+				<h3>{home.clientsHeading}</h3>
+				<LinkButton href="/clients" type='hollow'>{home.clientsButtonLabel}</LinkButton>
 			</div>
 			<div class="logos">
-				<a class="client" href="https://buildots.com/" target="_blank"><img class="buildots-logo" src={buildots.src} alt="buildots logo"/></a>
-				<a class="client" href="https://www.band.ai/" target="_blank"><img src={band.src} alt="BAND logo"/></a>
-				<a class="client" href="https://scaleops.com/" target="_blank"><img src={scaleops.src} alt="ScaleOps logo"/></a>
-				<a class="client" href="https://www.datarails.com/" target="_blank"><img class="datarails-logo" src={datarails.src} alt="Datarails logo"/></a>
-				<a class="client" href="https://kumo.ai/" target="_blank"><img src={kumo.src} alt="kumo logo"/></a>
-				<a class="client" href="https://www.getport.io/" target="_blank"><img src={port.src} alt="Port logo"/></a>
+				{homepageClients.map((c) => (
+					<a class="client" href={c.website} target="_blank"><img class={`${c.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-logo`} src={c.logo.src} alt={`${c.name} logo`}/></a>
+				))}
 			</div>
 		</section>
 		<section class="section" id="results">
@@ -86,18 +46,18 @@ const results = [
 				{results.map(r => <ResultCard {...r}/>)}
 			</ul>
 			<div class="results-desc">
-				<h3>Media coverage that makes an impact</h3>
-				<p class="desc-text">We specialize in maximizing the media coverage for your big announcements and in proactively creating continuous results between the major stories.</p>
-				<LinkButton href="/results" type='hollow'>See more coverage</LinkButton>
+				<h3>{home.coverageHeading}</h3>
+				<p class="desc-text">{home.coverageText}</p>
+				<LinkButton href="/results" type='hollow'>{home.coverageButtonLabel}</LinkButton>
 			</div>
 		</section>
 		<Testimonials />
 		<section class="section" id="team">
 			<div>
-				<img src="/team1.webp" alt="The team at concrete media working in the Jerusalem, Israel office of their B2B tech Public Relations agency."/>
-				<h3>Join us</h3>
-				<p class="desc-text">Join Concrete Media and do tech PR at the highest level for some of the best and brightest companies.</p>
-				<LinkButton href="/join-us">See open positions</LinkButton>
+				{home.joinUsImage && <img src={home.joinUsImage} alt={home.joinUsImageAlt || ""}/>}
+				<h3>{home.joinUsHeading}</h3>
+				<p class="desc-text">{home.joinUsText}</p>
+				<LinkButton href="/join-us">{home.joinUsButtonLabel}</LinkButton>
 			</div>
 		</section>
 		<Footer />
@@ -162,7 +122,7 @@ const results = [
 	}
 
 	.hero {
-		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), url(/hero-32.webp);
+		background: linear-gradient(54.77deg, #7022FB 0%, rgba(112, 34, 251, 0) 100%), var(--heroImage);
 		background-size: cover;
 		background-position: center;
 		height: 100vh;

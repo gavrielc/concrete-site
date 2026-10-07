@@ -1,0 +1,25 @@
+name: Sanity content backup
+
+# Weekly backup of all website content (Sanity documents and images).
+# Download it from the run's "Artifacts" section; each backup is kept for 90 days.
+on:
+  schedule:
+    - cron: '0 3 * * 0' # Sundays 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Export content
+        run: node scripts/backup-sanity.mjs sanity-backup
+      - name: Upload backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: sanity-backup-${{ github.run_number }}
+          path: sanity-backup
+          retention-days: 90

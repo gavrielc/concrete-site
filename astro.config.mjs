@@ -6,6 +6,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 import preact from "@astrojs/preact";
 
+// Clients, team and coverage content comes from Sanity at build time
+import cmsContent from "./src/lib/cms.mjs";
+
 // https://astro.build/config
 export default defineConfig({
   server: {
@@ -14,8 +17,12 @@ export default defineConfig({
     strictPort: true,
   },
   site: 'https://concrete.media/',
-  integrations: [sitemap(), preact()],
+  // team-flip is a design preview for the customer, kept out of the sitemap.
+  integrations: [sitemap({filter: (page) => !page.includes('/team-flip')}), preact()],
   scopedStyleStrategy: "where",
+  vite: {
+    plugins: [cmsContent()],
+  },
   build: {
     inlineStylesheets: 'always',
   },
